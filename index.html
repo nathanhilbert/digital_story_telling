@@ -14,6 +14,36 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+
+
+        <style type="text/css">
+            .stickyitem{
+                
+                height:30px;width:100%;display:block;
+            }
+            .menu1{
+                z-index:5001;
+                background-color:blue;
+            }
+            .menu2{
+                z-index:5002;
+                background-color:green;
+            }
+            .menu3{
+                z-index:5003;
+                background-color:blue;
+            }
+
+            .stickyitem.stuck{
+
+                position:fixed;
+                top:0;
+                box-shadow:0 2px 4px rgba(0, 0, 0, .3);
+
+
+            }
+        </style>
+
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
 
@@ -52,9 +82,35 @@
                  "max_zoom":45,
                  "show_footer":false,
                  "display_zoom_level":true,
+                 "mousewheel":"none"
              });
 
            });
+        </script>
+
+
+        <!--load elements for sticky menus -->
+        <script src="js/waypoints.js"></script>
+        <script src="js/waypoints-sticky.js"></script>
+
+        <script>
+
+            $(document).ready(function() {
+                $('#menu1').waypoint('sticky');
+                $('#menu2').waypoint('sticky');
+                $('#menu3').waypoint('sticky');
+/*
+                $('.menu2wrapper').waypoint(function(direction) {
+                    if (direction === "down"){
+                        $('#menu1').waypoint('unsticky');
+                    }
+                    });
+*/
+
+            
+
+            });
+
         </script>
 
 
@@ -63,8 +119,19 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+        <div id='topblock' style="height:500px;width:100%;display:block;background-color:green;">Intropage</div>
+
+        <div id='menu1' class="menu1 stickyitem">Menu 1</div>
+
 
         <div id='placement' style="height: 600px;width: 100%;"></div>
+
+            <div id='menu2' class="menu2 stickyitem">Menu 2</div>
+
+        <div id='content2' style="height:1500px;width:200px;background-color:red;display:block;">Lots of content</div>
+            <div id='menu3' class="menu3 stickyitem">Menu 3</div>
+
+        <div id='content23' style="height:1500px;width:200px;background-color:red;display:block;">Lots of content</div>
 
 
 
