@@ -15,6 +15,9 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
 
+        <link rel="stylesheet" type="text/css" href="css/default.css" />
+        <link rel="stylesheet" type="text/css" href="css/component.css" />
+
 
         <style type="text/css">
             .stickyitem{
@@ -67,6 +70,8 @@
                 position: relative;
                 }
         </style>
+
+
 
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
@@ -188,11 +193,21 @@
                     }
                 });
 
-              
+
             
 
             });
 
+        </script>
+
+
+        <!-- init grid for exec summary -->
+        <script src="js/grid.js"></script> 
+        <script>
+            $(function() {
+                Grid.init();
+                console.log('initatived');
+            });
         </script>
 
     </head>
@@ -210,7 +225,16 @@
 
         </section>
         <div id='container' class='container'>
-            <div id='topblock' style="height:500px;width:100%;display:block;background-color:green;">Intropage</div>
+            <div id='topblock' style="height:500px;width:100%;display:block;background-color:green;">
+                <div class="dd">
+                <ul id="og-grid" class="og-grid">
+                <li> <a href="#" data-largesrc="img/3.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot."> <img src="img/3_thumb.jpg" alt="img01"/> </a> </li>
+                <li> <a href="#" data-largesrc="img/3.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu."> <img src="img/3_thumb.jpg" alt="img02"/> </a> </li>
+                <li> <a href="#" data-largesrc="img/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato."> <img src="img/3_thumb.jpg" alt="img03"/> </a> </li>
+                <li> <a href="#" data-largesrc="img/3.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot."> <img src="img/3_thumb.jpg" alt="img01"/> </a> </li>
+                </ul>
+                </div>
+            </div>
             <div id='menu1_anchor'>
                 <div id='menu1' class="menu1 stickyitem"><a href="#menu1_anchor">Menu 1</a><a href="#menu2_anchor">Menu 2</a><a href="#menu3_anchor">Menu 3</a></div>
             </div>
