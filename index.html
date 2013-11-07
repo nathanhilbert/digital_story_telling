@@ -42,6 +42,30 @@
 
 
             }
+            .introvideo{
+                position: absolute;
+                overflow: hidden;
+                height: 100%;
+                width: 100%;
+
+            }
+            #video_intro{
+                min-width: 100%;
+                min-height: 100%;
+                max-width: 1000%;
+                max-height: 1000%;
+                width: auto;
+                height: auto;
+                z-index: -1000;
+                overflow: hidden;
+                border-bottom: 1px solid #e4e4e4;
+            }
+            .container {
+                max-width: 960px;
+                width: 92%;
+                margin: 0px auto;
+                position: relative;
+                }
         </style>
 
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -54,6 +78,21 @@
 
         <script src="js/jquery-1.9.1.min.js"></script>
         <script src="js/jquery-ui-1.10.3.custom.min.js" type="text/javascript" charset="utf-8"></script>
+
+        <!--Adjust the size of the front page for video -->
+
+        <script>
+
+           $(document).ready(function () { 
+                          $(".container").css('top', $(window).height()-50);
+                  $(window).resize(function() {
+                    $(".container").css('top', $(window).height()-50);
+                  });
+            });
+        </script>
+
+
+
             <script src="js/underscore-min.js" type="text/javascript" charset="utf-8"></script>
         <script src="js/backbone-min.js" type="text/javascript" charset="utf-8"></script>
         <script src="js/json2.js" type="text/javascript" charset="utf-8"></script>
@@ -97,41 +136,76 @@
 
             $(document).ready(function() {
                 $('#menu1').waypoint('sticky');
+                /*
+                $('#menu1').waypoint(function(direction){
+                    console.log(direction);
+                    //trigger BBQ state if need be
+                });
+*/
                 $('#menu2').waypoint('sticky');
                 $('#menu3').waypoint('sticky');
-/*
-                $('.menu2wrapper').waypoint(function(direction) {
-                    if (direction === "down"){
-                        $('#menu1').waypoint('unsticky');
-                    }
-                    });
-*/
-
             
 
             });
 
         </script>
 
+        <!--starting smooth scroll and BBQ -->
+          <script src="js/jquery.smooth-scroll.js"></script>
+          <script src="js/jquery.ba-bbq.js"></script>
+          <script>
+            $(document)
+            .on('click', 'a[href*="#"]', function() {
+              if ( this.hash && this.pathname === location.pathname ) {
+                $.bbq.pushState( '#/' + this.hash.slice(1) );
+                return false;
+              }
+            })
+            .ready(function() {
+              $(window).bind('hashchange', function(event) {
+                var tgt = location.hash.replace(/^#\/?/,'');
+                if ( document.getElementById(tgt) ) {
+                  $.smoothScroll({scrollTarget: '#' + tgt});
+                }
+              });
+
+              $(window).trigger('hashchange');
+            });
+          </script>
 
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div id='topblock' style="height:500px;width:100%;display:block;background-color:green;">Intropage</div>
+        <section class='introvideo'>
+            <video id="video_intro" preload="auto" autoplay="true" loop="loop" volume="100">
+              <source src="media/Graphic1_Timeline_v1webmsd.webm" type="video/webm">
+              <source src="media/Graphic1_Timeline_v1oggtheora.ogv" type="video/ogg ogv" ;="" codecs="theora, vorbis">
+              <source src="media/Graphic1_Timeline_v1.mp4" type="video/mp4"> 
+              Video not supported
+            </video>
 
-        <div id='menu1' class="menu1 stickyitem">Menu 1</div>
+        </section>
+        <div id='container' class='container'>
+            <div id='topblock' style="height:500px;width:100%;display:block;background-color:green;">Intropage</div>
+            <div id='menu1_anchor'>
+                <div id='menu1' class="menu1 stickyitem"><a href="#menu1_anchor">Menu 1</a><a href="#menu2_anchor">Menu 2</a><a href="#menu3_anchor">Menu 3</a></div>
+            </div>
 
 
-        <div id='placement' style="height: 600px;width: 100%;"></div>
+            <div id='placement' style="height: 600px;width: 100%;"></div>
+            <div id='menu2_anchor'>
+                <div id='menu2' class="menu2 stickyitem"><a href="#menu1_anchor">Menu 1</a><a href="#menu2_anchor">Menu 2</a><a href="#menu3_anchor">Menu 3</a></div>
+            </div>
 
-            <div id='menu2' class="menu2 stickyitem">Menu 2</div>
+            <div id='content2' style="height:1500px;width:200px;background-color:red;display:block;">Lots of content</div>
+            <div id='menu3_anchor'>
+                <div id='menu3' class="menu3 stickyitem"><a href="#menu1_anchor">Menu 1</a><a href="#menu2_anchor">Menu 2</a><a href="#menu3_anchor">Menu 3</a></div>
+            </div>
 
-        <div id='content2' style="height:1500px;width:200px;background-color:red;display:block;">Lots of content</div>
-            <div id='menu3' class="menu3 stickyitem">Menu 3</div>
-
-        <div id='content23' style="height:1500px;width:200px;background-color:red;display:block;">Lots of content</div>
+            <div id='content23' style="height:1500px;width:200px;background-color:red;display:block;">Lots of content</div>
+        </div>
 
 
 
