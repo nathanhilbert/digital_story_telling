@@ -299,6 +299,7 @@ var Grid = (function() {
 		// expand preview overlay
 		preview.open();
 
+
 	}
 
 	function hidePreview() {
@@ -306,6 +307,7 @@ var Grid = (function() {
 		var preview = $.data( this, 'preview' );
 		preview.close();
 		$.removeData( this, 'preview' );
+
 	}
 
 	// the preview obj / overlay
@@ -396,6 +398,7 @@ var Grid = (function() {
 				this.setHeights();
 				// scroll to position the preview in the right place
 				this.positionPreview();
+				
 			}, this ), 25 );
 
 		},
@@ -408,6 +411,7 @@ var Grid = (function() {
 					}
 					self.$item.removeClass( 'og-expanded' );
 					self.$previewEl.remove();
+					$.waypoints('refresh');	
 				};
 
 			setTimeout( $.proxy( function() {
@@ -423,6 +427,9 @@ var Grid = (function() {
 				if( !support ) {
 					onEndFn.call();
 				}
+
+
+
 
 			}, this ), 25 );
 			
@@ -472,7 +479,7 @@ var Grid = (function() {
 				previewOffsetT = this.$previewEl.offset().top - scrollExtra,
 				scrollVal = this.height + this.$item.data( 'height' ) + marginExpanded <= winsize.height ? position : this.height < winsize.height ? previewOffsetT - ( winsize.height - this.height ) : previewOffsetT;
 			
-			$body.animate( { scrollTop : scrollVal }, settings.speed );
+			$body.animate( { scrollTop : scrollVal }, settings.speed, "swing", function(){$.waypoints('refresh');});
 
 		},
 		setTransition  : function() {
