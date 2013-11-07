@@ -87,7 +87,7 @@
 
 .og-fullimg,
 .og-details {
-	width: 50%;
+	width: 41%;
 	float: left;
 	height: 100%;
 	overflow: hidden;
@@ -123,16 +123,7 @@
 }
 
 .og-details a {
-	font-weight: 700;
-	font-size: 16px;
-	color: #333;
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	padding: 10px 20px;
-	border: 3px solid #333;
-	display: inline-block;
-	margin: 30px 0 0;
-	outline: none;
+	display:none;
 }
 
 .og-details a::before {

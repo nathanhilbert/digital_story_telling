@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!DOCTYPE html >
+<html scrollleft="NaN">
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -17,6 +18,7 @@
 
         <link rel="stylesheet" type="text/css" href="css/default.css" />
         <link rel="stylesheet" type="text/css" href="css/component.css" />
+        <link rel="stylesheet" type="text/css" href="css/sideswipe.css" />
 
 
         <style type="text/css">
@@ -72,6 +74,12 @@
             .subvideo{
                 width: auto;
                 height: 540px;
+            }
+            .audiobutton{
+                display:block; background-color:blue;height:25px;width:25px;top:0px;
+            }
+            .playing{
+                background-color:yellow;
             }
         </style>
 
@@ -184,13 +192,13 @@
             });
           </script>
 
-        <!--Video Controller -->
+        <!--Media Controller -->
         <script>
 
             $(document).ready(function() {
                 //need a server that sends partial content, but that is not the case
               $("#video_intro").bind("timeupdate", function(){
-                    if(this.currentTime >= 5){
+                    if(this.currentTime >= 21){
                         this.currentTime = 0;
                         setTimeout(function() {
                            $("#video_intro").get(0).play();
@@ -199,8 +207,21 @@
                     }
                 });
 
-
-            
+              $(".audiowrapper").click(function(){
+                var tempaudioarray = $(this).children("audio");
+                if (tempaudioarray.length < 1){
+                    return;
+                }
+                var tempaudio = tempaudioarray[0];
+                if (tempaudio.currentTime == 0 || tempaudio.paused == true){
+                    tempaudio.play();
+                   $(tempaudio).siblings(".audiobutton").addClass("playing");
+                }
+                else {
+                    tempaudio.pause();
+                    $(tempaudio).siblings(".audiobutton").removeClass("playing");
+                }
+              });
 
             });
 
@@ -209,65 +230,124 @@
         <!-- Slideshow -->
         <script src="js/lightbox-2.6.min.js"></script>
 
+        <!-- Nav controller -->
+
+         <script>
+             $(document).ready(function() {
+                //need a server that sends partial content, but that is not the case
+              $("#video_intro").bind("timeupdate", function(){
+                    if(this.currentTime >= 21){
+                        this.currentTime = 0;
+                        setTimeout(function() {
+                           $("#video_intro").get(0).play();
+                        }, 1500);
+                        ;
+                    }
+                });
+
+              $(".audiowrapper").click(function(){
+                var tempaudioarray = $(this).children("audio");
+                if (tempaudioarray.length < 1){
+                    return;
+                }
+                var tempaudio = tempaudioarray[0];
+                if (tempaudio.currentTime == 0 || tempaudio.paused == true){
+                    tempaudio.play();
+                   $(tempaudio).siblings(".audiobutton").addClass("playing");
+                }
+                else {
+                    tempaudio.pause();
+                    $(tempaudio).siblings(".audiobutton").removeClass("playing");
+                }
+              });
+
+            });
+
+        </script>       
+
 
 
 
     </head>
-    <body>
+    <body scrollleft="NaN" class="maincontent-visible">
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <section class='introvideo'>
-            <video id="video_intro" class="videoclass" preload="auto" autoplay="true" loop="loop" volume="100">
-              <source src="media/Graphic1_Timeline_v1webmsd.webm" type="video/webm">
-              <source src="media/Graphic1_Timeline_v1oggtheora.ogv" type="video/ogg ogv" ;="" codecs="theora, vorbis">
-              <source src="media/Graphic1_Timeline_v1.mp4" type="video/mp4"> 
-              Video not supported
-            </video>
-
-        </section>
-        <div id='container' class='container'>
-            <div id='topblock' style="width:100%;display:block;background-color:green;">
-                <div class="dd">
-                <ul id="og-grid" class="og-grid">
-                <li> <a href="#" data-largesrc="img/3.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot."> <img src="img/3_thumb.jpg" alt="img01"/> </a> </li>
-                <li> <a href="#" data-largesrc="img/3.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu."> <img src="img/3_thumb.jpg" alt="img02"/> </a> </li>
-                <li> <a href="#" data-largesrc="img/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato."> <img src="img/3_thumb.jpg" alt="img03"/> </a> </li>
-                <li> <a href="#" data-largesrc="img/3.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot."> <img src="img/3_thumb.jpg" alt="img01"/> </a> </li>
-                </ul>
-                </div>
-            </div>
-            <div id='menu1_anchor'>
-                <div id='menu1' class="menu1 stickyitem"><a href="#menu1_anchor">Menu 1</a><a href="#menu2_anchor">Menu 2</a><a href="#menu3_anchor">Menu 3</a></div>
-            </div>
-
-
-            <div id='placement' style="height: 600px;width: 100%;"></div>
-            <div id='menu2_anchor'>
-                <div id='menu2' class="menu2 stickyitem"><a href="#menu1_anchor">Menu 1</a><a href="#menu2_anchor">Menu 2</a><a href="#menu3_anchor">Menu 3</a></div>
-            </div>
-
-            <div id='content2' style="height:1500px;width:200px;background-color:red;display:block;">Lots of content</div>
-            <div id='menu3_anchor'>
-                <div id='menu3' class="menu3 stickyitem"><a href="#menu1_anchor">Menu 1</a><a href="#menu2_anchor">Menu 2</a><a href="#menu3_anchor">Menu 3</a></div>
-            </div>
-
-            <div id='content23' style="height:350px;width:98%;background-color:red;display:block;">chunk of content</div>
-            <div class="subvideo">
-                <video id="video_sub1" class="videoclass" preload="auto" volume="100" controls>
-                  <source src="media/Graphic2_MapGraphic_v1.webmsd.webm" type="video/webm">
-                  <source src="media/Graphic2_MapGraphic_voggtheora.ogv" type="video/ogg ogv" ;="" codecs="theora, vorbis">
-                  <source src="media/Graphic2_MapGraphic_v1.mp4" type="video/mp4"> 
+        <div id="subreport1" class='panelswipe maincontent'>
+            <section class='introvideo'>
+                <video id="video_intro" class="videoclass" preload="auto" autoplay="true" loop="loop" volume="100">
+                  <source src="media/Graphic1_Timeline_v1webmsd.webm" type="video/webm">
+                  <source src="media/Graphic1_Timeline_v1oggtheora.ogv" type="video/ogg ogv" ;="" codecs="theora, vorbis">
+                  <source src="media/Graphic1_Timeline_v1.mp4" type="video/mp4"> 
                   Video not supported
                 </video>
+
+            </section>
+            <div id='container' class='container'>
+                <div id='topblock' style="width:100%;display:block;background-color:green;">
+                    <div class="dd">
+                    <ul id="og-grid" class="og-grid">
+                    <li> <a href="#" data-largesrc="img/3.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot."> <img src="img/3_thumb.jpg" alt="img01"/> </a> </li>
+                    <li> <a href="#" data-largesrc="img/3.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu."> <img src="img/3_thumb.jpg" alt="img02"/> </a> </li>
+                    <li> <a href="#" data-largesrc="img/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato."> <img src="img/3_thumb.jpg" alt="img03"/> </a> </li>
+                    <li> <a href="#" data-largesrc="img/3.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot."> <img src="img/3_thumb.jpg" alt="img01"/> </a> </li>
+                    </ul>
+                    </div>
+                </div>
+                <div id='menu1_anchor'>
+                    <div id='menu1' class="menu1 stickyitem"><a href="#menu1_anchor">Menu 1</a><a href="#menu2_anchor">Menu 2</a><a href="#menu3_anchor">Menu 3</a></div>
+                </div>
+
+
+                <div id='placement' style="height: 600px;width: 100%;"></div>
+                <div id='menu2_anchor'>
+                    <div id='menu2' class="menu2 stickyitem"><a href="#menu1_anchor">Menu 1</a><a href="#menu2_anchor">Menu 2</a><a href="#menu3_anchor">Menu 3</a></div>
+                </div>
+
+                <div id='content2' style="height:1500px;width:200px;background-color:red;display:block;">Lots of content</div>
+                <div id='menu3_anchor'>
+                    <div id='menu3' class="menu3 stickyitem"><a href="#menu1_anchor">Menu 1</a><a href="#menu2_anchor">Menu 2</a><a href="#menu3_anchor">Menu 3</a></div>
+                </div>
+
+                <div id='content23' style="height:350px;width:98%;background-color:red;display:block;">chunk of content</div>
+                <div class="subvideo">
+                    <video id="video_sub1" class="videoclass" preload="auto" volume="100" controls>
+                      <source src="media/Graphic2_MapGraphic_v1.webmsd.webm" type="video/webm">
+                      <source src="media/Graphic2_MapGraphic_voggtheora.ogv" type="video/ogg ogv" ;="" codecs="theora, vorbis">
+                      <source src="media/Graphic2_MapGraphic_v1.mp4" type="video/mp4"> 
+                      Video not supported
+                    </video>
+                </div>
+                <div id='content23' style="height:350px;width:98%;background-color:red;display:block;">chunk of content</div>
+                <div class='imageset'>
+                    <a href="img/3.jpg" data-lightbox="roadtrip"><span style='height:300px;width:300px;display:block;background-color:green;'>Click to view slides</span></a>
+                    <a href="img/3.jpg" data-lightbox="roadtrip"></a>
+                    <a href="img/3.jpg" data-lightbox="roadtrip"></a>
+                </div>
+                <div id='content23' style="height:350px;width:98%;background-color:red;display:block;">chunk of content</div>
+                <div class='audiowrapper' style="height:350px;width:98%;background-color:green;display:block;">
+                    <div class='audiobutton'>X</div>
+                    <audio>
+                      <source src="media/AnimalGame.mp3" type="audio/ogg">
+                      <source src="media/AnimalGame.mp3" type="audio/mpeg">
+                      Your browser does not support the audio element.
+                    </audio>
+                </div>
+
+                <div id='content23' style="height:350px;width:98%;background-color:red;display:block;">chunk of content</div>
+                <div class='audiowrapper' style="height:350px;width:98%;background-color:green;display:block;">
+                    <div class='audiobutton'>X</div>
+                    <audio controls>
+                      <source src="media/AnimalGame.mp3" type="audio/ogg">
+                      <source src="media/AnimalGame.mp3" type="audio/mpeg">
+                      Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <div id='content23' style="height:350px;width:98%;background-color:red;display:block;"><a href="#subreport1">Subreportrepot12</a></div>
             </div>
-            <div id='content23' style="height:350px;width:98%;background-color:red;display:block;">chunk of content</div>
-            <div class='imageset'>
-                <a href="img/3.jpg" data-lightbox="roadtrip"><span style='height:300px;width:300px;display:block;background-color:green;'>Click to view slides</span></a>
-                <a href="img/3.jpg" data-lightbox="roadtrip"></a>
-                <a href="img/3.jpg" data-lightbox="roadtrip"></a>
-            </div>
-            <div id='content23' style="height:350px;width:98%;background-color:red;display:block;">chunk of content</div>
+        </div>
+        <div id="subreport1" class="panelswipe subreport1">
+            <p>here is the report</p>
         </div>
 
 
