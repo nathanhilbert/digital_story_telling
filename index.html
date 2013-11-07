@@ -147,27 +147,6 @@
         </script>
 
 
-        <!--load elements for sticky menus -->
-        <script src="js/waypoints.js"></script>
-        <script src="js/waypoints-sticky.js"></script>
-
-        <script>
-
-            $(document).ready(function() {
-                $('#menu1').waypoint('sticky');
-                /*
-                $('#menu1').waypoint(function(direction){
-                    console.log(direction);
-                    //trigger BBQ state if need be
-                });
-*/
-                $('#menu2').waypoint('sticky');
-                $('#menu3').waypoint('sticky');
-            
-
-            });
-
-        </script>
 
         <!--starting smooth scroll and BBQ -->
           <script src="js/jquery.smooth-scroll.js"></script>
@@ -183,7 +162,8 @@
             .ready(function() {
               $(window).bind('hashchange', function(event) {
                 var tgt = location.hash.replace(/^#\/?/,'');
-                if ( document.getElementById(tgt) ) {
+                console.log(tgt);
+                if ( document.getElementById(tgt) && ! $("#" + tgt).hasClass("panelswipe")) {
                   $.smoothScroll({scrollTarget: '#' + tgt});
                 }
               });
@@ -263,13 +243,40 @@
 
             });
 
-        </script>       
+        </script>   
 
+
+        <script src="js/sideswipe.js"></script>    
+
+
+
+        <!--load elements for sticky menus -->
+        <script src="js/waypoints.js"></script>
+        <script src="js/waypoints-sticky.js"></script>
+
+        <script>
+
+            $(document).ready(function() {
+                $('#menu1').waypoint('sticky');
+                /*
+                $('#menu1').waypoint(function(direction){
+                    console.log(direction);
+                    //trigger BBQ state if need be
+                });
+*/
+                $('#menu2').waypoint('sticky');
+                $('#menu3').waypoint('sticky');
+                console.log("were are sticky now");
+            
+
+            });
+
+        </script>
 
 
 
     </head>
-    <body scrollleft="NaN" class="maincontent-visible">
+    <body scrollleft="NaN">
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->

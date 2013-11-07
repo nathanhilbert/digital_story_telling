@@ -1,10 +1,10 @@
 (function() {
   // http://www.zachstronaut.com/posts/2009/01/18/jquery-smooth-scroll-bugs.html
-  var scrollElement = 'html, body';
+  var scrollElement = 'body';
   var $scrollElement;
 
   $(function() {
-    $('html, body').each(function () {
+    $('body').each(function () {
       var initScrollLeft = $(this).attr('scrollLeft');
       
       $(this).attr('scrollLeft', initScrollLeft + 1);
@@ -26,10 +26,11 @@
       var hash = '#' + this.id;
 
       $('a[href="' + hash + '"]').click(function(event) {
+        console.log("animating");
         $scrollElement.stop().animate({
           scrollLeft: $panel.offset().left
         }, 500, 'swing', function() {
-          window.location.hash = hash;
+          //window.location.hash = hash;
         });
 
         event.preventDefault();
@@ -115,85 +116,7 @@
     });
   });
 
-  /* Docs nav highlighting */
-  $(function() {
-    $('.doc-section')
-      .waypoint(function(direction) {
-        var $links = $('a[href="#' + this.id + '"]');
-        $links.toggleClass('active', direction === 'down');
-      }, {
-        context: '#docs',
-        offset: '100%'
-      })
-      .waypoint(function(direction) {
-        var $links = $('a[href="#' + this.id + '"]');
-        $links.toggleClass('active', direction === 'up');
-      }, {
-        context: '#docs',
-        offset: function() {
-          return -$(this).height();
-        }
-      });
-  });
 
-  /* Get Started section notification examples */
-  $(function() {
-    var notify = function(message) {
-      var $message = $('<p style="display:none;">' + message + '</p>');
-
-      $('.notifications').append($message);
-      $message.slideDown(300, function() {
-        window.setTimeout(function() {
-          $message.slideUp(300, function() {
-            $message.remove();
-          });
-        }, 2000);
-      });
-    };
-
-    $('#example-basic').waypoint(function() {
-     notify('Basic example callback triggered.');
-    }, { context: '.panelswipe' });
-
-    $('#example-direction').waypoint(function(direction) {
-      notify('Direction example triggered scrolling ' + direction);
-    }, { context: '.panelswipe' });
-
-    $('#example-offset-pixels').waypoint(function() {
-      notify('100 pixels from the top');
-    }, {
-      offset: 100,
-      context: '.panelswipe'
-    });
-
-    $('#example-offset-percent').waypoint(function() {
-      notify('25% from the top');
-    }, {
-      offset: '25%',
-      context: '.panelswipe'
-    });
-
-    $('#example-offset-function').waypoint(function() {
-      notify('Element bottom hit window top');
-    }, {
-      offset: function() {
-        return -$(this).height();
-      },
-      context: '.panelswipe'
-    });
-
-    $('#example-context').waypoint(function() {
-      notify('Hit top of context');
-    }, { context: '.example-scroll-div' });
-
-    $('#example-handler').waypoint({
-      handler: function() {
-        notify('Handler option used');
-      },
-      offset: '50%',
-      context: '.panelswipe'
-    });
-  });
 
   /* Centering for About and Shortcut panels */
   $(function() {
