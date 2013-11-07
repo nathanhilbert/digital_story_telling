@@ -173,6 +173,28 @@
             });
           </script>
 
+        <!--Video Controller -->
+        <script>
+
+            $(document).ready(function() {
+                //need a server that sends partial content, but that is not the case
+              $("#video_intro").bind("timeupdate", function(){
+                    if(this.currentTime >= 5){
+                        this.currentTime = 0;
+                        setTimeout(function() {
+                           $("#video_intro").get(0).play();
+                        }, 1500);
+                        ;
+                    }
+                });
+
+              
+            
+
+            });
+
+        </script>
+
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -204,7 +226,18 @@
                 <div id='menu3' class="menu3 stickyitem"><a href="#menu1_anchor">Menu 1</a><a href="#menu2_anchor">Menu 2</a><a href="#menu3_anchor">Menu 3</a></div>
             </div>
 
-            <div id='content23' style="height:1500px;width:200px;background-color:red;display:block;">Lots of content</div>
+            <div id='content23' style="height:350px;width:98%;background-color:red;display:block;">chunk of content</div>
+            <div class="subvideo">
+                <video id="video_intro" preload="auto" autoplay="false" loop="loop" volume="100">
+                  <source src="media/Graphic2_MapGraphic_v1.webmsd.webm" type="video/webm">
+                  <source src="media/Graphic2_MapGraphic_voggtheora.ogv" type="video/ogg ogv" ;="" codecs="theora, vorbis">
+                  <source src="media/Graphic2_MapGraphic_v1.mp4" type="video/mp4"> 
+                  Video not supported
+                </video>
+                <div class="subvideo_overlay">Play</div>
+            </div>
+            <div id='content23' style="height:350px;width:98%;background-color:red;display:block;">chunk of content</div>
+            <div id='content23' style="height:350px;width:98%;background-color:red;display:block;">chunk of content</div>
         </div>
 
 
