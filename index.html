@@ -164,7 +164,7 @@
                 var tgt = location.hash.replace(/^#\/?/,'');
                 console.log(tgt);
                 if ( document.getElementById(tgt) && ! $("#" + tgt).hasClass("panelswipe")) {
-                  $.smoothScroll({scrollTarget: '#' + tgt});
+                  $.smoothScroll({scrollTarget: $('#' + tgt), scrollElement: $('#maincontent')});
                 }
               });
 
@@ -257,16 +257,18 @@
         <script>
 
             $(document).ready(function() {
-                $('#menu1').waypoint('sticky');
+                $('#menu1').waypoint('sticky', 
+                { context: '#maincontent' });
                 /*
                 $('#menu1').waypoint(function(direction){
                     console.log(direction);
                     //trigger BBQ state if need be
                 });
 */
-                $('#menu2').waypoint('sticky');
-                $('#menu3').waypoint('sticky');
-                console.log("were are sticky now");
+                $('#menu2').waypoint('sticky',
+                    { context: '#maincontent' });
+                $('#menu3').waypoint('sticky',
+                    { context: '#maincontent' });
             
 
             });
@@ -280,7 +282,7 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div id="subreport1" class='panelswipe maincontent'>
+        <div id="maincontent" class='panelswipe maincontent'>
             <section class='introvideo'>
                 <video id="video_intro" class="videoclass" preload="auto" autoplay="true" loop="loop" volume="100">
                   <source src="media/Graphic1_Timeline_v1webmsd.webm" type="video/webm">

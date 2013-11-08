@@ -40,6 +40,7 @@ var version = '1.4.13',
 
       this.each(function() {
 
+
         if (this == document || this == window) { return; }
         var el = $(this);
         if ( el[dir]() > 0 ) {
@@ -165,6 +166,8 @@ $.smoothScroll = function(options, px) {
       aniOpts = {},
       scrollprops = [];
 
+
+
   if (typeof options === 'number') {
     opts = $.extend({link: null}, $.fn.smoothScroll.defaults, optionOverrides);
     scrollTargetOffset = options;
@@ -177,12 +180,15 @@ $.smoothScroll = function(options, px) {
       }
     }
   }
+  console.log(scrollTargetOffset);
+  console.log(scrollDir);
 
   scrollDir = opts.direction == 'left' ? 'scrollLeft' : scrollDir;
 
   if ( opts.scrollElement ) {
     $scroller = opts.scrollElement;
     if ( !(/^(?:HTML|BODY)$/).test($scroller[0].nodeName) ) {
+      console.log($scroller);
       scrollerOffset = $scroller[scrollDir]();
     }
   } else {
@@ -198,7 +204,16 @@ $.smoothScroll = function(options, px) {
                         $(opts.scrollTarget)[offPos]()[opts.direction] ) ||
                         0;
 
-  aniProps[scrollDir] = scrollTargetOffset + scrollerOffset + opts.offset;
+  console.log("target offset from top of element");
+  console.log(scrollTargetOffset);
+  //scrollTargetOffset = 0- scrollTargetOffset;
+  console.log("scrolleroffset the way it is");
+  console.log(scrollerOffset);
+  console.log(opts.offset);
+  console.log($scroller);
+
+  aniProps[scrollDir] = scrollTargetOffset + $scroller.height() + opts.offset;
+  console.log(aniProps[scrollDir]);
   speed = opts.speed;
 
   // automatically calculate the speed of the scroll based on distance / coefficient
@@ -210,6 +225,7 @@ $.smoothScroll = function(options, px) {
     // divide the speed by the coefficient
     speed = speed / opts.autoCoefficent;
   }
+console.log(aniOpts);
 
   aniOpts = {
     duration: speed,
@@ -218,6 +234,8 @@ $.smoothScroll = function(options, px) {
       opts.afterScroll.call(opts.link, opts);
     }
   };
+  console.log(aniProps);
+  console.log(aniOpts);
 
   if (opts.step) {
     aniOpts.step = opts.step;
