@@ -1,6 +1,6 @@
 (function() {
   // http://www.zachstronaut.com/posts/2009/01/18/jquery-smooth-scroll-bugs.html
-  var scrollElement = 'body';
+  var scrollElement = 'html,body';
   var $scrollElement;
 
   $(function() {
@@ -27,11 +27,12 @@
 
       $('a[href="' + hash + '"]').click(function(event) {
         console.log("animating");
-        $scrollElement.stop().animate({
+        console.log($panel.offset().left);
+        console.log($panel);
+        console.log($scrollElement);
+        $("body,html").stop().animate({
           scrollLeft: $panel.offset().left
-        }, 500, 'swing', function() {
-          //window.location.hash = hash;
-        });
+        }, 500, 'swing');
 
         event.preventDefault();
       });
@@ -81,7 +82,6 @@
 
     /* Most finds will scroll a single panel. */
     var scrollToPanel = function(panel) {
-      console.log(panel);
       $scrollElement.scrollLeft($(panel).offset().left);
     };
 
@@ -106,7 +106,6 @@
 
     $('.panelswipe').scroll(function() {
       window.clearTimeout(timer);
-      console.log(this);
       timer = window.setTimeout(scrollToPanel, 50, this);
     });
 
