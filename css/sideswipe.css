@@ -118,3 +118,21 @@ a {
     width: 620px;
     margin: 60px auto;
     padding-bottom: 400px; }
+
+.subreport2 {
+  left: 200%;
+  background: #c5d5e5;
+  color: #626a72; }
+  .get-started a {
+    color: #626a72;
+    border-bottom-color: #939fab; }
+    .get-started a:hover {
+      color: #444a50;
+      border-bottom-color: #626a72; }
+  .get-started p > code {
+    padding: 0 2px;
+    background: #e2eaf2; }
+  .get-started .inner {
+    width: 620px;
+    margin: 60px auto;
+    padding-bottom: 400px; }

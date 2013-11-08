@@ -1,5 +1,5 @@
 <!DOCTYPE html >
-<html scrollleft="NaN">
+<html scrollleft="NaN" scrolltop="NaN">
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -154,6 +154,10 @@
           <script>
             $(document)
             .on('click', 'a[href*="#"]', function() {
+                console.log(this);
+                if ($(this).hasClass("storestate")){
+                    $.bbq.pushState( '#/' + this.id );
+                }
               if ( this.hash && this.pathname === location.pathname ) {
                 $.bbq.pushState( '#/' + this.hash.slice(1) );
                 return false;
@@ -278,7 +282,7 @@
 
 
     </head>
-    <body scrollleft="NaN">
+    <body scrollleft="NaN" scrolltop="NaN" style="overflow-y:hidden;">
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -352,13 +356,22 @@
                       Your browser does not support the audio element.
                     </audio>
                 </div>
-                <div id='content23' style="height:350px;width:98%;background-color:red;display:block;"><a href="#subreport1">Subreportrepot12</a></div>
+                <div id='content23' style="height:350px;width:98%;background-color:red;display:block;"><a id="subreport1_button" class="storestate" href="#subreport1">Subreportrepot12</a><a id="subreport2_button" class="storestate" href="#subreport2">Subreportrepot12</a></div>
+
             </div>
         </div>
         <div id="subreport1" class="panelswipe subreport1">
+            <div id='content23' style="height:350px;width:98%;background-color:red;display:block;">chunk of content</div>
             <p>here is the report</p>
+            <div id='content23' style="height:350px;width:98%;background-color:red;display:block;">chunk of content</div>
+            <div id='content23' style="height:350px;width:98%;background-color:red;display:block;">chunk of content</div>
         </div>
-
+        <div id="subreport2" class="panelswipe subreport2">
+            <div id='content23' style="height:350px;width:98%;background-color:red;display:block;">chunk of content</div>
+            <p>here is the report</p>
+            <div id='content23' style="height:350px;width:98%;background-color:red;display:block;">chunk of content</div>
+            <div id='content23' style="height:350px;width:98%;background-color:red;display:block;">chunk of content</div>
+        </div>
 
 
         <script src="js/plugins.js"></script>

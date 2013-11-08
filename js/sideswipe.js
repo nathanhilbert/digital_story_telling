@@ -81,6 +81,7 @@
 
     /* Most finds will scroll a single panel. */
     var scrollToPanel = function(panel) {
+      console.log(panel);
       $scrollElement.scrollLeft($(panel).offset().left);
     };
 
@@ -105,6 +106,7 @@
 
     $('.panelswipe').scroll(function() {
       window.clearTimeout(timer);
+      console.log(this);
       timer = window.setTimeout(scrollToPanel, 50, this);
     });
 
