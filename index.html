@@ -81,6 +81,13 @@
             .playing{
                 background-color:yellow;
             }
+
+
+            /**TImeline csss
+            **/
+            .tg-timeline-start{
+                display:none;
+            }
         </style>
 
 
@@ -134,12 +141,14 @@
         <script>
         var tg1, tg_actor, myMED;
            $(document).ready(function () { 
+            /*need to change timeglider data in timeglider/TG_Mediator.js
+                because file system can not ajax*/
               tg1 = $("#placement").timeline({
-                 "data_source":"json/exampledata.json",
+                 "data_source":"json/timelinedata.json",
                  "min_zoom":20,
                  "max_zoom":45,
                  "show_footer":false,
-                 "display_zoom_level":true,
+                 "display_zoom_level":false,
                  "mousewheel":"none"
              });
 
