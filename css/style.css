@@ -1,0 +1,72 @@
+/* ------------------------------------------------------------------------------ */
+	/*
+		
+	 Project Name:   Africa Lead Report
+	 Websites url:   www.n/a.com
+	 File:		     style.css
+	 Author:  		 Benga Ajakaye // Nathan Hilbert
+	 Creator: 	     Development Alternative, Inc - DAI
+	 Creation date:  Nov 08, 2012
+	 Version: 		 1.0
+	 Copyright: 	 (c) 2013
+	 
+
+	*/
+/* ------------------------------------------------------------------------------ */
+
+
+body {margin: 0px; padding: 0px; background-color: #fff}
+
+/* StartVideo //////////////////////////////////////////////////////////// */
+.startVideo {width: 100%; height: 600px; background-color: #ccc}
+	.startVideo h3 {color: brown; padding: 200px 0px 0px 0px; margin: 0 auto; text-align: center;}
+
+.floating_intro {
+	position: absolute;
+	margin: 0px auto;
+	display: block;
+	width: 303px;
+	height: 90px;
+	left: 5%;
+	top: 5%;
+	background-image: url('../img/africalead-logo.png');
+	background-repeat: no-repeat;
+}
+ 
+.skipToContent {margin: 0px auto; width: 53px; height: 50px; z-index: 999; position: relative; padding-bottom:2px;}  
+.skipToContent a{}
+.skipToContent a:hover {zoom: 1; filter: alpha(opacity=8);opacity: 0.8;}
+
+
+
+/* Logo/logo/introduction/navigation //////////////////////////////////////////////////////////// */
+.startVideo {width: 100%; height: 600px; background-color: #ccc}
+.wrapper {color: #555; background-color: #fffbf8; width: 100%; padding: 70px 0px 0px 0px; overflow: hidden}
+	.wrapper h1{color: #572902; background: url(images/headerBG.png) no-repeat bottom center; font-size: 38px; text-align: center; padding: 0px; line-height: 115px; margin: 0px; font-family: 'Armata', sans-serif; font-weight: normal;}
+	.wrapper p{text-align: center; font-size: 17px;}
+
+.logo {width: 325px; overflow: hidden; margin: 0 auto 0px; display: block;}
+.introText {width: 940px; margin: 40px auto 50px; padding: 0px}
+.navBoxes {width: 940px; overflow: hidden; margin: 0 auto 0px; padding: 20px;}
+	.navBoxes ul {margin: 0 auto; padding: 0; list-style: none;}
+	.navBoxes li {width: 214px; height: 200px; float: left; margin: 0px 10px 0px 10px; background-color: #fff}	
+	
+.subNavigation {width: 100%; height: 128px; margin: 0 0 20px 0; background: url(images/subNavIMG.png);}
+	.subHolder {width: 940px; overflow: hidden; margin: 0 auto;}
+	.subHolder h2 {font-size: 35px; color: #fff; font-family: 'Armata' sans-serif; margin: 50px 0px 0px 0px; font-weight: normal; float: left}	
+	.subHolder h3 {font-size: 17px; color: #fff; margin: 67px 0px 0px 130px;font-family: 'Armata' sans-serif; font-weight: normal; float: left}		
+
+.contentWrap {width: 940px; overflow: hidden; margin: 0 auto 30px; background: url(images/hrLine.png) bottom left no-repeat}
+	.content {width: 940px; overflow: hidden; margin: 0 auto; padding: 0px 0px 30px 0px}
+	.content h2 {font-size: 22px; color: #363636; font-family: 'Armata' sans-serif; margin: 50px 0px 0px 0px; font-weight: normal}	
+	.content img {padding: 6px; float: left; margin: 0px 20px 0px 0px; background-color: #fff}
+	.content p {font-size: 14px; text-align: left; -moz-column-count:2; /* Firefox */ -webkit-column-count:2; /* Safari and Chrome */ column-count:2; text-align: justify; text-justify: newspaper}
+	.contentLeft  {width: 450px; float: left; overflow: hidden; background-color: #ff}
+	.contentRight {width: 450px; float: left; overflow: hidden; background-color: #ff}
+	
+	.video800 {width:940px; height: 280px; margin: 20px auto 40px; background-color: #999; clear:both}
+	.video450 {width:450px; height: 180px; margin: 10px 0px 30px 0px; background-color: #777; float: left}
+	.video230 {width:230px; height: 180px;  margin: 10px 7px 30px 7px; background-color: #555; float: left}
+	
+	
+	

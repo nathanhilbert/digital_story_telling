@@ -84,55 +84,11 @@ a {
 */
 
 .maincontent {
-  left: 0;
-  background: #c5e5d5;
-  color: #62726a; }
-  .about h3 {
-    color: #44504a; }
-  .about a {
-    color: #62726a; }
-    .about a:hover, .about a:focus {
-      color: #44504a; }
-  .about .inner {
-    width: 620px;
-    position: absolute;
-    left: 50%;
-    top: 60px;
-    margin: 0 0 0 -310px; }
+  left: 0;}
 
 
 .subreport1 {
-  left: 100%;
-  background: #c5d5e5;
-  color: #626a72; }
-  .get-started a {
-    color: #626a72;
-    border-bottom-color: #939fab; }
-    .get-started a:hover {
-      color: #444a50;
-      border-bottom-color: #626a72; }
-  .get-started p > code {
-    padding: 0 2px;
-    background: #e2eaf2; }
-  .get-started .inner {
-    width: 620px;
-    margin: 60px auto;
-    padding-bottom: 400px; }
+  left: 100%; }
 
 .subreport2 {
-  left: 200%;
-  background: #c5d5e5;
-  color: #626a72; }
-  .get-started a {
-    color: #626a72;
-    border-bottom-color: #939fab; }
-    .get-started a:hover {
-      color: #444a50;
-      border-bottom-color: #626a72; }
-  .get-started p > code {
-    padding: 0 2px;
-    background: #e2eaf2; }
-  .get-started .inner {
-    width: 620px;
-    margin: 60px auto;
-    padding-bottom: 400px; }
+  left: 200%;}

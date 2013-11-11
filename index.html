@@ -7,11 +7,19 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
+        <title>Africa Lead (Africa Leadership Training and Capacity Building Program )</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+       <meta name="keywords" content="Africa Lead (Africa Leadership Training and Capacity Building Program )">
+       <meta name="description" content="Africa Lead (Africa Leadership Training and Capacity Building Program )">
+       <meta name="responsible_official" content="Africa Lead (Africa Leadership Training and Capacity Building Program )" />
+       <meta name="author" content="OIMT // Benga Ajakaye — DAI — www.dai.com" />
+       <meta name="posted" content="11/08/2013" />
+       <meta name="language" content="English" />
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
@@ -22,8 +30,23 @@
         <link rel="stylesheet" type="text/css" href="css/component.css" />
         <link rel="stylesheet" type="text/css" href="css/sideswipe.css" />
 
+        <!-- This is for timeglider -->
+        <link rel="stylesheet" href="css/jquery-ui-1.10.3.custom.css" type="text/css" charset="utf-8">
+        <link rel="stylesheet" href="timeglider/Timeglider.css" type="text/css" charset="utf-8">
+        <link rel="stylesheet" href="timeglider/timeglider.datepicker.css" type="text/css" charset="utf-8">
+
+        <link rel="stylesheet" href="css/lightbox.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="css/style.css" media="all"/>
+
+
 
         <style type="text/css">
+        @font-face {
+              font-family: 'Armata';
+              font-style: normal;
+              font-weight: 400;
+              src: local('Armata'), local('Armata-Regular'), url(fonts/FG9R9aX-RIX_AvJI8USOWg.woff) format('woff');
+            }
             .stickyitem{
                 
                 height:30px;width:100%;display:block;
@@ -97,12 +120,6 @@
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
 
-        <!-- This is for timeglider -->
-        <link rel="stylesheet" href="css/jquery-ui-1.10.3.custom.css" type="text/css" charset="utf-8">
-        <link rel="stylesheet" href="timeglider/Timeglider.css" type="text/css" charset="utf-8">
-        <link rel="stylesheet" href="timeglider/timeglider.datepicker.css" type="text/css" charset="utf-8">
-
-        <link rel="stylesheet" href="css/lightbox.css" media="screen">
 
         <script src="js/jquery-1.9.1.min.js"></script>
         <script src="js/jquery-ui-1.10.3.custom.min.js" type="text/javascript" charset="utf-8"></script>
@@ -112,9 +129,9 @@
         <script>
 
            $(document).ready(function () { 
-                          $(".container").css('top', $(window).height()-50);
+                          $(".container").css('top', $(window).height()-52);
                   $(window).resize(function() {
-                    $(".container").css('top', $(window).height()-50);
+                    $(".container").css('top', $(window).height()-52);
                   });
             });
         </script>
@@ -337,14 +354,22 @@
         <![endif]-->
         <div id="maincontent" class='panelswipe maincontent'>
             <section class='introvideo'>
+                <div class="floating_intro"></div>
                 <video id="video_intro" class="videoclass video_intro" preload="auto" autoplay="true" loop="loop" volume="0">
-                  <source src="media/Graphic_Timeline_v2.webm" type="video/webm">
+                  <source src="media/cassava_intro.webm" type="video/webm">
                   Video not supported
                 </video>
 
+
             </section>
+
             <div id='container' class='container'>
-                <div id='topblock' style="width:100%;display:block;background-color:green;">
+                <div class="skipToContent">
+                    <a href="#topblock">
+                        <img src="img/skipContent.png">
+                    </a>
+                </div>
+                <div id='topblock' style="width:100%;">
                     <div class="dd">
                     <ul id="og-grid" class="og-grid">
                     <li> <a href="#" data-largesrc="img/3.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot."> <img src="img/3_thumb.jpg" alt="img01"/> </a> </li>
