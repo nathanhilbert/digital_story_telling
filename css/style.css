@@ -15,13 +15,11 @@
 /* ------------------------------------------------------------------------------ */
 
 
-body {margin: 0px; padding: 0px; background-color: #fff}
-
 /* StartVideo //////////////////////////////////////////////////////////// */
 .startVideo {width: 100%; height: 600px; background-color: #ccc}
 	.startVideo h3 {color: brown; padding: 200px 0px 0px 0px; margin: 0 auto; text-align: center;}
 
-.floating_intro {
+.floating_intro_logo {
 	position: absolute;
 	margin: 0px auto;
 	display: block;
@@ -32,6 +30,32 @@ body {margin: 0px; padding: 0px; background-color: #fff}
 	background-image: url('../img/africalead-logo.png');
 	background-repeat: no-repeat;
 }
+
+.floating_intro_info{
+position: absolute;
+margin: 0px auto;
+display: block;
+width: 80%;
+height: 90px;
+left: 5%;
+bottom: 225px;
+margin-left: auto;
+margin-right: auto;
+color: white;
+text-shadow: 0px 0px 9px black;
+}
+
+.wrapper h1 {
+color: #572902;
+background: url('../img/headerBG.png') no-repeat bottom center;
+font-size: 38px;
+text-align: center;
+padding: 0px;
+line-height: 115px;
+margin: 0px;
+font-family: 'Armata', sans-serif;
+font-weight: normal;
+}
  
 .skipToContent {margin: 0px auto; width: 53px; height: 50px; z-index: 999; position: relative; padding-bottom:2px;}  
 .skipToContent a{}
@@ -41,9 +65,13 @@ body {margin: 0px; padding: 0px; background-color: #fff}
 
 /* Logo/logo/introduction/navigation //////////////////////////////////////////////////////////// */
 .startVideo {width: 100%; height: 600px; background-color: #ccc}
-.wrapper {color: #555; background-color: #fffbf8; width: 100%; padding: 70px 0px 0px 0px; overflow: hidden}
-	.wrapper h1{color: #572902; background: url(images/headerBG.png) no-repeat bottom center; font-size: 38px; text-align: center; padding: 0px; line-height: 115px; margin: 0px; font-family: 'Armata', sans-serif; font-weight: normal;}
+.wrapper {color: #555; background-color: #fffbf8; width: 100%; padding: 35px 0px 0px 0px; overflow: hidden}
+	.wrapper h1{color: #572902; background: url('../img/headerBG.png') no-repeat bottom center; font-size: 38px; text-align: center; padding: 0px; line-height: 115px; margin: 0px; font-family: 'Armata', sans-serif; font-weight: normal;}
 	.wrapper p{text-align: center; font-size: 17px;}
+
+.subwrapper{color: #555; background-color: #fffbf8; width: 100%; padding: 35px 0px 0px 0px; overflow: hidden}
+	.subwrapper h1{color: #572902; background: url('../img/headerBG.png') no-repeat bottom center; font-size: 38px; text-align: center; padding: 0px; line-height: 115px; margin: 0px; font-family: 'Armata', sans-serif; font-weight: normal;}
+	.subwrapper p{text-align: justify; font-size: 13px;}
 
 .logo {width: 325px; overflow: hidden; margin: 0 auto 0px; display: block;}
 .introText {width: 940px; margin: 40px auto 50px; padding: 0px}
@@ -51,12 +79,24 @@ body {margin: 0px; padding: 0px; background-color: #fff}
 	.navBoxes ul {margin: 0 auto; padding: 0; list-style: none;}
 	.navBoxes li {width: 214px; height: 200px; float: left; margin: 0px 10px 0px 10px; background-color: #fff}	
 	
-.subNavigation {width: 100%; height: 128px; margin: 0 0 20px 0; background: url(images/subNavIMG.png);}
-	.subHolder {width: 940px; overflow: hidden; margin: 0 auto;}
-	.subHolder h2 {font-size: 35px; color: #fff; font-family: 'Armata' sans-serif; margin: 50px 0px 0px 0px; font-weight: normal; float: left}	
-	.subHolder h3 {font-size: 17px; color: #fff; margin: 67px 0px 0px 130px;font-family: 'Armata' sans-serif; font-weight: normal; float: left}		
+.subNavigation {width: 100%; height: 128px; margin: 0 0 20px 0; background: url('../img/subNavIMG.png');}
+	.subHolder {width: 940px; overflow: hidden; margin: 0 10px;position: relative;}
+	.subHolder h2 {font-size: 35px; color: #fff; font-family: 'Armata' sans-serif; margin: 0px 0px 0px 0px; font-weight: normal; display:inline-block; width:175px;}	
+	.subHolder h3 {font-size: 17px; color: #fff; margin: 0px 0px 0px 0px;font-family: 'Armata' sans-serif; font-weight: normal; float: right}		
+	.subHolder a{
+		color:white;
+		text-decoration: none;
+		bottom-margin:5px;
+		display:inline-block;
+		width:100px;
+		padding-top:20px;
+	}
+	.subHolder a:hover{
+		zoom: 1; filter: alpha(opacity=6);opacity: 0.6;
 
-.contentWrap {width: 940px; overflow: hidden; margin: 0 auto 30px; background: url(images/hrLine.png) bottom left no-repeat}
+	}
+
+.contentWrap {min-width: 940px; overflow: hidden; margin: 0 auto 30px; background: url('../img/hrLine.png') bottom left no-repeat}
 	.content {width: 940px; overflow: hidden; margin: 0 auto; padding: 0px 0px 30px 0px}
 	.content h2 {font-size: 22px; color: #363636; font-family: 'Armata' sans-serif; margin: 50px 0px 0px 0px; font-weight: normal}	
 	.content img {padding: 6px; float: left; margin: 0px 20px 0px 0px; background-color: #fff}
@@ -67,6 +107,68 @@ body {margin: 0px; padding: 0px; background-color: #fff}
 	.video800 {width:940px; height: 280px; margin: 20px auto 40px; background-color: #999; clear:both}
 	.video450 {width:450px; height: 180px; margin: 10px 0px 30px 0px; background-color: #777; float: left}
 	.video230 {width:230px; height: 180px;  margin: 10px 7px 30px 7px; background-color: #555; float: left}
+
+#topmenu .dd ul li a {cursor:pointer;}
+#topmenu .dd ul li a :hover{
+	zoom: 1; filter: alpha(opacity=8);opacity: 0.8;
+}
+
+.shoutbox{
+	display: block;
+	width: 40%;
+	float: right;
+	margin-left: 42px;
+	background-color: #CCCCCC;
+	padding: 20px;
+	margin-right: 42px;
+	border-top:thick solid #65b561;
+	border-bottom:thick solid #65b561;
+	position:relative;
+}
+
+.shoutborder{
+	content: '';
+	position: absolute;
+	width: 75px;
+	height: 5px;
+	background: #65b561;
+	padding-left: -10px;
+	margin-left: -20px;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	transform: rotate(90deg);
+	margin:30px;
+}
+
+.shoutright-top {
+	top:0px;right:0px;
+	margin-right: -37px;
+}
+.shoutleft-top {
+	top:0px;left:0px;
+	margin-left:-37px;
+}
+.shoutright-bottom {
+	bottom:0px;right:0px;
+	margin-right: -37px;
+}
+.shoutleft-bottom {
+	bottom:0px;left:0px;
+	margin-left:-37px;
+}
+
+
+
+.videooverlay{
+	cursor: pointer;
+	display: block;
+	height: 50px;
+	left: 20px;
+	position: absolute;
+	width: 139px;
+	background: url("img/playheads.png") no-repeat scroll 0 -320px transparent;
+	bottom: 20px;
+}
 	
 	
 	

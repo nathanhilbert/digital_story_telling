@@ -49,7 +49,7 @@
             }
             .stickyitem{
                 
-                height:30px;width:100%;display:block;
+                height:50px;width:100%;display:block;
             }
             .menu1{
                 z-index:5001;
@@ -68,7 +68,10 @@
 
                 position:fixed;
                 top:0;
-                box-shadow:0 2px 4px rgba(0, 0, 0, .3);
+                /*box-shadow:0 2px 4px rgba(0, 0, 0, .3);*/
+                  -webkit-box-shadow: 0px 2px 4px #000000;
+                       -moz-box-shadow: 0px 2px 4px #000000;
+                            box-shadow: 0px 2px 4px #000000;
 
 
             }
@@ -83,6 +86,17 @@
                 min-width: 100%;
                 min-height: 100%;
                 max-width: 1000%;
+                max-height: 1000%;
+                width: auto;
+                height: auto;
+                z-index: -1000;
+                overflow: hidden;
+                border-bottom: 1px solid #e4e4e4;
+            }
+            .subvideo .videoclass{
+                min-width: 100%;
+                min-height: 100%;
+                max-width: 960px;
                 max-height: 1000%;
                 width: auto;
                 height: auto;
@@ -305,7 +319,7 @@
                     });
                 })
                //$("#video_intro").get(0).play();
-            }, 1000);
+            }, 1500);
 
 
 
@@ -327,17 +341,13 @@
         <script>
 
             $(document).ready(function() {
-                $('#menu1').waypoint('sticky', 
+                $('#context').waypoint('sticky', 
                 { context: '#maincontent' });
-                /*
-                $('#menu1').waypoint(function(direction){
-                    console.log(direction);
-                    //trigger BBQ state if need be
-                });
-*/
-                $('#menu2').waypoint('sticky',
+                $('#activities').waypoint('sticky',
                     { context: '#maincontent' });
-                $('#menu3').waypoint('sticky',
+                $('#outcomes').waypoint('sticky',
+                    { context: '#maincontent' });
+                $('#appendices').waypoint('sticky',
                     { context: '#maincontent' });
             
 
@@ -354,7 +364,13 @@
         <![endif]-->
         <div id="maincontent" class='panelswipe maincontent'>
             <section class='introvideo'>
-                <div class="floating_intro"></div>
+                <div class="floating_intro_logo"></div>
+                <div class='floating_intro_info'>
+                    <h1>AFRICA LEADERSHIP TRAINING AND CAPACITY BUILDING PROGRAM</h2>
+                    <h3> Developing a cadre of African leaders who will design and implement food security strategies and investment plans</h3>
+                    <h1>FINAL REPORT</h1>
+
+                </div>
                 <video id="video_intro" class="videoclass video_intro" preload="auto" autoplay="true" loop="loop" volume="0">
                   <source src="media/cassava_intro.webm" type="video/webm">
                   Video not supported
@@ -365,26 +381,110 @@
 
             <div id='container' class='container'>
                 <div class="skipToContent">
-                    <a href="#topblock">
+                    <a href="#introduction">
                         <img src="img/skipContent.png">
                     </a>
                 </div>
-                <div id='topblock' style="width:100%;">
-                    <div class="dd">
-                    <ul id="og-grid" class="og-grid">
-                    <li> <a href="#" data-largesrc="img/3.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot."> <img src="img/3_thumb.jpg" alt="img01"/> </a> </li>
-                    <li> <a href="#" data-largesrc="img/3.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu."> <img src="img/3_thumb.jpg" alt="img02"/> </a> </li>
-                    <li> <a href="#" data-largesrc="img/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato."> <img src="img/3_thumb.jpg" alt="img03"/> </a> </li>
-                    <li> <a href="#" data-largesrc="img/3.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot."> <img src="img/3_thumb.jpg" alt="img01"/> </a> </li>
-                    </ul>
+                <div id='introduction' style='width:100%'>
+                    <div class="wrapper">
+                        <h1 id="intro">Introduction</h1>
+                        <div>
+                        <p>
+    The purpose of this report is to summarize and describe the USAID’s Africa Lead program and the four tasks that were implemented over the three year life of the program. This report is also written to both present the results and outcomes of the program as well as capture the main lessons that have been learned from the design, customization and implementation of Africa Lead’s tasks. 
+                        </p>
+                        <p>
+    This report is structured by first presenting an overall summary of the Africa Lead program, its goals, objectives and operational structure. This is followed by a description of each of the four tasks providing an overview for each task with a description of the main activities that were implemented, along with the overall results and outcomes of the tasks. These sections are then followed by a discussion of the programmatic and operational lessons learned from throughout the program.
+                        </p>
+                            <div id='topmenu' style="width:100%;">
+                                <div class="dd">
+                                <ul id="og-grid" class="og-grid">
+                                <li> <a href="#" data-largesrc="img/contextIMG.png" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot."> <img src="img/contextIMG.png" alt="Context"/> </a> </li>
+                                <li> <a href="#" data-largesrc="img/activitiesIMG.png" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu."> <img src="img/activitiesIMG.png" alt="img02"/> </a> </li>
+                                <li> <a href="#" data-largesrc="img/outcomeIMG.png" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato."> <img src="img/outcomeIMG.png" alt="img03"/> </a> </li>
+                                <li> <a href="#" data-largesrc="img/appendicesIMG.png" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot."> <img src="img/appendicesIMG.png" alt="img01"/> </a> </li>
+                                </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div id='menu1_anchor'>
-                    <div id='menu1' class="menu1 stickyitem"><a href="#menu1_anchor">Menu 1</a><a href="#menu2_anchor">Menu 2</a><a href="#menu3_anchor">Menu 3</a></div>
+
+                <div id='context_anchor'>
+                    <div id='context' class="subNavigation menu1 stickyitem">
+                        <div class="subHolder">
+                        <a href="#introduction">Summary</a>
+                        <h2>Context</h2><a href="#context_anchor">Activities</a><a href="#menu2_anchor">Outcomes</a><a href="#menu3_anchor">Appendices</a>
+                        <h3>Background and History of Project</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subwrapper">
+                    <h2 id="intro">Background and History of Project</h2>
+                    <p>
+Africa Lead is a program sponsored by the U.S. government’s Agency for International Development (USAID) which was designed to support the capacity building program of the US Government’s Feed the Future (FTF) Initiative, which aligns U.S. Government development assistance with Africa-owned agriculture development plans that are, in turn, aligned with the African Union’s Comprehensive Africa Agriculture Development Program (CAADP). CAADP seeks to contribute to the MDG goals by ensuring that governments throughout the continent apply 10% of their public budgets to agriculture in an effort to achieve the 6% annual growth in agricultural productivity that is needed to achieve sustainable food security throughout the continent.
+                    </p>
+                    <p>
+Africa Lead is implemented by lead RAISE Plus IQC holder, DAI and supported by Management Systems International (MSI), Winrock International, Training Resources Group (TRG), ECI Africa Consulting (Pty) Ltd., and Michigan State University (MSU). Africa Lead operates across three regions in Sub-Saharan Africa from two offices. Working across public, civil society, university and private sector institutions, Africa Lead seeks to ensure that there are leaders trained to maintain a critical mass of food security “Champions” who will drive agriculture-led development by leading and implementing the Regional and National Agriculture Investment Plans within the Comprehensive Africa Agriculture Development Program (CAADP) framework.
+                    </p>
+                    <div class="subvideo">
+                        <div class="videooverlay_text">text</div>
+                        <div class="videooverlay_play">play</div>
+
+                        <video id="video_sub1" class="videoclass" preload="auto" volume="0" controls>
+                            <source src="media/Graphic4_OrgLogos_v1.webm" type="video/webm">
+                          Video not supported
+                        </video>
+                    </div>
+
+                    <p>
+                        When the project started it was implemented through three regional offices–Accra, Ghana; Nairobi, Kenya; and Pretoria, South Africa–each run by a Regional Deputy Chief of Party (DCOP).  However at the end of July 2012 the Pretoria office was closed and program implementation for Southern Africa was handled by the Nairobi office, becoming the Africa Lead East and Southern Africa (ESA) office. Program implementation and operations in the Nairobi and Accra offices are supported by a Bethesda-based office headed by the program’s Chief of Party (COP).
+                    </p>
+
+                    <p>
+                        Africa Lead was initially a two-year task order under the RAISE Plus Indefinite Quantity Contract (IQC) mechanism, designed to run from September 20, 2010 to September 30, 2012, with a budget ceiling of $21,332,381. As of a September 30, 2012 contract modification, the Program was extended for one year (through September 2013) and the ceiling was raised by $4,850,000 to $26,182,381. In addition, Africa Lead received a 3 month no cost extension in September 2013, putting the final end of contract as November 30, 2013. 
+                    </p>
+
+
+                </div>
+
+                <div class="subwrapper">
+
+                    <h2 id="intro">Goals and Purpose of Africa Lead </h2>
+                    <div class="shoutbox shoutboxright">
+                        <div class="shoutborder shoutright-top"></div>
+                        <div class="shoutborder shoutleft-top"></div>
+                        <div class="shoutborder shoutright-bottom"></div>
+                        <div class="shoutborder shoutleft-bottom"></div>
+                        <h4>Africa Lead has four main goals:</h4>
+                        <ul>
+                            <li>To provide training to strengthen capacity of African professional to assume leadership roles in their own institutions for moving the CAADP agenda forward</li>
+                            <li>To assess human resource and institutional capacity to inform the types of training and investment that will impact the ability of key institutions to meet FTF larger goals</li>
+                            <li>To develop a data base of African institutions who can provide training in priority areas</li>
+                            <li>To provide organizational and logistical support to participant trainings in priority areas</li>
+                        </ul>
+
+                    </div>
+                    <p>Africa Lead is a highly flexible mechanism that provided a variety of capacity building options to the USAID South, East and West Africa Regional Missions and to local Missions in all 12 African Feed the Future (FTF) focus and aligned countries. Africa Lead provides leadership training, capacity assessments, logistical support for training and innovative short courses and internships/twinning arrangements prioritized in consultation with missions and partner countries and institutions, and a database of training offerings on the continent that can be matched to the leadership training and capacity building needs.
+                    </p>
+                    <p>
+                     The flexibility of Africa Lead as a mechanism means that the same set of tools can be used for institutional capacity assessments and for capacity building needs in a wide range of different contexts and environments, and can be used at the continental, regional, national or sub-national levels. By providing these capacity building options it strived to increase the participation of African leaders and institutions engaged in the CAADP process (SO1) and to strengthen key leaders technical and managerial skills and knowledge of agriculture systems and food security (SO2).
+                    </p>
+
+                    <div class="subvideo">
+                        <video id="video_sub2" class="videoclass" preload="auto" volume="0" controls>
+                            <source src="media/Graphic4_OrgLogos_v1.webm" type="video/webm">
+                          Video not supported
+                        </video>
+                    </div>
+
+
                 </div>
 
 
-                <div id='placement' style="height: 600px;width: 100%;"></div>
+
+
+
                 <div id='menu2_anchor'>
                     <div id='menu2' class="menu2 stickyitem"><a href="#menu1_anchor">Menu 1</a><a href="#menu2_anchor">Menu 2</a><a href="#menu3_anchor">Menu 3</a></div>
                 </div>

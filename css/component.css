@@ -48,14 +48,14 @@
 }
 
 .og-expander-inner {
-	padding: 50px 30px;
+	padding: 45px 30px;
 	height: 100%;
 }
 
 .og-close {
 	position: absolute;
-	width: 40px;
-	height: 40px;
+	width: 30px;
+	height: 30px;
 	top: 20px;
 	right: 20px;
 	cursor: pointer;
@@ -67,7 +67,7 @@
 	position: absolute;
 	width: 100%;
 	top: 50%;
-	height: 1px;
+	height: 3px;
 	background: #888;
 	-webkit-transform: rotate(45deg);
 	-moz-transform: rotate(45deg);
@@ -87,7 +87,8 @@
 
 .og-fullimg,
 .og-details {
-	width: 41%;
+	width: 30%;
+	min-width:150px;
 	float: left;
 	height: 100%;
 	overflow: hidden;
@@ -95,7 +96,9 @@
 }
 
 .og-details {
-	padding: 0 40px 0 20px;
+	padding: 0 15px 0 20px;
+	width:60%;
+	min-width: 300px;
 }
 
 .og-fullimg {
@@ -110,9 +113,10 @@
 
 .og-details h3 {
 	font-weight: 300;
-	font-size: 52px;
-	padding: 40px 0 10px;
+	font-size: 40px;
+	padding: 20px 0 10px;
 	margin-bottom: 10px;
+	margin-top:0px;
 }
 
 .og-details p {

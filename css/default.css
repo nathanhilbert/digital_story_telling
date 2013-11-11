@@ -30,8 +30,9 @@ html { height: 100%; }
 }
 
 body {
-    font-family: 'Lato', Calibri, Arial, sans-serif;
-    background: #f9f9f9;
+    /*font-family: 'Lato', Calibri, Arial, sans-serif;*/
+    font-family: 'Armata' sans-serif;
+    background: white;
     font-weight: 300;
     font-size: 15px;
     color: #333;
