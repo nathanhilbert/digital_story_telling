@@ -1,0 +1,5 @@
+C:\Users\nhilbert\Downloads\ffmpeg-20131110-git-8cdf4e0-win64-static\ffmpeg-2013
+1110-git-8cdf4e0-win64-static\bin>ffmpeg -i C:\inetpub\avanse\africalead\media\G
+raphic1_Timeline_v1.mp4 -acodec libvorbis -ac 2 -ab 96k -ar 44100 -b 345k -s 640
+x360 -avoid_negative_ts 1 C:\inetpub\avanse\africalead\media\Graphic_Timeline_v2
+.webm

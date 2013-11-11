@@ -66,7 +66,7 @@
     $window.resize(function() {
       window.clearTimeout(timer);
       timer = window.setTimeout(function() {
-        var hash = window.location.hash ? window.location.hash : '#about';
+        var hash = window.location.hash ? window.location.hash : '#maincontent';
 
         $scrollElement.stop().animate({
           scrollLeft: $(hash).offset().left
@@ -122,7 +122,7 @@
   /* Centering for About and Shortcut panels */
   $(function() {
     var $window = $(window);
-    var $centered = $('#about .inner, #shortcuts-examples .inner')
+    var $centered = $('#maincontent .inner, #shortcuts-examples .inner')
 
     var center = function() {
       var winHeight = $.waypoints('viewportHeight');
