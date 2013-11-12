@@ -40,109 +40,6 @@
 
 
 
-        <style type="text/css">
-        @font-face {
-              font-family: 'Armata';
-              font-style: normal;
-              font-weight: 400;
-              src: local('Armata'), local('Armata-Regular'), url(fonts/FG9R9aX-RIX_AvJI8USOWg.woff) format('woff');
-            }
-            .stickyitem{
-                
-                height:50px;width:100%;display:block;
-            }
-            .menu1{
-                z-index:5001;
-                background-color:blue;
-            }
-            .menu2{
-                z-index:5002;
-                background-color:green;
-            }
-            .menu3{
-                z-index:5003;
-                background-color:blue;
-            }
-
-            .maincontent-visible .stuck{
-
-                position:fixed;
-                top:0;
-                /*box-shadow:0 2px 4px rgba(0, 0, 0, .3);*/
-                  -webkit-box-shadow: 0px 2px 4px #000000;
-                       -moz-box-shadow: 0px 2px 4px #000000;
-                            box-shadow: 0px 2px 4px #000000;
-
-
-            }
-            .introvideo{
-                position: absolute;
-                overflow: hidden;
-                height: 100%;
-                width: 100%;
-
-            }
-            .videoclass{
-                min-width: 100%;
-                min-height: 100%;
-                max-width: 1000%;
-                max-height: 1000%;
-                width: auto;
-                height: auto;
-                z-index: -1000;
-                overflow: hidden;
-                border-bottom: 1px solid #e4e4e4;
-            }
-            .subvideo .videoclass{
-                min-width: 100%;
-                min-height: 100%;
-                max-width: 960px;
-                max-height: 1000%;
-                width: auto;
-                height: auto;
-                z-index: -1000;
-                overflow: hidden;
-                border-bottom: 1px solid #e4e4e4;
-            }
-            .container {
-                position: relative;
-                }
-            .subvideo{
-                width: auto;
-                height: auto;
-            }
-            .audiobutton{
-                display:block; background-color:blue;height:25px;width:25px;top:0px;
-            }
-            .playing{
-                background-color:yellow;
-            }
-
-
-            /**TImeline csss
-            **/
-            .tg-timeline-start{
-                display:none;
-            }
-
-            .image_wrapper{
-                width:35%;
-                height:auto;
-                margin:10px;
-
-            }
-            .image_right{
-                float:right;
-            }
-
-            .img_glow {
-                -moz-box-shadow: 0px 0px 20px #888;
-                -webkit-box-shadow: 0px 0px 20px #888;
-                box-shadow: 0px 0px 20px #888;
-
-            }
-        </style>
-
 
 
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
@@ -407,24 +304,32 @@
                 <div class="subwrapper">
                     <h2 id="intro">Introduction</h2>
                         <p>
+                <div class="subvideo image_right">
+                    <div class="videooverlay">
+                        <div class="videooverlay_button"></div>
+                        <img src='img/videoIMG_holder.png' />
+                    </div>
+                    <div class="videocontent">
+                        <video id="video_sub1" class="videoclass" preload="none" volume="0" loop controls>
+                            <source src="media/Graphic_Timeline_v1.webm" type="video/webm">
+                          Video not supported
+                        </video>
+                    </div>
+                </div>
     The purpose of this report is to summarize and describe the USAID’s Africa Lead program and the four tasks that were implemented over the three year life of the program. This report is also written to both present the results and outcomes of the program as well as capture the main lessons that have been learned from the design, customization and implementation of Africa Lead’s tasks. 
                         </p>
                         <p>
-    <div class='image_wrapper image_right'>
-        <img src='img/videoIMG_holder.png'>
-    </div>
+
+
     This report is structured by first presenting an overall summary of the Africa Lead program, its goals, objectives and operational structure. This is followed by a description of each of the four tasks providing an overview for each task with a description of the main activities that were implemented, along with the overall results and outcomes of the tasks. These sections are then followed by a discussion of the programmatic and operational lessons learned from throughout the program.
                         </p>
-                </div>
-                <div class="subvideo">
+                        <div class='image_wrapper'>
+                                <img src='img/videoIMG_holder.png'>
+                            </div>
 
-                    <video id="video_sub1" class="videoclass" preload="none" volume="0" loop controls>
-                        <source src="media/Graphic_Timeline_v1.webm" type="video/webm">
-                      Video not supported
-                    </video>
-                </div>
 
-                <div class="subwrapper">
+
+
                     <h2 id="intro">Background and History of Project</h2>
                     <p>
 Africa Lead is a program sponsored by the U.S. government’s Agency for International Development (USAID) which was designed to support the capacity building program of the US Government’s Feed the Future (FTF) Initiative, which aligns U.S. Government development assistance with Africa-owned agriculture development plans that are, in turn, aligned with the African Union’s Comprehensive Africa Agriculture Development Program (CAADP). CAADP seeks to contribute to the MDG goals by ensuring that governments throughout the continent apply 10% of their public budgets to agriculture in an effort to achieve the 6% annual growth in agricultural productivity that is needed to achieve sustainable food security throughout the continent.
@@ -571,11 +476,20 @@ Africa Lead is implemented by lead RAISE Plus IQC holder, DAI and supported by M
                 $('.subvideo .videoclass').each(function(){
                     this.load();
                 });
+                /*
 
                 $('.subvideo .videoclass').waypoint(function(direction){
 
                     this.play();
                 } , { context: '#maincontent' });
+*/
+                $(".videooverlay").click(function(event){
+                    $(this).hide();
+                    var videocontent = $(this).siblings(".videocontent");
+                    $(videocontent).show();
+                    $(videocontent).children("video")[0].play();
+
+                });
             
 
             });

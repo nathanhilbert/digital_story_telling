@@ -157,7 +157,7 @@ font-weight: normal;
 	margin-left:-37px;
 }
 
-
+/*
 
 .videooverlay{
 	cursor: pointer;
@@ -171,4 +171,143 @@ font-weight: normal;
 }
 	
 	
-	
+*/
+
+
+        @font-face {
+              font-family: 'Armata';
+              font-style: normal;
+              font-weight: 400;
+              src: local('Armata'), local('Armata-Regular'), url(fonts/FG9R9aX-RIX_AvJI8USOWg.woff) format('woff');
+            }
+            .stickyitem{
+                
+                height:50px;width:100%;display:block;
+            }
+            .menu1{
+                z-index:5001;
+                background-color:blue;
+            }
+            .menu2{
+                z-index:5002;
+                background-color:green;
+            }
+            .menu3{
+                z-index:5003;
+                background-color:blue;
+            }
+
+            .maincontent-visible .stuck{
+
+                position:fixed;
+                top:0;
+                /*box-shadow:0 2px 4px rgba(0, 0, 0, .3);*/
+                  -webkit-box-shadow: 0px 2px 4px #000000;
+                       -moz-box-shadow: 0px 2px 4px #000000;
+                            box-shadow: 0px 2px 4px #000000;
+
+
+            }
+            .introvideo{
+                position: absolute;
+                overflow: hidden;
+                height: 100%;
+                width: 100%;
+
+            }
+            .videoclass{
+                min-width: 100%;
+                min-height: 100%;
+                max-width: 1000%;
+                max-height: 1000%;
+                width: auto;
+                height: auto;
+                z-index: -1000;
+                overflow: hidden;
+                border-bottom: 1px solid #e4e4e4;
+            }
+            .subvideo .videoclass{
+                min-width: 100%;
+                min-height: 100%;
+                max-width: 960px;
+                max-height: 1000%;
+                width: auto;
+                height: auto;
+                z-index: -1000;
+                overflow: hidden;
+                border-bottom: 1px solid #e4e4e4;
+            }
+            .container {
+                position: relative;
+                }
+            .subvideo{
+				width: 415px;
+				height: 232px;
+				-moz-box-shadow: 0px 0px 20px #888;
+                -webkit-box-shadow: 0px 0px 20px #888;
+                box-shadow: 0px 0px 20px #888;
+                margin:10px;
+            }
+            .videooverlay{
+				width: 415px;
+				height: 232px;
+				overflow:hidden;
+				cursor: pointer;
+				zoom: 1; filter: alpha(opacity=8);opacity: 0.8;
+				position:relative;
+
+
+            }
+            .videooverlay:hover{
+            	zoom: 1; filter: alpha(opacity=10);opacity: 1;
+            }
+            .videooverlay_button{
+				display: block;
+				height: 50px;
+				left: 20px;
+				position: absolute;
+				width: 139px;
+				background: url("../img/playheads.png") no-repeat scroll 0 -320px transparent;
+				bottom: 20px;
+            }
+            .videooverlay_button:hover{
+            	background: url("../img/playheads.png") no-repeat scroll 0 -370px transparent;
+            }
+            .videocontent{
+                display:none;
+				width: 415px;
+				height: 232px;
+            }
+            .audiobutton{
+                display:block; background-color:blue;height:25px;width:25px;top:0px;
+            }
+            .playing{
+                background-color:yellow;
+            }
+
+
+            /**TImeline csss
+            **/
+            .tg-timeline-start{
+                display:none;
+            }
+
+            .image_wrapper{
+                width:35%;
+                height:auto;
+                margin:10px;
+
+            }
+            .image_right{
+                float:right;
+            }
+            .image_left{
+                float:left;
+            }
+
+            .img_glow {
+                -moz-box-shadow: 0px 0px 20px #888;
+                -webkit-box-shadow: 0px 0px 20px #888;
+                box-shadow: 0px 0px 20px #888;
+
+            }
