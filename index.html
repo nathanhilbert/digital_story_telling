@@ -105,9 +105,6 @@
                 border-bottom: 1px solid #e4e4e4;
             }
             .container {
-                max-width: 960px;
-                width: 92%;
-                margin: 0px auto;
                 position: relative;
                 }
             .subvideo{
@@ -303,23 +300,19 @@
             setTimeout(function() {
                 $('video').each(function(){
                     if (! $(this).hasClass("video_intro")){
-                        this.currentTime = 5;
-                        this.pause();
+                            //this.currentTime = 5;
+                            //this.pause();
+
                     }
+
                     $(this).click(function(){
-                        if (this.currentTime == 5){
-                            this.currentTime = 0;
-                        }
-                        if (this.paused){
-                            this.play();
-                        }
-                        else {
-                            this.pause();
-                        }
+                        console.log("playing");
+                        console.log(this);
+                        this.play();
                     });
                 })
                //$("#video_intro").get(0).play();
-            }, 1500);
+            }, 2000);
 
 
 
@@ -495,12 +488,6 @@ Africa Lead is implemented by lead RAISE Plus IQC holder, DAI and supported by M
                 </div>
 
                 <div id='content23' style="height:350px;width:98%;background-color:red;display:block;">chunk of content</div>
-                <div class="subvideo">
-                    <video id="video_sub1" class="videoclass" preload="auto" volume="0">
-                        <source src="media/Graphic_Timeline_v2.webm" type="video/webm">
-                      Video not supported
-                    </video>
-                </div>
                 <div id='content23' style="height:350px;width:98%;background-color:red;display:block;">chunk of content</div>
                 <div class='imageset'>
                     <a href="img/3.jpg" data-lightbox="roadtrip"><span style='height:300px;width:300px;display:block;background-color:green;'>Click to view slides</span></a>
