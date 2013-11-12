@@ -124,6 +124,23 @@
             .tg-timeline-start{
                 display:none;
             }
+
+            .image_wrapper{
+                width:35%;
+                height:auto;
+                margin:10px;
+
+            }
+            .image_right{
+                float:right;
+            }
+
+            .img_glow {
+                -moz-box-shadow: 0px 0px 20px #888;
+                -webkit-box-shadow: 0px 0px 20px #888;
+                box-shadow: 0px 0px 20px #888;
+
+            }
         </style>
 
 
@@ -363,14 +380,6 @@
                 </div>
                 <div id='introduction' style='width:100%'>
                     <div class="wrapper">
-                        <h1 id="intro">Introduction</h1>
-                        <div>
-                        <p>
-    The purpose of this report is to summarize and describe the USAID’s Africa Lead program and the four tasks that were implemented over the three year life of the program. This report is also written to both present the results and outcomes of the program as well as capture the main lessons that have been learned from the design, customization and implementation of Africa Lead’s tasks. 
-                        </p>
-                        <p>
-    This report is structured by first presenting an overall summary of the Africa Lead program, its goals, objectives and operational structure. This is followed by a description of each of the four tasks providing an overview for each task with a description of the main activities that were implemented, along with the overall results and outcomes of the tasks. These sections are then followed by a discussion of the programmatic and operational lessons learned from throughout the program.
-                        </p>
                             <div id='topmenu' style="width:100%;">
                                 <div class="dd">
                                 <ul id="og-grid" class="og-grid">
@@ -381,7 +390,7 @@
                                 </ul>
                                 </div>
                             </div>
-                        </div>
+
                     </div>
                 </div>
 
@@ -396,6 +405,26 @@
                 </div>
 
                 <div class="subwrapper">
+                    <h2 id="intro">Introduction</h2>
+                        <p>
+    The purpose of this report is to summarize and describe the USAID’s Africa Lead program and the four tasks that were implemented over the three year life of the program. This report is also written to both present the results and outcomes of the program as well as capture the main lessons that have been learned from the design, customization and implementation of Africa Lead’s tasks. 
+                        </p>
+                        <p>
+    <div class='image_wrapper image_right'>
+        <img src='img/videoIMG_holder.png'>
+    </div>
+    This report is structured by first presenting an overall summary of the Africa Lead program, its goals, objectives and operational structure. This is followed by a description of each of the four tasks providing an overview for each task with a description of the main activities that were implemented, along with the overall results and outcomes of the tasks. These sections are then followed by a discussion of the programmatic and operational lessons learned from throughout the program.
+                        </p>
+                </div>
+                <div class="subvideo">
+
+                    <video id="video_sub1" class="videoclass" preload="none" volume="0" loop controls>
+                        <source src="media/Graphic_Timeline_v1.webm" type="video/webm">
+                      Video not supported
+                    </video>
+                </div>
+
+                <div class="subwrapper">
                     <h2 id="intro">Background and History of Project</h2>
                     <p>
 Africa Lead is a program sponsored by the U.S. government’s Agency for International Development (USAID) which was designed to support the capacity building program of the US Government’s Feed the Future (FTF) Initiative, which aligns U.S. Government development assistance with Africa-owned agriculture development plans that are, in turn, aligned with the African Union’s Comprehensive Africa Agriculture Development Program (CAADP). CAADP seeks to contribute to the MDG goals by ensuring that governments throughout the continent apply 10% of their public budgets to agriculture in an effort to achieve the 6% annual growth in agricultural productivity that is needed to achieve sustainable food security throughout the continent.
@@ -404,15 +433,14 @@ Africa Lead is a program sponsored by the U.S. government’s Agency for Interna
 Africa Lead is implemented by lead RAISE Plus IQC holder, DAI and supported by Management Systems International (MSI), Winrock International, Training Resources Group (TRG), ECI Africa Consulting (Pty) Ltd., and Michigan State University (MSU). Africa Lead operates across three regions in Sub-Saharan Africa from two offices. Working across public, civil society, university and private sector institutions, Africa Lead seeks to ensure that there are leaders trained to maintain a critical mass of food security “Champions” who will drive agriculture-led development by leading and implementing the Regional and National Agriculture Investment Plans within the Comprehensive Africa Agriculture Development Program (CAADP) framework.
                     </p>
                 </div>
-                    <div class="subvideo">
-                        <div class="videooverlay_text">text</div>
-                        <div class="videooverlay_play">play</div>
+                <div class="subvideo">
 
-                        <video id="video_sub1" class="videoclass" preload="none" volume="0" controls>
-                            <source src="media/Graphic4_OrgLogos_v1.webm" type="video/webm">
-                          Video not supported
-                        </video>
-                    </div>
+                    <video id="video_sub2" class="videoclass" preload="none" volume="0" loop controls>
+                        <source src="media/Graphic4_OrgLogos_v1.webm" type="video/webm">
+                      Video not supported
+                    </video>
+                </div>
+
                 <div class="subwrapper">
 
                     <p>
@@ -452,8 +480,8 @@ Africa Lead is implemented by lead RAISE Plus IQC holder, DAI and supported by M
                 </div>
 
                     <div class="subvideo">
-                        <video id="video_sub2" class="videoclass" preload="none" volume="0" controls>
-                            <source src="media/Graphic4_OrgLogos_v1.webm" type="video/webm">
+                        <video id="video_sub3" class="videoclass" preload="none" volume="0" loop controls>
+                            <source src="media/Graphic2_AUCommissioner.webm" type="video/webm">
                           Video not supported
                         </video>
                     </div>
@@ -545,7 +573,7 @@ Africa Lead is implemented by lead RAISE Plus IQC holder, DAI and supported by M
                 });
 
                 $('.subvideo .videoclass').waypoint(function(direction){
-                    console.log("playing");
+
                     this.play();
                 } , { context: '#maincontent' });
             
