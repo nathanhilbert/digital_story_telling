@@ -109,7 +109,7 @@
                 }
             .subvideo{
                 width: auto;
-                height: 540px;
+                height: auto;
             }
             .audiobutton{
                 display:block; background-color:blue;height:25px;width:25px;top:0px;
@@ -296,7 +296,7 @@
                 }
               });
 
-
+/*
             setTimeout(function() {
                 $('video').each(function(){
                     if (! $(this).hasClass("video_intro")){
@@ -306,8 +306,6 @@
                     }
 
                     $(this).click(function(){
-                        console.log("playing");
-                        console.log(this);
                         this.play();
                     });
                 })
@@ -315,7 +313,7 @@
             }, 2000);
 
 
-
+*/
 
 
             });
@@ -331,22 +329,7 @@
         <script src="js/waypoints.js"></script>
         <script src="js/waypoints-sticky.js"></script>
 
-        <script>
 
-            $(document).ready(function() {
-                $('#context').waypoint('sticky', 
-                { context: '#maincontent' });
-                $('#activities').waypoint('sticky',
-                    { context: '#maincontent' });
-                $('#outcomes').waypoint('sticky',
-                    { context: '#maincontent' });
-                $('#appendices').waypoint('sticky',
-                    { context: '#maincontent' });
-            
-
-            });
-
-        </script>
 
 
 
@@ -364,7 +347,7 @@
                     <h1>FINAL REPORT</h1>
 
                 </div>
-                <video id="video_intro" class="videoclass video_intro" preload="auto" autoplay="true" loop="loop" volume="0">
+                <video id="video_intro" class="videoclass video_intro" poster="http://graphics8.nytimes.com/packages/images/multimedia/bundles/projects/2012/AvalancheDeploy/flyover.jpg" preload="auto" autoplay="true" loop="loop" volume="0">
                   <source src="media/cassava_intro.webm" type="video/webm">
                   Video not supported
                 </video>
@@ -420,15 +403,17 @@ Africa Lead is a program sponsored by the U.S. government’s Agency for Interna
                     <p>
 Africa Lead is implemented by lead RAISE Plus IQC holder, DAI and supported by Management Systems International (MSI), Winrock International, Training Resources Group (TRG), ECI Africa Consulting (Pty) Ltd., and Michigan State University (MSU). Africa Lead operates across three regions in Sub-Saharan Africa from two offices. Working across public, civil society, university and private sector institutions, Africa Lead seeks to ensure that there are leaders trained to maintain a critical mass of food security “Champions” who will drive agriculture-led development by leading and implementing the Regional and National Agriculture Investment Plans within the Comprehensive Africa Agriculture Development Program (CAADP) framework.
                     </p>
+                </div>
                     <div class="subvideo">
                         <div class="videooverlay_text">text</div>
                         <div class="videooverlay_play">play</div>
 
-                        <video id="video_sub1" class="videoclass" preload="auto" volume="0" controls>
+                        <video id="video_sub1" class="videoclass" preload="none" volume="0" controls>
                             <source src="media/Graphic4_OrgLogos_v1.webm" type="video/webm">
                           Video not supported
                         </video>
                     </div>
+                <div class="subwrapper">
 
                     <p>
                         When the project started it was implemented through three regional offices–Accra, Ghana; Nairobi, Kenya; and Pretoria, South Africa–each run by a Regional Deputy Chief of Party (DCOP).  However at the end of July 2012 the Pretoria office was closed and program implementation for Southern Africa was handled by the Nairobi office, becoming the Africa Lead East and Southern Africa (ESA) office. Program implementation and operations in the Nairobi and Accra offices are supported by a Bethesda-based office headed by the program’s Chief of Party (COP).
@@ -464,14 +449,16 @@ Africa Lead is implemented by lead RAISE Plus IQC holder, DAI and supported by M
                      The flexibility of Africa Lead as a mechanism means that the same set of tools can be used for institutional capacity assessments and for capacity building needs in a wide range of different contexts and environments, and can be used at the continental, regional, national or sub-national levels. By providing these capacity building options it strived to increase the participation of African leaders and institutions engaged in the CAADP process (SO1) and to strengthen key leaders technical and managerial skills and knowledge of agriculture systems and food security (SO2).
                     </p>
 
+                </div>
+
                     <div class="subvideo">
-                        <video id="video_sub2" class="videoclass" preload="auto" volume="0" controls>
+                        <video id="video_sub2" class="videoclass" preload="none" volume="0" controls>
                             <source src="media/Graphic4_OrgLogos_v1.webm" type="video/webm">
                           Video not supported
                         </video>
                     </div>
 
-
+                <div class="subwrapper">
                 </div>
 
 
@@ -540,6 +527,31 @@ Africa Lead is implemented by lead RAISE Plus IQC holder, DAI and supported by M
             $(function() {
                 Grid.init();
             });
+        </script>
+        <script>
+
+            $(document).ready(function() {
+                $('#context').waypoint('sticky', 
+                { context: '#maincontent' });
+                $('#activities').waypoint('sticky',
+                    { context: '#maincontent' });
+                $('#outcomes').waypoint('sticky',
+                    { context: '#maincontent' });
+                $('#appendices').waypoint('sticky',
+                    { context: '#maincontent' });
+
+                $('.subvideo .videoclass').each(function(){
+                    this.load();
+                });
+
+                $('.subvideo .videoclass').waypoint(function(direction){
+                    console.log("playing");
+                    this.play();
+                } , { context: '#maincontent' });
+            
+
+            });
+
         </script>
 
 
