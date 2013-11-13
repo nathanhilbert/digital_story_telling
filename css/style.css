@@ -29,6 +29,7 @@
 	top: 5%;
 	background-image: url('../img/africalead-logo.png');
 	background-repeat: no-repeat;
+	background-size: 303px 90px;
 }
 
 .floating_intro_info{
@@ -178,7 +179,7 @@ font-weight: normal;
               font-family: 'Armata';
               font-style: normal;
               font-weight: 400;
-              src: local('Armata'), local('Armata-Regular'), url(fonts/FG9R9aX-RIX_AvJI8USOWg.woff) format('woff');
+              src: local('Armata'), local('Armata-Regular'), url(../fonts/FG9R9aX-RIX_AvJI8USOWg.woff) format('woff');
             }
             .stickyitem{
                 
@@ -239,6 +240,7 @@ font-weight: normal;
             }
             .container {
                 position: relative;
+                background-color: #fffbf8;
                 }
             .subvideo{
 				width: 415px;
@@ -293,10 +295,15 @@ font-weight: normal;
             }
 
             .image_wrapper{
-                width:35%;
-                height:auto;
-                margin:10px;
+				width: 320px;
+				height: auto;
+				margin: 10px;
+				position: relative;
 
+            }
+            .image_wrapper img{
+            	width:inherit;
+            	height:inherit;
             }
             .image_right{
                 float:right;
@@ -321,3 +328,47 @@ font-weight: normal;
 	opacity: 0.85;
 }
 #tooltip h3, #tooltip div { margin: 0; }
+
+blockquote{
+	padding-top: 20px;
+overflow: hidden;
+font-size: 18px;
+line-height: 150%;
+color: #454545;
+}
+
+blockquote:before{
+	display: block;
+float: left;
+margin: 10px 15px 0 0;
+font-size: 100px;
+content: open-quote;
+color: #bababa;
+text-shadow: 0 1px 1px #909090;
+}
+
+blockquote .cite {
+	font-size: 0.75em;
+text-align: right;
+}
+
+.audiowrapper{
+	width: 300px;
+	height: 100px;
+    margin:15px;
+}
+.audiotag{
+	font-weight:700;
+}
+
+.infotip{
+	background-color: rgba(128, 128, 128, 0.15);
+	padding: 2px;
+	-moz-border-radius: 7px;
+	border-radius: 7px;
+
+}
+
+.infotip:hover{
+	background-color: rgba(128, 128, 128, 0.35);
+}
