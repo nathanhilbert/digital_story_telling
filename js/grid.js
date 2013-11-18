@@ -239,9 +239,20 @@ var Grid = (function() {
 			var $item = $( this ).parent();
 			// check if item already opened
 			current === $item.index() ? hidePreview() : showPreview( $item );
+			    $('.nexter').click(function(){
+                    var theclicker = $(this).attr("data");
+                    $("." + theclicker).click();
+                });
 			return false;
 
 		} );
+
+
+        $("#og-grid").children("li:first").children("a:first").click();
+
+
+        
+
 
 		// on window resize get the window´s size again
 		// reset some values..

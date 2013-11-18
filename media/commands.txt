@@ -1,4 +1,1 @@
-c:\inetpub\avanse\africalead\devmedia\video\ffmpeg\bin>ffmpeg -i C:\inetpub\avan
-se\africalead\devmedia\video\Graphic3_Stoplight_v1.mp4 -acodec libvorbis -ac 2 -
-ab 96k -ar 44100 -b 4000k -s 640x360 -avoid_negative_ts 1 C:\inetpub\avanse\afri
-calead\media\Graphic3_Stoplight_v1.webm
+c:\inetpub\avanse\africalead\devmedia\video\ffmpeg\bin>ffmpeg -i C:\inetpub\avanse\africalead\devmedia\video\Graphic3_Stoplight_v1.mp4 -acodec libvorbis -ac 2 -ab 96k -ar 44100 -b 4000k -s 640x360 -avoid_negative_ts 1 C:\inetpub\avanse\africalead\media\Graphic3_Stoplight_v1.webm

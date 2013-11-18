@@ -42,6 +42,8 @@
 
 
 
+
+
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
 
@@ -83,6 +85,8 @@
 
         <script src="timeglider/timeglider.datepicker.js" type="text/javascript" charset="utf-8"></script>
 
+        <script src="js/sideswipe.js"></script>    
+
         <script>
         var tg1, tg_actor, myMED;
            $(document).ready(function () { 
@@ -106,28 +110,33 @@
           <script src="js/jquery.smooth-scroll.js"></script>
           <script src="js/jquery.ba-bbq.js"></script>
           <script>
+          var firstload = true;
             $(document)
             .on('click', 'a[href*="#"]', function() {
-                console.log(this);
                 if ($(this).hasClass("storestate")){
-                    $.bbq.pushState( '#/' + this.id );
+                    $.bbq.pushState( '#/' + $(this).attr("data") );
                 }
               if ( this.hash && this.pathname === location.pathname ) {
                 $.bbq.pushState( '#/' + this.hash.slice(1) );
+                $(window).trigger('hashchange');
                 return false;
               }
             })
             .ready(function() {
               $(window).bind('hashchange', function(event) {
                 var tgt = location.hash.replace(/^#\/?/,'');
-                console.log(tgt);
+                console.log("event triggered");
                 if ( $("#" + tgt).length > 0 && ! $("#" + tgt).hasClass("panelswipe")) {
                   $.smoothScroll({scrollTarget: $('#' + tgt), scrollElement: $('#maincontent')});
                 }
                 else if($("#" + tgt).hasClass("panelswipe")){
                     var hashstart = location.hash.substring(0,2);
-                    console.log("do we have classes");
-                    console.log($("body").attr('class'));
+                    if (firstload){
+                        setTimeout(function() {
+                           $("a[href='#" + tgt + "']").trigger("click");
+                        }, 100);
+                    }
+                    /*
                     if (! $("body").attr('class')){
                         setTimeout(function() {
                             console.log("trigger");
@@ -135,7 +144,9 @@
                         }, 100);
                         
                     }
+                    */
                 }
+                firstload = false;
               });
 
               $(window).trigger('hashchange');
@@ -181,16 +192,53 @@
         <!-- Slideshow -->
         <script src="js/lightbox-2.6.min.js"></script>
 
+        <!--load elements for sticky menus -->
+        <script src="js/waypoints.js"></script>
+        <script src="js/waypoints-sticky.js"></script>
+
         <!-- Nav controller -->
 
          <script>
              $(document).ready(function() {
 
-                
+                $('.subreportpoint').waypoint(function(direction){
+                    var myclasses = $(this).attr('class').split(" ")[1].split("_");
+                    var thecontrol = myclasses[1];
+                    var targetobject = myclasses[0];
+                    if (thecontrol == "start"){
+                        if (direction == "up"){
+                            $("#" + targetobject + "_button").addClass("hidden");
+                            //$("#" + targetobject + "_button").hide();
+                        }
+                        else {
+                            $("#" + targetobject + "_button").removeClass("hidden");
+                            //$("#" + targetobject + "_button").show();
+                        }
+                    }
+                    else {  //at end
+                        if (direction == "up"){
+                            $("#" + targetobject + "_button").removeClass("hidden");
+                            //$("#" + targetobject + "_button").show();
+                        }
+                        else {
+                            $("#" + targetobject + "_button").addClass("hidden");
+                            //$("#" + targetobject + "_button").hide();
+                        }
+                    }
+
+                }, { context: '#maincontent' });
+
+                /*this if for the back buttons of the submenus*/
+                $(".backbutton").click(function(){
+                    history.back();
+                });
 
 
 
-                
+
+
+
+
                 //need a server that sends partial content, but that is not the case
 /*
               $(".audiowrapper").click(function(){
@@ -235,13 +283,9 @@
         </script>   
 
 
-        <script src="js/sideswipe.js"></script>    
 
 
 
-        <!--load elements for sticky menus -->
-        <script src="js/waypoints.js"></script>
-        <script src="js/waypoints-sticky.js"></script>
 
 
 
@@ -254,11 +298,10 @@
         <![endif]-->
         <div id="maincontent" class='panelswipe maincontent'>
             <section class='introvideo'>
-                <div class="floating_intro_logo"></div>
-                <div class='floating_intro_info'>
-                    <h1>AFRICA LEADERSHIP TRAINING AND CAPACITY BUILDING PROGRAM</h2>
-                    <h3> Developing a cadre of African leaders who will design and implement food security strategies and investment plans</h3>
-                    <h1>FINAL REPORT</h1>
+                <div class="floating_intro_logo">
+
+                    <img src='img/africalead-logo.png' style="height:200px;"/>
+                    <img src='img/introtext.png' style="position:absolute; bottom:30px;left:0px;"/>
 
                 </div>
                 <video id="video_intro" class="videoclass video_intro" poster="http://graphics8.nytimes.com/packages/images/multimedia/bundles/projects/2012/AvalancheDeploy/flyover.jpg" preload="auto" autoplay="true" loop="loop" volume="0">
@@ -276,14 +319,15 @@
                     </a>
                 </div>
                 <div id='introduction' style='width:100%'>
+
                     <div class="wrapper">
                             <div id='topmenu' style="width:100%;">
                                 <div class="dd">
                                 <ul id="og-grid" class="og-grid">
-                                <li> <a href="#" data-largesrc="img/contextIMG.png" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot."> <img src="img/contextIMG.png" alt="Context"/> </a> </li>
-                                <li> <a href="#" data-largesrc="img/activitiesIMG.png" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu."> <img src="img/activitiesIMG.png" alt="img02"/> </a> </li>
-                                <li> <a href="#" data-largesrc="img/outcomeIMG.png" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato."> <img src="img/outcomeIMG.png" alt="img03"/> </a> </li>
-                                <li> <a href="#" data-largesrc="img/appendicesIMG.png" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot."> <img src="img/appendicesIMG.png" alt="img01"/> </a> </li>
+                                <li> <a href="#" class="context_grid" data-largesrc="img/contextIMG.png" data-title="Azuki bean" data-description="Swiss <div id='something'>hereis a div</div>chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.<span class='nexter' data='activities_grid'>>>>>>>></span>"> <img src="img/contextIMG.png" alt="Context"/> </a> </li>
+                                <li> <a href="#" class="activities_grid"  data-largesrc="img/activitiesIMG.png" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.<span class='nexter' data='outcomes_grid'>>>>>>>></span>"> <img src="img/activitiesIMG.png" alt="img02"/> </a> </li>
+                                <li> <a href="#" class="outcomes_grid"  data-largesrc="img/outcomeIMG.png" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato."> <img src="img/outcomeIMG.png" alt="img03"/> </a> </li>
+                                <li> <a href="#" class="appendices_grid"  data-largesrc="img/appendicesIMG.png" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot."> <img src="img/appendicesIMG.png" alt="img01"/> </a> </li>
                                 </ul>
                                 </div>
                             </div>
@@ -293,11 +337,12 @@
 
                 <div id='context_anchor'>
                     <div id='context' class="subNavigation menu1 stickyitem">
+                        <img src="img/aidlogo.png" style="height:80px;float:right;"/>
                         <div class="subHolder">
                         <a href="#introduction">Summary</a>
                         <h2>Context</h2><a href="#activities_anchor">Activities</a><a href="#menu2_anchor">Outcomes</a><a href="#menu3_anchor">Appendices</a>
-                        <h3>Background and History of Project</h3>
                         </div>
+
                     </div>
                 </div>
 
@@ -310,8 +355,8 @@
                         <img src='img/videoIMG_holder.png' />
                     </div>
                     <div class="videocontent">
-                        <video id="video_sub1" class="videoclass" preload="none" volume="0" loop controls>
-                            <source src="media/Graphic_Timeline_v1.webm" type="video/webm">
+                        <video id="video_sub1" class="videoclass" preload="none" volume="0" controls>
+                            <source src="media/Champions  02  20131114.webm" type="video/webm">
                           Video not supported
                         </video>
                     </div>
@@ -484,7 +529,7 @@ Africa Lead was initially implemented from the three regional offices located in
                             </div>
                         Africa Lead has trained 1,875 (1,246—Male, and 629—Female) mid- and senior-level professionals in leadership skills and approaches and CAADP principles and processes (this number includes participants from Module 1, Module 2, and Module 1 &2 trainings). CAADP Champions for Change graduates are English or French speakers from 29 countries in sub-Saharan Africa who work across a broad range of sectors: 31% hail from NGOs and civil society institutions, 43% from the public sector, 13% from the private sector, and 13% from universities and research institutions.
                     </p>
-                    <h4 class="subreportpoint subreport1_start">Module 1: Champions for Change Leadership Training</h4>
+                    <h4 id="module1_start" class="subreportpoint module1_start">Module 1: Champions for Change Leadership Training</h4>
                     <p>Module One was launched in January 2011. It is a five day course was designed to build the leadership and management gap in agriculture institutions and identify, prioritize and implement strong agriculture policies, investments and programs. The goals of the training were to increase knowledge of CAADP, participation in CAADP implementation and leadership and change management skills. Post-training surveys suggest participants acquired the skills and motivation during training to champion institutional changes that promote food security and CAADP.
                     </p>
                     <div class="shoutbox shoutboxright">
@@ -553,10 +598,10 @@ Africa Lead was initially implemented from the three regional offices located in
                         </div>
                     </div>
                     <h5>Outputs, Outcomes and Results</h5>
-                    <p class="subreportpoint subreport1_end">
+                    <p class="subreportpoint module1_end">
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas metus est, egestas vel aliquet at, pellentesque nec lorem. Pellentesque molestie bibendum eros, eu suscipit nisi volutpat fringilla.
                     </p>
-                    <h4>Module 2: Project Design and Rapid Results Approach</h4>
+                    <h4 id="module2_start" class="subreportpoint module2_start">Module 2: Project Design and Rapid Results Approach</h4>
                     <p>
 Module two which was initially designed to be more of a technical course on specific skill sets that had been identified both during Module One trainings and institutional capacity assessment in Task 3. Module Two was to be delivered to a sub set of Module 1 graduates, However it became apparent that this course would need to be tailored to fit the needs of each Mission and for this reason the designers in DC came up with a 4 day course outline which included the powerful Rapid Results Initiative and mixed and matched and added sessions for a 5 day course to suit specific needs and requirements for FTF partners. 
                     </p>
@@ -600,7 +645,7 @@ Module two which was initially designed to be more of a technical course on spec
                           Your browser does not support the audio element.
                         </audio>
                     </div>
-                    <p>
+                    <p class="subreportpoint module2_end">
                         Module Two trainings began in Tanzania in the summer of 2011 and in Ghana and Liberia in March/April of 2012.
                     </p>
                     <h5>Outputs, Outcomes and Results </h5>
@@ -704,21 +749,53 @@ This work involved developing a case study research methodology, writing the ass
                     <a href="img/3.jpg" data-lightbox="roadtrip"></a>
                     <a href="img/3.jpg" data-lightbox="roadtrip"></a>
                 </div>
-                <div id='content23' style="height:350px;width:98%;background-color:red;display:block;"><a id="subreport1_button" class="storestate" href="#subreport1">Subreportrepot12</a><a id="subreport2_button" class="storestate" href="#subreport2">Subreportrepot12</a></div>
 
+                <!--hidden buttons here-->
+                <a href="#module1" class="storestate subreportside hidden" id="module1_button" data="module1_start" style="top:60px;z-index:6001">
+                    <p>Click here to see more info on a subreport</p>
+                </a>
+                <a href="#module2" class="storestate subreportside hidden" id="module2_button" data="module2_start" style="top:170px;z-index:6002">
+                    <p>See module 2 report</p>
+                </a>
             </div>
         </div>
-        <div id="subreport1" class="panelswipe subreport1">
-            <div id='content23' style="height:350px;width:98%;background-color:red;display:block;">chunk of content</div>
-            <p>here is the report</p>
-            <div id='content23' style="height:350px;width:98%;background-color:red;display:block;">chunk of content</div>
-            <div id='content23' style="height:350px;width:98%;background-color:red;display:block;">chunk of content</div>
+        <div id="module1" class="panelswipe module1">
+            <div id='container' class='container'>
+                    <div id='module1_anchor'>
+                        <div id='module1' class="subNavigation menu2 stickyitem">
+                            <div class="subHolder">
+                            <a class="backbutton"><< Back</a>
+                            <a href="#context_anchor">Context</a><h2>Activities</h2><a href="#outcomes_anchor">Outcomes</a><a href="#appendices_anchor">Appendices</a>
+                            <h3>Subtext goes here</h3>
+                            </div>
+                        </div>
+                    </div>
+                <div class="subwrapper">
+                    <h1>Subreport Module 1</h1>
+                    <p>
+This work involved developing a case study research methodology, writing the assignment’s Scope of Work, finding and hiring in-country consultants, conducting field work, and producing draft reports. Draft reports were produced and underwent a field review process that involved USAID Missions and a representative of the African Union Commission. Reports were finalized during this quarter and an initial draft of an overall lessons learned synthesis report was sent to USAID for review.
+                    </p>
+                </div>
+            </div>
         </div>
-        <div id="subreport2" class="panelswipe subreport2">
-            <div id='content23' style="height:350px;width:98%;background-color:red;display:block;">chunk of content</div>
-            <p>here is the report</p>
-            <div id='content23' style="height:350px;width:98%;background-color:red;display:block;">chunk of content</div>
-            <div id='content23' style="height:350px;width:98%;background-color:red;display:block;">chunk of content</div>
+        <div id="module2" class="panelswipe module2">
+            <div id='container' class='container'>
+                    <div id='module2_anchor'>
+                        <div id='module2' class="subNavigation menu2 stickyitem">
+                            <div class="subHolder">
+                            <a class="backbutton"><< Back</a>
+                            <a href="#context_anchor">Context</a><h2>Activities</h2><a href="#outcomes_anchor">Outcomes</a><a href="#appendices_anchor">Appendices</a>
+                            <h3>Subtext goes here</h3>
+                            </div>
+                        </div>
+                    </div>
+                <div class="subwrapper">
+                    <h1>Subreport Module 2</h1>
+                    <p>
+This work involved developing a case study research methodology, writing the assignment’s Scope of Work, finding and hiring in-country consultants, conducting field work, and producing draft reports. Draft reports were produced and underwent a field review process that involved USAID Missions and a representative of the African Union Commission. Reports were finalized during this quarter and an initial draft of an overall lessons learned synthesis report was sent to USAID for review.
+                    </p>
+                </div>
+            </div>
         </div>
 
 
@@ -730,11 +807,14 @@ This work involved developing a case study research methodology, writing the ass
         <script>
             $(function() {
                 Grid.init();
+
             });
         </script>
         <script>
 
             $(document).ready(function() {
+
+
                 //maybe change hash here   handler: function(dir) {
         //Do stuff when the user scrolls past this waypoint.
                 //}
@@ -779,6 +859,8 @@ This work involved developing a case study research methodology, writing the ass
                     }, 
                     delay: 150 
                 });
+
+
             
 
             });
