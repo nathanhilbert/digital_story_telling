@@ -24,7 +24,7 @@
 	margin: 0px auto;
 	display: block;
 	width: 303px;
-	height: 100%;
+	height: 85%;
     min-height:400px;
 	left: 5%;
 	top: 5%;
@@ -84,7 +84,11 @@ font-weight: normal;
 	.navBoxes li {width: 214px; height: 200px; float: left; margin: 0px 10px 0px 10px; background-color: #fff}	
 	
 .subNavigation {width: 100%; height: 128px; margin: 0 0 20px 0; background: url('../img/subNavIMG.png');}
-	.subHolder {width: auto; margin: 0 10px;position: relative;}
+	.subHolder {width: auto;
+margin: 0 10px;
+position: relative;
+display: inline-block;
+margin-left: 21px;}
 	.subHolder h2 {font-size: 35px; color: #fff; font-family: 'Armata' sans-serif; margin: 0px 0px 0px 0px; font-weight: normal; display:inline-block; width:175px;}	
 	.subHolder h3 {font-size: 17px; color: #fff; margin: 0px 0px 0px 0px;font-family: 'Armata' sans-serif; font-weight: normal; float: right}		
 	.subHolder a{
@@ -412,4 +416,18 @@ text-align: right;
 
 .backbutton{
 	cursor:pointer;
+}
+
+.aidlogo{
+height: 50px;
+float: left;
+width: auto;
+display: inline;
+position: relative;
+}
+.fallbackinstruction{
+    padding-top:100px;
+    padding-left:600px;
+    font-size:18px;
+    color:red;
 }

@@ -22,6 +22,9 @@
        <meta name="language" content="English" />
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="icon" 
+          type="image/png" 
+          href="favicon.png">
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
@@ -60,6 +63,10 @@
                   $(window).resize(function() {
                     $(".container").css('top', $(window).height()-52);
                   });
+
+
+
+
             });
         </script>
 
@@ -125,7 +132,6 @@
             .ready(function() {
               $(window).bind('hashchange', function(event) {
                 var tgt = location.hash.replace(/^#\/?/,'');
-                console.log("event triggered");
                 if ( $("#" + tgt).length > 0 && ! $("#" + tgt).hasClass("panelswipe")) {
                   $.smoothScroll({scrollTarget: $('#' + tgt), scrollElement: $('#maincontent')});
                 }
@@ -304,10 +310,12 @@
                     <img src='img/introtext.png' style="position:absolute; bottom:30px;left:0px;"/>
 
                 </div>
-                <video id="video_intro" class="videoclass video_intro" poster="http://graphics8.nytimes.com/packages/images/multimedia/bundles/projects/2012/AvalancheDeploy/flyover.jpg" preload="auto" autoplay="true" loop="loop" volume="0">
-                  <source src="media/cassava_intro.webm" type="video/webm">
-                  Video not supported
-                </video>
+                <div class="videofallback">
+                    <video id="video_intro" class="videoclass video_intro" poster="http://graphics8.nytimes.com/packages/images/multimedia/bundles/projects/2012/AvalancheDeploy/flyover.jpg" preload="auto" autoplay="true" loop="loop" volume="0">
+                      <source src="media/cassava_intro.webm" type="video/webm">
+                      Video not supported
+                    </video>
+                </div>
 
 
             </section>
@@ -337,7 +345,7 @@
 
                 <div id='context_anchor'>
                     <div id='context' class="subNavigation menu1 stickyitem">
-                        <img src="img/aidlogo.png" style="height:80px;float:right;"/>
+                        <img src="img/aidlogo_small.png" class="aidlogo"/>
                         <div class="subHolder">
                         <a href="#introduction">Summary</a>
                         <h2>Context</h2><a href="#activities_anchor">Activities</a><a href="#menu2_anchor">Outcomes</a><a href="#menu3_anchor">Appendices</a>
@@ -478,10 +486,10 @@ Africa Lead was initially implemented from the three regional offices located in
 
                 <div id='activities_anchor'>
                     <div id='activities' class="subNavigation menu2 stickyitem">
+                        <img src="img/aidlogo.png" class="aidlogo"/>
                         <div class="subHolder">
                         <a href="#introduction">Summary</a>
                         <a href="#context_anchor">Context</a><h2>Activities</h2><a href="#outcomes_anchor">Outcomes</a><a href="#appendices_anchor">Appendices</a>
-                        <h3>Subtext goes here</h3>
                         </div>
                     </div>
                 </div>
@@ -828,12 +836,22 @@ This work involved developing a case study research methodology, writing the ass
                 $('#appendices').waypoint('sticky',
                     { context: '#maincontent' });
 
-                $('.subvideo .videoclass').each(function(){
-                    this.load();
-                });
-                $('audio').each(function(){
-                    this.load();
-                });
+
+
+
+
+
+                if (Modernizr.video.webm){
+                    $('.subvideo .videoclass').each(function(){
+                        this.load();
+                    });
+                    $('audio').each(function(){
+                        this.load();
+                    });
+                }
+                else {
+                    $(".videofallback").html("<div class='fallbackinstruction'>Here are instructions<br/><a href='apps/chrome_installer.exe'>Chrome</a><br/><a href='apps/firefox_installer.exe'>Firefox</a></div>");
+                }
                 /*
 
                 $('.subvideo .videoclass').waypoint(function(direction){
