@@ -1,0 +1,25 @@
+
+
+
+
+/**needed for sideswipe **/
+.maincontent {
+  left: 0;}
+
+
+
+.module1 {
+  left: 0; }
+
+.module2 {
+  left: 0;}
+
+.lessonslearned{
+    left:0;
+}
+
+.panelswipe{
+    position:relative;
+    height:auto;
+    width:auto;
+}
