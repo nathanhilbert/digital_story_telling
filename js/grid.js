@@ -243,6 +243,7 @@ var Grid = (function() {
                     var theclicker = $(this).attr("data");
                     $("." + theclicker).click();
                 });
+            $(".og-details").scrollTop( 0 );
 			return false;
 
 		} );

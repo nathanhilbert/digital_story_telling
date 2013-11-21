@@ -99,6 +99,8 @@
 	padding: 0 15px 0 20px;
 	width:60%;
 	min-width: 300px;
+	overflow-y: scroll;
+	height: 450px;
 }
 
 .og-fullimg {
@@ -123,7 +125,7 @@
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 22px;
-	color: #999;
+	color: #303030;
 }
 
 .og-details a {
