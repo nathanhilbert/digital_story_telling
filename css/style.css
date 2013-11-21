@@ -420,7 +420,7 @@ position: relative;
 .maincontent {
   left: 0;}
 
-  .maincontent-visible .stuck{
+  .maincontent-visible .maincontent .stuck{
 
     position:fixed;
     top:0;
@@ -444,7 +444,7 @@ position: relative;
     left:300%;
 }
 
-  .lessonslearned-visible .stuck{
+  .lessonslearned-visible .lessonslearned  .stuck{
 
     position:fixed;
     top:0;
