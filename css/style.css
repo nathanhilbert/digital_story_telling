@@ -13,7 +13,7 @@
 
 	*/
 /* ------------------------------------------------------------------------------ */
-
+body {font-style: normal !important;}
 
 /* StartVideo //////////////////////////////////////////////////////////// */
 .startVideo {width: 100%; height: 600px; background-color: #ccc}
@@ -23,9 +23,8 @@
 	position: absolute;
 	margin: 0px auto;
 	display: block;
-	width: 303px;
+	width: auto;
 	height: 85%;
-    min-height:400px;
 	left: 5%;
 	top: 5%;
 	/*
@@ -34,6 +33,24 @@
 	background-size: 303px 90px;
 	*/)
 }
+
+/* Additional Styles //////////////////////////////////////////////////////////// */
+p.introText {width: 700px; color: #000; font-size: 19px !important; overflow: hidden; display: block; clear: both;}
+div span.mainWelcomeText {font-size: 20px; color: #552701; margin-bottom: 15px; font-weight:bold; font-family: arial; text-transform: uppercase;}
+div span.finalReport {font-size: 20px; color: #fff;  margin: 0px; font-family: arial;}
+
+div .og-details p {font-size: 14px; color: #555; font-family: arial; font-style: normal;}
+div.subwrapper, p{font-style: normal !important; font-family: arial;} 
+div.subwrapper p{line-height: <##>;}
+
+blockquote { margin: 1em 2em; border-left: 1px dashed #999; padding-left: 1em; } 
+blockquote p:first-letter { float: left; margin: .2em .3em .1em 0; font-family: "Monotype Corsiva", "Apple Chancery", fantasy; font-size: 220%; font-weight: bold; } 
+blockquote p:first-line { font-variant: small-caps; }
+
+span.nexter {text-transform: uppercase; color: #0a5e07; font-weight: bold}
+span.nexter:hover {color: #555; margin: 0px 5px 0px 0px}
+div h3{font-style: normal !important; font-family: arial; text-transform: uppercase; font-size: 26px !important;}
+div .subHolder {font-style: normal !important;}
 
 .floating_intro_info{
 position: absolute;
