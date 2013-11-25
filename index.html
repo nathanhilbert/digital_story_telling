@@ -741,9 +741,13 @@ The purpose of this report is to describe the USAID&rsquo;s Africa Lead program 
 
 
 
-
                 if (Modernizr.video.webm){
                     $('.subvideo .videoclass').each(function(){
+                        this.load();
+
+                    }).bind("ended", function() {
+                       $(this).parent().hide();
+                        $(this).parent().siblings().show();
                         this.load();
                     });
                     $('audio').each(function(){
