@@ -341,6 +341,9 @@ margin-left: 21px;}
             .image_left{
                 float:left;
             }
+            .image_center{
+                margin:auto;
+            }
 
             .img_glow {
                 -moz-box-shadow: 0px 0px 20px #888;
