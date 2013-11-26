@@ -277,7 +277,8 @@ margin-left: 21px;}
 				-moz-box-shadow: 0px 0px 20px #888;
                 -webkit-box-shadow: 0px 0px 20px #888;
                 box-shadow: 0px 0px 20px #888;
-                margin:15px;
+                margin:25px;
+                margin-right: 42px;
             }
 
             .videooverlay{
@@ -293,6 +294,11 @@ margin-left: 21px;}
             .videooverlay:hover{
             	zoom: 1; filter: alpha(opacity=10);opacity: 1;
             }
+            .videooverlay img{
+                height:inherit;
+                width:inherit;
+            }
+
             .videooverlay_button{
 				display: block;
 				height: 50px;
