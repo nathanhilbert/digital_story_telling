@@ -158,6 +158,13 @@ margin-left: 21px;}
 	border-top:thick solid #65b561;
 	border-bottom:thick solid #65b561;
 	position:relative;
+    background: -moz-linear-gradient(45deg, rgba(68,124,66,0.57) 0%, rgba(68,124,66,0.57) 2%, rgba(68,124,66,0.31) 43%, rgba(68,124,66,0.25) 52%, rgba(68,124,66,0.55) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(68,124,66,0.57)), color-stop(2%,rgba(68,124,66,0.57)), color-stop(43%,rgba(68,124,66,0.31)), color-stop(52%,rgba(68,124,66,0.25)), color-stop(100%,rgba(68,124,66,0.55))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(45deg, rgba(68,124,66,0.57) 0%,rgba(68,124,66,0.57) 2%,rgba(68,124,66,0.31) 43%,rgba(68,124,66,0.25) 52%,rgba(68,124,66,0.55) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(45deg, rgba(68,124,66,0.57) 0%,rgba(68,124,66,0.57) 2%,rgba(68,124,66,0.31) 43%,rgba(68,124,66,0.25) 52%,rgba(68,124,66,0.55) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(45deg, rgba(68,124,66,0.57) 0%,rgba(68,124,66,0.57) 2%,rgba(68,124,66,0.31) 43%,rgba(68,124,66,0.25) 52%,rgba(68,124,66,0.55) 100%); /* IE10+ */
+    background: linear-gradient(45deg, rgba(68,124,66,0.57) 0%,rgba(68,124,66,0.57) 2%,rgba(68,124,66,0.31) 43%,rgba(68,124,66,0.25) 52%,rgba(68,124,66,0.55) 100%); /* W3C */
+
 }
 
 .shoutborder{
@@ -352,6 +359,7 @@ margin-left: 21px;}
 	background-color: #eee;
 	padding: 5px;
 	opacity: 0.85;
+
 }
 #tooltip h3, #tooltip div { margin: 0; }
 
@@ -387,17 +395,46 @@ text-align: right;
 	font-weight:700;
 }
 
-.infotip{
-	background-color: rgba(128, 128, 128, 0.15);
+.infotip, .highlightimage{
+	background-color: rgba(128, 128, 128, 0.10);
 	padding: 2px;
 	-moz-border-radius: 7px;
 	border-radius: 7px;
 
 }
 
-.infotip:hover{
+.infotip:hover, .highlightimage:hover{
 	background-color: rgba(128, 128, 128, 0.35);
 }
+
+
+@-webkit-keyframes shadow-in {   
+   from {          -webkit-box-shadow: 0px 0px 0px #000000;
+           -moz-box-shadow: 0px 0px 0px #000000;
+                box-shadow: 0px 0px 0px #000000;}
+   to {          -webkit-box-shadow: 0px 0px 13px #000000;
+           -moz-box-shadow: 0px 0px 13px #000000;
+                box-shadow: 0px 0px 13px #000000;}
+}
+
+@keyframes shadow-in {
+   from {          -webkit-box-shadow: 0px 0px 0px #000000;
+           -moz-box-shadow: 0px 0px 0px #000000;
+                box-shadow: 0px 0px 0px #000000;}
+   to {          -webkit-box-shadow: 0px 0px 13px #000000;
+           -moz-box-shadow: 0px 0px 13px #000000;
+                box-shadow: 0px 0px 13px #000000;}
+}
+
+.highlighted {
+   -webkit-animation: shadow-in .5s ease-in 1;
+   animation: shadow-in .5s ease-in 1;
+-webkit-box-shadow: 0px 0px 13px #000000;
+           -moz-box-shadow: 0px 0px 13px #000000;
+                box-shadow: 0px 0px 13px #000000
+}
+
+
 
 .subreportside{
 	display:block;
