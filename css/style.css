@@ -40,7 +40,7 @@ div span.mainWelcomeText {font-size: 20px; color: #552701; margin-bottom: 15px; 
 div span.finalReport {font-size: 20px; color: #fff;  margin: 0px; font-family: arial;}
 
 div .og-details p {font-size: 14px; color: #555; font-family: arial; font-style: normal;}
-div.subwrapper, p{font-style: normal !important; font-family: arial;} 
+div.subwrapper, p, ul{font-style: normal !important; font-family: arial;} 
 div.subwrapper p{line-height: <##>;}
 
 blockquote { margin: 1em 2em; border-left: 1px dashed #999; padding-left: 1em; } 
@@ -150,6 +150,7 @@ margin-left: 21px;}
 .shoutbox{
 	display: block;
 	width: 40%;
+    margin:10px;
 	float: right;
 	margin-left: 42px;
 	background-color: #CCCCCC;
@@ -341,6 +342,9 @@ margin-left: 21px;}
             	width:inherit;
             	height:inherit;
             }
+            .imagedisplay{
+                margin:20px;
+            }
             .image_right{
                 float:right;
             }
@@ -349,6 +353,7 @@ margin-left: 21px;}
             }
             .image_center{
                 margin:auto;
+                display: block;
             }
 
             .img_glow {
@@ -409,6 +414,7 @@ text-align: right;
 	padding: 2px;
 	-moz-border-radius: 7px;
 	border-radius: 7px;
+    cursor:pointer;
 
 }
 
@@ -490,6 +496,15 @@ position: relative;
 }
 
 
+.sticky-wrapper{
+    margin-top:75px;
+}
+
+.captionbox {
+    text-align:center;
+    width: 324px;
+}
+
 
 
 /**needed for sideswipe **/
@@ -532,3 +547,5 @@ position: relative;
 
 
 }
+
+
