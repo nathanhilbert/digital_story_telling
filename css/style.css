@@ -524,18 +524,31 @@ position: relative;
 
 }
 
-
-.module1 {
-  left: 300%; }
-
-.module2 {
-  left: 200%;}
-
-.database{
+.energizing{
     left:100%;
 }
+.module1 {
+  left: 200%; }
 
-  .database-visible .database  .stuck{
+.module2 {
+  left: 300%;}
+.experiential {
+  left: 400%;}
+.assessments {
+  left: 500%;}
+
+.database{
+    left:600%;
+}
+
+
+
+  .database-visible .database .stuck,
+  .energizing-visible .energizing .stuck,
+  .module1-visible .module1 .stuck,
+  .module2-visible .module2 .stuck,
+  .experiential-visible .experiential .stuck,
+  .assessments-visible .assessments .stuck{
 
     position:fixed;
     top:0;
