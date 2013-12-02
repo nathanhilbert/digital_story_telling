@@ -101,8 +101,10 @@ font-weight: normal;
 	.wrapper p{text-align: left; font-size: 17px;}
 
 .subwrapper{color: #555; background-color: white; width: 100%; padding: 35px 0px 0px 0px; overflow: hidden; max-width:960px; margin:auto;}
-	.subwrapper h1{color: #572902; background: url('../img/headerBG.png') no-repeat bottom center; font-size: 38px; text-align: center; padding: 0px; line-height: 115px; margin: 0px; font-family: 'Armata', sans-serif; font-weight: normal;}
+	   .subwrapper h1{color: #572902; background: url('../img/headerBG.png') no-repeat bottom center; font-size: 38px; text-align: center; padding: 0px 0px 25px 0px;  
+    margin-bottom: 10px; font-family: 'Armata', sans-serif; font-weight: normal;}
 	.subwrapper p{text-align: justify; font-size: 14px;}
+    div .subwrapper strong{color: #572902; text-align: center; margin: 0px; padding: 0px; font-weight: normal; font-size: 20px !important;}
 
 .logo {width: 325px; overflow: hidden; margin: 0 auto 0px; display: block;}
 .introText {width: 940px; margin: 40px auto 50px; padding: 0px}
@@ -454,24 +456,25 @@ text-align: right;
 
 
 
-.subreportside{
-	display:block;
-	width:120px;
-	height:100px;
+.subreportside{ display:block; width:140px; overflow: hidden;}
+.subreportside p{padding: 5px; font-size: 14px;}
+.subreportside a {text-decoration: none;}
 
-}
+
+
 .maincontent-visible .subreportside{
-	position:fixed;
-	display:block;
-	top:10px;
-	right:17px;
-	-moz-border-radius: 7px;
-	border-radius: 7px;
-	background-color: rgba(128, 128, 128, 0.35);
-	padding: 5px;
+    position:fixed;
+    display:block;
+    top:5px;
+    right:17px;
+    -moz-border-radius-bottomright: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: #07770F;
+    color: #fff;
+    padding: 5px 5px 5px 10px;
 }
 .subreportside:hover{
-	background-color: rgba(128, 128, 128, 0.60);
+	background-color: #17AA1D;
 }
 
 .hidden{
@@ -577,7 +580,7 @@ position: relative;
     text-align: left;
 }
 .ac-container label{
-    font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Arial', Arial, sans-serif;
     padding: 5px 20px;
     position: relative;
     z-index: 20;
@@ -605,12 +608,12 @@ position: relative;
 }
 .ac-container input:checked + label,
 .ac-container input:checked + label:hover{
-    background: #078301;
+    background: #07770F;
     color: #fff;
-    text-shadow: 0px 1px 1px rgba(255,255,255, 0.6);
     box-shadow: 
         0px 0px 0px 1px rgba(155,155,155,0.3), 
         0px 2px 2px rgba(0,0,0,0.1);
+    text-transform: uppercase;
 }
 .ac-container label:hover:after,
 .ac-container input:checked + label:hover:after{
@@ -667,6 +670,8 @@ position: relative;
     height: auto;
 }
 
+.ac-large ul{margin: 0px 0px 0px 20px; padding: 0px;}
+.ac-large li {margin:0px; padding; list-style: none}
 
 /* Blockquote style ——————————————————————————————————————————————— 
 ///////////////////////////////////////////////////////////////////
@@ -674,7 +679,7 @@ position: relative;
 
 blockquote {
 font-family: Georgia, serif;
-font-size: 14px;
+font-size: 18px;
 font-style: italic;
 width: 450px;
 margin: 8px 10px 8px 20px;
@@ -687,7 +692,7 @@ float: right;
 
 blockquote {
 font-family: Georgia, serif;
-font-size: 14px;
+font-size: 18px;
 font-style: italic;
 width: 450px;
 margin: 8px 10px 8px 20px;
@@ -697,7 +702,7 @@ position: relative;
 color: #998576;
 float: right;
 }
-/*
+
 blockquote:before {
 display: block;
 content: "\201C";
@@ -708,7 +713,6 @@ top: -20px;
 color: #7a7a7a;
 font-family: Helvetica CY, serif;
 }
-*/
 
 blockquote cite {
 color: #999999;
@@ -763,5 +767,15 @@ table.altrowstable td {
     background-color:#d4e3e5;
 }
 .evenrowcolor{
-    background-color:#c3dde0;
+    background-color:green;
 }
+
+
+
+/* Misc style ——————————————————————————————————————————————— 
+///////////////////////////////////////////////////////////////////
+*/
+
+a[href $='.pdf'] {padding: 8px 0 8px 20px; background: transparent url(../img/pdf.png) no-repeat center left}
+a[href $='.doc'] {padding: 8px 0 8px 20px; background: transparent url(../img/doc.png) no-repeat center left}
+a[href $='.docx'] {padding: 8px 0 8px 20px; background: transparent url(../img/doc.png) no-repeat center left}

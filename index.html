@@ -40,26 +40,7 @@
                   <script src="js/jquery-ui-1.10.3.custom.min.js" type="text/javascript" charset="utf-8"></script>
                   <!--Adjust the size of the front page for video -->
                   <!-- Javascript goes in the document HEAD -->
-                  <script type="text/javascript">
-                     function altRows(id){
-                     if(document.getElementsByTagName){  
-                     
-                     var table = document.getElementById(id);  
-                     var rows = table.getElementsByTagName("tr"); 
-                     
-                     for(i = 0; i < rows.length; i++){          
-                      if(i % 2 == 0){
-                        rows[i].className = "evenrowcolor";
-                      }else{
-                        rows[i].className = "oddrowcolor";
-                      }      
-                     }
-                     }
-                     }
-                     window.onload=function(){
-                     altRows('alternatecolor');
-                     }
-                  </script>
+
                   <script>
                      $(document).ready(function () { 
                                     $(".container").css('top', $(window).height()-52);
@@ -1358,7 +1339,7 @@
                                  <input id="ac-10" name="accordion-1" type="radio" />
                                  <label for="ac-10">List of Abbreviations</label>
                                  <article class="ac-large">
-                                    <table border="" cellpadding="0" cellspacing="0">
+                                    <table class="altrowstable" id="alternatecolor">
                                        <tbody>
                                           <tr>
                                              <td class="table-td">ACTESA&nbsp;</td>
@@ -1776,219 +1757,11 @@
                            <p>&nbsp;</p>
                            <p>&nbsp;</p>
                            <p>SCALING UP FOR FOOD SECURITY IN AFRICA - COURSE SCHEDULE</p>
-                           <table border="" cellpadding="0" cellspacing="0">
-                              <tbody>
-                                 <tr>
-                                    <td style="width:139px">
-                                       <p><strong>MONDAY</strong></p>
-                                    </td>
-                                    <td style="width:132px">
-                                       <p><strong>TUESDAY</strong></p>
-                                    </td>
-                                    <td style="width:126px">
-                                       <p><strong>WEDNESDAY</strong></p>
-                                    </td>
-                                    <td style="width:132px">
-                                       <p><strong>THURSDAY</strong></p>
-                                    </td>
-                                    <td style="width:126px">
-                                       <p><strong>FRIDAY</strong></p>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td style="width:139px">
-                                       <p><strong><em>Themes:</em></strong></p>
-                                       <p>* CAADP / FTF Frameworks</p>
-                                       <p>&nbsp;</p>
-                                       <p>* Status of Change in Food Security</p>
-                                       <p>&nbsp;</p>
-                                       <p>* Opportunities for Success</p>
-                                    </td>
-                                    <td style="width:132px">
-                                       <p><strong><em>Themes: </em></strong></p>
-                                       <p>* Leading and Managing Change</p>
-                                    </td>
-                                    <td style="width:126px">
-                                       <p><strong><em>Theme:&nbsp; </em></strong></p>
-                                       <p>* Strategic Thinking &amp; Planning</p>
-                                       <p>&nbsp;</p>
-                                       <p>* Advocacy: Analyzing Stakeholders</p>
-                                    </td>
-                                    <td style="width:132px">
-                                       <p><strong><em>Themes: </em></strong></p>
-                                       <p>* Advocacy: Developing Messages</p>
-                                       <p>&nbsp;</p>
-                                       <p>* Leadership Skills for Change Initiatives</p>
-                                       <p>&nbsp;</p>
-                                    </td>
-                                    <td style="width:126px">
-                                       <p><strong><em>Themes:&nbsp; </em></strong></p>
-                                       <p>* Capacity Needs Assessment</p>
-                                       <p>&nbsp;</p>
-                                       <p>* Monitoring and Evaluation</p>
-                                       <p>&nbsp;</p>
-                                       <p>*Creating Plans for</p>
-                                       <p>Next Steps</p>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td style="width:139px">
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; Welcome and Introductions: Building the Team</p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; Our Roles in Food Security (Rome, L&rsquo;Aquila, CAADP &amp; FTF/ Guiding Principles)<br />
-                                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                       </p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; &nbsp;<strong><em>Lunch</em></strong></p>
-                                       <p>&nbsp;</p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; Status of Food Security (Inclusive Approach-Gender, the Poor, Climate Change &amp; Nutrition)</p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; Opportunities for Food Security Initiatives in Countries/Region</p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; Individual Planning/ Journaling</p>
-                                    </td>
-                                    <td style="width:132px">
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; Overview of the Day /Homework</p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; Overview of Leading &amp; Managing Change</p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; Leading &amp; Managing Change &ndash; Step 1: Increase Urgency</p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; Leading &amp; Managing Change &ndash; Step 2: Build the Guiding Team</p>
-                                       <p>&nbsp;</p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; <strong><em>Lunch</em></strong></p>
-                                       <p>&nbsp;</p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; Leading &amp; Managing Change &ndash; Step 3: Create A Compelling Vision</p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; &nbsp;Individual Planning/ Journaling</p>
-                                    </td>
-                                    <td style="width:126px">
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; Overview of the Day/Homework</p>
-                                       <p>&nbsp;</p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; Strategic Thinking &amp; Planning</p>
-                                       <p>&nbsp;</p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; <strong><em>Lunch</em></strong></p>
-                                       <p>&nbsp;</p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; Strategic Thinking&nbsp; &amp; Planning (continued)</p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; Advocacy: Analyzing Stakeholders in Food Security: Knowledge Positions</p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; Individual Planning / Journaling</p>
-                                    </td>
-                                    <td style="width:132px">
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; Overview of the Day/Homework</p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; Advocacy: Developing Messages with Impact<br />
-                                          &nbsp;
-                                       </p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; Individual Leadership Action Plan</p>
-                                       <p>&nbsp;</p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; &nbsp;<strong><em>Lunch</em></strong></p>
-                                       <p>&nbsp;</p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; Individual Change Leadership Action Plan</p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; (continued)</p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; Journaling</p>
-                                       <p>&nbsp;</p>
-                                    </td>
-                                    <td style="width:126px">
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; Overview of the Day/Homework</p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; Introduction to the Capacity Needs Assessment Approach</p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; Basics of Monitoring and Evaluation</p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; Country/Region Food Security Networking &amp; Collaboration Work Groups and Reports</p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; Closing Session</p>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td style="width:139px">
-                                       <p><strong><em>Homework:&nbsp; </em></strong></p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; Read <em>Leading Change </em>HBR Article &nbsp;</p>
-                                    </td>
-                                    <td style="width:132px">
-                                       <p><strong><em>Homework:&nbsp; </em></strong></p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; Review Strategic Thinking &amp; Planning Section</p>
-                                    </td>
-                                    <td style="width:126px">
-                                       <p><strong><em>Homework:&nbsp; </em></strong></p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; Complete Leadership Practices Inventory</p>
-                                    </td>
-                                    <td style="width:132px">
-                                       <p><strong><em>Homework:</em></strong></p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; Review Capacity Needs Assessment Materials</p>
-                                    </td>
-                                    <td style="width:126px">
-                                       <p><strong><em>Homework:</em></strong></p>
-                                       <p>Be a</p>
-                                       <p>CHAMPION OF CHANGE !</p>
-                                       <p>&nbsp;</p>
-                                    </td>
-                                 </tr>
-                              </tbody>
-                           </table>
+                           <p><img src="img/energizing_schedule1.png" id="energizing_schedule1"  style="height:700px" /></p>
                            <p>&nbsp;</p>
                            <p>Module One was followed by a second wave of 4-day residential trainings in a course called Module Two. Although there is some overlap in content between them, Module Two is more focused on management skills needed to implement and accelerate initiatives to transform agriculture and achieve food security at sub-national, national or regional levels. Module One is more focused on nurturing leaders who are motivated and able to spearhead policy change processes and agriculture transformation in their countries. Unlike Module One, most Module Two trainings are held in the country of the local USAID Mission paying for the training and only include participants from a single country, single set of organizations or single institution, depending on the objective of the training. The exception to this is Module Two trainings paid for by the Regional Missions which target staff from regional institutions with roles in CAADP&rsquo;s four pillars or those key to facilitating regional economic integration. A sample agenda for the standard Module Two program is provided below:</p>
                            <p>Sample Module 2: Agenda</p>
-                           <table border="" cellpadding="0" cellspacing="0">
-                              <tbody>
-                                 <tr>
-                                    <td style="width:158px">
-                                       <p><strong>Day One</strong></p>
-                                    </td>
-                                    <td style="width:162px">
-                                       <p><strong>Day Two</strong></p>
-                                    </td>
-                                    <td style="width:168px">
-                                       <p><strong>Day Three</strong></p>
-                                    </td>
-                                    <td style="width:204px">
-                                       <p><strong>Day Four</strong></p>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td colspan="4" style="width:692px">
-                                       <p><strong>A.M.</strong></p>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td style="width:158px">
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; Pre-Training Survey</p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; <strong>Session 1:</strong> Introductions and Overview</p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; <strong>Session 2:</strong> NAIP/RAIP Overview</p>
-                                    </td>
-                                    <td style="width:162px">
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; <strong>Session 5: </strong>Project Management Overview (continued)</p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; <strong>Session 6:</strong> NAIP/RAIP Support Mechanisms &ndash; Concurrent Tracks:</p>
-                                       <p>&middot; Track1 &ndash; Strategic Influencing for Stakeholder Participation and Collaboration</p>
-                                       <p>&middot; Track 2 &ndash; Financial Management</p>
-                                       <p>&middot; Track 3 &ndash; Managing the Donor-Recipient Relationship</p>
-                                       <p>&middot; Track 4 &ndash; Managing People to Achieve Results</p>
-                                    </td>
-                                    <td style="width:168px">
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; <strong>Session 7:</strong> Monitoring &amp; Evaluation for NAIP/RAIP Implementation (continued)</p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; <strong>Session 8:</strong> Design and Implementation of Rapid Results Projects</p>
-                                       <p>&nbsp;</p>
-                                    </td>
-                                    <td style="width:204px">
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; <strong>Session 9:</strong> Action Planning for NAIP/RAIP Implementation (continued)</p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; <strong>Session 10:</strong> Teambuilding &ndash; Success Factors for Effective Implementation</p>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td colspan="4" style="width:692px">
-                                       <p><strong>LUNCH &ndash; P.M.</strong></p>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td style="width:158px">
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; <strong>Session 3:</strong> Success Stories in Agricultural Productivity &ndash; Characteristics of Effective Projects</p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; <strong>Session 4:</strong> Project Management Overview</p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; <strong>Session 5:</strong> Project Management Overview</p>
-                                    </td>
-                                    <td style="width:162px">
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; Concurrent Tracks Continued</p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; <strong>Session 7:</strong> Monitoring &amp; Evaluation for NAIP/RAIP Implementation</p>
-                                    </td>
-                                    <td style="width:168px">
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; <strong>Session 8:</strong> Design and Implementation of Rapid Results Projects (continued)</p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; <strong>Session 9:</strong> Action Planning for NAIP/RAIP Implementation</p>
-                                    </td>
-                                    <td style="width:204px">
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; <strong>Session 10:</strong> Teambuilding &ndash; Success Factors for Effective Implementation (continued)</p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; <strong>Session 11:</strong> Next Steps for the Group, Resources and Skill Development Needed</p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; <strong>Session 12:</strong> Wrap Up and Closure</p>
-                                       <p>&middot;&nbsp;&nbsp;&nbsp; Post-Training Survey</p>
-                                    </td>
-                                 </tr>
-                              </tbody>
-                           </table>
+                            <p><img src="img/energizing_schedule2.png" id="energizing_schedule2"  style="height:592px" /></p>
                            <p>&nbsp;</p>
                            <p>Most Module One trainings that have been provided by Africa Lead in East, Southern and West Africa occurred between January and July 2011. In September 2011 a simplified three-day Non-State Actor (NSA) Dialogue Platform training on CAADP and methods for engaging governments and stakeholders in policy dialogues was held for non-state actors (community-based, academic, media, private sector organizations) in several Africa Lead countries in East, Southern and West Africa. Module Two trainings began in Tanzania in the summer of 2011 and in Ghana and Liberia in March/April of 2012. Since that time, East and West African Regional and local Missions have continued to submit buy-in orders for Africa Lead training workshops based on customized blends of the original Module One curriculum and the Module Two curriculum. Examples of customized trainings include adaptations of the Module One leadership training for high level Parliamentarians in Uganda and Government-to-Government Policy Dialogues developed to facilitate collaboration and coordination on policy formation and planning among ministries in Tanzania. The adaptability of Africa Lead&rsquo;s training curricula to cater to different audiences or training objectives depending on the strategic interests of the Mission buying in constitutes an important level of flexibility that allows Africa Lead to address widely different contexts at sub-national, national and regional levels with a relatively simple set of capacity building tools.</p>
                            <h2>Capacity building for CAADP at 10 years</h2>
@@ -2469,491 +2242,528 @@
                         </div>
                         <div class="subwrapper">
                            <h1>Energizing and Re-energizing Champions for Change for Food Security:&nbsp; Lessons Learned from Africa Lead Leadership Training</h1>
-                           <h1>Introduction</h1>
-                           <p>Africa Lead, the Africa Leadership Training and Capacity Building Program, was initially a two-year task order under the RAISE Plus Indefinite Quantity Contract (IQC) mechanism, designed to run from September 20, 2010 to September 30, 2012, with a budget ceiling of $21,332,381. As of a September 30, 2012 contract modification, the program was extended for one year (through September 2013) and the ceiling was raised by $4,850,000 to $26,182,381. Africa Lead is being implemented by lead RAISE Plus IQC holder, DAI, supported by Management Systems International (MSI), Winrock International, Training Resources Group (TRG), ECI Africa Consulting (Pty) Ltd., and Michigan State University (MSU).</p>
-                           <p>From the beginning of the program until July 31, 2012 Africa Lead was implemented through three regional offices&ndash;Accra, Ghana; Nairobi, Kenya; and Pretoria, South Africa &ndash; each run by a Regional Deputy Chief of Party (DCOP). Since closure of the Pretoria office, program implementation for Southern Africa has been handled primarily by the Nairobi office, now designated as the Africa Lead East and Southern Africa (ESA) office. Program implementation and operations in the Nairobi and Accra offices are supported by a Bethesda-based office headed by the program COP.</p>
-                           <p>The purpose of the program is to support the capacity building program of the US Government&rsquo;s Feed the Future (FTF) Initiative, which aligns U.S. Government development assistance with Africa-owned agriculture development plans that are, in turn, aligned with the African Union&rsquo;s Comprehensive Africa Agriculture Development Program (CAADP). CAADP seeks to contribute to the MDG goals by ensuring that governments throughout the continent apply 10% of their public budgets to agriculture in an effort to achieve the 6% annual growth in agricultural productivity that is needed to achieve sustainable food security throughout the continent.</p>
-                           <p>Africa Lead provides leadership training, capacity assessments, logistical support for training and innovative short courses and internships/twinning arrangements prioritized in consultation with missions and partner countries and institutions, and a database of training offerings on the continent that can be matched to the leadership training and capacity building needs.</p>
-                           <h1>Purpose of Report</h1>
-                           <p>&nbsp;</p>
-                           <p>The purpose of this report is to describe the Champions for Change leadership training that Africa Lead provided, and to capture the main lessons that have been learned from the design, customization and delivery of the course. The report also seeks to drive improvements from these lessons that will make future leadership training more effective in developing a cadre, network and critical mass of champions and in strengthening the institutions within which they work.&nbsp; A final purpose of the report is to identify how leadership training might be injected into other types of training in such a way as to achieve scale in leadership training and to ground the leadership training by identifying the &ldquo;leadership training for what?&rdquo; question.</p>
-                           <h1>Goal of Champions for Change Training</h1>
-                           <p>&nbsp;</p>
-                           <p>The goal of the Champions for Change training, as stated in the Africa Lead contract, is to &ldquo;Build a cadre of African leaders to design and implement food security strategies and investment plans.&rdquo;&nbsp; Translated into the language of a vision for the program, Africa Lead seeks to contribute to the overall goal of helping Africa achieve, &ldquo;Better designed, delivered, implemented and measured agriculture policies, programs and enterprises in Africa, leading to greater agricultural productivity and food security.&rdquo;</p>
-                           <p>&nbsp;Africa Lead does no prior assessments of the need for leadership training.&nbsp; The impetus to provide leadership training comes from CAADP imperatives for transformational change and for &ldquo;business unusual,&rsquo; namely that to move African agriculture to the new plane of productivity needed for achieving the MDGs, innovative, transformative leadership is going to be required of leaders working in the agriculture and agribusiness sector.</p>
-                           <p>Technical training overlaid on overly bureaucratic institutions is not going to &ldquo;do the trick.&rdquo; Heads of divisions, departments, agencies and ministries need to know how to effectively manage transformational change. They need to know how to create a sense of urgency, build a sustaining team within their own organizations and across agencies and otherwise motivate staff, colleagues and superiors to combine forces toward achievable and measurable results.&nbsp; The Africa Lead Module One (Leadership and Change Management) and Module Two (Program Design and Implementation Tools) trainings are designed to build that force multiplier that drives effective leaders.</p>
-                           <h1>Methodology and Structure of Training</h1>
-                           <p>&nbsp;</p>
-                           <p>Immediately upon award of the Task Order contract, Africa Lead deployed senior trainers and training design specialists to the task of developing a five day course including presentational material, trainer guides and participant manuals.&nbsp; The curriculum is designed to be highly interactive and to be maximally effective within an adult learning context.&nbsp; It was ground-truthed during a training-of-trainers (TOT) session in Nairobi during which highly experienced regional African trainers reviewed the material, learned what the objectives of the training were.&nbsp; The regional African trainers contextualized the material and the approach in a way that ensures that the material will both &ldquo;get to the heart and to the head&rdquo; of African training participants.</p>
-                           <p><img src="img/whatsherstory3.png" id="whatsherstory3" class="image_right" style="height:300px" /></p>
-                           <p>The combination of inputs from international experts in adult learning techniques and regional experts has resulted in a powerful curriculum, methodology and approach to the Champions training.&nbsp; Two devices are of particular note in this regard.&nbsp; First the use of imagery and symbolism/ceremony helps to get at the heart.&nbsp; The imagery of a small girl whose future is clearly in doubt as a result of her gender, poverty, food insecurity and climate change challenges is especially powerful.&nbsp; Participants are asked to give the girl a name and to imagine her future based on specified criteria that will challenge her chance to grow up healthy and productive.&nbsp; This produces a visceral connection to the girl as representing the urgency of the food security challenge in Africa.</p>
-                           <p>The ceremony aspect revolves around the African &ldquo;food security&rdquo; or food storage pot.&nbsp; The idea is that the pot has been broken and/or left unfilled and that this is the symbolism of the food security challenge before African Food Security Champions.&nbsp; As particularly insightful interventions and comments are made during the training, the trainers and then later other participants exhort the innovator to &ldquo;fill the pot&rdquo; or to &ldquo;mend the pot, fill the pot,&rdquo; with grain kept to the side of the pot.&nbsp; The imagery of the little girl and the symbolism of filling the African food security pot are together the foundation of the Champions brand.&nbsp; African food security Champions for Change are marked by their sense of agency and urgency.&nbsp; These symbols and images helped ensure that the training went beyond the &ldquo;head&rdquo; and to the &ldquo;heart.&rdquo;</p>
-                           <div class="subvideo image_left truevideo">
-                              <div class="videooverlay truevideo">
-                                 <div class="videooverlay_button"></div>
-                                 <img src='img/Overlay_PotFinal-FINAL.png' />
-                              </div>
-                              <div class="videocontent">
-                                 <video id="video_sub11" class="videoclass" preload="none" volume="0" controls>
-                                    <source src="media/PotFinal-FINAL2.webm" type="video/webm">
-                                    Video not supported
-                                 </video>
-                              </div>
-                           </div>
-                           <p>The course is a 40-hour residential training course with extensive use of exercises designed to get the participants out of their comfort zones and to force them to look at common problems from different perspectives.&nbsp; The course is divided into seven &ldquo;themes&rdquo; over the course of five days of training (look for the Trainers Guide coming to the Africa Lead website in 2014):</p>
-                           <p>&nbsp;</p>
-                           <ul>
-                              <li>CAADP and FTF Frameworks</li>
-                              <li>Status of Change in Food Security</li>
-                              <li>Opportunities for Success</li>
-                              <li>Leading and Managing Change</li>
-                              <li>Strategic Planning and Thinking</li>
-                              <li>Advocacy: Analyzing Stakeholders</li>
-                              <li>Advocacy: Developing Messages</li>
-                              <li>Leadership Skills for Change Initiatives</li>
-                              <li>Capacity Needs Assessment</li>
-                              <li>Monitoring and Evaluation</li>
-                              <li>Creating Plans for Using/Applying Skills</li>
-                           </ul>
-                           <p>&nbsp;</p>
-                           <p>&nbsp;</p>
-                           <p>These themes are presented in 12 sessions with a thirteenth session for wrap up:</p>
-                           <ul>
-                              <li>Session 1:&nbsp; Building our Team</li>
-                              <li>Session 2:&nbsp; Our Roles in Food Security</li>
-                              <li>Session 3:&nbsp; Eight-Step Change Management Framework (Introduction and Step 1: Increase Urgency)</li>
-                              <li>Session 4:&nbsp; Eight-Step Change Management Framework (Step 2: Build the Guiding Team)</li>
-                              <li>Session 5:&nbsp; Eight-Step Change Management Framework (Step 3: Creating Compelling Visions)</li>
-                              <li>Session 6:&nbsp; Strategic Thinking and Planning</li>
-                              <li>Session 7:&nbsp; Advocacy Part I: Analyzing Stakeholders</li>
-                              <li>Session 8:&nbsp; Advocacy Part II:&nbsp; Creating Messages for Stakeholders</li>
-                              <li>Session 9:&nbsp; Individual Change Leadership Action Plans</li>
-                              <li>Session 10:&nbsp; Action Planning</li>
-                              <li>Session 11:&nbsp; The Basics of Monitoring and Evaluation (M&amp;E)</li>
-                              <li>Session 12:&nbsp; Capacity Assessment and Development</li>
-                           </ul>
-                           <p>Participants are encouraged to engage in journaling and individual planning at the end of each day as a way to reinforce the learning process and ensure that the action plans produced at the end of the training will be realistic and discrete enough to be actionable and under the control of the Champion upon his or her completion of the training.</p>
-                           <p>Training workshops are conducted for cohorts of between 25 and 35 participants.&nbsp; This size is considered optimal for a training in which extensive discussions, exchanges and facilitated exercises are core to the learning experience.</p>
-                           <p>There are &nbsp;multiple objectives of the training. The main objectives being the development of a stronger understanding of CAADP, food security and each participant&rsquo;s role in securing a food secure future for his or her country and region.&nbsp; Also, the understanding and application of change management and leadership tools and skills is a critical objective of the training.</p>
-                           <p>Ultimately, the development hypothesis underlying the Champions for Change training is that a critical mass of innovative, results-focused agriculture leaders from across the spectrum of agriculture and food security stakeholders will result in better policies and programs; that &ldquo;governance&rdquo; in agriculture will make the critical difference for food security.</p>
-                           <p><strong>Objectives:</strong></p>
-                           <p><strong>By the end of the training, participants will be able to:</strong></p>
-                           <ul>
-                              <li><em>Describe their current and potential, formal and informal roles in food security initiatives, including &ndash; but not exclusive to &ndash; active roles in CAADP and Country Investment Plans.</em></li>
-                              <li><em>Explore and analyze major challenges in implementing major agricultural initiatives and identify innovative actions that they can take to help overcome these challenges. </em></li>
-                              <li><em>Demonstrate skills necessary for being a champion for change, including such areas as planning, advocacy, and transformative leadership.</em></li>
-                              <li><em>Develop Individual Action Plans to expand their roles and to become active and creative participants in their country and region&rsquo;s ownership of food security initiatives, including outreach to other champions of change and stakeholders.</em></li>
-                              <li><em>Expand their own views of food security and develop advocacy strategies to change mindsets about the role of the very poor, the importance of gender, the role of nutrition in advancing agricultural-led growth, and the impact of climate change on agricultural development.</em></li>
-                              <li><em>Understand their historic roles as part of a pan-African initiative to tap the most creative thinkers and leaders in finding innovative new ways to meet food security challenges.</em></li>
-                              <li><em>Create sustainable networks to increase agricultural performance and food security.</em></li>
-                           </ul>
-                           <h3>Exercises designed to change perspectives and think outside the box</h3>
-                           <p>&nbsp;</p>
-                           <p>A hallmark of the Champions for Change training is the set of exercises that are designed to challenge perspectives and ways of approaching participants&rsquo; work. In addition to the &ldquo;little girl storytelling,&rdquo; these include, but are not only limited to, the following:</p>
-                           <ul>
-                              <li>Out of the Box: The Nine Dots</li>
-                              <li>The Roadblock Game</li>
-                              <li>Left Foot Right Shoe, Right Foot Left Shoe</li>
-                              <li>Switching the Way Arms are Crossed</li>
-                              <li>Kaleidoscope</li>
-                              <li>Developing and Practicing SMART Messages</li>
-                              <li>Animal Game</li>
-                           </ul>
-                           <div class="subvideo image_right truevideo">
-                              <div class="videooverlay truevideo">
-                                 <div class="videooverlay_button"></div>
-                                 <img src='img/Overlay_Paul_Animal_Game-FINAL.png' />
-                              </div>
-                              <div class="videocontent">
-                                 <video id="video_sub12" class="videoclass" preload="none" volume="0" controls>
-                                    <source src="media/Paul_Animal_Game-FINAL2.webm" type="video/webm">
-                                    Video not supported
-                                 </video>
-                              </div>
-                           </div>
-                           <h1>Accomplishments</h1>
-                           <h2>Number and Type of Champions Trained</h2>
-                           <p>&nbsp;</p>
-                           <p>A large number of agriculture leaders have been trained by Africa Lead.&nbsp; Here we focus on those who have been through the above-mentioned Champions for Change training (Task One Module One).&nbsp; It is important to mention, however, that while there are many workshops in which the standard five day, 40 hour Champions for Change training has been provided, there are also multiple variants of the standard training.&nbsp; Meaning no disrespect to participants in other trainings, Africa Lead has generally reserved the title &ldquo;Champions for Change for Food Security&rdquo; for agriculture leaders who have been through the full training. There is no doubt that there are other &ldquo;champions&rdquo; for transformation in agriculture and food security besides the Africa Lead-trained Champions.&nbsp; Here we refer to graduates of the standard Champions for Change training.</p>
-                           <p><img src="img/module_1_comparedtoother.png" class="image_right" id="module_1_comparedtoother"  style="height:250px" /></p>
-                           <p>The program has trained <span class="highlightimage" data="module1_participants_by_region">1,343 agriculture leaders</span> in the five day Champions for Change training, which has been provided in 54 separate training workshops to classes of approximately 24 participants representing 29 countries overall , including 575 Champions for Change in East Africa, 375 in West Africa, and 393 in Southern Africa. Africa Lead targets a 50/50 gender split of trainees, ending up with 35 percent of the participants being female.</p>
-                           <p><img src="img/module1_participants_by_region.png" class="image_left" id="module1_participants_by_region"  style="height:250px" /></p>
-                           <p>&nbsp;</p>
+
+                    <strong>Introduction</strong>
+
+
+                    <p>Africa Lead, the Africa Leadership Training and Capacity Building Program, was initially a two-year task order under the RAISE Plus Indefinite Quantity Contract (IQC) mechanism, designed to run from September 20, 2010 to September 30, 2012, with a budget ceiling of $21,332,381. As of a September 30, 2012 contract modification, the program was extended for one year (through September 2013) and the ceiling was raised by $4,850,000 to $26,182,381. Africa Lead is being implemented by lead RAISE Plus IQC holder, DAI, supported by Management Systems International (MSI), Winrock International, Training Resources Group (TRG), ECI Africa Consulting (Pty) Ltd., and Michigan State University (MSU).</p>
+
+                    <p>From the beginning of the program until July 31, 2012 Africa Lead was implemented through three regional offices&ndash;Accra, Ghana; Nairobi, Kenya; and Pretoria, South Africa &ndash; each run by a Regional Deputy Chief of Party (DCOP). Since closure of the Pretoria office, program implementation for Southern Africa has been handled primarily by the Nairobi office, now designated as the Africa Lead East and Southern Africa (ESA) office. Program implementation and operations in the Nairobi and Accra offices are supported by a Bethesda-based office headed by the program COP.</p>
+
+                    <p>The purpose of the program is to support the capacity building program of the US Government&rsquo;s Feed the Future (FTF) Initiative, which aligns U.S. Government development assistance with Africa-owned agriculture development plans that are, in turn, aligned with the African Union&rsquo;s Comprehensive Africa Agriculture Development Program (CAADP). CAADP seeks to contribute to the MDG goals by ensuring that governments throughout the continent apply 10% of their public budgets to agriculture in an effort to achieve the 6% annual growth in agricultural productivity that is needed to achieve sustainable food security throughout the continent.</p>
+
+                    <p>Africa Lead provides leadership training, capacity assessments, logistical support for training and innovative short courses and internships/twinning arrangements prioritized in consultation with missions and partner countries and institutions, and a database of training offerings on the continent that can be matched to the leadership training and capacity building needs.</p>
+
+                    <h1>Purpose of Report</h1>
+
+                    <p>&nbsp;</p>
+
+                    <p>The purpose of this report is to describe the Champions for Change leadership training that Africa Lead provided, and to capture the main lessons that have been learned from the design, customization and delivery of the course. The report also seeks to drive improvements from these lessons that will make future leadership training more effective in developing a cadre, network and critical mass of champions and in strengthening the institutions within which they work.&nbsp; A final purpose of the report is to identify how leadership training might be injected into other types of training in such a way as to achieve scale in leadership training and to ground the leadership training by identifying the &ldquo;leadership training for what?&rdquo; question.</p>
+
+                    <h1>Goal of Champions for Change Training</h1>
+
+                    <p>&nbsp;</p>
+
+                    <p>The goal of the Champions for Change training, as stated in the Africa Lead contract, is to &ldquo;Build a cadre of African leaders to design and implement food security strategies and investment plans.&rdquo;&nbsp; Translated into the language of a vision for the program, Africa Lead seeks to contribute to the overall goal of helping Africa achieve, &ldquo;Better designed, delivered, implemented and measured agriculture policies, programs and enterprises in Africa, leading to greater agricultural productivity and food security.&rdquo;</p>
+
+                    <p>&nbsp;Africa Lead does no prior assessments of the need for leadership training.&nbsp; The impetus to provide leadership training comes from CAADP imperatives for transformational change and for &ldquo;business unusual,&rsquo; namely that to move African agriculture to the new plane of productivity needed for achieving the MDGs, innovative, transformative leadership is going to be required of leaders working in the agriculture and agribusiness sector.</p>
+
+                    <p>Technical training overlaid on overly bureaucratic institutions is not going to &ldquo;do the trick.&rdquo; Heads of divisions, departments, agencies and ministries need to know how to effectively manage transformational change. They need to know how to create a sense of urgency, build a sustaining team within their own organizations and across agencies and otherwise motivate staff, colleagues and superiors to combine forces toward achievable and measurable results.&nbsp; The Africa Lead Module One (Leadership and Change Management) and Module Two (Program Design and Implementation Tools) trainings are designed to build that force multiplier that drives effective leaders.</p>
+
+                    <h1>Methodology and Structure of Training</h1>
+
+                    <p>&nbsp;</p>
+
+                    <p>Immediately upon award of the Task Order contract, Africa Lead deployed senior trainers and training design specialists to the task of developing a five day course including presentational material, trainer guides and participant manuals.&nbsp; The curriculum is designed to be highly interactive and to be maximally effective within an adult learning context.&nbsp; It was ground-truthed during a training-of-trainers (TOT) session in Nairobi during which highly experienced regional African trainers reviewed the material, learned what the objectives of the training were.&nbsp; The regional African trainers contextualized the material and the approach in a way that ensures that the material will both &ldquo;get to the heart and to the head&rdquo; of African training participants.</p>
+
+
+                    <p><img src="img/whatsherstory3.png" id="whatsherstory3" style="height:300px" /></p>
+                    
+
+                    <p>The combination of inputs from international experts in adult learning techniques and regional experts has resulted in a powerful curriculum, methodology and approach to the Champions training.&nbsp; Two devices are of particular note in this regard.&nbsp; First the use of imagery and symbolism/ceremony helps to get at the heart.&nbsp; The imagery of a small girl whose future is clearly in doubt as a result of her gender, poverty, food insecurity and climate change challenges is especially powerful.&nbsp; Participants are asked to give the girl a name and to imagine her future based on specified criteria that will challenge her chance to grow up healthy and productive.&nbsp; This produces a visceral connection to the girl as representing the urgency of the food security challenge in Africa.</p>
+
+                    <p>The ceremony aspect revolves around the African &ldquo;food security&rdquo; or food storage pot.&nbsp; The idea is that the pot has been broken and/or left unfilled and that this is the symbolism of the food security challenge before African Food Security Champions.&nbsp; As particularly insightful interventions and comments are made during the training, the trainers and then later other participants exhort the innovator to &ldquo;fill the pot&rdquo; or to &ldquo;mend the pot, fill the pot,&rdquo; with grain kept to the side of the pot.&nbsp; The imagery of the little girl and the symbolism of filling the African food security pot are together the foundation of the Champions brand.&nbsp; African food security Champions for Change are marked by their sense of agency and urgency.&nbsp; These symbols and images helped ensure that the training went beyond the &ldquo;head&rdquo; and to the &ldquo;heart.&rdquo;</p>
+                   
+                    <p>The course is a 40-hour residential training course with extensive use of exercises designed to get the participants out of their comfort zones and to force them to look at common problems from different perspectives.&nbsp; The course is divided into seven &ldquo;themes&rdquo; over the course of five days of training (look for the Trainers Guide coming to the Africa Lead website in 2014):</p>
+
+
+          <table class="altrowstable" id="alternatecolor" style="clear: both">
+             <tr>
+             <td>CAADP and FTF Frameworks</td>
+             <td>Status of Change in Food Security</td>
+             </tr>
+
+             <tr>
+             <td>Opportunities for Success</td>
+             <td>Leading and Managing Change</td>
+             </tr>
+
+             <tr>
+             <td>Strategic Planning and Thinking</td>
+             <td>Advocacy: Analyzing Stakeholders</td>
+             </tr>
+
+             <tr>
+             <td>Advocacy: Developing Messages</td>
+             <td>Leadership Skills for Change Initiatives</td>
+             </tr>
+
+             <tr>
+             <td>Capacity Needs Assessment</td>
+             <td>Monitoring and Evaluation</td>
+             </tr>
+
+             <tr>
+             <td>Creating Plans for Using/Applying Skills</td>
+             <td></tr>
+             </tr>
+          
+          </table>
+          
+          <br />
+          
+          <table class="altrowstable" id="alternatecolor" style="clear: both">
+                    <strong>These themes are presented in 12 sessions with a thirteenth session for wrap up:</strong>
+                    <tr>
+             <td>Session 1:&nbsp; Building our Team</td>
+             <td>Session 2:&nbsp; Our Roles in Food Security</td>
+             </tr>
+             <tr>
+             <td>Session 3:&nbsp; Eight-Step Change Management Framework (Introduction and Step 1: Increase Urgency)</td>
+             <td>Session 4:&nbsp; Eight-Step Change Management Framework (Step 2: Build the Guiding Team)</td>
+             </tr>
+
+             <tr>
+             <td>Session 5:&nbsp; Eight-Step Change Management Framework (Step 3: Creating Compeltdng Visions)</td>
+             <td>Session 6:&nbsp; Strategic Thinking and Planning</td>
+             </tr>
+             <tr>
+             <td>Session 7:&nbsp; Advocacy Part I: Analyzing Stakeholders</td>
+             <td>Session 8:&nbsp; Advocacy Part II:&nbsp; Creating Messages for Stakeholders</td>
+             </tr>
+             <tr>
+             <td>Session 9:&nbsp; Individual Change Leadership Action Plans</td>
+             <td>Session 10:&nbsp; Action Planning</td>
+             </tr>
+
+             <tr>
+             <td>Session 11:&nbsp; The Basics of Monitoring and Evaluation (M&amp;E)</td>
+             <td>Session 12:&nbsp; Capacity Assessment and Development</td>
+             </tr>
+          </table>   
+          <br /><br />   
+  
+          
+          <div class="subvideo image_left truevideo">
+                        <div class="videooverlay truevideo">
+                            <div class="videooverlay_button"></div>
+                            <img src='img/Overlay_PotFinal-FINAL.png' />
+                        </div>
+                        <div class="videocontent">
+                            <video id="video_sub11" class="videoclass" preload="none" volume="0" controls>
+                                <source src="media/PotFinal-FINAL2.webm" type="video/webm">
+                              Video not supported
+                            </video>
+                        </div>
+                    </div>
+
+
+                    <p>Participants are encouraged to engage in journaling and individual planning at the end of each day as a way to reinforce the learning process and ensure that the action plans produced at the end of the training will be realistic and discrete enough to be actionable and under the control of the Champion upon his or her completion of the training.</p>
+
+                    <p>Training workshops are conducted for cohorts of between 25 and 35 participants.&nbsp; This size is considered optimal for a training in which extensive discussions, exchanges and facilitated exercises are core to the learning experience.</p>
+
+                    <p>There are &nbsp;multiple objectives of the training. The main objectives being the development of a stronger understanding of CAADP, food security and each participant&rsquo;s role in securing a food secure future for his or her country and region.&nbsp; Also, the understanding and application of change management and leadership tools and skills is a critical objective of the training.</p>
+
+                    <p>Ultimately, the development hypothesis underlying the Champions for Change training is that a critical mass of innovative, results-focused agriculture leaders from across the spectrum of agriculture and food security stakeholders will result in better policies and programs; that &ldquo;governance&rdquo; in agriculture will make the critical difference for food security.</p>
+                    
+                    <h1>Objectives:</h1>
+                    
+                        <p><strong>By the end of the training, participants will be able to:</strong></p>
+
+                        <ul>
+                            <li><em>Describe their current and potential, formal and informal roles in food security initiatives, including &ndash; but not exclusive to &ndash; active roles in CAADP and Country Investment Plans.</em></li>
+                            <li><em>Explore and analyze major challenges in implementing major agricultural initiatives and identify innovative actions that they can take to help overcome these challenges. </em></li>
+                            <li><em>Demonstrate skills necessary for being a champion for change, including such areas as planning, advocacy, and transformative leadership.</em></li>
+                            <li><em>Develop Individual Action Plans to expand their roles and to become active and creative participants in their country and region&rsquo;s ownership of food security initiatives, including outreach to other champions of change and stakeholders.</em></li>
+                            <li><em>Expand their own views of food security and develop advocacy strategies to change mindsets about the role of the very poor, the importance of gender, the role of nutrition in advancing agricultural-led growth, and the impact of climate change on agricultural development.</em></li>
+                            <li><em>Understand their historic roles as part of a pan-African initiative to tap the most creative thinkers and leaders in finding innovative new ways to meet food security challenges.</em></li>
+                            <li><em>Create sustainable networks to increase agricultural performance and food security.</em></li>
+                        </ul>
+
+
+                    <h3>Exercises designed to change perspectives and think outside the box</h3>
+
+                    <p>&nbsp;</p>
+
+                    <p>A hallmark of the Champions for Change training is the set of exercises that are designed to challenge perspectives and ways of approaching participants&rsquo; work. In addition to the &ldquo;little girl storytelling,&rdquo; these include, but are not only limited to, the following:</p>
+
+                    <ul>
+                        <li>Out of the Box: The Nine Dots</li>
+                        <li>The Roadblock Game</li>
+                        <li>Left Foot Right Shoe, Right Foot Left Shoe</li>
+                        <li>Switching the Way Arms are Crossed</li>
+                        <li>Kaleidoscope</li>
+                        <li>Developing and Practicing SMART Messages</li>
+                        <li>Animal Game</li>
+                    </ul>
+
+                    <div class="subvideo image_right truevideo">
+                        <div class="videooverlay truevideo">
+                            <div class="videooverlay_button"></div>
+                            <img src='img/Overlay_Paul_Animal_Game-FINAL.png' />
+                        </div>
+                        <div class="videocontent">
+                            <video id="video_sub12" class="videoclass" preload="none" volume="0" controls>
+                                <source src="media/Paul_Animal_Game-FINAL2.webm" type="video/webm">
+                              Video not supported
+                            </video>
+                        </div>
+                    </div> 
+
+                    <p><img src="img/module_1_comparedtoother.png" class="image_right" id="module_1_comparedtoother"  style="height:250px" />
+                    <img src="img/module1_participants_by_region.png" class="image_left" id="module1_participants_by_region"  style="height:250px" /></p>
+
+                    <h1 style="clear:both">Accomplishments</h1>
+                    <strong>Number and Type of Champions Trained</strong>
+
+
+                    <p>A large number of agriculture leaders have been trained by Africa Lead.&nbsp; Here we focus on those who have been through the above-mentioned Champions for Change training (Task One Module One).&nbsp; It is important to mention, however, that while there are many workshops in which the standard five day, 40 hour Champions for Change training has been provided, there are also multiple variants of the standard training.&nbsp; Meaning no disrespect to participants in other trainings, Africa Lead has generally reserved the title &ldquo;Champions for Change for Food Security&rdquo; for agriculture leaders who have been through the full training. There is no doubt that there are other &ldquo;champions&rdquo; for transformation in agriculture and food security besides the Africa Lead-trained Champions.&nbsp; Here we refer to graduates of the standard Champions for Change training.</p>                    
+
+                    <p>The program has trained <span class="highlightimage" data="module1_participants_by_region">1,343 agriculture leaders</span> in the five day Champions for Change training, which has been provided in 54 separate training workshops to classes of approximately 24 participants representing 29 countries overall , including 575 Champions for Change in East Africa, 375 in West Africa, and 393 in Southern Africa. Africa Lead targets a 50/50 gender split of trainees, ending up with 35 percent of the participants being female.</p>
+
+                    </table>
+
+                    <h1>Assessment of Impact by Participants</h1>
+
+                    <p>&nbsp;</p>
+
+                    <p>Africa Lead understands that to be credible, any true assessment of program impact must be done by a disinterested, independent consultant or organization. Nonetheless, for the program&rsquo;s own management, monitoring, reporting and learning purposes, Africa Lead undertakes to determine how the Champions training is perceived by participants both in the short term (views about how the training is conducted) and the medium and long term (views on behavior change impact of the training).</p>
+
+                    <p>With respect to how participants viewed the training, <span class="highlightimage" data="table_participants_by_region">the table below</span> clearly presents the point that has been made anecdotally in one-on-one conversations, workshops and meetings, namely that the training has been exceptionally well received.</p>
+
+
+                    <h1>Total Module 1 Participants by Country</h1>
+
+          <table class="altrowstable" id="alternatecolor" style="float:left; margin-right: 20px;">
+                            <tr>
+                                <th>Country</th>
+                                <th># Participants</th>
+                            </tr>
+                            <tr>
+                                <td >Angola</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>Botswana</td>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <td>Burkina Faso</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>Burundi</td>
+                                <td>11</td>
+                            </tr>
+                            <tr>
+                                <td>DRC</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>Ethiopia</td>
+                                <td>116</td>
+                            </tr>
+                            <tr>
+                                <td>Ghana</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>Guinea</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>Guinea-Bissau</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>Kenya</td>
+                                <td>128</td>
+                            </tr>
+                            <tr>
+                                <td>Lesotho</td>
+                                <td>13</td>
+                            </tr>
+                            <tr>
+                                <td>Liberia</td>
+                                <td>100</td>
+                            </tr>
+                            <tr>
+                                <td>Madagascar</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>Malawi</td>
+                                <td>21</td>
+                            </tr>
+                            <tr>
+                                <td>Mali</td>
+                                <td>38</td>
+                            </tr>
+                            <tr>
+                                <td>Malawi</td>
+                                <td>21</td>
+                            </tr>
                            </table>
-                           <p>&nbsp;</p>
-                           <p>&nbsp;</p>
-                           <h2>Assessment of Impact by Participants</h2>
-                           <p>&nbsp;</p>
-                           <p>Africa Lead understands that to be credible, any true assessment of program impact must be done by a disinterested, independent consultant or organization. Nonetheless, for the program&rsquo;s own management, monitoring, reporting and learning purposes, Africa Lead undertakes to determine how the Champions training is perceived by participants both in the short term (views about how the training is conducted) and the medium and long term (views on behavior change impact of the training).</p>
-                           <p>With respect to how participants viewed the training, <span class="highlightimage" data="table_participants_by_region">the table below</span> clearly presents the point that has been made anecdotally in one-on-one conversations, workshops and meetings, namely that the training has been exceptionally well received.</p>
-                           <p><strong>TOTAL MODULE 1 PARTICIPANTS BY COUNTRY</strong></p>
-                           <table id="table_participants_by_region" border="" cellpadding="0" cellspacing="0" style="width:223px">
-                           <tbody>
-                              <tr>
-                                 <td style="height:21px; width:109px">
-                                    <p><strong>Country</strong></p>
-                                 </td>
-                                 <td style="height:21px; width:114px">
-                                    <p><strong># Participants</strong></p>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td style="height:21px; width:109px">
-                                    <p><strong>Angola</strong></p>
-                                 </td>
-                                 <td style="height:21px; width:114px">
-                                    <p>1</p>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td style="height:20px; width:109px">
-                                    <p><strong>Botswana</strong></p>
-                                 </td>
-                                 <td style="height:20px; width:114px">
-                                    <p>12</p>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td style="height:20px; width:109px">
-                                    <p><strong>Burkina Faso</strong></p>
-                                 </td>
-                                 <td style="height:20px; width:114px">
-                                    <p>2</p>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td style="height:20px; width:109px">
-                                    <p><strong>Burundi</strong></p>
-                                 </td>
-                                 <td style="height:20px; width:114px">
-                                    <p>11</p>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td style="height:20px; width:109px">
-                                    <p><strong>DRC</strong></p>
-                                 </td>
-                                 <td style="height:20px; width:114px">
-                                    <p>2</p>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td style="height:20px; width:109px">
-                                    <p><strong>Ethiopia</strong></p>
-                                 </td>
-                                 <td style="height:20px; width:114px">
-                                    <p>116</p>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td style="height:20px; width:109px">
-                                    <p><strong>Ghana</strong></p>
-                                 </td>
-                                 <td style="height:20px; width:114px">
-                                    <p>100</p>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td style="height:20px; width:109px">
-                                    <p><strong>Guinea</strong></p>
-                                 </td>
-                                 <td style="height:20px; width:114px">
-                                    <p>2</p>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td style="height:4px; width:109px">
-                                    <p><strong>Guinea-Bissau</strong></p>
-                                 </td>
-                                 <td style="height:4px; width:114px">
-                                    <p>2</p>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td style="height:20px; width:109px">
-                                    <p><strong>Kenya</strong></p>
-                                 </td>
-                                 <td style="height:20px; width:114px">
-                                    <p>128</p>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td style="height:20px; width:109px">
-                                    <p><strong>Lesotho</strong></p>
-                                 </td>
-                                 <td style="height:20px; width:114px">
-                                    <p>13</p>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td style="height:20px; width:109px">
-                                    <p><strong>Liberia</strong></p>
-                                 </td>
-                                 <td style="height:20px; width:114px">
-                                    <p>100</p>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td style="height:20px; width:109px">
-                                    <p><strong>Madagascar</strong></p>
-                                 </td>
-                                 <td style="height:20px; width:114px">
-                                    <p>1</p>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td style="height:20px; width:109px">
-                                    <p><strong>Malawi</strong></p>
-                                 </td>
-                                 <td style="height:20px; width:114px">
-                                    <p>21</p>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td style="height:20px; width:109px">
-                                    <p><strong>Mali</strong></p>
-                                 </td>
-                                 <td style="height:20px; width:114px">
-                                    <p>38</p>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td style="height:20px; width:109px">
-                                    <p><strong>Mozambique</strong></p>
-                                 </td>
-                                 <td style="height:20px; width:114px">
-                                    <p>13</p>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td style="height:20px; width:109px">
-                                    <p><strong>Namibia</strong></p>
-                                 </td>
-                                 <td style="height:20px; width:114px">
-                                    <p>11</p>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td style="height:20px; width:109px">
-                                    <p><strong>Niger</strong></p>
-                                 </td>
-                                 <td style="height:20px; width:114px">
-                                    <p>3</p>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td style="height:20px; width:109px">
-                                    <p><strong>Nigeria</strong></p>
-                                 </td>
-                                 <td style="height:20px; width:114px">
-                                    <p>58</p>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td style="height:20px; width:109px">
-                                    <p><strong>Rwanda</strong></p>
-                                 </td>
-                                 <td style="height:20px; width:114px">
-                                    <p>35</p>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td style="height:20px; width:109px">
-                                    <p><strong>Senegal</strong></p>
-                                 </td>
-                                 <td style="height:20px; width:114px">
-                                    <p>68</p>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td style="height:20px; width:109px">
-                                    <p><strong>South Africa</strong></p>
-                                 </td>
-                                 <td style="height:20px; width:114px">
-                                    <p>16</p>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td style="height:20px; width:109px">
-                                    <p><strong>Sudan</strong></p>
-                                 </td>
-                                 <td style="height:20px; width:114px">
-                                    <p>1</p>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td style="height:20px; width:109px">
-                                    <p><strong>Swaziland</strong></p>
-                                 </td>
-                                 <td style="height:20px; width:114px">
-                                    <p>11</p>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td style="height:20px; width:109px">
-                                    <p><strong>Tanzania</strong></p>
-                                 </td>
-                                 <td style="height:20px; width:114px">
-                                    <p>130</p>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td style="height:20px; width:109px">
-                                    <p><strong>Togo</strong></p>
-                                 </td>
-                                 <td style="height:20px; width:114px">
-                                    <p>2</p>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td style="height:20px; width:109px">
-                                    <p><strong>Uganda</strong></p>
-                                 </td>
-                                 <td style="height:20px; width:114px">
-                                    <p>144</p>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td style="height:20px; width:109px">
-                                    <p><strong>Zambia</strong></p>
-                                 </td>
-                                 <td style="height:20px; width:114px">
-                                    <p>138</p>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td style="height:20px; width:109px">
-                                    <p><strong>Zimbabwe&nbsp;&nbsp; </strong></p>
-                                 </td>
-                                 <td style="height:20px; width:114px">
-                                    <p>164</p>
-                                 </td>
-                              </tr>
-                              <tr>
-                                 <td style="height:20px; width:109px">
-                                    <p><strong>Total </strong></p>
-                                 </td>
-                                 <td style="height:20px; width:114px">
-                                    <p><strong>1,343</strong></p>
-                                 </td>
-                              </tr>
-                           </tbody>
-                         </table>
-                           <p><img src="img/module1_setthestage.png" class="image_right" id="module1_setthestage"  style="height:250px" /></p>
-                           <p>There is a very high level of appreciation of the quality of the African regional trainers and their ability to motivate the participants during the training sessions.&nbsp; This relates to the trainers&rsquo; ability to put the Kotter material and other material into the proper context for African agricultural experts and agribusiness people.<span class="infotip" data="John Kotter’s 8-Step Change Model was a core element of the training provided in the Champions for Change leadership training discussed here.">&sup1;</span>&nbsp; Participants appreciate the emphasis on practical learning that emphasized adult learning techniques rather than dry lecture style presentation.&nbsp;</p>
-                           <p>In extensive interviews with a sample of Champions a year or more after their training there reveals a continuing sense that the training has affected participants&rsquo; lives both personally and professionally.</p>
-                           <h2>The Champions Brand</h2>
-                           <p>&nbsp;</p>
-                           <p>Consensus from the Lessons Learned workshop held at the Windsor Hotel in Nairobi on 11-12 June 2013 is that the Africa Lead CAADP and leadership training has created a powerful Champions brand of transformed African agriculture leaders.&nbsp; Characteristics of the Champions brand include:</p>
-                           <p>&nbsp;</p>
-                           <p>1) a greater sense of urgency about food security</p>
-                           <p>2) understanding of CAADP and its role at all levels</p>
-                           <p>3) a sense of being part of a bigger effort</p>
-                           <p>4) mutual support and recognition and a desire to establish a supporting network</p>
-                           <p>5) a desire to do things differently, to innovate in leading and collaborating with others towards a common goal; and</p>
-                           <p>6) a desire to develop other leaders or Champions</p>
-                           <p>&nbsp;</p>
-                           <p>This outcome of the Champions for Change transformational leadership training exceeds the goal of building a &ldquo;&hellip;cadre of African leaders to design and implement food security strategies and investment plans.&rdquo;&nbsp; The outcome far exceeds expectations since as in the words of one of the Nairobi participants, the training created a kind of &ldquo;religion&rdquo; about leadership for food security.</p>
-                           <h1>Conclusions and Lessons Learned</h1>
-                           <p>&nbsp;</p>
-                           <p>Responses from participants and observers alike indicate that the Champions for Change training is a transformative experience that in many cases is pivotal to behavior change among the individual participants in the training.&nbsp; This is largely anecdotal evidence, of course, of the impact of the training and needs to be corroborated by more independent, objective and scientific evidence. The best that Africa Lead has been able to do is to incorporate extensive, focused interviews with a purposive subsample of Champions from most of the countries that received the leadership training.&nbsp; From those lessons learned interviews and from a mid-term and end-of-project workshop, Africa Lead has pieced together some key lessons that should guide subsequent leadership training and broader capacity building for agriculture productivity and food security.</p>
-                           <p>The lessons are the following (grouped into the three categories below):</p>
-                           <p><strong>What makes the Champions for Change 40 hours of training so powerful?</strong></p>
-                           <ul>
-                              <li>The combination of highly experienced and qualified African and International training experts has proven to be a determinant of the effectiveness of the training.&nbsp; By using the best international development training and curriculum minds to develop a curriculum that is then customized or Africanized by the best regional African development trainers and facilitators, Africa Lead is able to provide a training that captures international best practices AND is able to reach the &ldquo;heads and hearts&rdquo; of an African audience.&nbsp; The customization does not end with the first training but is a continuous process with trainers and training managers constantly tweaking the curriculum and the way concepts are explained and discussed. This results from a systematic daily review and critique among the training team of the presentations and reactions from participants, which are then fed into further adaptation of the material and presentation.</li>
-                              <li>Leadership training is not provided in isolation of the reason for the training. Combining leadership training with a very clear and urgent purpose for the leadership training is an effective combination, giving meaning to the leadership training. In the case of the Champions for Change leadership training the &ldquo;for what?&rdquo; question is answered in the latter part of the training title, &ldquo;&hellip;For Food Security.&rdquo;&nbsp; The more formal title of the training also captures the &ldquo;for what?&rdquo; question, &ldquo;Scaling up for Food Security in Africa:&nbsp; Champions for Change Leadership Training.&rdquo; The Lessons Learned research interviews with more than 100 champions across countries that each have at least 100 champions trained unearths this element of the training and explains how it has been instrumental to the behavior change experienced by many participants.</li>
-                           </ul>
-                           <p>&nbsp;</p>
-                           <ul>
-                              <li>The symbolism of the Broken African Pot and how it is used as a motivational tool is cited frequently by Champions as a memorable innovation and symbol for sustained commitment.</li>
-                           </ul>
-                           <p>&nbsp;</p>
-                           <p>&nbsp;</p>
-                           <blockquote style="float:right">
-                              <p><em>&ldquo;&hellip;she reminded me of my responsibility as a citizen of this country that I need to look out for others and that little girl could be my sister, could be my neighbor&hellip;&rdquo;.&rdquo;</em></p>
-                              <cite>-Champion from Uganda</cite>
-                           </blockquote>
-                           <ul>
-                              <li>The imagery of the little girl and the exercise designed to &ldquo;tell her story,&rdquo; is exceptionally powerful and has brought training participants to the point of tears. The effect of personalizing poverty and imagining futures for the girl deepens the sense of urgency for improving food security and a sense of personal responsibility. Already in Africa, agricultural professionals are increasingly removed from the rural poverty they are expected to help resolve.</li>
-                           </ul>
-                           <p><strong>What configurations or arrangements of the training work best?</strong></p>
-                           <ul>
-                              <li>There is consensus within the project that combining technical training with imagery (little girl) and symbolism (African food security pot) designed to get at the heart and create a sense of shared urgency is the most effective combination for the training.&nbsp; It seems to have the longest, most sustained impact on participants in the training.</li>
-                           </ul>
-                           <p>&nbsp;</p>
-                           <ul>
-                              <li>Residential training in which the participants stay together in one place for the duration of the week-long training helps foster an &ldquo;esprit de corps&rdquo; and an exchange of ideas outside of classroom exercises and learning facilitation.</li>
-                           </ul>
-                           <p>&nbsp;</p>
-                           <ul>
-                              <li>The use of adult learning techniques that emphasizes discussion and employs exercises designed to draw out experiences of relevance to the topics being discussed. These reinforce a sense of purpose and forge a commitment to participatory process.</li>
-                           </ul>
-                           <p>&nbsp;</p>
-                           <blockquote style="float:left">
-                              <p><em>&ldquo;When I filled the pot it vividly occurred to me that I have an obligation to assist my community to become food secure.&rdquo;</em></p>
-                              <cite>-Champion from Ethiopia</cite>
-                           </blockquote>
-                           <ul>
-                              <li>The application of the Kotter 8-step methodology and concepts to managing and leading change is effective and is one of the main elements of the training that Champions remember many months after the training.</li>
-                           </ul>
-                           <p><strong>What are some weaknesses of the training?&nbsp; What can be done better in the future?</strong></p>
-                           <blockquote style="float:right">
-                              <p><em>&ldquo;We were able to lead the consultation process with more confidence because as Champions we must have a vision&hellip;call for a sense of urgency in searching for ways to rebuild the &lsquo;broken pot&rsquo;.</em></p>
-                              <cite>-Champion from Mozambique</cite>
-                           </blockquote>
-                           <p><img src="img/module1_greetings.png" id="module1_greetings"  style="height:250px" /></p>
-                           <ul>
-                              <li>While one of the very first documents produced on the project was entitled, <em>&ldquo;Criteria for Selection of Trainees for Module 1 Training&rdquo;</em> (September 20, 2010; attached as Appendix One to this report), selection of participants for training has not always been as systematic as it needs to be resulting in some cases in participants who do not fully meet the criteria identified in the training selection document. Selection was supposed to have been done in conjunction with the missions funding the training and with their government and development partner counterparts. The reality is that selection more often has been done uniquely by the field staff with little involvement from missions. It may have been more effective to have provided leadership training to a critical mass of influencers or potential influencers and team leaders from targeted organizations, public, and non-state organizations alike.</li>
-                              <li>Champions feel that there is little in the way of organized post-training support for them to coach them in their application of the skills they have learned. This is not so much a reflection on the training per se, but in the lack of a more holistic capacity building support to Champions. This lack of post-training support is most evident in relation to the action plans that each training participant develops, and the need to work more effectively to apply the elements of those action plans.</li>
-                              <li>The process of action planning may have been a casualty of the many other topics that need to be covered during the training, including the concept of food security and the principles, processes and objectives of CAADP.&nbsp; Subsequent leadership trainings should attempt to weave in action planning more integrally from the very start so the action plans are more actionable at the end and can be shared with Africa Lead and other Champions to enhance mutual accountability. This integration can also guide coaching and facilitation that could be provided to Champions by the project.</li>
-                              <li>Some participants state that the training is too packed and there is insufficient time to dig more deeply into the various topics and skills presented during the five days.&nbsp; This suggests a demand for more in-depth training in some of the material covered in the 12 sessions.</li>
-                           </ul>
-                           <h1>Looking Forward</h1>
-                           <p>&nbsp;</p>
-                           <p>The idea that the Champions would form a cadre of African leaders to spearhead a new transformation of agriculture and food security on the continent appears to have been prescient. There have been too many testimonials from Champions and observers of the Champions alike for this to be seen as a fluke.</p>
-                           <p>The Champion brand is recognized across the continent as describing energetic, visionary agriculturalists who understand that waiting for someone else to make the move is not an option.&nbsp; Representatives of the Champion brand understand that the challenge of agricultural productivity and food security is everyone&rsquo;s regardless of what level of official power he or she has. They see that the challenge is urgent and can be addressed best through developing teams with common goals and clear objectives. The new ideas, new ways of looking at things and innovation needed for the transformation will come from ensuring that old, hierarchical ways of making decisions give way to more modern consultative ways in which all ideas are given a chance regardless of position or standing.</p>
-                           <p>Individually, most Champions are not in a position to radically transform the ways their organizations, communities or countries work.&nbsp; They need the support of a critical mass to be able to affect their own organizations and the broader ethos in their communities, countries and regions as well as across the continent.&nbsp; Thus a focus on scaling up the leadership training, strengthening networks and exchanges among Champions, and helping trained agricultural leaders to transform the institutions in which they work are the critical next steps towards developing capable and results-focused organizations. These can in turn design better, deliver more effectively and efficiently, and use measurement and evidence to improve design and delivery of both policies and programs that will allow the private sector and households to improve agricultural productivity and food security.</p>
-                           <p>Africa Lead suggests that the lessons learned from program implementation show that leadership training coupled with institutional capacity building and scaling up of leadership training are likely to bear fruit in terms of better performing institutions that are more results-focused. It will also result in better policies grounded in the economic realities that with a conducive policy environment it is the African private sector (small farmers and small agri-processors included) that will unleash the powerful innovative potential of millions of African agriculturalists and entrepreneurs who will drive agricultural transformation.</p>
-                           <p>&nbsp;</p>
-                           <p>&nbsp;</p>
-                           <h1>Appendices</h1>
-                           <h2>Appendix 1: ALTCAP Trainee Selection Criteria<span class="infotip" data="Original short name for Africa Leadership Training and Capacity Building Program (ALTCAP), which was subsequently changed for Africa Lead.">&sup1;</span></h2>
-                           <p>ALTCAP</p>
-                           <p>&nbsp;</p>
-                           <p>&nbsp;</p>
-                           <p>Criteria for Selection of Trainees for Module 1 Training</p>
-                           <p>&nbsp;</p>
-                           <p><strong>Background</strong></p>
-                           <p>The ALTCAP project seeks to strengthen the ability of leaders and key decision-makers in the region to develop and implement prioritized, realistic and measurable programs that will build Africa&rsquo;s capacity to feed itself and provide a solid foundation for subsequent agriculture led growth and&nbsp; economic development.&nbsp; Given the size of the challenge relative to the funds available it is critical that the program identifies and selects&nbsp; participants that have the&nbsp; greatest probability and potential to drive change within their respective organizations which in turn will lead to the achievement of Feed the Future country investment plan objectives. Ensuring that the right people get the training intended for leaders involved in agriculture prioritization, strategic planning and development is an important first step in strengthening agriculture strategy , planning and implementation&nbsp; functions in the FTF target countries.&nbsp; We seek individuals who are strongly dedicated to driving broad based change and to developing&nbsp; their respective country&rsquo;s agriculture sector as a way of strenghtening&nbsp; the foundations for&nbsp; broader economic development throughout the continent.</p>
-                           <p>We understand that we are to work with USAID regional and bilateral missions to identify and invite African leaders to participate in the leadership training workshops, and that they, in turn, need to collaborate with government and other stakeholders to ensure that the leaders invited are widely understood to have stature in the agriculture development community and as such will be able to have a measurable impact on the nature of agriculture investment programs.&nbsp;</p>
-                           <p>In addition to initial selection/recommendation by USAID, prospective participants must complete an application form and fit most of the criteria of selection outlined below.&nbsp; Moreover, they must be nominated and supported by their organization, i.e. their supervisor/manager must agree in writing by completing a nomination form that after the training the individual will receive their full&nbsp; support and backing to implement change strategies within the organization to achieve FTF outcomes.</p>
-                           <p>To ensure that we recruit the right people we will be looking for the following characteristics in individual potential trainees/participants:</p>
-                           <ol>
-                              <li>Genuine interest in the training.&nbsp; Does not seek payment to attend training<span class="infotip" data="Only actual costs for lodging, travel and meals will be covered for any attendees, which should ensure that only those who are coming primarily for the substance of the workshop will come">&sup1;</span></li>
-                              <li>Results-oriented.&nbsp; Known for setting goals and seeking to achieve them</li>
-                              <li>Independent-minded.&nbsp; Not necessarily high up in a bureaucracy, but a recognized thought-leader</li>
-                              <li>Creative.&nbsp; Someone known for thinking outside of the box and considering alternatives</li>
-                              <li>Track record of positive involvement in national agriculture strategy setting and planning</li>
-                              <li>Consensus builder.&nbsp; Known for building consensus rather than being divisive</li>
-                              <li>Influential : a decision-maker and respected driver of change within their organization and in the agriculture sector within the&nbsp; country.</li>
-                              <li>Networked: knowledgeable of the key actors and decision makers within their organization and agriculture sector in the country at large.</li>
-                              <li>Committed: must agree to help develop and implement country change initiatives within their organizations.</li>
-                              <li>Knowledgeable:&nbsp; Has a broad knowledge of agriculture systems and role of agriculture in overall economy and economic development</li>
-                           </ol>
-                           <p>We will also look for a balance of institutions, organizations and agencies, including:</p>
-                           <ol>
-                              <li>Ministry of Agriculture Policy and Planning Units</li>
-                              <li>Ministry of Planning, Agriculture and Rural Development Planning Sections</li>
-                              <li>Ministry of Finance Budget Development Offices</li>
-                              <li>Ministry of Cooperation, Development Coordination Offices</li>
-                              <li>Central Bank</li>
-                              <li>Agriculture Producer Association representatives</li>
-                              <li>Trader Association representatives</li>
-                              <li>Exporter Association representatives</li>
-                              <li>Representatives of Non-Governmental Organizations involved in agricultural production and development</li>
-                              <li>Representatives of local consulting companies</li>
-                              <li>Representatives of local universities and think tanks, research institutions</li>
-                           </ol>
+
+                            
+          <table class="altrowstable" id="alternatecolor" style="float:left; margin-right: 20px;">
+                            
+                            <tr>
+                                <th>Country</th>
+                                <th># Participants</th>
+                            </tr>
+                            <tr>
+                                <td>Malawi</td>
+                                <td>21</td>
+                            </tr>
+                            <tr>
+                                <td>Mali</td>
+                                <td>38</td>
+                            </tr>
+                            <tr>
+                                <td>Mozambique</td>
+                                <td>13</td>
+                            </tr>
+                            <tr>
+                                <td>Namibia</td>
+                                <td>11</td>
+                            </tr>
+                            <tr>
+                                <td>Niger</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td>Nigeria</td>
+                                <td>58</td>
+                            </tr>
+                            <tr>
+                                <td>Rwanda</td>
+                                <td>35</td>
+                            </tr>
+                            <tr>
+                                <td>Senegal</td>
+                                <td>68</td>
+                            </tr>
+                            <tr>
+                                <td>South Africa</td>
+                                <td>16</td>
+                            </tr>
+                            <tr>
+                                <td>Sudan</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>Swaziland</td>
+                                <td>11</td>
+                            </tr>
+                            <tr>
+                                <td>Tanzania</td>
+                                <td>130</td>
+                            </tr>
+                            <tr>
+                                <td>Togo</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>Uganda</td>
+                                <td>144</td>
+                            </tr>
+                            <tr>
+                                <td>Zambia</td>
+                                <td>138</td>
+                            </tr>
+                            <tr>
+                                <td>Zimbabwe&nbsp;&nbsp; </td>
+                                <td>164</td>
+                            </tr>
+                            <tr>
+                                <td>Total </td>
+                                <td>1,343</td>
+                            </tr>
+           </table>
+                            
+
+                    <p><img src="img/module1_setthestage.png" class="image_right" id="module1_setthestage"  style="height:250px; margin: 0px 0px 20px 0px !important" /></p>
+                    <p>There is a very high level of appreciation of the quality of the African regional trainers and their ability to motivate the participants during the training sessions.&nbsp; This relates to the trainers&rsquo; ability to put the Kotter material and other material into the proper context for African agricultural experts and agribusiness people.<span class="infotip" data="John Kotter’s 8-Step Change Model was a core element of the training provided in the Champions for Change leadership training discussed here.">&sup1;</span>&nbsp; Participants appreciate the emphasis on practical learning that emphasized adult learning techniques rather than dry lecture style presentation.&nbsp;</p>
+
+                    <p>In extensive interviews with a sample of Champions a year or more after their training there reveals a continuing sense that the training has affected participants&rsquo; lives both personally and professionally.</p>
+                    <p>&nbsp;</p>
+
+                    <h1 style="clear:both">The Champions Brand</h1>
+
+                    <p>Consensus from the Lessons Learned workshop held at the Windsor Hotel in Nairobi on 11-12 June 2013 is that the Africa Lead CAADP and leadership training has created a powerful Champions brand of transformed African agriculture leaders.&nbsp; Characteristics of the Champions brand include:</p>
+
+                    <p>&nbsp;</p>
+
+          <ol>
+          <li>a greater sense of urgency about food security</li>
+          <li>understanding of CAADP and its role at all levels</li>
+          <li>a sense of being part of a bigger effort</li>
+          <li>mutual support and recognition and a desire to establish a supporting network</li>
+          <li>a desire to do things differently, to innovate in leading and collaborating with others towards a common goal; and</li>
+          <li>a desire to develop other leaders or Champions</li>
+          </ol>
+
+                    <p>This outcome of the Champions for Change transformational leadership training exceeds the goal of building a &ldquo;&hellip;cadre of African leaders to design and implement food security strategies and investment plans.&rdquo;&nbsp; The outcome far exceeds expectations since as in the words of one of the Nairobi participants, the training created a kind of &ldquo;religion&rdquo; about leadership for food security.</p>
+
+                    <h1>Conclusions and Lessons Learned</h1>
+
+                    <p>&nbsp;</p>
+
+                    <p>Responses from participants and observers alike indicate that the Champions for Change training is a transformative experience that in many cases is pivotal to behavior change among the individual participants in the training.&nbsp; This is largely anecdotal evidence, of course, of the impact of the training and needs to be corroborated by more independent, objective and scientific evidence. The best that Africa Lead has been able to do is to incorporate extensive, focused interviews with a purposive subsample of Champions from most of the countries that received the leadership training.&nbsp; From those lessons learned interviews and from a mid-term and end-of-project workshop, Africa Lead has pieced together some key lessons that should guide subsequent leadership training and broader capacity building for agriculture productivity and food security.</p>
+
+                    <h1>The lessons are the following (grouped into the three categories below):</h1>
+
+                    <p><strong>What makes the Champions for Change 40 hours of training so powerful?</strong></p>
+
+                    <ul>
+                        <li>The combination of highly experienced and qualified African and International training experts has proven to be a determinant of the effectiveness of the training.&nbsp; By using the best international development training and curriculum minds to develop a curriculum that is then customized or Africanized by the best regional African development trainers and facilitators, Africa Lead is able to provide a training that captures international best practices AND is able to reach the &ldquo;heads and hearts&rdquo; of an African audience.&nbsp; The customization does not end with the first training but is a continuous process with trainers and training managers constantly tweaking the curriculum and the way concepts are explained and discussed. This results from a systematic daily review and critique among the training team of the presentations and reactions from participants, which are then fed into further adaptation of the material and presentation.</li>
+                        <li>Leadership training is not provided in isolation of the reason for the training. Combining leadership training with a very clear and urgent purpose for the leadership training is an effective combination, giving meaning to the leadership training. In the case of the Champions for Change leadership training the &ldquo;for what?&rdquo; question is answered in the latter part of the training title, &ldquo;&hellip;For Food Security.&rdquo;&nbsp; The more formal title of the training also captures the &ldquo;for what?&rdquo; question, &ldquo;Scaling up for Food Security in Africa:&nbsp; Champions for Change Leadership Training.&rdquo; The Lessons Learned research interviews with more than 100 champions across countries that each have at least 100 champions trained unearths this element of the training and explains how it has been instrumental to the behavior change experienced by many participants.</li>
+                        <li>The symbolism of the Broken African Pot and how it is used as a motivational tool is cited frequently by Champions as a memorable innovation and symbol for sustained commitment.</li>
+                    </ul>
+
+
+
+                    <p>&nbsp;</p>
+                         <blockquote style="float:right">
+                            <p><em>&ldquo;&hellip;she reminded me of my responsibility as a citizen of this country that I need to look out for others and that little girl could be my sister, could be my neighbor&hellip;&rdquo;.&rdquo;</em></p>
+
+                            <cite>-Champion from Uganda</cite>
+                     </blockquote>
+
+                    <ul>
+                        <li>The imagery of the little girl and the exercise designed to &ldquo;tell her story,&rdquo; is exceptionally powerful and has brought training participants to the point of tears. The effect of personalizing poverty and imagining futures for the girl deepens the sense of urgency for improving food security and a sense of personal responsibility. Already in Africa, agricultural professionals are increasingly removed from the rural poverty they are expected to help resolve.</li>
+                    </ul>
+
+                    <p><strong>What configurations or arrangements of the training work best?</strong></p>
+
+                    <ul>
+                        <li>There is consensus within the project that combining technical training with imagery (little girl) and symbolism (African food security pot) designed to get at the heart and create a sense of shared urgency is the most effective combination for the training.&nbsp; It seems to have the longest, most sustained impact on participants in the training.</li>
+                        <li>Residential training in which the participants stay together in one place for the duration of the week-long training helps foster an &ldquo;esprit de corps&rdquo; and an exchange of ideas outside of classroom exercises and learning facilitation.</li>
+                        <li>The use of adult learning techniques that emphasizes discussion and employs exercises designed to draw out experiences of relevance to the topics being discussed. These reinforce a sense of purpose and forge a commitment to participatory process.</li>
+                    </ul>
+
+                    <p>&nbsp;</p>
+                         <blockquote style="float:left">
+                            <p><em>&ldquo;When I filled the pot it vividly occurred to me that I have an obligation to assist my community to become food secure.&rdquo;</em></p>
+
+                            <cite>-Champion from Ethiopia</cite>
+                     </blockquote>
+
+
+                    <ul>
+                        <li>The application of the Kotter 8-step methodology and concepts to managing and leading change is effective and is one of the main elements of the training that Champions remember many months after the training.</li>
+                    </ul>
+
+                    <h1 style="clear:both">What are some weaknesses of the training?&nbsp; What can be done better in the future?</h1>
+
+                         <blockquote style="float:right">
+                            <p><em>&ldquo;We were able to lead the consultation process with more confidence because as Champions we must have a vision&hellip;call for a sense of urgency in searching for ways to rebuild the &lsquo;broken pot&rsquo;.</em></p>
+
+                            <cite>-Champion from Mozambique</cite>
+                     </blockquote>
+
+                     
+                     <p><img src="img/module1_greetings.png" id="module1_greetings"  style="height:250px" /></p>
+
+
+                    <ul>
+                        <li>While one of the very first documents produced on the project was entitled, <em>&ldquo;Criteria for Selection of Trainees for Module 1 Training&rdquo;</em> (September 20, 2010; attached as Appendix One to this report), selection of participants for training has not always been as systematic as it needs to be resulting in some cases in participants who do not fully meet the criteria identified in the training selection document. Selection was supposed to have been done in conjunction with the missions funding the training and with their government and development partner counterparts. The reality is that selection more often has been done uniquely by the field staff with little involvement from missions. It may have been more effective to have provided leadership training to a critical mass of influencers or potential influencers and team leaders from targeted organizations, public, and non-state organizations alike.</li>
+
+                        <li>Champions feel that there is little in the way of organized post-training support for them to coach them in their application of the skills they have learned. This is not so much a reflection on the training per se, but in the lack of a more holistic capacity building support to Champions. This lack of post-training support is most evident in relation to the action plans that each training participant develops, and the need to work more effectively to apply the elements of those action plans.</li>
+                        <li>The process of action planning may have been a casualty of the many other topics that need to be covered during the training, including the concept of food security and the principles, processes and objectives of CAADP.&nbsp; Subsequent leadership trainings should attempt to weave in action planning more integrally from the very start so the action plans are more actionable at the end and can be shared with Africa Lead and other Champions to enhance mutual accountability. This integration can also guide coaching and facilitation that could be provided to Champions by the project.</li>
+
+                        <li>Some participants state that the training is too packed and there is insufficient time to dig more deeply into the various topics and skills presented during the five days.&nbsp; This suggests a demand for more in-depth training in some of the material covered in the 12 sessions.</li>
+                    </ul>
+
+                    <h1>Looking Forward</h1>
+
+                    <p>The idea that the Champions would form a cadre of African leaders to spearhead a new transformation of agriculture and food security on the continent appears to have been prescient. There have been too many testimonials from Champions and observers of the Champions alike for this to be seen as a fluke.</p>
+                    <p>The Champion brand is recognized across the continent as describing energetic, visionary agriculturalists who understand that waiting for someone else to make the move is not an option.&nbsp; Representatives of the Champion brand understand that the challenge of agricultural productivity and food security is everyone&rsquo;s regardless of what level of official power he or she has. They see that the challenge is urgent and can be addressed best through developing teams with common goals and clear objectives. The new ideas, new ways of looking at things and innovation needed for the transformation will come from ensuring that old, hierarchical ways of making decisions give way to more modern consultative ways in which all ideas are given a chance regardless of position or standing.</p>
+                    <p>Individually, most Champions are not in a position to radically transform the ways their organizations, communities or countries work.&nbsp; They need the support of a critical mass to be able to affect their own organizations and the broader ethos in their communities, countries and regions as well as across the continent.&nbsp; Thus a focus on scaling up the leadership training, strengthening networks and exchanges among Champions, and helping trained agricultural leaders to transform the institutions in which they work are the critical next steps towards developing capable and results-focused organizations. These can in turn design better, deliver more effectively and efficiently, and use measurement and evidence to improve design and delivery of both policies and programs that will allow the private sector and households to improve agricultural productivity and food security.</p>
+                    <p>Africa Lead suggests that the lessons learned from program implementation show that leadership training coupled with institutional capacity building and scaling up of leadership training are likely to bear fruit in terms of better performing institutions that are more results-focused. It will also result in better policies grounded in the economic realities that with a conducive policy environment it is the African private sector (small farmers and small agri-processors included) that will unleash the powerful innovative potential of millions of African agriculturalists and entrepreneurs who will drive agricultural transformation.</p>
+
+
+                    <h1>Appendices</h1>
+
+                    <strong>Appendix 1: ALTCAP Trainee Selection Criteria<span class="infotip" data="Original short name for Africa Leadership 
+                    Training and Capacity Building Program (ALTCAP), which was subsequently changed for Africa Lead.">&sup1;</span></strong>
+
+                    <p>Criteria for Selection of Trainees for Module 1 Training</p>
+
+                    <p><strong>Background</strong></p>
+
+                    <p>The ALTCAP project seeks to strengthen the ability of leaders and key decision-makers in the region to develop and implement prioritized, realistic and measurable programs that will build Africa&rsquo;s capacity to feed itself and provide a solid foundation for subsequent agriculture led growth and&nbsp; economic development.&nbsp; Given the size of the challenge relative to the funds available it is critical that the program identifies and selects&nbsp; participants that have the&nbsp; greatest probability and potential to drive change within their respective organizations which in turn will lead to the achievement of Feed the Future country investment plan objectives. Ensuring that the right people get the training intended for leaders involved in agriculture prioritization, strategic planning and development is an important first step in strengthening agriculture strategy , planning and implementation&nbsp; functions in the FTF target countries.&nbsp; We seek individuals who are strongly dedicated to driving broad based change and to developing&nbsp; their respective country&rsquo;s agriculture sector as a way of strenghtening&nbsp; the foundations for&nbsp; broader economic development throughout the continent.</p>
+                    <p>We understand that we are to work with USAID regional and bilateral missions to identify and invite African leaders to participate in the leadership training workshops, and that they, in turn, need to collaborate with government and other stakeholders to ensure that the leaders invited are widely understood to have stature in the agriculture development community and as such will be able to have a measurable impact on the nature of agriculture investment programs.&nbsp;</p>
+                    <p>In addition to initial selection/recommendation by USAID, prospective participants must complete an application form and fit most of the criteria of selection outlined below.&nbsp; Moreover, they must be nominated and supported by their organization, i.e. their supervisor/manager must agree in writing by completing a nomination form that after the training the individual will receive their full&nbsp; support and backing to implement change strategies within the organization to achieve FTF outcomes.</p>
+                    <p>&nbsp;</p>
+                    <strong>To ensure that we recruit the right people we will be looking for the following characteristics in individual potential trainees/participants:</strong>
+
+           <table class="altrowstable" id="alternatecolor" style="clear: both">
+          <tr>
+          <td>Genuine interest in the training.&nbsp; Does not seek payment to attend 
+          training<span class="infotip" data="Only actual costs for lodging, travel and meals will be covered for any attendees, 
+          which should ensure that only those who are coming primarily for the substance of the workshop will come">&sup1;</span></td>
+          <td>Results-oriented.&nbsp; Known for setting goals and seeking to achieve them</td>
+          </tr>
+  
+          <tr>
+          <td>Independent-minded.&nbsp; Not necessarily high up in a bureaucracy, but a recognized thought-leader</td>
+          <td>Creative.&nbsp; Someone known for thinking outside of the box and considering alternatives</td>
+          </tr>
+          <tr>
+          <td>Track record of positive involvement in national agriculture strategy setting and planning</td>
+          <td>Consensus builder.&nbsp; Known for building consensus rather than being divisive</td>
+          </tr>
+          <tr>
+          <td>Influential : a decision-maker and respected driver of change within their organization and in the agriculture sector within the&nbsp; country.</td>
+          <td>Networked: knowledgeable of the key actors and decision makers within their organization and agriculture sector in the country at large.</td>
+          </tr>
+          <tr>
+          <td>Committed: must agree to help develop and implement country change initiatives within their organizations.</td>
+          <td>Knowledgeable:&nbsp; Has a broad knowledge of agriculture systems and role of agriculture in overall economy and economic development</td>
+          </tr>
+           </table>
+                    <p>&nbsp;</p>
+
+                    <strong>We will also look for a balance of institutions, organizations and agencies, including:</strong>
+
+          <table class="altrowstable" id="alternatecolor" style="clear: both">
+           <tr>
+              <td>Ministry of Agriculture Policy and Planning Units</td>
+              <td>Ministry of Planning, Agriculture and Rural Development Planning Sections</td>
+           </tr>
+           <tr>
+              <td>Ministry of Finance Budget Development Offices</td>
+              <td>Ministry of Cooperation, Development Coordination Offices</td>
+           </tr>
+           <tr>
+              <td>Central Bank</td>
+              <td>Agriculture Producer Association representatives</td>
+           </tr>
+           <tr>
+              <td>Trader Association representatives</td>
+              <td>Exporter Association representatives</td>
+           </tr>
+           <tr>
+              <td>Representatives of Non-Governmental Organizations involved in agricultural production and development</td>
+              <td>Representatives of local consulting companies</td>
+           </tr>
+           <tr>
+              <td>Representatives of local universities and think tanks, research institutions</td>
+              <td></tr>
+           </tr>
+          </table>
                         </div>
                      </div>
                   </div>
@@ -2969,6 +2779,526 @@
                            </div>
                         </div>
                         <div class="subwrapper">
+                          <h1>Champions for Change: Sustaining the Momentum Through Results-Oriented Action Plans.</h1>
+
+                          <h1>Introduction</h1>
+
+                          <p>The Module Two training program is an initiative under Africa Lead Task One: Provision of Leadership Training to African Food Security Leaders. A major focus of Task One is to address the leadership and management gap in agriculture institutions engaged in the process of identifying, prioritizing and implementing strong agriculture policies, investments and programs. An equally important component of Task One is to raise awareness of CAADP&lsquo;s principles, processes and goals.</p>
+
+                          <p>By January 2012, when the standard Module Two program was launched, Africa Lead had been operating for more than one year in support of CAADP and its Regional Agricultural Investment Programs (RAIPs) and National Agricultural Investment Programs (NAIPs). Module One training was being delivered at a rapid pace and &ldquo;Champions&rdquo; were acquiring knowledge, skills and attitudes related to understanding CAADP goals, new perspectives on food security, strategies for leading and managing change, strategic thinking and planning skills, advocacy skills, leadership skills, and monitoring and evaluation concepts and practices.</p>
+
+                          <p>The evaluation findings for the Module One training were very positive. After the first year of activity, Africa Lead regional offices reported that Champions at regional and country levels were leaving the Module One training program highly motivated and that they were establishing and broadening networks for action in their countries and regions. The three Africa Lead regions had trained over 1,000 &ldquo;Champions&rdquo; from 29 countries in Module One in both English and French, including 575 Champions for Change in East Africa, 375 in West Africa, and 393 in Southern Africa. Module One training was achieving its purpose &ldquo;To inspire, energize and mobilize innovative leaders, champions, and thinkers in African countries, who are committed to creative new approaches to achieving food security.&rdquo;</p>
+
+                          <p>The Africa Lead Module Two program is designed to build on the momentum of Module One and to provide &ldquo;Champions&rdquo; with a critical set of complementary project implementation skills and practical methods required to move the CAADP implementation process forward. The focus of Module Two is to ensure that national, regional, organizational and unit action plans in support of CAADP are followed and that these plans show tangible, positive results.</p>
+
+                          <p>In this report we describe the process for designing and implementing the Africa Lead Module Two program, identify program achievements and challenges, report on lessons learned and share recommendations for future Feed the Future and CAADP interventions.</p>
+
+                          <p>&nbsp;</p>
+
+                          <h1>Module Two Concept and Structure</h1>
+
+                          <h2>strategic geographic focus</h2>
+
+                          <p>Africa Lead has conceptualized the Module Two program to be implemented on a country or region-specific basis, with content specifically tailored to meet the identified needs in these geographic areas.</p>
+
+                          <h2>Target Audience</h2>
+
+                          <p>Module Two targets two sets of participants: (1) previous beneficiaries from Module One who have demonstrated strong leadership aptitude, alignment with the CAADP and FTF approaches, and who have been identified by USAID missions and CAADP country/regional teams as food security Champions likely to benefit from deepening their knowledge and further developing skill sets for leading change; and (2) CAADP focal points, country teams and key individuals involved in implementing NAIPs and/or RAIPs and overseeing the implementation process.</p>
+
+                          <h2>Assumptions</h2>
+
+                          <p>The designers of the Module Two intervention operated under the following assumptions:</p>
+
+                          <p>&sect;&nbsp; The primary target audience for participating countries and regions is the country or regional implementation teams, which includes representatives of the CAADP Country Teams (CCTs), regional agricultural and rural development teams, selected Champions from the Module One training program, representatives from the ministries of agriculture and other key stakeholders.</p>
+
+                          <p>&sect;&nbsp; The most effective and efficient structure is to focus on work in individual countries and with regional bodies.</p>
+
+                          <p>&sect;&nbsp; There is a critical need to support follow-up of the country teams from both Modules One and Two in order to maintain momentum, to continue monitoring progress and to ensure that the concepts that have been learned and the enthusiasm that has been established result in real and productive change. For regional teams, the Module Two intervention provides an opportunity to integrate new skills into the work of developing and implementing plans.</p>
+
+                          <h2>structure</h2>
+
+                          <p>Module Two takes the form of country and region-specific interventions with key people and institutions as they continue to refine and implement their action plans.</p>
+
+                          <p>Module Two facilitation teams work with regional and country teams responsible for NAIP/RAIP implementation individually so as to insure a focus on specific needs and action plans and the broadest inclusion of stakeholders in each country and region. Facilitators work with country and regional teams in separate workshops. The two focus West Africa countries that have engaged in the Module Two intervention are Ghana and Liberia.&nbsp; Africa Lead East Africa Region conducted three regional Module Two workshops; one in Nairobi, Kenya, one in Entebbe, Uganda and one in Dar es Salaam, Tanzania.</p>
+
+                          
+                          <img src="img/module2_weeklymeetings.png" class="image_right" id="module2_weeklymeetings"  style="height:300px" />
+
+                          <p>Each participating country or region is requested to identify several agricultural productivity / food security projects and to send project teams to participate in a Module Two intervention. Project representatives are instructed in the Rapid Results Approach (RRA) and each team develops a plan for a Rapid Results Initiative (RRI) during the workshop. The advantages of RRA are that projects produce results very quickly, new work patterns are identified and lessons are learned about specific interventions and the process of managing change. The lessons learned from RRA projects are used to support broader and longer-term goals for NAIP/RAIP implementation.</p>
+
+                          <p>&nbsp;</p>
+
+                          <h1>Module Two Curriculum Design Process</h1>
+
+                          <p>The standard four-day Module Two curriculum has been designed by Africa Lead headquarters staff with guidance, direction and input from USAID Washington, USAID regional and bi-lateral missions, Africa Lead regional office staff and trainers and food security development partners operating in Sub-Saharan Africa. The Task One design team developed and circulated several Module Two concept papers for review and comment during the summer of 2011. The design team modified the concept, based on guidance received during the review process. The design team also administered a survey to Africa Lead regional trainers to obtain their perspectives based on their experiences with the Module One training program and their knowledge of prospective Module Two target populations. The Task One team conducted a pilot delivery of the Module Two curriculum for 11 WA Regional Africa Lead trainers in Ghana in September 2011 and finalized the curriculum during the following months.</p>
+
+                          <p>Africa Lead determined early on that a project implementation methodology would be a key component of the Module Two curriculum. On behalf of Africa Lead, Development Alternatives International (DAI) issued a call for proposals in May 2010 for curriculum design assistance for such a project implementation methodology. The Rapid Results Institute was the successful bidder and was awarded a purchase order by DAI in September 2010 to complete this task.</p>
+
+                          <p>&nbsp;</p>
+
+                          <p>The Institute tailored their Rapid Results Approach (RRA) to fit within the Module Two curriculum and to address the CAADP implementation process. RRA is a methodology which utilizes action planning tools and coaching to help project teams obtain concrete results in support of longer-term work plans within a period of approximately 100 days. The RRA concept is designed to help project teams successfully complete ambitious 100 day projects, thereby providing further innovation, motivation and lessons learned to support continued success and progress in longer-term program implementation. RRA has become the centerpiece of the Module Two training program.</p>
+
+                          <p>&nbsp;</p>
+
+                          <p>Prior to the launch of the standard Module Two training program, the Task One headquarters team supported the EA Regional Africa Lead office and USAID/Tanzania with the design of a specialized Module Two curriculum in support of the USAID FORWARD localization initiative. This event was held October 24-28, 2011. The program was a five day intensive course on best practices in financial management, transparent procurement, project design, and monitoring and evaluation to support Feed the Future&rsquo;s goal of aligning resources with country-owned processes and procurement reform.</p>
+
+                          <p>In the spring and summer of 2012, the EA Africa Lead office and the Task One headquarters team designed a five day modified regional Module Two workshop. This workshop incorporated the standard Module Two sessions and included additional sessions on regional topics such as policy analysis, cross-border trade, development of regional compacts and investment frameworks, diseases and pests, public health and nutrition, and sanitary and phytosanitary standards (SPS). &nbsp;</p>
+
+                          <h1>Module Two Program Delivery Preparation</h1>
+
+                          <img src="img/module2_stick.png" class="image_right" id="module2_stick"  style="height:250px" />
+
+                          <p>In preparation for the launch of the standard Module Two training program in West Africa, the Task One headquarters team delivered a training of trainers (TOT) event for Module Two Africa Lead WA Regional trainers in January 2012. Prior to the WA Module Two training deliveries in Ghana and Liberia, the WA Regional Africa Lead office and the Task One Headquarters team conducted a meeting in each country for senior leaders of participating organizations. A similar Module Two Training of Trainers event was conducted in Nairobi, Kenya August 1-4, 2012 with three EA trainers/facilitators and two EA subject matter experts. 
+                          </p>
+
+                          <p>The purpose of the preparatory country meetings is to ensure that senior leaders attain a thorough understanding of Rapid Results Initiatives (RRIs) and how they are different from &ldquo;100 day projects&rdquo;, discuss how the &nbsp;Rapid Results Approach (RRA) can be used to build capacity for NAIP/RAIP implementation and identify challenge areas and team members for Rapid Results teams. The senior leader meetings also provide an opportunity for organizational leaders to buy-in to Module Two and the RRA and to establish their accountability to support RRIs implemented by their organizations&rsquo; teams</p>
+
+                          <p>&nbsp;</p>
+
+                          <h1>Module Two Program Implementation</h1>
+
+                          <p>Africa Lead delivered a specialized Module Two event in October 2011 at the request of USAID/Tanzania and in support of the USAID FORWARD localization initiative. This specialized version of Module Two was designed to build the capacity of Tanzanian institutions to directly receive and manage US government funds for USAID-funded agriculture development projects. This curriculum, which was offered to 40 individuals representing USAID/Tanzania implementing partners, included information on financial management, procurement, and USAID and FTF policies and procedures.</p>
+
+                          <p>WA Regional Trainers, with Task One headquarters support, launched what was to become the standard four-day Module Two workshop March 27-30, 2012 at the Shai Hills preserve Ghana. WA Regional trainers conducted two subsequent Module Two training events in Ghana, between April and June 2012, for a total of four events. Approximately 100 participants from several organizations were trained in Module Two in Ghana.&nbsp;</p>
+
+                          <p>WA Regional Trainers, with support from the Task One headquarters team, launched the standard four-day Module Two workshop April 2012 in Monrovia, Liberia. WA Regional trainers conducted three subsequent Module Two training events in Liberia between May and July 2012, for a total of four events. Approximately 100 participants were trained in Module Two in Liberia.</p>
+
+                          <p>EA Regional Trainers, with support from the Task One headquarters team, delivered a five-day regional Module Two workshop in Nairobi, Kenya, August 6-10, 2012, with support from the Task One headquarters team. WA Regional trainers conducted two subsequent regional Module Two training events; one in Entebbe, Uganda and one in Dar es Salaam, Tanzania.</p>
+
+                          <blockquote style="float:right">
+                          Sample Rapid Results Initiatives
+                          Ghana – March 27-30, 2012
+                          • Adherence to stipulated good manufacturing practices [GMP’s] among all production staff by 80% within 100days. (YEDENT)
+                          • PPRSD (MOFA)-Reduced incidence of interception of pests in eggplant for export from 100% to 5% in 100days
+                          • Raise the number of active and identifiable membership of G.N.A.P.F from 1,000 to 1,500 in 120 days.
+                          • Increase the survival rate of local poultry to 50% in 50 communities in the coverage area of RITE FM in 120 days.
+                          • Increasing the membership of O.L.F.A. from 20-70 to ensure bio security in the GA East municipality in 100 days.
+                        </blockquote>
+
+
+                          <p><strong>The Rapid Results Approach (RRA)</strong> &ndash; is a management and project implementation technique which involves teams in organizations or consortiums committing to highly ambitious 100-day goals, and then persisting until these goals are achieved. The technique was developed by Schaffer Consulting, which used the concept for decades in the private sector. The technique has been adapted for non-profit work by the Rapid Results Institute, a Schaffer Consulting affiliate, and it has it has been used in development projects across Sub-Saharan Africa, South America, the United States, and the Middle East since 2007.</p>
+
+                          <p>The Rapid Results Institute collaborated with Africa Lead to include RRA as a key component of the Module Two curriculum. Three hundred thirty-three individuals from 23 African countries were trained in Module Two and RRA and several organizational and regional teams successfully completed 100-day projects.</p>
+
+                           <div class='audiowrapper'>
+                                 <div class='audiotag'>Hear about our approach</div>
+                                 <audio preload='none' controls>
+                                    <source src="media/Jeha RRI_edited.mp3" type="audio/mpeg">
+                                    Your browser does not support the audio element.
+                                 </audio>
+                              </div>
+
+                          <p>&nbsp;</p>
+
+                          <blockquote style="float:right">
+                            Goal of Module Two Training 
+                          Objectives:
+
+                          After participating in the Module Two intervention, implementation teams of champions will be able to:
+                          § Identify and develop strategic coordination mechanisms for CAADP and NAIPs/RAIPs
+                          § Identify and agree to the most critical steps for CAADP NAIP/RAIP implementation 
+                          § Appreciate the necessary steps and activities in successful project and program design
+                          § Integrate the project design elements into on-going NAIPs/RAIPs
+                          § Apply appropriate project management, monitoring and evaluation methodologies to plans/projects 
+                          § Use the Rapid Results Approach (RRA) to develop 100-day action plans.
+                        </blockquote>
+
+                          <p>&nbsp;</p>
+
+                          <p>&nbsp;</p>
+
+
+
+
+                          <h1>Challenges</h1>
+
+                          <ul>
+                            <li><strong>Lack of Resources for Post Module Two Workshop Follow Up. </strong>Africa Lead lacks resources to provide follow up support to workshop participants after completion of Module Two training. The Module Two training is deemed by participants to have been a valuable capacity building intervention in training evaluations completed immediately following the workshops. Without resources to follow up with participants after the training, Africa Lead is unable to assess the progress of participants or their sponsoring organization after the training workshops ended. Neither is Africa Lead able to provide follow up support that is typically necessary to help training participants complete their post-training action plans and goals.</li>
+                          </ul>
+
+                          <p>&nbsp;</p>
+
+                          <ul>
+                            <li><strong>A principle feature of RRA is the provision of follow-up coaching support for RRA teams. </strong>The purpose of follow up by RRA coaches is to provide support and guidance to RRA teams as they work to implement their &ldquo;100-day&rdquo; plans. Since Africa Lead lacks the resources to provide coaching support, RRA teams are on their own as they set out to implement their RRIs. Africa Lead has received anecdotal reports that indicate that some RRA teams have been able to successfully complete Rapid Results Initiatives.&nbsp; Africa Lead has limited ability to substantiate these reports or to track the progress of RRA teams after they complete the Module Two workshops.</li>
+                          </ul>
+
+                          <p>&nbsp;</p>
+
+                          <ul>
+                            <li><strong>One reason that Africa Lead is not able to provide coaching support for RRA teams has to do with the buy-in process for USAID mission participation in Africa Lead initiatives.</strong> In the case of Module Two, the USAID mission buy-in process was completed while the Module Two training program was still being conceptualized. In West Africa, Africa Lead and the USAID Missions followed the buy-in process that was used for Module One. This process committed Africa Lead to train 100 &ldquo;Champions&rdquo; in each participating country. The buy-in process in East Africa, while regional in focus, similarly provided funds for participants to complete Module Two training but did not support post-training coaching.</li>
+                          </ul>
+
+                          <p>&nbsp;</p>
+
+                          <ul>
+                            <li><strong>Module Two Implemented Towards the End of the Africa Lead Project Cycle. </strong>When the standard Module Two program was implemented, it was late in the Africa Lead project cycle. As additional countries and mission began to gain interest in the Module Two concept, there were limited resources events. Africa Lead Regional Offices did, however, deliver several blended Module One / Module Two events, training 169 individuals.</li>
+                          </ul>
+
+                            <p><strong>Total Module 2 Participants by Country</strong></p>
+
+                            <table border="" cellpadding="0" cellspacing="0" style="width:217px">
+                              <tbody>
+                                <tr>
+                                  <td style="height:20px; width:112px">
+                                  <p><strong>Country</strong></p>
+                                  </td>
+                                  <td style="height:20px; width:105px">
+                                  <p><strong># Participants</strong></p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="height:20px; width:112px">
+                                  <p><strong>Ghana</strong></p>
+                                  </td>
+                                  <td style="height:20px; width:105px">
+                                  <p>100</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="height:20px; width:112px">
+                                  <p><strong>Liberia</strong></p>
+                                  </td>
+                                  <td style="height:20px; width:105px">
+                                  <p>100</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="height:20px; width:112px">
+                                  <p><strong>Zambia</strong></p>
+                                  </td>
+                                  <td style="height:20px; width:105px">
+                                  <p>17</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="height:20px; width:112px">
+                                  <p><strong>Uganda</strong></p>
+                                  </td>
+                                  <td style="height:20px; width:105px">
+                                  <p>14</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="height:20px; width:112px">
+                                  <p><strong>Togo</strong></p>
+                                  </td>
+                                  <td style="height:20px; width:105px">
+                                  <p>3</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="height:20px; width:112px">
+                                  <p><strong>Tanzania</strong></p>
+                                  </td>
+                                  <td style="height:20px; width:105px">
+                                  <p>44</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="height:20px; width:112px">
+                                  <p><strong>Senegal</strong></p>
+                                  </td>
+                                  <td style="height:20px; width:105px">
+                                  <p>3</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="height:20px; width:112px">
+                                  <p><strong>Rwanda</strong></p>
+                                  </td>
+                                  <td style="height:20px; width:105px">
+                                  <p>1</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="height:20px; width:112px">
+                                  <p><strong>Niger</strong></p>
+                                  </td>
+                                  <td style="height:20px; width:105px">
+                                  <p>3</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="height:20px; width:112px">
+                                  <p><strong>Mauritania</strong></p>
+                                  </td>
+                                  <td style="height:20px; width:105px">
+                                  <p>3</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="height:20px; width:112px">
+                                  <p><strong>Mali</strong></p>
+                                  </td>
+                                  <td style="height:20px; width:105px">
+                                  <p>3</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="height:20px; width:112px">
+                                  <p><strong>Botswana</strong></p>
+                                  </td>
+                                  <td style="height:20px; width:105px">
+                                  <p>1</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="height:20px; width:112px">
+                                  <p><strong>Benin</strong></p>
+                                  </td>
+                                  <td style="height:20px; width:105px">
+                                  <p>1</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="height:20px; width:112px">
+                                  <p><strong>Kenya</strong></p>
+                                  </td>
+                                  <td style="height:20px; width:105px">
+                                  <p>18</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="height:20px; width:112px">
+                                  <p><strong>Guinea&nbsp; </strong></p>
+                                  </td>
+                                  <td style="height:20px; width:105px">
+                                  <p>2</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="height:20px; width:112px">
+                                  <p><strong>Guinea Bissau</strong></p>
+                                  </td>
+                                  <td style="height:20px; width:105px">
+                                  <p>2</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="height:20px; width:112px">
+                                  <p><strong>Gambia</strong></p>
+                                  </td>
+                                  <td style="height:20px; width:105px">
+                                  <p>2</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="height:20px; width:112px">
+                                  <p><strong>Ethiopia</strong></p>
+                                  </td>
+                                  <td style="height:20px; width:105px">
+                                  <p>6</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="height:20px; width:112px">
+                                  <p><strong>DRC</strong></p>
+                                  </td>
+                                  <td style="height:20px; width:105px">
+                                  <p>1</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="height:20px; width:112px">
+                                  <p><strong>Cote d&#39;Ivoire</strong></p>
+                                  </td>
+                                  <td style="height:20px; width:105px">
+                                  <p>3</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="height:20px; width:112px">
+                                  <p><strong>Chad</strong></p>
+                                  </td>
+                                  <td style="height:20px; width:105px">
+                                  <p>1</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="height:20px; width:112px">
+                                  <p><strong>Burkina Faso</strong></p>
+                                  </td>
+                                  <td style="height:20px; width:105px">
+                                  <p>3</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="height:20px; width:112px">
+                                  <p><strong>Swaziland</strong></p>
+                                  </td>
+                                  <td style="height:20px; width:105px">
+                                  <p>1</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td style="height:20px; width:112px">
+                                  <p><strong>Total:</strong></p>
+                                  </td>
+                                  <td style="height:20px; width:105px">
+                                  <p><strong>333</strong></p>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+
+
+                          <p>&nbsp;</p>
+
+                          <h1>Accomplishments</h1>
+
+                          <p><img src="img/module2_trainings_by_sector2.png" class="float:left;" id="module2_trainings_by_sector2"  style="height:250px" /></p>
+
+                          <p>As of July 2013, 333 individuals had been trained in Module Two from 23 different countries. The breakdown of Module Two participants by country is shown in the chart at right.&nbsp; The sectoral breakdown shoes the distribution across governmental/non-governmental, for-profit/non-profit and research/university affiliation.</p>
+
+                          <p>&nbsp;</p>
+
+                          <p>&nbsp;</p>
+
+                          <p>Among the 333 in individuals trained in Module Two, the gender breakdown for East Africa and West Africa was as follows:</p>
+
+                          <p>&nbsp;</p>
+
+                          <ul>
+                            <li>104 East Africa (M=74, F=30)</li>
+                            <li>229 West Africa (M=161, F=68)</li>
+                          </ul>
+
+                          <p>&nbsp;</p>
+
+                            
+                          <p><img src="img/module2_byregion2.png" class="image_right" id="module2_byregion2"  style="height:250px" /></p>
+
+                          <p>&nbsp;</p>
+
+                          <p>Africa Lead Regional Offices trained 199 individuals in combined Module One &amp; 2 courses. The gender breakdown for these 199 participants was 140 males and 59 females.</p>
+
+                          <p>&nbsp;</p>
+
+                          <h1>Lessons Learned</h1>
+
+                          <p>Africa Lead has conducted over 100 qualitative key informant interviews of participants in Africa Lead training programs. Interviewees have identified the following strengths, weaknesses and best practices leading to impact of the Module Two program:</p>
+
+                          <p>&nbsp;</p>
+
+                          <p>Strengths</p>
+
+                          <ul>
+                            <li>Trainings can be adapted to accommodate different kinds of technical content.</li>
+                            <li>The standard Module Two curriculum improves participants&rsquo; capacity to manage for results.</li>
+                          </ul>
+
+                          <p>&nbsp;</p>
+
+                          <p>Weaknesses</p>
+
+                          <ul>
+                            <li>As a standalone course, Module Two lacks transformative impact of leadership training [Module One].</li>
+                            <li>Intensity and sustainability of behavior change is diluted when not accompanied by transformative leadership training to instill strong ongoing motivation.</li>
+                          </ul>
+
+                          <p>&nbsp;</p>
+
+                          <p>Best practices leading to impact</p>
+
+                          <ul>
+                            <li>Make sure top leaders from organizations targeted for Module Two have also taken the five-day leadership training [Module One].</li>
+                            <li>Train several people from the same organization to reinforce change within the organization.</li>
+                          </ul>
+                          <blockquote style="float:right">
+                          “When I came, I thought 5 days was too long – now I realize it was too short! The part of managing people has shown me how I behave. I have seen my weaknesses. The RRI action plan to get fair trade certification to increase cooperatives by 200% I am happy this plan will be implemented. ” 
+                          <cite>Module Two Champion from Ethiopia</cite>
+                        </blockquote>
+
+                          <p>&nbsp;</p>
+
+                          <p>&nbsp;</p>
+
+                          <p>Follow up consultation with the Rapid Results Institute has identified the following lessons related to the roll out and implementation of the Rapid Results Approach (RRA) (Note: while the Institute has supported the design of the RRA content of the Module Two curriculum it has not been involved in the roll out or implementation of the program):</p>
+
+                          <p>&nbsp;</p>
+
+                          <ul>
+                            <li>It would have been more advantageous for Africa Lead to have focused, initially, on smaller numbers of participants in participating countries. The idea is to start with a few individuals in each country before going wide. You do not necessarily need to train 100 people per country, but rather identify smaller numbers of people from a few strategic organizations or institutions.</li>
+                            <li>It would have been more advantageous for Africa Lead to have invited larger numbers of Module Two participants from each participating organization, e.g., 12 rather than three or four. It is easier for larger teams, all of whom attend the workshop, to get energized and mobilized. The Rapid Results Institute has advised Africa Lead that it is possible for larger teams, such as 12, who leave RRA training highly motivated, to achieve an approximately 60% success rate with their Rapid Results Initiative (RRI) even without follow up.</li>
+                            <li>It is best to allow teams to come to the workshop and establish their Rapid Results Initiative (RRI) goals, <strong><em>before</em></strong> they select or elect their team leader. After they have established their RRI goal, allow teams to select their team leader at the workshop.</li>
+                          </ul>
+
+                          <p>&nbsp;</p>
+
+                          <h1>Recommendations</h1>
+
+                          <h1><strong>1. &nbsp;Ensure that development of capacity building interventions is a highly collaborative process involving development partners and senior leaders of institutions that will receive assistance.</strong></h1>
+
+                          <p>&nbsp;</p>
+
+                          <p>Development and implementation of the Module Two program has been characterized by significant interaction and engagement with a broad spectrum of partners. Partners include USAID Washington and Regional and Bilateral Missions, African government officials, African trainers, development partners and senior leaders from participating organizations. This engagement and input from a variety of perspectives has resulted in a program that focuses on high priority needs and contributes to the buy-in of the leaders of participating organizations. These factors are critical to the success achieved through the Module Two program.</p>
+
+                          <p>&nbsp;</p>
+
+                          <p>For the Rapid Results Approach (RRA), senior leaders of participating organizations identify the team members who attend Module Two workshops. These leaders also identify the focus areas for their organization&rsquo;s Rapid Results Initiatives and they commit, in advance, to support their teams&rsquo; implementation efforts.</p>
+
+                          <p>&nbsp;</p>
+
+                          <p><strong>2. &nbsp;Provide follow on support for training and networking events.</strong></p>
+
+                          <p>&nbsp;</p>
+
+                          <p>Build in follow up support for Module Two workshops and other capacity building interventions. Combine training and networking events with interventions that support the application of relevant skills, which bring about change in individual and organizational attitudes and practices and which encourage and support the completion of action plans. Training workshops and networking events can be beneficial as initial capacity building interventions which provide important opportunities for skill-building and collaboration. Isolated training and networking events. However they have limited potential for contributing to long-term capacity building and sustainability. Comprehensive and coordinated interventions such as coaching, mentoring, organization development, consultation, strategic planning and internships, when combined with training and networking, have the potential to achieve long-term results.</p>
+
+                          <p>&nbsp;</p>
+
+                          <p>For Rapid Results teams, the recommended follow up process during the project implementation phase includes:</p>
+
+                          <ul>
+                            <li>Conduct one-hour coaching meetings or calls with four or five selected team leaders every two weeks. Selected team leaders should have attended the same workshop and/or have similar RRI goals. Such meetings provide participants with additional skill-building, opportunities to report on and obtain focused support and guidance related to ongoing food security / agriculture projects and support for planning replication of successful interventions.</li>
+                            <li>Use an intern to manage routine contact and data gathering with the RRI teams. This type of follow up does not have to be conducted by an experienced professional. University students are often capable to serve as competent interns. Student interns may be recruited without cost if their involvement in an RRA project is structured as a university-supervised research program.</li>
+                            <li>Have the interns conduct follow up and data gathering directly (in person), not remotely.</li>
+                          </ul>
+
+                          <p>&nbsp;</p>
+
+                          <p><strong>3. &nbsp;Utilize a robust selection process for identifying capacity building recipients.</strong></p>
+
+                          <p>When choosing partners (capacity building recipients), consider the organizational leadership&rsquo;s track record in adaptive capacity and strategic planning in addition to the organization&rsquo;s technical capacity. Examine the governance structure for flexibility and support of strategic leadership.&nbsp; Choose partners who are self-motivated and primed to be grown for sustainability.</p>
+
+                          <p>&nbsp;</p>
+
+                          <p>Once partner organizations are selected, build ownership, commitment and accountability of senior leaders through joint planning workshops, action plans and/or memoranda of understanding.</p>
+
+                          <p>&nbsp;</p>
+
+                          <p><strong>4. &nbsp;Incorporate social enterprise/income generation strategies in order to achieving long-term sustainability.</strong></p>
+
+                          <p>Include sustainability planning as part of agreements to provide capacity building support. Encourage and support recipient organizations to plan for and implement a variety of social enterprise/income generating strategies which include independent generation of income as well as access to other donor support. Build in accountability structures and mechanisms as a part of capacity building plans.</p>
+
+                          <p>&nbsp;</p>
+
+                          <p><strong>5. &nbsp;Create cascading capacity building processes as a component of large-scale capacity building.</strong></p>
+
+                          <p>Help create the expectation that each recipient institution will be responsible for building the capacity of others involved in CAADP implementation. The assumption of this responsibility will be especially important for recipient institutions that provide oversight and/or have subcontractor/sub-grantee partners. Build the capacity of recipient institutions to provide tailored capacity building support to institutions which are parallel to them or below them in the hierarchical strata. Strategies for developing the capacity to cascade capacity building may include training in needs assessment, adult learning principles, curriculum design, coaching and mentoring, communication, consultation and action planning.</p>
+
+                          <p>&nbsp;</p>
+
+                          <p><strong>6. &nbsp;Engage, energize and empower government leaders to promote CAADP success.</strong></p>
+
+                          <p>&nbsp;</p>
+
+                          <blockquote style="float:left">
+                            “The training has been very useful. I have been involved in CAADP in the past; however, I now understand other facets of CAADP; research, market access, cross border trade and the role of Regional Economic Blocks.” 
+                            <cite>Module Two Champion from Djibouti </cite></blockquote>
+
+                          <p>To the extent possible within the CAADP framework, provide support directly to senior leaders and managers in regional, national and local public institutions to enhance their ability to manage sophisticated agricultural productivity programs. This capacity building may include areas such as change management, leadership, policy development and analysis, stakeholder engagement, advocacy and collaboration to involve civil society and the private sector.</p>
+
+                          <p>&nbsp;</p>
+
+                          <p>In some countries and regions, Africa Lead has helped to energize and mobilize many Champions from non-profit and private sector organizations and has not yet achieved sufficient saturation within the higher levels of government.&nbsp; Full and committed engagement of senior government leaders is essential to CAADP success.</p>
+
+                          <p>&nbsp;</p>
+
+                          <h1>APPENDIX I: Module Two Content</h1>
+
+                          <h2>Sample Module Two Agenda</h2>
+
                         </div>
                      </div>
                   </div>
@@ -3203,6 +3533,27 @@
                      
                      });
                      
+                  </script>
+
+                <script type="text/javascript">
+                     function altRows(id){
+                     if(document.getElementsByTagName){  
+                     
+                     var table = document.getElementById(id);  
+                     var rows = table.getElementsByTagName("tr"); 
+                     
+                     for(i = 0; i < rows.length; i++){          
+                      if(i % 2 == 0){
+                        rows[i].className = "evenrowcolor";
+                      }else{
+                        rows[i].className = "oddrowcolor";
+                      }      
+                     }
+                     }
+                     }
+                     window.onload=function(){
+                     altRows('alternatecolor');
+                     }
                   </script>
                </body>
             </html>
