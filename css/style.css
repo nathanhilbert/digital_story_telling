@@ -44,8 +44,8 @@ div.subwrapper, p{font-style: normal !important; font-family: arial;}
 div.subwrapper p{line-height: <##>;}
 
 blockquote { margin: 1em 2em; border-left: 1px dashed #999; padding-left: 1em; } 
-blockquote p:first-letter { float: left; margin: .2em .3em .1em 0; font-family: "Monotype Corsiva", "Apple Chancery", fantasy; font-size: 220%; font-weight: bold; } 
-blockquote p:first-line { font-variant: small-caps; }
+/*blockquote p:first-letter { float: left; margin: .2em .3em .1em 0; font-family: "Monotype Corsiva", "Apple Chancery", fantasy; font-size: 220%; font-weight: bold; } */
+/*blockquote p:first-line { font-variant: small-caps; }*/
 
 span.nexter {text-transform: uppercase; color: #0a5e07; font-weight: bold}
 span.nexter:hover {color: #555; margin: 0px 5px 0px 0px}
@@ -102,7 +102,7 @@ font-weight: normal;
 
 .subwrapper{color: #555; background-color: white; width: 100%; padding: 35px 0px 0px 0px; overflow: hidden; max-width:960px; margin:auto;}
 	.subwrapper h1{color: #572902; background: url('../img/headerBG.png') no-repeat bottom center; font-size: 38px; text-align: center; padding: 0px; line-height: 115px; margin: 0px; font-family: 'Armata', sans-serif; font-weight: normal;}
-	.subwrapper p{text-align: justify; font-size: 13px;}
+	.subwrapper p{text-align: justify; font-size: 14px;}
 
 .logo {width: 325px; overflow: hidden; margin: 0 auto 0px; display: block;}
 .introText {width: 940px; margin: 40px auto 50px; padding: 0px}
@@ -275,7 +275,7 @@ margin-left: 21px;}
             .subvideo{
                 width: 415px;
                 height: 232px;
-                margin: 10px 20px 25px 25px !important;
+                margin: 10px 20px 25px 25px;
                padding: 10px;
                background-color: #ebebeb;
                -moz-box-shadow: 0px 0px 5px #888;
@@ -386,7 +386,7 @@ line-height: 150%;
 color: #454545;
 background-color: #fff;
 }
-
+/*
 blockquote:before{
 	display: block;
 float: left;
@@ -396,6 +396,7 @@ content: open-quote;
 color: #bababa;
 text-shadow: 0 1px 1px #909090;
 }
+*/
 
 blockquote .cite {
 	font-size: 0.75em;
@@ -504,7 +505,7 @@ position: relative;
 
 .captionbox {
     text-align:center;
-    width: 324px;
+    width: 400px;
 }
 
 
@@ -673,7 +674,7 @@ position: relative;
 
 blockquote {
 font-family: Georgia, serif;
-font-size: 18px;
+font-size: 14px;
 font-style: italic;
 width: 450px;
 margin: 8px 10px 8px 20px;
@@ -686,7 +687,7 @@ float: right;
 
 blockquote {
 font-family: Georgia, serif;
-font-size: 18px;
+font-size: 14px;
 font-style: italic;
 width: 450px;
 margin: 8px 10px 8px 20px;
@@ -696,7 +697,7 @@ position: relative;
 color: #998576;
 float: right;
 }
-
+/*
 blockquote:before {
 display: block;
 content: "\201C";
@@ -707,6 +708,7 @@ top: -20px;
 color: #7a7a7a;
 font-family: Helvetica CY, serif;
 }
+*/
 
 blockquote cite {
 color: #999999;
