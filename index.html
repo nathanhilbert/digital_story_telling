@@ -22,9 +22,7 @@
        <meta name="language" content="English" />
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="icon" 
-          type="image/png" 
-          href="favicon.png">
+        <link rel="icon" type="image/png" href="favicon.png">
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
@@ -42,12 +40,35 @@
         <link rel="stylesheet" type="text/css" href="css/style.css" media="all"/>
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
+
         <script src="js/jquery-1.9.1.min.js"></script>
         <script src="js/jquery-ui-1.10.3.custom.min.js" type="text/javascript" charset="utf-8"></script>
 
         <!--Adjust the size of the front page for video -->
 
-        <script>
+		 <!-- Javascript goes in the document HEAD -->
+		 <script type="text/javascript">
+		 function altRows(id){
+		 if(document.getElementsByTagName){  
+   
+			var table = document.getElementById(id);  
+			var rows = table.getElementsByTagName("tr"); 
+	
+			for(i = 0; i < rows.length; i++){          
+				if(i % 2 == 0){
+					rows[i].className = "evenrowcolor";
+				}else{
+					rows[i].className = "oddrowcolor";
+				}      
+			}
+		 }
+		 }
+		 window.onload=function(){
+		 altRows('alternatecolor');
+		 }
+		 </script>
+
+       <script>
 
            $(document).ready(function () { 
                           $(".container").css('top', $(window).height()-52);
@@ -300,29 +321,37 @@
 
             </section>
 
-            <div id='container' class='container'>
+            <div id="container" class="container">
                 <div class="skipToContent">
                     <a href="#introduction">
                         <img src="img/skipContent.png">
                     </a>
                 </div>
-                <div id='introduction' style='width:100%'>
+                <div id="introduction" style="width:100%">
 
                     <div class="wrapper">
-                            <div id='topmenu' style="width:100%;">
+                            <div id="topmenu" style="width:100%;">
                                 <div class="dd">
                                 <ul id="og-grid" class="og-grid">
-                                <li> <a href="#" class="context_grid" data-largesrc="img/contextIMG.png" data-title="Context" data-description="<p>While Africa has seen a burst of economic growth and activity in the last decade, it remains a continent with substantial unfulfilled promise. Nowhere is this more evident than in the agriculture sector and the state of food insecurity in many countries -- especially among the most vulnerable and marginalized groups. For a variety of seemingly intractable reasons African agriculture has not yet effectively made the transition from small, semi-subsistence farming that is poorly linked to the burgeoning urban markets. Transitioning to commercially-oriented farming enables farmers to draw a living income by understanding and responding to the growing demand of Africa&rsquo;s fast growing cities.</p>
+                                <li> <a href="#" class="context_grid" data-largesrc="img/contextIMG.png" data-title="Context" data-description="<p>While Africa has seen a burst of economic growth and activity in the last decade, it remains a continent 
+                                with substantial unfulfilled promise. Nowhere is this more evident than in the agriculture sector and the 
+                                state of food insecurity in many countries -- especially among the most vulnerable and marginalized groups.
+                                 For a variety of seemingly intractable reasons African agriculture has not yet effectively made the transition
+                                  from small, semi-subsistence farming that is poorly linked to the burgeoning urban markets. 
+                                  Transitioning to commercially-oriented farming enables farmers to draw a living income by understanding and 
+                                  responding to the growing demand of Africa&rsquo;s fast growing cities.</p>
 
 <p>The African Union Comprehensive Africa Agriculture Development Program (CAADP) seeks to propel this needed transformation of African agriculture from the low input, low output situation that is common to semi-subsistence farming to one based on reliable markets.&nbsp; With expanding markets it is increasingly worth a farmer&rsquo;s while to invest in his or her farmland and to purchase inputs and productivity-enhancing equipment shifting production primarily for the market (eg. farming as a business).</p>
 
-                    <div class='shoutbox shoutboxright'>
-                        <div class='shoutborder shoutright-top'></div>
-                        <div class='shoutborder shoutleft-top'></div>
-                        <div class='shoutborder shoutright-bottom'></div>
-                        <div class='shoutborder shoutleft-bottom'></div>
-<p>Africa Lead is implemented by a consortium of development organizations &ndash; DAI, ECI-<em>Africa</em>, Management Systems International (MSI), Michigan State University (MSU), Training Resources Group, Inc., (TRG) and Winrock International under contract number: EDH-I-00-05-00004/TO&rdquo;AID-OAA-TO-10-00045. Africa Lead began as a 24-month project, extended to 39-months, was implemented through first three and then two regional offices &ndash; Nairobi, Kenya and Accra, Ghana (the South Africa office closed in July 2012) &ndash; and an HQ office in the Washington, DC area and had a final budget of over 25 million USD.&nbsp; This report is funded by the U.S. Agency for International Development.&nbsp; The authors&rsquo; views expressed in this publication do not necessarily reflect the views of the USAID or the U.S. Government.</p>
-</div>
+ 
+ 	<blockquote>
+      &ldquo;Africa Lead is implemented by a consortium of development organizations &ndash; DAI, ECI-<em>Africa</em>, Management Systems International (MSI), Michigan State University (MSU), Training Resources Group, Inc., (TRG) and Winrock International under contract number: EDH-I-00-05-00004/TO&rdquo;AID-OAA-TO-10-00045. 
+      Africa Lead began as a 24-month project, extended to 39-months, was implemented through first three and then two regional offices &ndash; Nairobi, Kenya and Accra, Ghana (the South Africa office closed in July 2012) &ndash; and an HQ office in the Washington, DC area and had a final budget of over 25 million USD.&nbsp; This report is funded by the U.S. Agency for International Development.&nbsp; The authors&rsquo; 
+      views expressed in this publication do not necessarily reflect the views of the USAID or the U.S. Government.&rdquo;
+
+		<cite>Africa Lead</cite>
+	</blockquote>
+     
 
 	<p>The U.S. Government&rsquo;s Feed the Future (FTF) program supports the transformation initiative of AU&rsquo;s CAADP. As a crucial initial part of the FTF support to the African governments&rsquo; CAADP, USAID designed the innovative African Leadership Training and Capacity Building Program (Africa Lead) to spearhead a variety of activities. Key amongst these is to get the word out to a broader audience of agriculture and food security stakeholders about CAADP goals, principles and processes. Another key initial focus of Africa Lead is to address head-on the issue of strengthening the leadership in institutions and organizations that have to be highly effective if the desired transformation in agriculture and food security is to be achieved.</p>
 
@@ -386,12 +415,12 @@
                 </div>
 
                 <div class="subwrapper">
-                    <h2 id="intro">Introduction - Purpose</h2>
+                    <h3>Introduction - Purpose</h3>
                         <p>
 
 <p>The purpose of this report is to describe USAID&rsquo;s Africa Lead program and summarize the four tasks that were implemented over the three-year time period of this program (September 2010 &ndash; November 2013). This report is also written to both present the results and outcomes of the program (Activities section) as well as capture the main lessons that have been learned during the design, customization and implementation of all of the Africa Lead&rsquo;s tasks (Lessons section).&nbsp;</p>
-                <div class="subvideo image_center">
-                    <div class="videooverlay">
+                    <div class="subvideo image_left truevideo" style="margin-left: 0px !important">
+                        <div class="videooverlay truevideo">
                         <div class="videooverlay_button"></div>
                         <img src='img/Overlay_Graphic1_Timeline.png' />
                     </div>
@@ -406,21 +435,19 @@
 
 
 
-                    <h2 id="intro">Background and History of Project</h2>
-                    <div class="shoutbox shoutboxright">
-                        <div class="shoutborder shoutright-top"></div>
-                        <div class="shoutborder shoutleft-top"></div>
-                        <div class="shoutborder shoutright-bottom"></div>
-                        <div class="shoutborder shoutleft-bottom"></div>
-<p>The purpose of this report is to describe USAID&rsquo;s Africa Lead program and summarize the four tasks that were implemented over the three-year time period of this program (September 2010 &ndash; November 2013). This report is also written to both present the results and outcomes of the program (Activities section) as well as capture the main lessons that have been learned during the design, customization and implementation of all of the Africa Lead&rsquo;s tasks (Lessons section).&nbsp;</p>
-
-                    </div>
+                    <h3>Background and History of Project</h3>
+                    
 
 <p>Africa Lead is a region-wide program sponsored by the U.S. government&rsquo;s Agency for International Development (USAID) designed to support the capacity building program of the U.S. Government&rsquo;s <em>Feed the Future </em>(FTF) Initiative, which aligns U.S. Government development assistance with Africa-owned agriculture development plans that are, in turn, aligned with the African Union&rsquo;s Comprehensive Africa Agriculture Development Program (CAADP). These CAADP plans and initiatives seek to contribute to the <em>Millennium Development Goals</em> (MDG) by both encouraging and ensuring that governments throughout the continent apply 10% of their public budgets to agriculture in an effort to achieve the 6% annual growth in agricultural productivity that is needed to achieve sustainable food security throughout the continent.</p>
 
 <p>Africa Lead-supported human and institutional capacity development was initially a two-year task order under the RAISE Plus Indefinite Quantity Contract (IQC) mechanism, designed to run from September 20, 2010 to September 30, 2012, with a budget ceiling of $21,332,381. However, on September 30, 2012 the contract was modified to extend the program for one more year (through September 2013) and raise the ceiling by $4,850,000 to $26,182,381. In addition, Africa Lead received a 3-month no cost extension in September 2013, putting the final end of contract as November 30, 2013.&nbsp;</p>
 
-                <div class="subvideo image_left">
+	 <blockquote style="float:left">
+	 The purpose of this report is to describe USAID&rsquo;s Africa Lead program and summarize the four tasks that were implemented over the three-year time period of this program (September 2010 &ndash; November 2013). This report is also written to both present the results and outcomes of the program (Activities section) as well as capture the main lessons that have been learned during the design, customization and implementation of all of the Africa Lead&rsquo;s tasks (Lessons section).&nbsp;
+	 <cite>Africa Lead</cite>
+	 </blockquote>
+
+                <div class="subvideo image_right">
                     <div class="videooverlay">
                         <div class="videooverlay_button"></div>
                         <img src='img/Overlay_Graphic4_orgs.png' />
@@ -439,42 +466,30 @@
 
 
 
-
-
-
-
-
-
-
                 </div>
 
                 <div class="subwrapper">
 
-                    <h2 id="intro">Goals and Purpose of Africa Lead </h2>
+                    <h3>Goals and Purpose of Africa Lead </h3>
 
-                    <div class="shoutbox shoutboxright">
-                        <div class="shoutborder shoutright-top"></div>
-                        <div class="shoutborder shoutleft-top"></div>
-                        <div class="shoutborder shoutright-bottom"></div>
-                        <div class="shoutborder shoutleft-bottom"></div>
-                        <p><strong><em>Africa Lead&rsquo;s Four Main Goals:</em></strong></p>
-
-                        <ol>
-                            <li><em>To provide training to strengthen capacity of African professional to assume leadership roles in their own institutions for moving the CAADP agenda forward</em></li>
-                            <li><em>To provide organizational and logistical support to participant trainings in priority areas</em></li>
-                            <li><em>To assess human resource and institutional capacity to inform the types of training and investment that will impact the ability of key institutions to meet FTF larger goals</em></li>
-                            <li><em>To develop a data base of African institutions who can provide training in priority areas</em></li>
-                        </ol>
-
-
-                    </div>
+        <blockquote>
+		 <strong><em>Africa Lead&rsquo;s Four Main Goals:</em></strong>
+		  <ol>
+			<li><em>To provide training to strengthen capacity of African professional to assume leadership roles in their own institutions for moving the CAADP agenda forward</em></li>
+			<li><em>To provide organizational and logistical support to participant trainings in priority areas</em></li>
+			<li><em>To assess human resource and institutional capacity to inform the types of training and investment that will impact the ability of key institutions to meet FTF larger goals</em></li>
+			<li><em>To develop a data base of African institutions who can provide training in priority areas</em></li>
+		  </ol>
+        
+        </blockquote>
+		  
 
 
 <p>Economic growth in Africa has begun to accelerate, but poverty remains extensive and food security continues to be a challenge on the continent. This is because agricultural productivity, the foundation of food and financial security has been lagging. The African Union&rsquo;s CAADP is designed to confront this reality and lay the groundwork for &ldquo;transformative&rdquo; change in agriculture.</p>
 
 <p>The objective of the Africa Lead program is to support this transformation by strengthening a cadre of African professionals able to design, implement and measure the impact of food security policies and programs that will strongly affect productivity and food security. Africa Lead represents an early and important part of the U.S. Government&rsquo;s FTF capacity building approach which aligns U.S. Government development assistance with Africa-owned agriculture development plans that are, in turn, aligned with the African Union&rsquo;s CAADP.</p>
 
-                    <div class="subvideo image_left truevideo">
+                    <div class="subvideo image_right truevideo">
                         <div class="videooverlay truevideo">
                             <div class="videooverlay_button"></div>
                             <img src='img/Overlay_Rhoda_Peace-FINAL.png' />
@@ -496,7 +511,7 @@
 
 <p>The results framework lays out the project&rsquo;s strategy to both achieve the objectives of the project and contribute to the higher-level goals of FTF and CAADP. Although these two higher level goals are out of the manageable control of the Africa Lead project, Africa Lead has been able to provide needed support to FTF and CAADP&rsquo;s lower level goals of <em>Implementing, funding and approving country investment plans (</em>G1.2) and <em>Improving the performance of key institutions in implementing their CAADP agenda </em>(G1.3).</p>
 
-<p>The Africa Lead&rsquo;s strategic objectives (SO) of:</p>
+<strong>The Africa Lead&rsquo;s strategic objectives (SO) of:</strong>
 
 <ol>
     <li><em>Increasing the participation of African leaders and institutions engaged in the CAADP process </em>(SO1) and;</li>
@@ -507,7 +522,7 @@
 
 
 
-                    <h2>Structure of Africa Lead</h2>
+<h3>Structure of Africa Lead</h3>
 <p>The Africa Lead Chief of Party (COP), the Operations Director and other central management support functions of operations, including program finance, and monitoring and evaluation are all located in the headquarters office. In addition, other Africa Lead team members from the implementing partners based in the Washington, DC area (MSI, TRG, WI), provide some of the technical support for institutional capacity assessments, curriculum design (especially the initial development of the signature Africa Lead &ldquo;product,&rdquo; the Champions for Change leadership training), internships and short trainings, the short course database, and the lessons learned research.</p>
 
 <p>Primary responsibility for program activity in the field lies with the regional offices located in Africa, each managed by a Deputy Chief of Party (DCoP), who functions as the Regional Program Director. (See Appendix III for organizational chart.)</p>
@@ -518,7 +533,7 @@
 
 <p>To address the main capacity building needs identified by USAID in designing Africa Lead, the program is organized along four main tasks or service areas, each focusing on different key components of the project designed to support each of its strategic objectives. Each Task area is led by a Task leader, who is then overseen by the COP.</p>
 
-<p>Africa Lead&rsquo;s four task areas are:</p>
+<strong>Africa Lead&rsquo;s four task areas are:</strong>
 
 <ul>
     <li><strong>Task One:</strong> Transformational Leadership Training and CAADP Sensitization</li>
@@ -538,14 +553,6 @@
 
 
 
-
-
-
-
-
-
-
-
 <!--start appendices section -->
                 <div id='activities_anchor'>
                     <div id='activities' class="subNavigation menu1 stickyitem sub_maincontent">
@@ -560,38 +567,33 @@
 
                 <div class="subwrapper">
 
-                    <h2>Task One: Transformational Leadership Training and CAADP Sensitization</h2>
-                    <h3>Overview and Methodology</h3>
+                    <h3>Task One: Transformational Leadership Training and CAADP Sensitization</h3>
+                    <strong>Overview and Methodology</strong>
                     <p>The Africa Leadership Training and Capacity Building Program, in particular Task One, is designed largely on the premise of the critical importance and need for leadership and change management training aligned to CAADP. The leadership training is intended to increase knowledge of the principles, approach and goals of CAADP.&nbsp; Equally importantly the training addresses the need for change management and results-based management throughout organizations in the agriculture sector attempting to address the challenges to achieving greater agricultural productivity and food security. With this in mind, Africa Lead has developed and delivered two training modules focused on <strong>leadership</strong> and <strong>rapid results</strong>.</p>
 
                     <p>The first training, Module One (&ldquo;Champions for Change&rdquo;), was developed soon after the start of the contract in September 2010 and began to be delivered in January 2011. It is a five-day course focused on leadership skills that introduce CAADP, the FTF initiative, and some key aspects of strategic planning, leading and managing change, and performance monitoring &amp; evaluation (M&amp;E).</p>
 
-                    
+                    <p><img src="img/trainings_by_type.png" id="trainings_by_type"  style="height:250px" /></p>
 
                     <p>The Module One training was followed in October 2011 with the delivery of Module Two, which is designed to teach skills in project and program design and management, monitoring and evaluation methodologies, team building and the Rapid Results Approach (RRA) to support the movement for the implementation of CAADP National Agriculture Investment Plan (NAIP) <span class="infotip" data="The CAADP National Agriculture Investment Plans (NAIPs) are also frequently called the CIPs, for Country Investment Plans.">&sup1;</span>. These trainings draw participants from multiple countries and contain sessions focused on leadership skills for food security and CAADP.</p>
 
                     <p>Since the goal of Task One is to generate a network of strategically-placed, skilled food security &ldquo;Champions&rdquo; in each country who are informed about, and committed and motivated to engage collectively around CAADP, Africa Lead works closely with Missions, donors and other projects and counterparts to select participants. When the Africa Lead program began in late 2010 and continually throughout the project, the Bureau of Food Security asks Regional and local Missions and their African counterparts to identify mid-level professionals working in agriculture and food security to participate in a training program to develop leadership skills and knowledge relevant to moving the CAADP process forward at the national level.</p>
 
-                    <p><img src="img/trainings_by_type.png" style="height:250px" id="trainings_by_type" class="imagedisplay image_left"/></p>
-
                     <p>Although separate Module One and Two training workshops are the main forms through which the leadership and project management skills are provided under Task One, both Modules are also customized, abridged and adapted to meet the needs of the different stakeholders and reach a wider set of audiences.</p>
 
                     <p>Among the most interesting customizations of the Task One training is the development of abbreviated leadership &ldquo;Super Champions&rdquo; training workshops for senior officials, including parliamentarians, ministers and governors. These generally involve compressing the five day training into one day and were specifically advocated by the Champions who had gone through the longer training. An early reaction on the Champions&rsquo; part was &ldquo;You should be providing this training to our bosses.&rdquo;</p>
 
-                    <div class="shoutbox shoutboxright">
-                        <div class="shoutborder shoutright-top"></div>
-                        <div class="shoutborder shoutleft-top"></div>
-                        <div class="shoutborder shoutright-bottom"></div>
-                        <div class="shoutborder shoutleft-bottom"></div>
-                        <p><strong><em>Module One General Agenda</em></strong></p>
-                        <ul>
-                            <li><strong><em>Day 1:</em></strong><em> Develop common understanding of CAADP &amp; FTF frameworks and programs; assess status of change in country teams; identify challenges to change</em></li>
-                            <li><strong><em>Day 2:</em></strong><em> Leading &amp; managing change</em></li>
-                            <li><strong><em>Day 3:</em></strong><em> Strategic planning &amp; priority setting tools; Advocacy &amp; Communication; Changing mindsets to enable change</em></li>
-                            <li><strong><em>Day 4:</em></strong><em> Understanding the country change initiative plans and implementation process;&nbsp; Prioritizing &amp; planning for carrying out individual &amp; team change initiatives</em></li>
-                            <li><strong><em>Day 5:</em></strong><em> Creating plans for using skills &amp; implementing plans</em> <em>developed</em></li>
-                        </ul>
-                    </div>
+  <blockquote>
+  <strong>Module One General Agenda:</strong>
+	<ul>
+	<li>Day 1: Develop common understanding of CAADP &amp; FTF frameworks and programs; assess status of change in country teams; identify challenges to change</em></li>
+	<li>Day 2: Leading &amp; managing change</em></li>
+	<li>Day 3: Strategic planning &amp; priority setting tools; Advocacy &amp; Communication; Changing mindsets to enable change</em></li>
+	<li>Day 4: Understanding the country change initiative plans and implementation process;&nbsp; Prioritizing &amp; planning for carrying out individual &amp; team change initiatives</em></li>
+	<li>Day 5: Creating plans for using skills &amp; implementing plans</em> <em>developed</em></li>
+	</ul>
+
+  </blockquote>
 
                     <p>There are, however a number of permutations of customized Module One and Two training workshops (<span class="highlightimage" data="trainings_by_type">See chart Trainings by Type</span> and for further explanation of additional trainings, see Task Two).</p>
 
@@ -613,15 +615,12 @@
 
 
                     <h3>Module One: Champions for Change Leadership Training</h3>
-                    <h4>Module One Overview</h4>
+                    <strong>Module One Overview</strong>
 
                     <p>Module One was launched in January 2011 as a five day course designed to fill the leadership and management gap observed in some agriculture institutions and identify, prioritize and implement strong agriculture policies, investments and programs. The goals of the training are to increase: (1) knowledge of CAADP, (2) participation in CAADP implementation and, (3) leadership and change management skills.</p>
-
                     <p>In late 2010, Africa Lead&rsquo;s senior trainers and designers completed a draft curriculum and assembled a dozen potential trainers for a three day Training of Trainers (ToT) and curriculum validation in Nairobi. Working together with excellent regional trainers the TOT trainers solicited African examples that ensure maximum impact of the training when rolled out in countries and regions.</p>
-
                     <p>The Africa Lead senior trainers have taken great care to select regional facilitators/trainers for the workshops who are sensitive, responsive to body language, effective with participants, who ask open-ended questions to bring out and engage participants, and who understand the material on a technical level. From the ToT group, eight were selected to deliver the Module One leadership and CAADP program sensitization training.</p>
-
-                    <p>The ToT training comprises 40 hours of exercises on topics including:</p>
+                    <strong>The ToT training comprises 40 hours of exercises on topics including:</strong>
 
                     <ul>
                         <li>Food Security,</li>
@@ -639,7 +638,19 @@
 
                     <p>Of particular impact is the image and accompanying exercise of the little girl who is used to reinforce the urgency and effects of food insecurity as well as the long term impact of having insufficient food as a child. In general, the Module One curriculum takes large concepts such as poverty, gender inequality and hunger to a personal level and with the additions from the trainers, like the girl, these topics have had even more of an impact than ever anticipated.&nbsp;</p>
 
-                    <p><img src="img/whatsherstory.png" class="imagedisplay image_center" style="height:530px" /></p>
+                    <p><img src="img/whatsherstory.png" /></p>
+                    
+                    <strong>What's her story</strong>
+                    <p>Create her life story from childhood to adulthood, using your assigned overlooked issue:</p>
+                    <ul>
+                      <li>How might her gender affect her access to food security throughout her life?</li>
+                      <li>How might her poverty affect her food security?</li>
+                      <li>How might access to and lock of nutritious food affect her life as a growing child and as a mother?</li>
+                      <li>How might climate change affect her family's ability to achieve food security?</li>
+                    </ul>
+
+
+                    <p>Task One uses a highly participatory approach designed using the best practices for adult learning and utilizing the extensive depth of experience and knowledge of the curriculum developers. It also uses a variety of different learning styles, including visual, audial and kinesthetic.</p>
 
                     <div class="subvideo image_right truevideo">
                         <div class="videooverlay truevideo">
@@ -652,18 +663,13 @@
                               Video not supported
                             </video>
                         </div>
-                    </div>
-
-                    <p>
-                        Task One uses a highly participatory approach designed using the best practices for adult learning and utilizing the extensive depth of experience and knowledge of the curriculum developers. It also uses a variety of different learning styles, including visual, audial and kinesthetic.</p>
-
-                   
+                    </div>                    
 
                     <p>Each workshop session includes elements catering to each learning style with breakout sessions for small groups to interact, share and relate content to their own life experience. In most training workshops each session brings together participants from different countries and sectors giving them a platform to share, compare and contrast experiences as they develop personal and country action plans. Most Module One workshops held were residential, which facilitate an extremely important contributor to expansion of professional networks, through &nbsp;participant engagement with one another throughout the training.</p>
 
                     <p>Overall, the purpose of Module One is to provide leadership training that enables a more effective shared vision around investment programs, secures public and donor funding for priority programs, and drives the CAADP agenda. To help support this, Module One focuses on maintaining a shared vision, and building up a &ldquo;critical mass&rdquo; of champions who constitute a community of practice, and can advocate for the resources and political support to achieve key agriculture and food security goals.&nbsp;</p>
 
-                     <div class="subvideo image_center truevideo">
+                     <div class="subvideo image_right truevideo">
                         <div class="videooverlay truevideo">
                             <div class="videooverlay_button"></div>
                             <img src='img/Overlay_Champions02-FINAL.png' />
@@ -676,42 +682,30 @@
                         </div>
                     </div>                       
 
-                    <h4  id="energizing_start" class="subreportpoint energizing_start">Module One: Outputs, Outcomes and Results</h4>
-
+                    <h3  id="energizing_start" class="subreportpoint energizing_start">Module One: Outputs, Outcomes and Results</h3>
                     <p>Module One was launched in January 2011 and by the end of that year a total of 1,089 Champions had been trained. In subsequent years the &ldquo;Champions for Change&rdquo; training continued to be conducted but the focus switched to Module Two and other customized trainings and internships.</p>
-
                     <p id="module1_start" class="subreportpoint module1_start">Overall, 1,343 participants (869 males and 474 females) have received <span class="highlightimage" data="module1_regiongender">Module One Champions for Change</span> training by the end of the project. Most of the Champions are from East Africa representing a variety of sectors with 32% from the civil society, 16% from the private sector, 13 % from research/university sectors, and 38% representing Government staff.</p>
 
-
-                    <p><img src="img/module1_regiongender.png" id="module1_regiongender" class="imagedisplay image_right" style="height:300px" /></p>
-                    
-
-
                     <p>To understand and communicate how Module One training is affecting participant behavior, following the training Africa Lead administers a Pre and Post Survey in conjunction with the training, as well as sends participants a six month follow-up survey by email using a survey application called Survey Monkey.</p>
-
                     <p>In addition, a small sample (100) of Champions and other stakeholders in Africa Lead have been intensively interviewed to more deeply get at impact, with each interview lasting for more than an hour. This research is presented in the report: <em>Energizing Champions for Food Security: Reflections on What Works, Why, and What are the Challenges.</em></p>
-
                     <p>Africa Lead has received the results of 1,260 Pre-Surveys and 1,222 Post-Surveys. This contrasts to the lower but still respectable 46% response rate to the Survey Monkey survey in which 622 of the 1,343 Champions responded to the emailed questionnaire six &nbsp;months after taking the training.</p>
+                    <p>A total of 98% of participants consider training quality to be excellent or good, with 99% reporting that the usefulness of the content is good or excellent. In the six month follow up survey 52.5% of participants respond that the training is far above the average training, with an additional 33% responding that it is slightly above average (for a total of 85.5% reporting the training to be above average).</p>
 
-                    <p >A total of 98% of participants consider training quality to be excellent or good, with 99% reporting that the usefulness of the content is good or excellent. In the six month follow up survey 52.5% of participants respond that the training is far above the average training, with an additional 33% responding that it is slightly above average (for a total of 85.5% reporting the training to be above average).</p>
 
-                    <div class="shoutbox shoutboxright">
-                        <div class="shoutborder shoutright-top"></div>
-                        <div class="shoutborder shoutleft-top"></div>
-                        <div class="shoutborder shoutright-bottom"></div>
-                        <div class="shoutborder shoutleft-bottom"></div>
-                        <p><em>&ldquo;The Africa Lead training, to me it&rsquo;s been such tremendous help. I mean in terms of leadership because I think in the Ghanaian setting we don&rsquo;t place that much important in leadership training or in leadership&hellip;but after the Africa Lead training, I got to understand what is required of a leader to improve my skills as a leader.&nbsp; I learned a lot of things that to me mean how to make decision, how to build consensus, how to filter through and prioritize all of those. I think it had helped me as a leader and also as a business woman.&rdquo; </em></p>
+                    <p><img src="img/module1_regiongender.png" id="module1_regiongender" class="image_right" style="height:250px" /></p>
 
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <em>- </em><em>Champion from Ghana</em></p>
-                    </div>
+<blockquote>
+The Africa Lead training, to me it&rsquo;s been such tremendous help. I mean in terms of leadership because I think in the Ghanaian setting we don&rsquo;t place that much important in leadership training or in leadership&hellip;but after the Africa Lead training, I got to understand what is required of a leader to improve my skills as a leader.&nbsp; I learned a lot of things that to me mean how to make decision, how to build consensus, how to filter through and prioritize all of those. I think it had helped me as a leader and also as a business woman.
+<cite>Champion from Ghana</cite>
+</blockquote>
 
                     <p>Overall, Module One is considered by participants to be very successful in delivering the content of the training. The majority of participants report that they have improved their knowledge a lot during the training in Advocacy (72%), Strategic Thinking (85%), Leadership (89%), Team Building (84%), and M&amp;E (61%).</p>
 
                     <p>In addition, according to the six month follow up survey, 84.3% report that they use what they learned in the training more than other trainings they have attended, with 90.2% responding that they have used the leadership or management tools and techniques at their job since the training.</p>
 
-                    <p><img src="img/module2_trainings_sector.png" id="module2_trainings_sector" class="imagedisplay image_left" style="height:250px" /></p>
+                    <p><img src="img/module2_trainings_sector.png" id="module2_trainings_sector" class="image_right" style="height:250px" /></p>
 
-                    <p>When asked in which area the participants are <span class="highlightimage" data="module2_trainings_sector">using the training</span>, the most common response is leadership and strategic thinking.</p>
+                                       <p>When asked in which area the participants are <span class="highlightimage" data="module2_trainings_sector">using the training</span>, the most common response is leadership and strategic thinking.</p>
 
                     <p>In addition, 71.8% of respondents have implemented or started to implement their action plan six months after the training, with 24.3% not yet implementing but are still planning on doing so. Of those who have start working on their action plan, 9.6% have completed their action plan and 87.9% have started and are still working on their action plan.</p>
 
@@ -719,7 +713,7 @@
 
                     <p>When participants are asked in the six month follow up survey what they have done differently because of the training -- how their behavior has changed -- there is a variety of responses including a farmer reporting that after the training he turned his farm into a business and someone noting how she has adopted the team building strategies to use at work. Others explain how they have been involved in food security advocacy with their local government, while others are conducting trainings. In general many of the participants talk about how their level of understanding and commitment to addressing food security, malnutrition and gender has increased.</p>
 
-                    <p class="subreportpoint energizing_end">Some express having a new sense of commitment to their work, &ldquo;I have become more passionate and aggressive in implementing my ideas&rdquo;. Others have started to include a broader range of stakeholders and partners in their work to expand the food security network or simply have begun to use their improved planning and management skills at work.</p>
+                    <p class="subreportpoint energizing_end">Some express having a new sense of commitment to their work, &ldquo;I have become more passionate and aggressive in implementing my ideas&rdquo;. Others have started to include a broader range of stakeholders and partners in their work to expand the food security network or simply have begun to use their improved planning and management skills at work.</
 
                     <p>When delivering any type of training the hope is that the participant will find the content useful and adopt the practices, but beyond this, the idea that the training can be passed on to other individuals is an extra benefit. The momentum of the Africa Lead Leadership training encourages participants to share their knowledge with others. Fifty-one percent of respondents (235 participants) report that they have conducted training since participating in the &ldquo;Champions for Change&rdquo; Module One training; of these 75% use some of the Africa Lead material. On average these participants have delivered 3.5 trainings to an average of 103 people.</p>
 
@@ -731,7 +725,7 @@
 
 
                     <h3>Module Two: Project Design and Rapid Results Approach</h3>
-                    <h4>Module Two Overview</h4>
+                    <strong>Module Two Overview</strong>
 
                     <p>To supplement Module One, Module Two was initially designed to be more of a technical course on specific skill sets identified both during Module One trainings and institutional capacity assessment in Task Three.</p>
 
@@ -747,15 +741,13 @@
 
                     <p>The RRI sets an ambitious goal to be achieved in 60 to 120 days. The initiative is carried out in three phases &ndash; pre-launch, launch and implementation. Each phase is designed to neutralize common systemic barriers to performance. The provision of coaching support during the implementation phase is an important part of the RRA concept.</p>
 
-                    <p>The three unique elements of a RRI are:</p>
+                    <strong>The three unique elements of a RRI are:</strong>
+					<ul>
+					  <li>1. Ambitious but realistic goals</li>
+					  <li>2. Encourage innovation from below</li>
+					  <li>3. Coaching support &ndash; specially trained facilitators</li>
+					</ul>
 
-                    <p>1. Ambitious but realistic goals</p>
-
-                    <p>2. Encourage innovation from below</p>
-
-                    <p>3. Coaching support &ndash; specially trained facilitators</p>
-
-                    <p>&nbsp;</p>
 
                     <p>The RRA is designed to help individuals or teams expedite implementation of projects and demonstrate rapid results, showing to themselves and stakeholders the feasibility of the project. It is a tool for increasing organizational performance by setting highly ambitious yet achievable goals that are easily measured/clearly defined, urgent and important and achieve visible results quickly. The training approach uses classroom trainings followed by periodic coaching visits to help participants address challenges to achieving rapid results.&nbsp;&nbsp;</p>
 
@@ -767,18 +759,18 @@
                         </audio>
                     </div>
 
-                    <h4 id="module2_start" class="subreportpoint module2_start">Module Two: Outputs, Outcomes and Results</h4>
-                    <p>The Module Two training is provided through both the East/Southern and West Africa offices with a total of 333 participants being trained to date. Of these 235 are males and 98 are females. The majority of the participants come from non-profit/non-government organizations (41%) (<span class="highlightimage" data="module2_trainings_sector_pie">see chart Module Training by Sector</span>) and represent 23 African countries.</p>
-
-                    
+                    <h3 id="module2_start" class="subreportpoint module2_start">Module Two: Outputs, Outcomes and Results</h3>
+                    <p>The Module Two training is provided through both the East/Southern and West Africa offices with a total of 333 
+                    participants being trained to date. Of these 235 are males and 98 are females. The majority of the participants 
+                    come from non-profit/non-government organizations (41%) (see chart Module Training by Sector) and represent 23 
+                    African countries.</p>
 
                     <p>Although Module Two was originally designed to be delivered as a follow up course to Module One, according to the Pre survey 80% of participants had not taken Module One before taking Module Two (212 out of 261).</p>
-
                     <p>Similar to Module One, all Module Two participants are asked to fill out both a pre and post survey (331 pre-survey and 313 post-survey). The majority of participants, 99% report that the quality of the training is excellent (59%) or good (40%). In addition, 98% think the usefulness of the training is excellent (56%) or good (42%).</p>
+                    
 
-                    <img src="img/module2_trainings_sector_pie.png" id="module2_trainings_sector_pie" class="imagedisplay image_right" style="height:250px" />
 
-                    <p>Some examples from the follow up survey of how participants are using their training are:</p>
+                    <strong style="clear:both">Some examples from the follow up survey of how participants are using their training are:</strong>
 
                     <ul>
                         <li>Setting targets and meeting them at work</li>
@@ -788,13 +780,15 @@
                         <li>Creating a network of more farmers to sell and store grain together</li>
                     </ul>
 
-                    
+                    <p>&nbsp;</p>
 
                     <p>One participant noting the personal aspect of the training and its influence reports: &ldquo;Work using my heart instead of my head. As a result I have created a lot of good relationships with other stakeholders.&rdquo;</p>
-
-                    <p>One of the key elements of the Module Two training is the action plan. At the end of the training 98% of the participants are pleased with their action plan and will be implementing their plan. Eighty-two percent think that the Rapid Result Approach will be useful to them in the future in designing and implementing projects or programs in agriculture and food security.</p>
-
-                    <p>Some of the different types of action plans developed include:</p>
+                    <p>One of the key elements of the Module Two training is the action plan. At the end of the training 98% of the participants 
+                    are pleased with their action plan and will be implementing their plan. Eighty-two percent think that the Rapid Result 
+                    Approach will be useful to them in the future in designing and implementing projects or programs in agriculture and 
+                    food security.</p>
+                    
+                    <strong>Some of the different types of action plans developed include:</strong>
 
                     <ul>
                         <li>Raising farmer association membership</li>
@@ -807,6 +801,7 @@
 
                     <p class="subreportpoint module2_end">Unfortunately, the follow up survey for the Module Two participants has not received sufficient responses to make it representative. The survey was successfully sent to 226 participants (70 emails bounced) and 58 participants have responded. Although the sample in not representative, it still illustrates the work that the Champions do after the workshop, with 88.2% of the respondents expressing that they have started to implement their action plan, and 84.2% reporting that they have experienced positive benefits from their action plan implementation.</p>
 
+
                     <p>Many of the reported challenges of implementation are funding and logistical support. However, 90% of respondents have shared their action plan with their supervisor and/or colleagues and received a positive and supportive reaction. Overall, 47.2% have completed their action plan, 38.9% have begun implementing it and 13.9% have tried but been unable to complete it due to challenges.</p>
 
                     <p>In addition to learning new skills, the training also provides an opportunity to network with other professionals; 76% of the participants report that the workshop has helped to provide this opportunity that can in the future be beneficial to their work.</p>
@@ -814,17 +809,18 @@
                     <p>In West Africa, five out of the nine institutions receiving Africa Lead coaching following Module Two training have implemented their RRI Action Plans successfully. The other four institutions plan to implement their Action plans but state that the lack of financial resources, time, and other unexpected challenges has delayed the process. One example is the team Leader of the University of Ghana College of Agriculture who indicates that she has applied the principles of RRI to set up a financial scheme where she lends money to clients. &nbsp;More analysis of the Module Two training can be found in the report: <em>Champions for Change: Sustaining the Momentum Through Results-Oriented Action Plans</em>.</p>
 
 
-
-
                     <h3>Other Modules: &nbsp;Customized Module 1 &amp; 2 Training</h3>
 
-                    <p>There are instances in which it makes more sense to &ldquo;mix and match&rdquo; sessions from Module One and Two in order to capture key elements of both in an abbreviated amount of time. The West Africa team did this for USAID/Ghana, which entailed organizing customized courses to enhance the leadership, project planning, management, monitoring and evaluation, and team building skills to senior and mid-career professionals from the Regional Coordinating Council, private sector, civil society and research institutions from the seventeen districts of the Northern region of Ghana.</p>
+                    <p>
+                    There are instances in which it makes more sense to &ldquo;mix and match&rdquo; sessions from Module One and 
+                    Two in order to capture key elements of both in an abbreviated amount of time. The West Africa team did this 
+                    for USAID/Ghana, which entailed organizing customized courses to enhance the leadership, project planning, 
+                    management, monitoring and evaluation, and team building skills to senior and mid-career professionals 
+                    from the Regional Coordinating Council, private sector, civil society and research institutions from the 
+                    seventeen districts of the Northern region of Ghana.
+                    </p>
 
-                    <p><img src="img/othermodules_ghana.png" class="imagedisplay image_right"style="height:250px" /></p>
-
-                    
-
-                    <p>Sessions from Module One are selected that aim at inspiring, energizing and mobilizing innovative leaders, champions, and thinkers in the agriculture field through:</p>
+                    <strong style="display:block">Sessions from Module One are selected that aim at inspiring, energizing and mobilizing innovative leaders, champions, and thinkers in the agriculture field through:</strong>
 
                     <ul>
                         <li>Equipping them with new knowledge, skills</li>
@@ -836,7 +832,6 @@
                         <li>Monitoring and evaluation concepts and practices.</li>
                     </ul>
 
-                    <p>&nbsp;</p>
 
                     <p>The main sessions from Module Two selected to further develop participants&rsquo; skills focus on:</p>
 
@@ -846,25 +841,22 @@
                     </ul>
 
 
-                    <h4>Module One & Two: Outputs, Outcomes and Results </h4>
+                    <h3>Module One & Two: Outputs, Outcomes and Results </h3>
                     <p>The Module One &amp; Two training programs were delivered between March and June 2013 with a total of 199 (142 males and 57 females) benefitting from the training. Six different courses have been taught and all trainings have been held in Tamale, Ghana.</p>
-
                     <p>Although Africa Lead has not been able to conduct a six month follow up survey, according to the Pre and Post surveys from all of the participants (199 for each survey), 99.9% report that the training quality is good or excellent with 99.9% rating the usefulness of the training to be excellent or good.</p>
-
                     <p>As part of the pre survey, 13% of participants express that they have extensive or moderate understanding of CAADP.&nbsp; This percentage increases by 93 % by the end of the workshop with 96.8% reporting that they have extensive or good understanding of CAADP.</p>
-
                     <p>With training, it is important that the learned knowledge turns into practice. Although the data from the pre and post survey are limited, 100% express that they want to help their institution participate in CAADP because of the training. And 95% state that they will use the leadership and management tools that they learned at the training a lot in their work.</p>
-
                     <p>The majority of participants say they are planning on implementing their action plan at their organization. Measuring progress on these plans lies in the future, however with the results of the post training survey the participants feel they have a better understanding of the RRA, CAADP and overall Leadership skills that they can continue to use at their institutions.&nbsp;</p>
 
+					<img src="img/othermodules_ghana.png" id="othermodules_ghana" class="image_center" style="height:250px" />
 
-                    <h2>Task Two: Technical and Third Party Training, Conferences and Other Innovative Learning Experiences</h2>
-                    <h3>Overview and Methodology </h3>
+                    <h3>Task Two: Technical and Third Party Training, Conferences and Other Innovative Learning Experiences</h3>
+                    <strong>Overview and Methodology </strong>
                     <p>The primary purpose of Task Two is to provide logistical and financial support for third party and other customized training workshops, internships and other innovative learning partnerships. This task area includes design, logistical and facilitation support provided by Africa Lead for a wide range of workshops, conferences and meetings related to building capacity in various areas critical to increased agricultural productivity, production and food security in Africa. Because of the regional office experience in and their know-how of coordinating trainings and meetings, sometimes on very short notice, Africa Lead has developed a strong reputation for being responsive and able to &ldquo;pull off&rdquo; complex workshops and conferences successfully.</p>
 
                     <p>Task Two activities often have been undertaken in response to assessments conducted under Task Three (discussed below) (e.g. CORAF, CILSS, ECOWAS support). Notably, some adjunct training supported by Africa Lead has been identified through the web-based database designed and built-up under Task Four (e.g., Namibia M&amp;E training).</p>
 
-                    <p>The three main activities under Task Two are:</p>
+                    <strong>The three main activities under Task Two are:</strong>
 
                     <ol>
                         <li>Internships</li>
@@ -873,11 +865,10 @@
                     </ol>
 
                     <h3>Internships</h3>
-                    <p><img src="img/internship_by_type.png" id="internship_by_type" class="imagedisplay image_right" style="height:250px" /></p>
-
                     <p>One of the innovative aspects of Task Two is the partnering between Africa Lead and U.S., international and African agribusinesses to provide both senior and young professionals hands-on learning experience to overcome technical, managerial and financial challenges to operating agribusinesses.&nbsp;</p>
 
-                
+                    <p><img src="img/internship_by_type.png" id="internship_by_type" class="image_right" style="height:250px" /></p>
+
                     
 
                     <p>Africa Lead has implemented four <span class="highlightimage" data="internship_by_type">main types of internships</span> &ndash; experiential learning opportunities -- under Task Two:</p>
@@ -889,8 +880,10 @@
                     <p>3) Student internships with SUA, Tanzania&rsquo;s Sokoine University of Agriculture</p>
 
                     <p>4) Specialist young interns seconded to CORAF/CILSS, including National Agriculture Research Service (NARS) internships.</p>
-
-                    <h3>Agribusiness Leadership Program (B2B) Exchanges</h3>
+					
+						
+                    <h3 style="clear:both">Agribusiness Leadership Program (B2B) Exchanges</h3>
+                    <p><img src="img/intern_hershey.png" id="intern_hershey" class="image_center" style="height:250px" /></p>
 
 
                     <p>The Agribusiness Leadership program, also known as the Business-to-Business (B2B) exchanges, is designed to match private sector hosts from more technically advanced companies with participants from enterprises who need technical skill upgrades or innovation to overcome identified challenges.&nbsp; To date the program has placed nominated individuals with companies in Africa, the United States and India.&nbsp; Participants get hands-on learning experiences to take back and apply to directly in their organizations.</p>
@@ -901,27 +894,21 @@
 
                     <p><strong>Hershey Co., USA:</strong> In February 2012, Africa Lead sponsored its first B2B professional intern from the Ethiopian Commodity Exchange (ECX) to attend a seven week intensive internship at the Hershey Company in Pennsylvania.</p>
 
-                    <p><img src="img/intern_hershey.png" class="imagedisplay image_right" style="height:300px" /></p>
-
                     <p>The intern worked with the Commodities Operation Unit, which deals with price risk management, and learned firsthand about how global private sector food companies rely on market intelligence and futures markets to ensure security of supply and hedge their risks against future price increases. During her internship she was able to sit with each commodity buyer/trader to gain each trader&rsquo;s insights about activities in commodity operations.</p>
 
                     <p>The intern was also able to attend meetings with other department staff, suppliers, and other external business counterparts, thereby gaining a broad understanding of the centrality of the Commodities Operation Unit and how it provides information and strategic guidance to the rest of the company.</p>
+
+                    
 
 
                     <p>Hershey personnel similarly report new learning from the experience of hosting an African Lead professional intern. &nbsp;Building relationships with commodity suppliers mitigates risk related to quality, supply and operational efficiencies.</p>
 
                     <p>Overall, the ECX intern feels that the knowledge she acquired on structured marketing systems, and her exposure to cutting edge ICT systems for structured commodity trading is helping her improve and take ECX&rsquo;s operation to higher level, particularly as the Exchange is rolling out its Futures unit.</p>
 
-                    <div class="shoutbox shoutboxright">
-                        <div class="shoutborder shoutright-top"></div>
-                        <div class="shoutborder shoutleft-top"></div>
-                        <div class="shoutborder shoutright-bottom"></div>
-                        <div class="shoutborder shoutleft-bottom"></div>
-                        <p><em>&ldquo;I gained work experience in my area of specialization, able to build professional networks, acquired practical and professional skill and knowledge, and shared expert perspective on commodity derivative (on futures and options). I also learned much beyond the listed items. It opened my eyes and initiated me to review the way I do things. The internship motivated me to continue working diligently.&rdquo;</em></p>
-
-                        <p><strong><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -JSE Professional Intern</em></strong></p>
-
-                    </div>
+                    <blockquote>
+                     I gained work experience in my area of specialization, able to build professional networks, acquired practical and professional skill and knowledge, and shared expert perspective on commodity derivative (on futures and options). I also learned much beyond the listed items. It opened my eyes and initiated me to review the way I do things. The internship motivated me to continue working diligently.
+                       <cite>JSE Professional Intern</cite>
+                    </blockquote>
 
 
                     <p><strong>Johannesburg Stock Exchange Limited: </strong>In 2012<strong>, </strong>Africa Lead separately sent four grain trade professionals for three week internships to the Commodity Derivatives Division of the Johannesburg Stock Exchange (JSE). JSE is the largest exchange in Africa, as well as the only African agriculture derivatives market.</p>
@@ -936,7 +923,11 @@
 
                     <p><strong>Zamindara Farm Solutions:</strong> During the fourth quarter of 2012 and the second quarter of 2013, Africa Lead sent two groups of three senior interns each to India to work with Zamindara Farm Solutions in the Punjab Province for a three week period. The senior interns come from four different countries, Uganda, Rwanda, Liberia, and Tanzania, with varied backgrounds in agricultural equipment leasing, engineering and finance.</p>
 
-                    <div class="subvideo image_left truevideo">
+                    <p>Zamindara is an agricultural equipment leasing company that provides small farmers access to modern farm machinery at a lower cost, helping to eliminate the need for farmers to take out loans to buy costly equipment that will take them years to repay. The fact that an invitation was extended to host second cadre of African Lead interns is testament to the value the company places in forging intercontinental relationships.</p>
+
+                    <p>In addition to working closely with Zamindara owners, managers and staff, the senior interns visit manufacturers of machinery, operators of grain markets including a local rice mill that purchases, processes and package paddy rice for wholesale. In one case, this rich experiential learning exchange also included a visit to an industrial training institute.</p>
+                    
+                    <div class="subvideo image_right truevideo">
                         <div class="videooverlay truevideo">
                             <div class="videooverlay_button"></div>
                             <img src='img/Overlay_Zamindar-FINAL.png' />
@@ -949,60 +940,45 @@
                         </div>
                     </div>
 
-                    <p>Zamindara is an agricultural equipment leasing company that provides small farmers access to modern farm machinery at a lower cost, helping to eliminate the need for farmers to take out loans to buy costly equipment that will take them years to repay. The fact that an invitation was extended to host second cadre of African Lead interns is testament to the value the company places in forging intercontinental relationships.</p>
-
-                    <p>In addition to working closely with Zamindara owners, managers and staff, the senior interns visit manufacturers of machinery, operators of grain markets including a local rice mill that purchases, processes and package paddy rice for wholesale. In one case, this rich experiential learning exchange also included a visit to an industrial training institute.</p>
-                
-                     <div class="shoutbox shoutboxleft">
-                        <div class="shoutborder shoutright-top"></div>
-                        <div class="shoutborder shoutleft-top"></div>
-                        <div class="shoutborder shoutright-bottom"></div>
-                        <div class="shoutborder shoutleft-bottom"></div>
-                        <p><em>&ldquo;This practicum was an eye opener to how far I have to go in making food safe for everyone&hellip;</em><em>It&rsquo;s a challenge but with the great exposure and training I have had&hellip;I believe I can lead the change I want to see in food safety and food security. It&rsquo;s all about passion, taking a lead and creating a difference however small it may be as long as </em><em>it creates an impact.&rdquo;</em></p>
-
-                        <p><strong><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; -Uncle Ben&rsquo;s Rice Intern&nbsp;</em></strong></p>
-
-                    </div>
 
                     <p>The African professionals participating in the Zamindara internships note the differences in production and processing methods in India vs. Africa. They have focused on learning new approaches to farm machinery leasing spearheaded at Zamindara and from their exposure to Zamindara&rsquo;s business strategies applying lessons for a business model for providing profitable mechanization solutions to small farmers.</p>
 
                     <p>The African participants express a particular appreciation for undertaking the experience in groups, which has allowed them to learn from each other as well as from their Zamindara hosts. The experience has motivated them as a group to discuss how the Punjab context and Zamindara&rsquo;s solutions relate to each of their own country contexts.</p>
 
 
+                     <blockquote>
+                        This practicum was an eye opener to how far I have to go in making food safe for everyone&hellip;</em><em>It&rsquo;s a challenge but with the great exposure and training I have had&hellip;I believe I can lead the change I want to see in food safety and food security. It&rsquo;s all about passion, taking a lead and creating a difference however small it may be as long as </em><em>it creates an impact.
+                        <cite>Uncle Ben&rsquo;s Rice Intern</cite>
 
+                    </div>
 
 
                     <p><strong>Uncle Ben&rsquo;s Rice</strong>: In June 2013, a senior intern from Uganda spent two months at the Mars Corporation Uncle Ben&rsquo;s Rice in Greenville, Mississippi, which processes and packages a large variety of dry meals and &lsquo;Ready to Heat Rice&rsquo;. The intern was assigned to the Quality &amp; Food Safety program where she gained hands-on learning experience participating in the program&rsquo;s quality audits conducted to ensure compliance of factory practices. She also observed the application of any necessary corrective actions imposed by the Quality and Food Safety program and the development of recommendations to continuously improve the food safety system.</p>
 
                     <p>The intern participated in the audit of major suppliers, was able to visit and learn about Mars&rsquo; quality and food safety processes, technologies and equipment, and participated in a number of relevant trainings including: Good Manufacturing Practices, Associate Safety, Good Hygiene and Hazard Analysis and Critical Control Points (HACCP) &ndash; for which she is now also a certified trainer.&nbsp;</p>
 
-                    
-                    <p><img src="img/intern_uncleben.png" class="imagedisplay image_left" style="height:300px" /></p>
-
+            
                     <p>As a result of the exchange the Africa Lead professional intern expresses confidence that she will be able to apply what she had learned to improve the food quality and safety in her workplace.&nbsp; In addition she is looking forward to supporting local food producers in Uganda to add value to their products through product development, quality control, commercialization and marketing of the products and product management. She is planning specifically to reassess the food quality and safety situation at her company, looking at the current practices in place and identifying gaps with HAACP.&nbsp;</p>
 
-                    <h3 id="experiential_start" class="subreportpoint experiential_start">Other Internships</h3>
+                    <strong><span id="experiential_start" class="subreportpoint experiential_start">Other Internships</span></strong>
                     <p>Beyond the B2B exchange internships, Africa Lead supports other innovative experiential learning opportunities as described as follows. </p>
-                    <h4>Agricultural Shows:</h4>
+                    
+                    <h3>Agricultural Shows:</h3>
                     <p>As part of a requested support to Liberia&rsquo;s Cuttington University, Africa Lead conducted an assessment of the College of Agriculture and Integrated Development Studies&rsquo; capacity to organize and manage an agriculture show. The findings of the assessment show that the College needs capacity building in several key areas such as: Planning, Financial Management and Fundraising. In response Africa Lead sponsored six senior interns including two members of the College of Agriculture&rsquo;s Agriculture Show planning committee, two representatives from the Ministry of Agriculture and two agribusiness professionals from Liberia to participate in study visits in Ghana and Kenya.&nbsp; The direct objective of this experiential learning is to observe and learn good practices in agriculture show organization and management.</p>
 
                     <p>Three senior interns attended the Agriculture Society of Kenya&rsquo;s (ASK) Nairobi International Show for three weeks from September 26 &ndash; October 2, 2011. Leading the study tour/internship was the University&rsquo;s Director of Practical Outreach for Extension and Training. He was accompanied by the CEO of Buchanan Resource and Development Corporation, and a representative of the Ministry of Agriculture. The other three senior interns spent sixteen days working and learning from both the AGRIFA and FAGRO show organizers in Accra, Ghana from October 7 &ndash; 22, 2011.&nbsp; The AGRIFA show represents an example of a good public - private partnership with the private sector driving the organization and management of the show.&nbsp;&nbsp;</p>
 
-                    <h4>Sokoine University of Agriculture (SUA) Internship:</h4>
+                    <h3>Sokoine University of Agriculture (SUA) Internship:</h3>
                     <p>The East Africa Office has developed and implemented a university agri-entrepreneur internship in partnership with Sokoine University of Agriculture (SUA).&nbsp; Its express goal is to support graduates of the University&rsquo;s Department of Agricultural Economics and Agribusiness in applying their studies to agricultural business development.</p>
 
                     <p>Through this program young graduates are matched and placed for six to eight weeks with companies that have been identified by Africa Lead and vetted by SUA professors. Between 2012 and 2013 twenty-four interns were placed with fifteen host companies in Tanzania and nine host companies in Kenya.&nbsp;</p>
+                    <p><img src="img/intern_uncleben.png" id="intern_uncleben" class="image_center" style="height:250px" /></p>
 
 
-                     <div class="shoutbox shoutboxright">
-                        <div class="shoutborder shoutright-top"></div>
-                        <div class="shoutborder shoutleft-top"></div>
-                        <div class="shoutborder shoutright-bottom"></div>
-                        <div class="shoutborder shoutleft-bottom"></div>
-                        <p><em>&ldquo;The things I learnt are what contributes a successful business. In order to stay in the business and be able to fight the competition, I need the best administration of my business but also good managing. To ensure that I get profit and cut off the losses and shorts, I have to manage financials in a very keen way. Also good relationship with my employees will ensure a good work done.&rdquo;</em></p>
-
-                        <p><strong><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-SUA Intern</em></strong></p>
-                    </div>
+                     <blockquote>
+                       The things I learnt are what contributes a successful business. In order to stay in the business and be able to fight the competition, I need the best administration of my business but also good managing. To ensure that I get profit and cut off the losses and shorts, I have to manage financials in a very keen way. Also good relationship with my employees will ensure a good work done.
+                        <cite>SUA Intern</cite>
+                     </blockquote>
 
                     <p>Each of the participating students is self selected through SUA&rsquo;s innovative Graduates Entrepreneurship program (SUGECO) in which students develop business plans that are reviewed by a committee which selects the best for funding under a USAID/DCA supported program. Based on the business plans of the 24 interns, Africa Lead negotiates with private firms to host them and helps them see how they could turn the &ldquo;theory&rdquo; of their business plans into practical businesses.</p>
 
@@ -1010,7 +986,8 @@
 
                     <p>On April 10, 2013, President Jakaya Mrisho Kikwete of the United Republic of Tanzania expressed his support for this program in empowering young graduates while expanding their employment opportunity through hands-on training and experience. The President pledged to contribute $3.5 million (Tsh 5 billion) to the continuation and scale up of the SUGEGO initiative.</p>
 
-                    <h4>CILSS and CORAF Young Professional Internship Programs</h4>
+
+                    <h3>CILSS and CORAF Young Professional Internship Programs</h3>
 
                     <p>In West Africa, Africa Lead has selected and provided logistical support to 10 interns assigned to work with Permanent Interstate Committee for Drought in the Sahel (<em>Comit&eacute; permanent Inter-Etats de Lutte contre la S&eacute;cheresse dans le </em><em>Sahel</em> or CILSS) and the West and Central African Council for Agricultural Research and Development (<em>le Conseil Ouest et Centre africain pour la recherche et le d&eacute;veloppement agricoles</em>, CORAF) for a yearlong internship program. CILSS and CORAF staff tap into the interns&rsquo; recent university education and specializations in key areas identified as gaps in the CORAF and CILSS institutional capacity assessments conducted by Africa Lead.</p>
 
@@ -1032,16 +1009,10 @@
                     <p>They report that the collaboration with people from different backgrounds gives them new insight into their own work and their future career goals. Many attest to gaining a new motivation to contribute to food security and state that they have acquired new perspectives and skills that can change the way they work back in their own organizations.</p>
 
 
-                     <div class="shoutbox shoutboxright">
-                        <div class="shoutborder shoutright-top"></div>
-                        <div class="shoutborder shoutleft-top"></div>
-                        <div class="shoutborder shoutright-bottom"></div>
-                        <div class="shoutborder shoutleft-bottom"></div>
-                        <p>&ldquo;<em>At first I didn&rsquo;t know who was coming, so only offered the internship for 4 weeks, but she brought a lot of benefits to my company, including pushing my staff to do more. She ended up staying 2 months. I then had more interns to follow. They gained experience in processing, marketing, practical skills in working with teams, and meeting funders and NGOs that deal with Cassava value chain. They brought knowledge from their schooling and talked to my workers about best practices and how to identify new markets&hellip;At first the staff was resistant, but we needed to help the youth and help us feed the future population. Now my staff asks when we are getting another intern, and they have realized the value of bringing in the intern.&rdquo;</em></p>
-
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>- Owner, host company of SUA intern</strong></p>
-
-                    </div>
+                     <blockquote style="float: left; margin-bottom: 54px">
+                       At first I didn&rsquo;t know who was coming, so only offered the internship for 4 weeks, but she brought a lot of benefits to my company, including pushing my staff to do more. She ended up staying 2 months. I then had more interns to follow. They gained experience in processing, marketing, practical skills in working with teams, and meeting funders and NGOs that deal with Cassava value chain. They brought knowledge from their schooling and talked to my workers about best practices and how to identify new markets&hellip;At first the staff was resistant, but we needed to help the youth and help us feed the future population. Now my staff asks when we are getting another intern, and they have realized the value of bringing in the intern.
+						<cite>Owner, host company of SUA intern</cite>
+                    </blockquote>
 
 
                     <p>Another important result from the internships is the impact they have on host organizations. Some hosts recounted in the Lesson Learned workshop that they had initially been hesitant to take on an intern. They realize in retrospect that the flow of information and ideas goes both ways; that they have learned a great deal from having interns and indicate that they are ready to host more.</p>
@@ -1052,7 +1023,7 @@
                     <p>The premise of Africa Lead is to lead with leadership, change management and CAADP training &ndash; supporting a cadre of Food Security Champions -- and then to follow with technical and other training as requested by USAID or as identified through institutional capacity assessments conducted by the program itself. The main two examples of these customized trainings are the Non-State Actor (NSA) workshops and the CORAF and CILSS- training program. Both are described below, along with other ad hoc trainings that Africa Lead supports.&nbsp;</p>
 
 
-                    <h4>Non-State Actor’s Workshop</h4>
+                    <h3>Non-State Actor’s Workshop</h3>
 
                     <p>As part of USAID support to the CAADP process, in 2011 Africa Lead developed a three day training to help civil society and the private sector engage productively with the government in the CAADP process. Africa Lead worked with the CAADP NSA Task Team and with national NSA leadership to jointly conduct a series of national-level NSA (community-based, academic, media, private sector organizations) workshops aimed at increasing and improving the quality of involvement of NSAs in the CAADP National Agriculture Investment Plan implementation process.</p>
 
@@ -1062,8 +1033,8 @@
 
                     <p>The Africa Lead-supported workshops provide training and an open forum for discussion, collaboration, and action planning. The main desired outcomes of the NSA workshops are to build a coalition of non-state actors interested in productively engaging in national and regional CAADP processes and actions; strengthen communication and consultation among NSA constituencies; and ensure inclusion of underrepresented groups. As part of the workshop, participants also develop group Action Plans that align the participants behind common objectives, create ownership, and detail concrete steps in high priority areas to boost engagement and hold CAADP partners accountable.</p>
 
-                    <h4>NSA: Outputs, Outcomes and Results</h4>
-                    <p><img src="img/nsa_trainings.png" id="nsa_trainings" class="imagedisplay image_right" style="height:250px" /></p>
+                    <h3>NSA: Outputs, Outcomes and Results</h3>
+                    <p><img src="img/nsa_trainings.png" id="nsa_trainings" class="image_right" style="height:250px" /></p>
 
 
 
@@ -1077,14 +1048,9 @@
 
                     <h3>Bridging Capacity: CORAF and CILSS</h3>
 
-                     <div class="shoutbox shoutboxleft">
-                        <div class="shoutborder shoutright-top"></div>
-                        <div class="shoutborder shoutleft-top"></div>
-                        <div class="shoutborder shoutright-bottom"></div>
-                        <div class="shoutborder shoutleft-bottom"></div>
-                            <p><strong>CORAF/CILSS Training Courses</strong></p>
-
-                            <ul>
+                     <blockquote>
+                        <strong>CORAF/CILSS Training Courses</strong>
+						    <ul>
                                 <li>Advanced Leadership</li>
                                 <li>Board Governance</li>
                                 <li>Budget Development Management</li>
@@ -1100,7 +1066,7 @@
                                 <li>Scientific Writing and Editing</li>
                             </ul>
 
-                    </div>
+                    </blockquote>
 
 
                     <p>At the request of USAID/West Africa, Africa Lead has conducted institutional assessments for the Permanent Interstate Committee for Drought in the Sahel (Comit&eacute; permanent Inter-Etats de Lutte contre la S&eacute;cheresse dans le <em>Sahel</em> or CILSS) and the West and Central African Council for Agricultural Research and Development (<em>le Conseil Ouest et Centre africain pour la recherche et le d&eacute;veloppement agricoles</em> or CORAF) to help gain a better understanding of these two organizations&rsquo; capacity development needs (see Task Three).</p>
@@ -1111,16 +1077,10 @@
 
                     <h3>CORAF and CILSS: Outputs, Outcomes and Results</h3>
 
-                     <div class="shoutbox shoutboxright">
-                        <div class="shoutborder shoutright-top"></div>
-                        <div class="shoutborder shoutleft-top"></div>
-                        <div class="shoutborder shoutright-bottom"></div>
-                        <div class="shoutborder shoutleft-bottom"></div>
-                        <p><em>&ldquo;Africa Lead&lsquo;s training has combined short courses and follow-up which has been very special for us. We have had many training programs, but not the same, didn&rsquo;t allow them to develop their own plan and put into action.&rdquo;</em></p>
-
-                        <p><strong><em>-CORAF Representative (Africa Lead Lessons Learned Conference June 2013)</em></strong></p>
-
-                    </div>
+                     <blockquote>
+                        Africa Lead&lsquo;s training has combined short courses and follow-up which has been very special for us. We have had many training programs, but not the same, didn&rsquo;t allow them to develop their own plan and put into action.
+                        <cite>CORAF Representative (Africa Lead Lessons Learned Conference June 2013)</cite>
+                    </blockquote>
 
                     <p>Between October 2012 and May 2013 Africa Lead delivered 21 courses to 158 CORAF and CILSS staff from 20 countries. During the Africa Lead Lessons Learned Conference in June 2013, CORAF and CILSS representatives shared their experience with the BCDP.</p>
 
@@ -1131,7 +1091,7 @@
                     <h3>Review of the Bridge Capacity Development Program </h3>
                     <p>To help determine the impact of the CORAF and CILSS training program, Africa Lead has hired MDF Training and Consultancy to carry out a review/lessons learned assessment of the program. Findings from the assessment are expected to help identify how the training has contributed to measureable institutional improvements, and will serve as a guide to future projects organized by Africa Lead.</p>
 
-                    <p>In general the training program has been well received by CORAF and CILSS and has significantly contributed to increased knowledge and skills in a number of domains. Some of the general recommendations from the assessment include:</p>
+                    <strong>In general the training program has been well received by CORAF and CILSS and has significantly contributed to increased knowledge and skills in a number of domains. Some of the general recommendations from the assessment include:</strong>
 
                     <ul>
                         <li>Ensuring that trainings are sufficiently related to the working environment of participants and organized in such a way that participants can immediately start to implement their acquired knowledge and skills.</li>
@@ -1147,121 +1107,63 @@
                     <p>In addition to Africa Lead&rsquo;s &ldquo;flagship&rdquo; leadership and project management training (Task One Modules One and Two), the program has initiated a wide range of other innovative training events and supported many workshops and conferences aimed at driving the transformation of agriculture that is central to CAADP and FTF. With buy-in from the Missions, Africa Lead often has been requested to provide agenda design, event planning, management, logistics, funding and facilitation design and delivery to a wide range of meetings held by USAID Missions.</p>
 
 
-                    <table border="" cellpadding="0" cellspacing="0">
-                        <tbody>
+					<table class="altrowstable" id="alternatecolor">
                             <tr>
-                                <th class="table-td">
-                                <p><strong>EVENT</strong></p>
-                                </th>
-                                <th class="table-td">
-                                <p><strong>PURPOSE</strong></p>
-                                </th>
+                                <th>EVENT</th>
+                                <th>PURPOSE</th>
                             </tr>
                             <tr>
-                                <td class="table-td">
-                                <p>Partnering with IFPRI to <strong>train</strong> select country Strategic Analysis and Knowledge Support Systems (SAKSS) &ldquo;nodes&rdquo; in East, West and Southern Africa</p>
-                                </td>
-                                <td class="table-td">
-                                <p>Capacity building of SAKSS nodes at regional and national levels is key to improve the process by which evidence is inserted into policies and programs in agriculture</p>
-                                </td>
+                                <td>Partnering with IFPRI to <strong>train</strong> select country Strategic Analysis and Knowledge Support Systems (SAKSS) &ldquo;nodes&rdquo; in East, West and Southern Africa</td>
+                                <td>Capacity building of SAKSS nodes at regional and national levels is key to improve the process by which evidence is inserted into policies and programs in agriculture</td>
                             </tr>
                             <tr>
-                                <td class="table-td">
-                                <p>Global Alliance for Action for Drought Resilience and Growth (3 events)</p>
-                                </td>
-                                <td class="table-td">
-                                <p>High level meetings to finalize the Regional and Country Frameworks on action for drought resilience for over 500 participants in total</p>
-                                </td>
+                                <td>Global Alliance for Action for Drought Resilience and Growth (3 events)</td>
+                                <td>High level meetings to finalize the Regional and Country Frameworks on action for drought resilience for over 500 participants in total</td>
                             </tr>
                             <tr>
-                                <td class="table-td">
-                                <p>East African Community (the Partnership for Aflatoxin Control in Africa, PACA)</p>
-                                </td>
-                                <td class="table-td">
-                                <p>Launch a USAID/EA funded program for a concerted and systematic approach to aflatoxin control within the East African Community with over 170 participants from 7 countries</p>
-                                </td>
+                                <td>East African Community (the Partnership for Aflatoxin Control in Africa, PACA)</td>
+                                <td>Launch a USAID/EA funded program for a concerted and systematic approach to aflatoxin control within the East African Community with over 170 participants from 7 countries</td>
                             </tr>
                             <tr>
-                                <td class="table-td">
-                                <p>Government to Government (G2G) training (Tanzania/USA)</p>
-                                </td>
-                                <td class="table-td">
-                                <p>Procurement specialists training government, NGO and other actual and potential Tanzanian implementation partners to USAID on financial reporting and M&amp;E systems</p>
-                                </td>
+                                <td>Government to Government (G2G) training (Tanzania/USA)</td>
+                                <td>Procurement specialists training government, NGO and other actual and potential Tanzanian implementation partners to USAID on financial reporting and M&amp;E systems</td>
                             </tr>
                             <tr>
-                                <td class="table-td">
-                                <p>Third Biennial Agriculture Sector Coordinating Unit Agricultural Development Forum, Kenya</p>
-                                </td>
-                                <td class="table-td">
-                                <p>Stakeholder consultation on development of Agribusiness with over 1,300 participants drawn from all the ASCU Ministries, Members of Parliament, a wide range of private sector and civil society organizations</p>
-                                </td>
+                                <td>Third Biennial Agriculture Sector Coordinating Unit Agricultural Development Forum, Kenya</td>
+                                <td>Stakeholder consultation on development of Agribusiness with over 1,300 participants drawn from all the ASCU Ministries, Members of Parliament, a wide range of private sector and civil society organizations</td>
                             </tr>
                             <tr>
-                                <td class="table-td">
-                                <p>Feed The Future, USAID/Tanzania</p>
-                                </td>
-                                <td class="table-td">
-                                <p>Coordination among 92 implementing partners and Tanzanian Government officials.</p>
-                                </td>
+                                <td>Feed The Future, USAID/Tanzania</td>
+                                <td>Coordination among 92 implementing partners and Tanzanian Government officials.</td>
                             </tr>
                             <tr>
-                                <td class="table-td">
-                                <p>G8 New Alliance for Food Security and Nutrition (2 events)</p>
-                                </td>
-                                <td class="table-td">
-                                <p>Informational and planning events in Tanzania and Ethiopia with over 250 participants in attendance</p>
-                                </td>
+                                <td>G8 New Alliance for Food Security and Nutrition (2 events)</td>
+                                <td>Informational and planning events in Tanzania and Ethiopia with over 250 participants in attendance</td>
                             </tr>
                             <tr>
-                                <td class="table-td">
-                                <p>Economic Growth Partners Meeting, Zanzibar</p>
-                                </td>
-                                <td class="table-td">
-                                <p>Coordination among 80 implementing partners and Zanzibar Government officials</p>
-                                </td>
+                                <td>Economic Growth Partners Meeting, Zanzibar</td>
+                                <td>Coordination among 80 implementing partners and Zanzibar Government officials</td>
                             </tr>
                             <tr>
-                                <td class="table-td">
-                                <p>Feed The Future/Uganda Partners Meeting</p>
-                                </td>
-                                <td class="table-td">
-                                <p>Field trip to Jinja for first Government and partners the dialogue with 90 guests</p>
-                                </td>
+                                <td>Feed The Future/Uganda Partners Meeting</td>
+                                <td>Field trip to Jinja for first Government and partners the dialogue with 90 guests</td>
                             </tr>
                             <tr>
-                                <td class="table-td">
-                                <p>Agricultural Sector Coordination Unit (ASCU), Agriculture Donor Working Group</p>
-                                </td>
-                                <td class="table-td">
-                                <p>First ever technical meeting of Kenyan Governors in Agriculture with colleagues from National Parliament and County Senate in the AG sub committees and their county level Ag ministers to build knowledge of agriculture and food security among Kenya&rsquo;s new Governors</p>
-                                </td>
+                                <td>Agricultural Sector Coordination Unit (ASCU), Agriculture Donor Working Group</td>
+                                <td>First ever technical meeting of Kenyan Governors in Agriculture with colleagues from National Parliament and County Senate in the AG sub committees and their county level Ag ministers to build knowledge of agriculture and food security among Kenya&rsquo;s new Governors</td>
                             </tr>
                             <tr>
-                                <td class="table-td">
-                                <p>G8 New Alliance for Food Security and Nutrition, Ghana</p>
-                                </td>
-                                <td class="table-td">
-                                <p>Launch of the New Alliance in Ghana with over 290 participants plus pre-meetings for government (39), private sector (30) and civil society (20) organizations</p>
-                                </td>
+                                <td>G8 New Alliance for Food Security and Nutrition, Ghana</td>
+                                <td>Launch of the New Alliance in Ghana with over 290 participants plus pre-meetings for government (39), private sector (30) and civil society (20) organizations</td>
                             </tr>
                             <tr>
-                                <td class="table-td">
-                                <p>Agriculture Policy Exchange and Learning Event</p>
-                                </td>
-                                <td class="table-td">
-                                <p>Multi-donor-sponsored for a total of 131 participants from 6 countries targeting country agriculture policy change commitments</p>
-                                </td>
+                                <td>Agriculture Policy Exchange and Learning Event</td>
+                                <td>Multi-donor-sponsored for a total of 131 participants from 6 countries targeting country agriculture policy change commitments</td>
                             </tr>
                             <tr>
-                                <td class="table-td">
-                                <p>Champions for Change Networks and Super Champions Meetings (2 events)</p>
-                                </td>
-                                <td class="table-td">
-                                <p>Sustaining the Africa Lead Champions&rsquo; network and CAADP momentum in Ghana with over 200 participants</p>
-                                </td>
+                                <td>Champions for Change Networks and Super Champions Meetings (2 events)</td>
+                                <td>Sustaining the Africa Lead Champions&rsquo; network and CAADP momentum in Ghana with over 200 participants</td>
                             </tr>
-                        </tbody>
                     </table>
 
 
@@ -1270,65 +1172,35 @@
 
                     <p>Some examples of these sponsorships for over 150 professionals in agricultural science and policy include:</p>
 
-                    <table border="" cellpadding="0" cellspacing="0">
-                        <tbody>
+					<table class="altrowstable" id="alternatecolor">
                             <tr>
-                                <td class="table-td">
-                                <p><strong>SPONSORED PARTICIPANT</strong></p>
-                                </td>
-                                <td class="table-td">
-                                <p><strong>HOST EVENT</strong></p>
-                                </td>
+                                <th>SPONSORED PARTICIPANT</th>
+                                <th>HOST EVENT</th>
                             </tr>
                             <tr>
-                                <td class="table-td">
-                                <p>Nigerian Federal Ministry of Agriculture and Rural Development (FMARD) staff (8)</p>
-                                </td>
-                                <td class="table-td">
-                                <p>Monitoring and Evaluation short courses x 3, Institute for Capacity Development, Namibia</p>
-                                </td>
+                                <td>Nigerian Federal Ministry of Agriculture and Rural Development (FMARD) staff (8)</td>
+                                <td>Monitoring and Evaluation short courses x 3, Institute for Capacity Development, Namibia</td>
                             </tr>
                             <tr>
-                                <td class="table-td">
-                                <p>RUFORUM nominated specialists from Uganda and Kenya (2)</p>
-                                </td>
-                                <td class="table-td">
-                                <p>Collective Research Planning and Proposal Development 2 week course, Agricultural Research Council, South Africa</p>
-                                </td>
+                                <td>RUFORUM nominated specialists from Uganda and Kenya (2)</td>
+                                <td>Collective Research Planning and Proposal Development 2 week course, Agricultural Research Council, South Africa</td>
                             </tr>
                             <tr>
-                                <td class="table-td">
-                                <p>Kenya Ministry of Livestock Development Veterinary Epidemiology staff (3)</p>
-                                </td>
-                                <td class="table-td">
-                                <p>Center for Epidemiology and Animal Health, USDA</p>
-                                </td>
+                                <td>Kenya Ministry of Livestock Development Veterinary Epidemiology staff (3)</td>
+                                <td>Center for Epidemiology and Animal Health, USDA</td>
                             </tr>
                             <tr>
-                                <td class="table-td">
-                                <p>Ghana Ministry of Food and Agriculture staff (20)</p>
-                                </td>
-                                <td class="table-td">
-                                <p>Monitoring and Evaluation short courses, Institute for Capacity Development, Namibia</p>
-                                </td>
+                                <td>Ghana Ministry of Food and Agriculture staff (20)</td>
+                                <td>Monitoring and Evaluation short courses, Institute for Capacity Development, Namibia</td>
                             </tr>
                             <tr>
-                                <td class="table-td">
-                                <p>Southern Sudan Ministry of Animal Resources and Fisheries, Veterinary Epidemiology</p>
-                                </td>
-                                <td class="table-td">
-                                <p>Center for Epidemiology and Animal Health, USDA</p>
-                                </td>
+                                <td>Southern Sudan Ministry of Animal Resources and Fisheries, Veterinary Epidemiology</td>
+                                <td>Center for Epidemiology and Animal Health, USDA</td>
                             </tr>
                             <tr>
-                                <td class="table-td">
-                                <p>12 Chief Veterinary Officers (CVOs)</p>
-                                </td>
-                                <td class="table-td">
-                                <p>APHIS meeting and study tour Western USA on disease control protocols and modern ranching techniques</p>
-                                </td>
+                                <td>12 Chief Veterinary Officers (CVOs)</td>
+                                <td>APHIS meeting and study tour Western USA on disease control protocols and modern ranching techniques</td>
                             </tr>
-                        </tbody>
                     </table>
 
 
@@ -1348,44 +1220,30 @@
                     <h3>Institutional Assessments:</h3>
 
 
-                     <div class="shoutbox shoutboxright">
-                        <div class="shoutborder shoutright-top"></div>
-                        <div class="shoutborder shoutleft-top"></div>
-                        <div class="shoutborder shoutright-bottom"></div>
-                        <div class="shoutborder shoutleft-bottom"></div>
-                        <p><strong>List of Organizations for which Africa Lead Conducted Capacity Assessments:</strong></p>
+                     <blockquote>
+                        <strong>List of Organizations for which Africa Lead Conducted Capacity Assessments:</strong>
 
-                        <p>- CILSS:&nbsp; Permanent Inter-State Committee for Drought Control in the Sahel</p>
+                        <li>CILSS: liermanent Inter-State Committee for Drought Control in the Sahel</li>
+                        <li>CORAF: The West and Central African Council for Agricultural Research and Develoliment</li>
+                        <li>ACTESA: The Alliance for Commodity Trade in Eastern and Southern Africa</li>
+                        <li>TAHA: Tanzania Horticultural Association - TAFSIli: Tanzania Agriculture and Food Security Investment lilan Steering Committee</li>
+                        <li>MIAFF: Uganda Min of Agriculture meta-assessment</li>
+                        <li>20 Agricultural Institutions in Northern Ghana</li>
+                        <li>Ghana METASIli Steering Committee</li>
+                        <li>9 South African training resources institutions</li>
+                        <li>Ethioliia and Rwanda CAADli NAIlis imlilementation Case Study</li>
+                        <li>Nigeria Agriculture Transformation Agenda (in coolieration with IFliRI)</li>
+                        <li>Niger HC3N Caliacity Assessment</li>
+                        <li>Agriculture liolicy Institutional Architecture and lirocess Assessments (7 countries)</li>
 
-                        <p>- CORAF: The West and Central African Council for Agricultural Research and Development</p>
-
-                        <p>- ACTESA: The Alliance for Commodity Trade in Eastern and Southern Africa</p>
-
-                        <p>- TAHA: Tanzania Horticultural Association - TAFSIP: Tanzania Agriculture and Food Security Investment Plan Steering Committee</p>
-
-                        <p>- MIAFF: Uganda Min of Agriculture meta-assessment</p>
-
-                        <p>- 20 Agricultural Institutions in Northern Ghana</p>
-
-                        <p>- Ghana METASIP Steering Committee</p>
-
-                        <p>- 9 South African training resources institutions</p>
-
-                        <p>-&nbsp;Ethiopia and Rwanda CAADP NAIPs implementation Case Study</p>
-
-                        <p>-&nbsp; Nigeria Agriculture Transformation Agenda (in cooperation with IFPRI)</p>
-
-                        <p>- Niger HC3N Capacity Assessment</p>
-
-                        <p>- Agriculture Policy Institutional Architecture and Process Assessments (7 countries)</p>
-
-                    </div>
+                    </blockquote>
 
 
 
                     <p>The purpose of these assessments is to examine what technical, managerial and process skills are needed to strengthen specific institutions or groups of institutions in moving agriculture forward and advancing the CAADP agenda. The assessments are also to suggest priorities and sequences of capacity building that will best strengthen the target institutions or institutions.</p>
 
-                    <p>The particular assessment methodology used varies depending on the nature of the organizations. Therefore Africa Lead has developed several methodologies for conducting organizational assessments. In general the same institutional functional capacity areas are reviewed under each assessment. These include:</p>
+                    <strong>The particular assessment methodology used varies depending on the nature of the organizations. Therefore Africa Lead has developed several methodologies for conducting organizational assessments. 
+                    In general the same institutional functional capacity areas are reviewed under each assessment. These include:</strong>
 
                     <ul>
                         <li>Governance</li>
@@ -1397,7 +1255,7 @@
                         <li>Management systems, including personnel and administrative management</li>
                     </ul>
 
-                    <p>Within the institutional capacity assessments there are multiple types of assessments that are conducted, including:</p>
+                    <strong>Within the institutional capacity assessments there are multiple types of assessments that are conducted, including:</strong>
 
                     <ol>
                         <li>Detailed assessments of individual institutions;</li>
@@ -1405,46 +1263,36 @@
                         <li>Program-wide area assessments.</li>
                     </ol>
 
-                    <br/><br/><br/><br/><br/>
+
                     <h3>Overview of Institutional Assessments Conducted</h3>
-                    <h4>Assessments of Individual Institutions</h4>
+                    <strong>Assessments of Individual Institutions</strong>
                     <p><strong>CILSS:</strong> Permanent Inter-State Committee for Drought Control in the Sahel.&nbsp; Developing innovations for addressing drought and climate change in African agriculture is a critical part of ensuring food security. The assessment involves development of a proposed capacity building program.</p>
-
                     <p><strong>CORAF:</strong> The West and Central African Council for Agricultural Research and Development. The assessment addresses improvements in the promotion and coordination of science-based agriculture activities in West Africa.</p>
-
                     <p><strong>ACTESA:</strong> The Alliance for Commodity Trade in Eastern and Southern Africa (ACTESA), and COMESA&rsquo;s CAADP coordination function, and its Sanitary and Phyto-sanitary Offices. The purpose of this assessment is to determine the institutional strengths and weaknesses of these three units, with a focus on their ability to manage for development results.</p>
-
                     <p><strong>ECOWAS/ECOWAP:</strong> Economic Community of West African States/ ECOWAS Regional Agricultural Policy. The assessment covers the Department of Agriculture and Rural Development at the ECOWAS Commission, as well as its Bank for Investment and Development (EBID). The analysis focuses on the capacities required to implement the West Africa regional Agricultural Policy.</p>
-
                     <p><strong>The Savanna Agricultural Research Institute (SARI), Nyankpala, Northern Ghana.</strong> SARI is one of the 13 research institutes that make up Ghana&rsquo;s Council for Scientific and Industrial Research (CSIR). This assessment includes a review of SARI&rsquo;s ability to support and advance private sector led agriculture technology generation and dissemination.</p>
-
                     <p><strong>Uganda Ministry of Agriculture, Animal Industry and Fisheries</strong> (MAAIF) This is a desk review of existing reports to identify capacity needs in both organizational management and technical skills related to climate change, rodent and pest control, agricultural statistics and food safety.</p>
-
-                    <h4>Assessments of National CAADP Process and Coordination Units</h4>
+                    <h3>Assessments of National CAADP Process and Coordination Units</h3>
                     <p><strong>Ghana METASIP - Identifying Capacity Needs for Implementing the Medium-term Agricultural Investment Plan, 2011-2015. </strong>The METASIP is Ghana&rsquo;s CAADP National Agriculture Investment Plan (NAIP). &nbsp;The purpose of this assessment includes identifying and analyzing institutions and their capacity for implementation, and suggesting improvements to the implementation process.</p>
-
                     <p><strong>Tanzania TAFSIP &ndash; Identifying Capacity Needs </strong><strong>for the Implementation of the Tanzania Agriculture and Food Security Investment Plan (TAFSIP). </strong>This assessment examines the critical institutions, their capacities and immediate strengthening needs to fulfill their coordination and implementation roles under TAFSIP.</p>
-
                     <p><strong>Nigeria Capacity Assessment: Analysis of Institutional Roles and Requirements to Achieve the Goals and Objectives of Nigeria&rsquo;s Agriculture Transformation Agenda (ATA). </strong>The purpose of this assessment covers critical federal and state government, private sector and civil society implementing institutions.&nbsp; It focuses on systemic reforms, technical assistance, and training needs to strengthen leadership and management structure for implementation of the ATA.</p>
-
                     <p><strong>Niger HC3N (Nigeriens Nourishing Nigeriens) Capacity Assessment. </strong>The assessment reviews and clarifies the roles and structures required to effectively manage the newly created High Commission for the 3N (Nigeriens Nourishing Nigeriens) Program and coordinate across an array of government and non-government actors.</p>
-
                     <p><strong>CAADP Ethiopia: </strong><strong>Implementation and Management Case Study.</strong> This case study reviews the management of the structure and processes used by Ethiopia to implement its CAADP National Agricultural Investment Plan (NAIP). In particular it documents lessons learned from the Agricultural Sector Policy and Investment Framework (PIF) used to implement it.</p>
 
                     <p><strong>CAADP Rwanda: </strong><strong>Implementation and Management Case Study. </strong>The purpose of this case study documents the structure and processes used by Rwanda to implement its CAADP National Agricultural Investment Plan (NAIP) - Agricultural Sector Investment Plan 2009-2012.</p>
 
                     <p><strong>Lessons from the Management of CAADP Programs in Ethiopia and Rwanda. </strong>This report is a synthesis of findings and lessons on the management of CAADP based on experience from Ethiopia and Rwanda. It focuses on management and coordination structures, processes and tools used to manage the NAIPs, and analysis of what has contributed to the success of the two programs.</p>
 
-                    <h4>Program-wide Area Assessments</h4>
+                    <strong>Program-wide Area Assessments</strong>
 
                     <p><strong>Institutional Mapping and Assessment of Northern Ghana Institutions Relevant to USAID Feed the Future Program: </strong>This mapping of the key actors operating in the Ghanaian agricultural landscape highlights prerequisite capacities for initiating the capacity development component of the Feed the Future (FTF) Initiative&rsquo;s support for modernizing Ghana&rsquo;s agricultural sector.&nbsp;&nbsp;</p>
 
-                    <h4>Policy Assessments (“Institutional Architecture” Assessments)</h4>
+                    <h3>Policy Assessments (“Institutional Architecture” Assessments)</h3>
                     <p>In collaboration with the USAID Enhancing Agricultural Trade (EAT) Project, Africa Lead has developed the Institutional Architecture for Food Security Policy Change assessment methodology (IAA). Since early 2013 this approach has been applied to conduct eight country-level and one Regional Economic Community (REC)-level analyses.</p>
 
                     <p>The purpose of these assessments is to determine a country&rsquo;s capacity to undertaken food security policy reform. They have been undertaken to provide the USAID Bureau of Food Security, USAID missions, local policymakers, and other key stakeholders with initial, &ldquo;first cut&rdquo; information on possible constraints that could stymie effective policy change.</p>
 
-                    <p>Once completed, the analysis can be used to design technical assistance and other support to address constraints and improve the policy capacity process.&nbsp; The assessments focus on areas of transparency, predictability, inclusiveness and evidence-based analysis and have been conducted for the agriculture policy processes in Ethiopia, Ghana, Tanzania, Malawi, Mozambique, Rwanda, Zambia, Democratic Republic of the Congo, and the East Africa Community <span class="infotip" data="The EAT project has co-conducted the Ethiopia IA assessment and conducted the assessments in Senegal, Uganda and Liberia (forthcoming)">&sup1;</span>.</p>
+                    <p>Once completed, the analysis can be used to design technical assistance and other support to address constraints and improve the policy capacity process.&nbsp; The assessments focus on areas of transparency, predictability, inclusiveness and evidence-based analysis and have been conducted for the agriculture policy processes in Ethiopia, Ghana, Tanzania, Malawi, Mozambique, Rwanda, Zambia, Democratic Republic of the Congo, and the East Africa Community.</p>
 
                     <p>The IAA assessment methodology contains two main components: (1) an institutional mapping process, which identifies the main institutions involved in a policy change process; and (2) an assessment of a country&rsquo;s capacity to undertake food security policy reform, as per the main elements of a policy development or change process.&nbsp;</p>
 
@@ -1470,15 +1318,15 @@
                     <p>In addition to the color ratings, each assessment includes narrative text to support each rating. At the end of each of the &ldquo;policy element&rdquo; sections recommendations are included that suggest assistance or process changes that can be undertaken to improve policy change capacity.</p>
 
 
-                    <h4>Assessments: Outputs, Outcomes and Results</h4>
+                    <h3>Assessments: Outputs, Outcomes and Results</h3>
                     <p>From the variety and number of assessments that Africa Lead has conducted there are many findings. Many of these are specific and relevant to the individual institution; however some of the results were cross cutting. Findings from both the individual institutional assessments and findings from the policy assessments are explained below.</p>
 
                     <p>A full description and encapsulation of the findings of assessments done to date is contained in the companion report: <em>Africa Lead Capacity Needs Assessments of African Institutional and Policy Processes: Guiding Achievement of CAADP Goals.</em></p>
 
-                    <h4>Individual Institutions</h4>
+                    <h3>Individual Institutions</h3>
                     <p>For the overall institutional findings the assessments found that in general many of the organizations lack adequate systems that use results-based management, and therefore lack clear program objectives, performance indicators, and use of performance monitoring and reporting systems to review performance and improve program management.</p>
 
-                    <p class="subreportpoint assessments_end">An additional element in short supply that could help fill these gaps is the need for updated Information, Communication and Technology systems, including knowledge management systems.&nbsp; While important for all institutions, this is particularly important for research and regional institutions.&nbsp;</p>
+      <p class="subreportpoint assessments_end">An additional element in short supply that could help fill these gaps is the need for updated Information, Communication and Technology systems, including knowledge management systems.&nbsp; While important for all institutions, this is particularly important for research and regional institutions.&nbsp;</p>
 
                     <p>Another overall finding is the need for additional and more workforce development/human resource management systems. To support this, the general finding is that the institutional assessments should be used as a basis for prioritizing and offering program-wide training and support.&nbsp; Training, and follow-up technical assistance, should be offered in strategic planning, monitoring and evaluation, results-based management, knowledge management, fund-raising, and outreach and communications. This has been done with CORAF and CILSS and been found to be very successful.</p>
 
@@ -1492,7 +1340,9 @@
 
 
                     <h3>Policy Capacity Assessments: Africa Lead Overall Findings</h3>
-                    <p>To determine how different countries rate in terms of their overall capacities to manage a policy change process the stoplight scoring system &ndash; green, yellow and red ratings &ndash; is converted to number scores. By converting these scores to number it is possible to review the following for the countries that have undergone IAA assessments:</p>
+                    <strong>To determine how different countries rate in terms of their overall capacities to manage a policy change process the stoplight scoring system &ndash; green, yellow and red ratings &ndash; is converted to number scores. 
+                    By converting these scores to number it is possible to review the following for the countries that have undergone IAA 
+                    assessments:</strong>
 
                     <ul>
                         <li>The relative strength of various countries&rsquo; capacities across the six policy change elements;</li>
@@ -1515,9 +1365,7 @@
                     </div>
 
                     <p>In general, the scores for individual country assessments, and the elements and indicators provide an overview of the strength and weakness of policy change capacity for particular countries, and for elements and indicators across the countries scored.&nbsp; However, it is suggested this information be used as general assessment guidance and, when possible, considered along with other available information.</p>
-
                     <p>The policy systems and change process can vary significantly from country to country, and can vary among policy reform processes within the same country &ndash; making direct comparisons from country to country somewhat inexact. Nonetheless, certain patterns emerge.&nbsp; For example, the studies suggest that promoting evidence-based analysis and inclusive stakeholder participation are the two policy elements that appear to need the most support.</p>
-
                     <p><em>Caveat lector</em>: It should be noted that the various elements and indicators are not weighted as to importance.&nbsp; Additionally, while the ratings do produce comparative scores, the assessment process is primarily qualitative so it is not a scientifically objective process.&nbsp; Despite these concerns, we believe the analysis does provide useful guidance for helping to identify future technical assistance priorities.</p>
 
 
@@ -1525,20 +1373,15 @@
                     <h3>Overview and Methodology</h3>
 
                     <p>Africa Lead&rsquo;s fourth task is developing a database of training institutions and technical short courses related to agricultural and management sciences that can be matched to the leadership training and capacity building needs relevant to African agriculture professionals.</p>
-
                     <p>The purpose of this element of the program is to facilitate the process of finding course offerings in Africa that can respond to the capacity building needs already known to exist or that are identified during the schedules of Task One trainings and Task Three capacity assessments. Additionally, it is meant to ensure a sustained dynamic process in which the African institutions providing training can tailor their offerings to the actual demands of individuals and institutions working to strengthen agriculture productivity for sustained food security throughout Africa.</p>
-
                     <p>Mustering the technical skills to create a user-friendly, smoothly operating online database is the easy part for a consortium such as Africa Lead. &nbsp;The two primary challenges, as with any database are: (1) to build something that does what the users of the data need it to do and, (2) to make it work effectively within the technical limitations of where it will be used.</p>
-
                     <p>Much attention has gone into building the database so that it can be managed and accessed from any browser. In determining the searchable fields and subject area topics for course selection, Africa Lead has worked closely with other organizations such as the German Government&rsquo;s InWEnt (Capacity Building International) and the United Nation&rsquo;s Food and Agriculture Organization (FAO), who are also working to build capacity development databases for the continent.</p>
-
+                    
                     <p>A technical snapshot of the Africa Lead database of Short courses looks like this (<span class="highlightimage" data="task4_people_layout">Figure 1</span>)</p>
 
-                    <p><img src="img/task4_people_layout.png" id="task4_people_layout" class="imagedisplay image_right" style="height:300px" /></p>
+                    <p><img src="img/task4_people_layout.png" id="task4_people_layout" class="image_center" style="height:250px" /></p>
 
-                    
-
-                    <p>Super Administrators (those with software-designing skills) and Administrators (those facile with operating the software) are able to use the Administrator Dashboard to:</p>
+                    <strong>Super Administrators (those with software-designing skills) and Administrators (those facile with operating the software) are able to use the Administrator Dashboard to:</strong>
 
                     <ul>
                         <li>View site analytics such as search keywords and number of registered users</li>
@@ -1549,18 +1392,11 @@
                     </ul>
 
                     <p>To serve Champions and others, the database needs to be current and to contain reliable information on relevant course offerings.&nbsp; To that end, the Africa Lead database developers have provided training to the regional offices for data entry, review and validation. A vetting system has been established to make sure that the data entered into the database is accurate.</p>
-
                     <p>The Africa Lead database aims to achieve the following impacts:</p>
 
                     <ul>
                         <li><strong>Increased Awareness of Courses Offered: </strong>Africa Lead identifies available courses at universities and training organizations in West, East, and Southern Africa, as well as relevant courses elsewhere in the world, and inputs this into a dynamic, interactive database that can be easily updated.&nbsp; This increases access to information and strengthens the ability of organizations to source information on what institutions and training courses are available and the location of those organizations and course schedules.</li>
-                    </ul>
-
-                    <ul>
                         <li><strong>Knowledge about Training Institutions and the Quality of Services: </strong>Africa Lead ensures that courses in the database are high quality and are applicable to the needs of African leaders. Organizations requiring training services have access to verified data on the quality of the short courses and capacity of the training institutions offering services.</li>
-                    </ul>
-
-                    <ul>
                         <li><strong>Matchmaking tool for the design of new training courses and for sending professionals on short-term courses</strong>:&nbsp; The database provides a targeted directory of options for those seeking training and education in areas critical to CAADP implementation. Capacity gaps and individuals needing training are identified through assessments, leading institutions to either seek a short course or design an appropriate training program to respond to their needs.</li>
                     </ul>
 
@@ -1580,152 +1416,71 @@
                     </div>
 
                     <p>The listed courses are offered primarily by post-secondary institutions and training organizations based on the continent. &nbsp;However, where technical training key to scaling up food security may only be available outside, courses offered in collaborating countries are also listed.</p>
-
                     <p>In building the short course database, Africa Lead has always considered the question of sustainability and finding a long-term home for the courses. The objective for Africa Lead is to continue to identify courses and make the list of courses available to potentially interested parties, likely beneficiaries, as well as likely funders.</p>
-
                     <p>To ensure future sustainability Africa Lead has negotiated a grant agreement with Open Educational Resources (OER) South Africa who became the host in September 2012.&nbsp; OER Africa continues to build upon the short course database and facilitates the ongoing development of agricultural professionals, students and other stakeholders working in the agricultural sector.</p>
-
                     <p>Currently, the database is being publicized widely not only to graduates of the Africa Lead Champions for Change courses but to many other high ranking personnel in government positions, faculty, non-governmental organizations and other interested persons.</p>
-
                     <p>Beginning December 2012, OER Africa in conjunction with the Regional Universities Forum for Capacity Building in Agriculture (RUFORUM) has traveled around and trained staff and students at 19 universities across Eastern and Southern Africa (in Ethiopia, Kenya, Lesotho, Uganda, Tanzania, Malawi, Zambia, Zimbabwe and Swaziland) in how to use the Africa Lead Database.&nbsp; This phase of the project aims to introduce institutions to the database and to teach individuals there how to upload information about their course offerings and therefore increase their dissemination. A total of 25 institutions (in Kenya, Malawi, Tanzania, Uganda, Ethiopia, Lesotho, Swaziland, Mozambique, Rwanda and South Africa) have been invited to participate.</p>
-
                     <h3 id="database_start" class="subreportpoint database_start">Database of Short Courses: Outputs, Outcomes and Results</h3>
                     <p>In general, the database has continued to add courses and the usership has shown potential growth. From December 2012 to 30 September 2013 over 3,500 people visited the database with 80.67% of the users being first time visitors and 19.2% being return visitors. Most visits to the site are from South Africa which may be linked to the fact that the top course providers are also from South Africa and Namibia.</p>
-
                     <p>The average visit duration to the database is 3 minutes and 23 seconds and there is a bounce-rate of 60.88% which is rather high and needs further interrogation to determine the cause of why visitors are not choosing to click on further links and explore the website.</p>
-
                     <p>Of the top twenty course contributors eight are higher education institutions with the others being from training organizations involved in development. The majority of these contributors are from Africa, however there are some contributors from countries such as the United States of America, United Kingdom and Malaysia.</p>
-
                     <p><strong>Table 2: Entry and vetting of Short Courses into the Africa Lead database since inception of this phase:&nbsp;&nbsp;</strong>
 
-                    <table border="" cellpadding="0" cellspacing="0">
-                        <tbody>
+					<table class="altrowstable" id="alternatecolor">
                             <tr>
-                                <td class="table-td">
-                                <p><strong>Period</strong></p>
-                                </td>
-                                <td class="table-td">
-                                <p><strong>Total # of courses available</strong></p>
-                                </td>
-                                <td class="table-td">
-                                <p><strong># of courses newly published</strong></p>
-                                </td>
-                                <td class="table-td">
-                                <p><strong># of organizations involved</strong></p>
-                                </td>
-                                <td class="table-td">
-                                <p><strong># of website visits</strong></p>
-                                </td>
-                                <td class="table-td">
-                                <p><strong># of page views</strong></p>
-                                </td>
-                                <td class="table-td">
-                                <p><strong>Duration of visit (minutes)</strong></p>
-                                </td>
-                                <td class="table-td">
-                                <p><strong># of visitors from Africa</strong></p>
-                                </td>
+                                <th>Period</th>
+                                <th>Total # of courses available</th>
+								<th># of courses newly published</th>
+                                <th># of organizations involved</th>
+                                <th># of website visits</th>
+                                <th># of page views</th>
+                                <th>Duration of visit (minutes)</th>
+                                <th># of visitors from Africa</strong></th>
                             </tr>
                             <tr>
-                                <td class="table-td">
-                                <p><strong>Dec&nbsp; 2012 &ndash;&nbsp; Feb 2013</strong></p>
+                                <td>Dec&nbsp; 2012 &ndash;&nbsp; Feb 2013</td>
+                                <td>1138</td>
+                                <td>444</td>
+                                <td>151</td>
+                                <td>902 (72.39% were new)</td>
+                                <td>3534</td>
+                                <td>5.04 minutes</td>
+                                <td>570</td>
+                            </tr>
+                            
+                            <tr>
+							   <td>March 2013 &ndash; June 2013</td>
+							   <td>1228</td>
+							   <td>93</td>
+							   <td>161</td>
+							   <td>1608 (84.3% were new)</td>
+							   <td>4292</td>
+							   <td>2.48 minutes</td>
+							   <td>1004</td>
 
-                                <p>&nbsp;</p>
-                                </td>
-                                <td class="table-td">
-                                <p>1138</p>
-                                </td>
-                                <td class="table-td">
-                                <p>444</p>
-                                </td>
-                                <td class="table-td">
-                                <p>151</p>
-                                </td>
-                                <td class="table-td">
-                                <p>902 (72.39% were new)</p>
-                                </td>
-                                <td class="table-td">
-                                <p>3534</p>
-                                </td>
-                                <td class="table-td">
-                                <p>5.04 minutes</p>
-                                </td>
-                                <td class="table-td">
-                                <p>570</p>
-                                </td>
                             </tr>
                             <tr>
-                                <td class="table-td">
-                                <p><strong>March 2013 &ndash; June 2013</strong></p>
-                                </td>
-                                <td class="table-td">
-                                <p>1228</p>
-                                </td>
-                                <td class="table-td">
-                                <p>93</p>
-                                </td>
-                                <td class="table-td">
-                                <p>161</p>
-                                </td>
-                                <td class="table-td">
-                                <p>1608 (84.3% were new)</p>
-                                </td>
-                                <td class="table-td">
-                                <p>4292</p>
-                                </td>
-                                <td class="table-td">
-                                <p>2.48 minutes</p>
-                                </td>
-                                <td class="table-td">
-                                <p>1004</p>
-                                </td>
+							   <td>July 2013 &ndash; Sept 2013</td>
+							   <td>1359</td>
+							   <td>131</td>
+							   <td>192</td>
+							   <td>1024 (82.8% new)</td>
+							   <td>2697</td>
+							   <td>&nbsp;</td>
+							   <td>&nbsp;</td>
                             </tr>
-                            <tr>
-                                <td class="table-td">
-                                <p><strong>&nbsp;July 2013 &ndash; Sept 2013</strong></p>
-                                </td>
-                                <td class="table-td">
-                                <p>1359</p>
-                                </td>
-                                <td class="table-td">
-                                <p>131</p>
-                                </td>
-                                <td class="table-td">
-                                <p>192</p>
-                                </td>
-                                <td class="table-td">
-                                <p>1024 (82.8% new)</p>
-                                </td>
-                                <td class="table-td">
-                                <p>2697</p>
-                                </td>
-                                <td class="table-td">
-                                <p>&nbsp;</p>
-                                </td>
-                                <td class="table-td">
-                                <p>&nbsp;</p>
-                                </td>
-                            </tr>
-                        </tbody>
                     </table>
                     </p>
 
 
 
                     <p>The outreach approach gives publicity to the ongoing short professional courses offered. The universities that are being visited have ongoing short courses that are relevant for sharing within the network but many have no central place to host or advertise the courses, nor is there often someone to push this content/information online.</p>
-
                     <p>OER finds working with RUFORUM as a partner to be extremely beneficial.&nbsp; It has facilitated easier identification of and access to the participating institutions and thus a better response has been obtained from the RUFORUM member institutions as opposed to those that are not. As part of this OER recommends moving the database to RUFORUM or OER Africa websites, which would allow all the available agriculture open education resources and the short course information to be accessed in one place, rather than for it to be a standalone site which requires more effort to maintain and advertise.</p>
-
                     <p>The training component of the project (implemented December 2013 to February 2013) indicates that while well received, actively engaging with the database is not without its challenges, for example, not all African higher education institution staff have regular access to Internet or up-to-date software or laptops and so alternative ways been devised to train them to learn about and use the database. For this reason, a template to collect course information has been developed that can be filled in easily on one&rsquo;s computer using a word processing package or printed out for a person to complete manually, scan and submit. This sort of tool is proving very useful when training at sites where connectivity and access to suitable hardware and software is limited.</p>
-
                     <p class="subreportpoint database_end">Targeting of the right institutional staff members also is critical in ensuring buy-in and participation. Another important factor is the time of year to visit the institutions as holidays and school schedules need to be considered.</p>
-
                     <p>There also are some challenges in <em>identifying and getting permission for the right people to be trained</em> &ndash; in some instances the associated bureaucratic red tape and hierarchical institutional protocol creates bottlenecks, barriers and delays.</p>
-
                     <p>More analysis of the near term scope of the database can be found in the report: <em>Africa Lead Database Use: Report on Lessons Learnt</em>.</p>
-
                     <p>Challenges notwithstanding, the database serves as a valuable resource that will ensure that some of the courses offered by Africa&rsquo;s and other countries&rsquo; finest agricultural institutions will be rendered highly visible to ensure their widespread dissemination and usage.</p>
-
 
                 </div>
 
@@ -1745,11 +1500,11 @@
 
                 <div class="subwrapper">
 
-                    <h2>Lessons Learned from Africa Lead</h2>
+                    <h3>Lessons Learned from Africa Lead</h3>
                     <p>Africa Lead has emphasized learning throughout the implementation of the project. As an early capacity building project under FTF the Africa Lead team is very aware of its &ldquo;trailblazing&rdquo; and catalytic role in coming up with innovative and productive ways to support capacity building for agricultural transformation in Africa.</p>
 
 
-                    <p><img src="img/lessons_beans.png" class="imagedisplay image_left" style="height:300px" /></p>
+                    <p><img src="img/lessons_beans.png" id="lessons_beans" class="image_right" style="height:300px" /></p>
                     
 
                     <p>This intense learning ethos has manifested itself through the flexible approach that the project takes, always ready to accommodate, adjust and adapt as the different tasks develop and are implemented.</p>
@@ -1758,99 +1513,63 @@
 
                     <p>Africa Lead actively seeks to learn, whether through feedback from participants or stakeholders, or between implementing partners and Africa Lead team members. The goal of the learning is two-fold: first, to improve results and outcomes of the project itself, and second, to have evidence on the usefulness of different approaches that can be considered by other capacity building projects.</p>
 
-                     <div class="shoutbox shoutboxright">
-                        <div class="shoutborder shoutright-top"></div>
-                        <div class="shoutborder shoutleft-top"></div>
-                        <div class="shoutborder shoutright-bottom"></div>
-                        <div class="shoutborder shoutleft-bottom"></div>
-                        <p><em>&ldquo;First, let me say, the certificates they presented to us. They gave me a glass figurine with &ldquo;Champion&rdquo; written on it. I put it on my table in the office. And it says, &ldquo;I&rsquo;m a Champion.&rdquo;&nbsp; Am I a Champion?&nbsp; What makes me a Champion? &nbsp;How can I exhibit that I am a Champion?&nbsp; These are things that make me not forget.&rdquo;</em></p>
-
-                        <p><em>&nbsp; &nbsp; &nbsp; &nbsp; -Champion from Uganda</em></p>
-
-                    </div>
+		
+	<blockquote>
+	 First, let me say, the certificates they presented to us. They gave me a glass figurine with &ldquo;Champion&rdquo; written on it. I put it on my table in the office. And it says, &ldquo;I&rsquo;m a Champion.&rdquo;&nbsp; Am I a Champion?&nbsp; What makes me a Champion? &nbsp;How can I exhibit that I am a Champion?&nbsp; These are things that make me not forget.
+		<cite>Champion from Uganda</cite>
+	</blockquote>
 
                     <p>The Module One training has been found to be &ldquo;transformative&rdquo; by Champions who have experienced it. Much of this strong impact is attributable to the African regional trainers who have been able to elicit strong emotions from the participants. In addition, another key component to the Africa-rooted roll out of the Module One training is the designing of the material that has become synonymous with the &ldquo;Champions brand&rdquo;. These include Champion banners for photos, awards and the training manual.</p>
-
                     <p>The participants themselves have developed the identity of &ldquo;Champion&rdquo;. This is a term that emerged during the training and has stuck after it as well. Participants use it to identify themselves with other individuals who have also participated in the training as in &ldquo;I am Champion X&rdquo;. &ldquo;Are you a Champion?&rdquo;</p>
-
                     <p>This designation has become the mark of those who had been involved in Africa Lead&rsquo;s trainings and became part of the &ldquo;Champion&rdquo; network. To help facilitate this network, Africa Lead has a Facebook page for Champions to share and communicate with each other; other Champion cohorts have also set up their own local Facebook sites. Africa Lead also convenes Champions for Change Networks and Super Champions Meetings as a venue to further strengthen networks.</p>
-
-                    <p>An end of project Lessons Learned Workshop was held in June 2013 <span class="infotip" data="At the time that this workshop was held the project was slated to close in September, three months from the workshop.">&sup1;</span> to reflect on the work of Africa Lead to date. Participants included CAADP representatives, Champions for Change trained by Africa Lead, key USAID personnel, and members of the Africa Lead team. All shared their experiences and thoughts on the impact Africa Lead.</p>
-
+ <p>An end of project Lessons Learned Workshop was held in June 2013 <span class="infotip" data="At the time that this workshop was held the project was slated to close in September, three months from the workshop.">&sup1;</span> to reflect on the work of Africa Lead to date. Participants included CAADP representatives, Champions for Change trained by Africa Lead, key USAID personnel, and members of the Africa Lead team. All shared their experiences and thoughts on the impact Africa Lead.</p>
                     <p>The way some Champions refer to the experience and what they have gained from the training is instructive.</p>
 
-
-                     <div class="shoutbox image_left">
-                        <div class="shoutborder shoutright-top"></div>
-                        <div class="shoutborder shoutleft-top"></div>
-                        <div class="shoutborder shoutright-bottom"></div>
-                        <div class="shoutborder shoutleft-bottom"></div>
-                        <p><em>&ldquo;I come from a poor rural community and on a personal level, it helped me join conversations about the welfare of my people, like Moses coming down from the mountain with the tablets to lead.&rdquo;</em></p>
-
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; -<em>Workshop participant</em></p>
-                    </div>
+                    <blockquote style="float: left; margin-bottom: 76px">
+                       I come from a poor rural community and on a personal level, it helped me join conversations about the welfare of my people, like Moses coming down from the mountain with the tablets to lead.
+                       <cite>Workshop participant</cite>
+                    </blockquote>
 
                     <p>Some use language of religious conversion to refer to how deeply they have been changed by the training, referring to the Champions for Change training as having &ldquo;created a religion; a community of &lsquo;believers.&rsquo;&rdquo;</p>
-
                     <p>Others mention that it does not matter whether someone took the training in Zimbabwe or Tanzania, all the Champions &ldquo;are talking the same language and are always at home with each other.&rdquo; No matter where or when they took the training the &ldquo;Champions&rdquo; continue to relate to each other, having a similar mindset toward the food security challenge.</p>
-
                     <p>The Champions talk about having a certain &ldquo;fire in their belly,&rdquo; a new sense of urgency to work together toward food security. One participant explained it as, &ldquo;the training changed me from a human &lsquo;being&rsquo; to a human &lsquo;doing.&rsquo;</p>
-
-                     <div class="shoutbox shoutboxright">
-                        <div class="shoutborder shoutright-top"></div>
-                        <div class="shoutborder shoutleft-top"></div>
-                        <div class="shoutborder shoutright-bottom"></div>
-                        <div class="shoutborder shoutleft-bottom"></div>
-                        <p><em>&ldquo;As &ldquo;Champions&rdquo; we work now as a team; we connect with people across countries and communicate with them.&nbsp; That&rsquo;s how we can really transform agriculture in Africa.&rdquo;</em></p>
-
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -<em>Workshop participant</em></p>
-
-                    </div>
+                    
+                    
+                    <blockquote style="float: left; margin-bottom: 55px">
+                       As &ldquo;Champions&rdquo; we work now as a team; we connect with people across countries and communicate with them.&nbsp; That&rsquo;s how we can really transform agriculture in Africa.
+						<cite>Workshop participant</cite>
+                    </blockquote>
 
                     <p>Impact attributed to the Africa Lead experience by participants ranges from personal empowerment to firm business contracts, to advances in the policy realm.</p>
-
                     <p>These samples are testament of the momentum that started with Module One and continued through Module Two trainings of Champions into a constellation of added-value exchanges, networking and collaboration including the customized trainings and outreach to non-state actors.</p>
 
-                     <div class="shoutbox image_left">
-                        <div class="shoutborder shoutright-top"></div>
-                        <div class="shoutborder shoutleft-top"></div>
-                        <div class="shoutborder shoutright-bottom"></div>
-                        <div class="shoutborder shoutleft-bottom"></div>
-                        <p><em>&ldquo;It has transformed me from working hard using my head to work hard using my heart.&rdquo;</em></p>
-
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -<em>Workshop participant</em></p>
-
-                    </div>
+                    <blockquote style="float: left">
+                       It has transformed me from working hard using my head to work hard using my heart.
+                        <cite>Workshop participant</cite>
+                    </blockquote>
 
                     <p>Although learning is a constant aspect of the project, embodied through questionnaires administered to training participants before, immediately after and six month later, as well as through other means of collecting information about the effect of project activities, Africa Lead institutionalizes feedback in other ways.</p>
 
-                    <br/><br/><br/><br/><br/>
+                 
 
-                    <div class="subvideo image_center">
-                        <div class="videooverlay">
+
+                    <div class="subvideo image_left truevideo" style="float:left !important">
+                        <div class="videooverlay truevideo">
                             <div class="videooverlay_button"></div>
                             <img src='img/Overlay_Graphic2_map.png' />
                         </div>
                         <div class="videocontent">
-                            <video id="video_sub8" class="videoclass" preload="none" volume="0" controls>
+                            <video id="video_sub9" class="videoclass" preload="none" volume="0" controls>
                                 <source src="media/Graphic2_MapGraphic_v1_FINAL.webm" type="video/webm">
                               Video not supported
                             </video>
                         </div>
                     </div>
 
-
-
-
-                     <div class="shoutbox shoutboxright">
-                        <div class="shoutborder shoutright-top"></div>
-                        <div class="shoutborder shoutleft-top"></div>
-                        <div class="shoutborder shoutright-bottom"></div>
-                        <div class="shoutborder shoutleft-bottom"></div>
-                        <p><em>&ldquo;I would like to acknowledge the spillover from Africa Lead; the AU Commissioner attributed her-re-election to Africa Lead.&rdquo;</em></p>
-
-                        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -<em>Workshop participant</em></p>
-                    </div>
+                     <blockquote>
+                        I would like to acknowledge the spillover from Africa Lead; the AU Commissioner attributed her-re-election to Africa Lead.
+                        <cite>Workshop participant</cite>
+                     </blockquote>
 
                     <p>Two main activities have been designed to systematically capture and consider the lessons learned. The first activity is the qualitative Lessons Learned research. In July and August 2012, two Africa Lead researchers conducted over 100 interviews with training beneficiaries in ten countries across the continent.&nbsp; The study documents the views of training beneficiaries on what has worked well and what can be improved upon with respect, primarily to the Champions for Change training.</p>
 
@@ -1869,53 +1588,28 @@
                     </div>
 
                     <p>The interviewees provide insight into how they perceive their own capacity building needs for agriculture and food security, giving practical suggestions on how to ensure CAADP plays a meaningful role guiding agriculture development within their national and regional contexts.</p>
-
                     <p>The second systematic effort to draw lessons from the project and its elements is the Africa Lead Lessons Learned Conference (<em>Lessons Learned Workshop: Sustaining The Momentum - Champions Transforming Institutions</em>) that was held in Kenya on June 11 &amp;12, 2013. This workshop brought together USAID, CAADP representatives, the Africa Lead team and many partners, Champions and other beneficiaries of the project to seek to capture the essence of what Africa Lead has accomplished and what can be learned from these successes and challenges.</p>
-
-                     <div class="shoutbox shoutboxright">
-                        <div class="shoutborder shoutright-top"></div>
-                        <div class="shoutborder shoutleft-top"></div>
-                        <div class="shoutborder shoutright-bottom"></div>
-                        <div class="shoutborder shoutleft-bottom"></div>
-                        <p><strong>Workshop Objectives:</strong></p>
-
-                        <ol>
-                            <li><em>Create a shared understanding of what has been achieved through the project and lessons that have been learned.</em></li>
-                            <li><em>Look ahead and discuss how to build on lessons learned to support continued contributions to missions&rsquo; FTF programs and to the AU CAADP agenda.</em></li>
-                        </ol>
-
-                    </div>
-
-
                     <p>Over the two day workshop participants shared facts and figures as well as personal testimonials of their experiences, creating a powerful picture of how the Africa Lead project affected lives, communities and institutions. The workshop helped establish a core set of lessons which then flowed into recommended actions that will build in Africa Lead, sustain the momentum, and achieve the critical mass of Champions and higher performing organizations needed for Africa&rsquo;s agricultural transformation.</p>
-
                     <p>Below are the main lessons distilled largely from the workshop. They are classified into two types of lessons: (1) Programmatic, and (2) Operational.</p>
-
                     <p>Africa Lead hopes that these lessons will be valuable for others implementing capacity building programs aimed at expediting improvements in agricultural productivity and food security in Africa.</p>
 
-                    <h2>Programmatic Lessons:</h2>
+
+                    <strong>Programmatic Lessons:</strong>
                     <p>There have been many lessons learned from Africa Lead, and the greatest challenge is not identifying those lessons but identifying which are the most pertinent ones for future capacity building initiatives.</p>
-
-                    <p>Here are presented the key programmatic lessons from Africa Lead:</p>
-
-                    <h3>Leadership Training-related Lessons:</h3>
+					 <p>Here are presented the key programmatic lessons from Africa Lead:</p>
+					
+                    <h3 style="clear:both">Leadership Training-related Lessons:</h3>
                     <ul>
                         <li><strong>Leadership training matters. </strong>Often overlooked, leadership training is critically important and a missing element of the capacity building and progress in agriculture and food security. Transforming agriculture is not simply a technical matter but is requires stronger more results oriented institutions led by innovative, team-oriented, results-focused, transformative leaders. Leadership helps put the various elements of food security into a holistic perspective, seeing the systems that all need to work together to achieve greater agricultural productivity, better nutrition and improved food security. Participants have a stronger work ethic, more of a sense of purpose and drive to work hard. The project is designed based on this premise, but at times the importance of leadership and change management training has been questioned as a priority vis &agrave; vis technical training. The consensus from the Lessons Learned workshop is a resounding agreement that leadership training is critically important for success in agriculture policy and programming.</li>
                     </ul>
 
-                    <p>&nbsp;</p>
-
-
-                     <div class="shoutbox shoutboxright">
-                        <div class="shoutborder shoutright-top"></div>
-                        <div class="shoutborder shoutleft-top"></div>
-                        <div class="shoutborder shoutright-bottom"></div>
-                        <div class="shoutborder shoutleft-bottom"></div>
-                        <p>&ldquo;<em>Champions for Change bring together people from different professions.&nbsp; They are professional agriculturalists, they are journalists, they are government officials &ndash; I think we can be a very important group to cause change.&rdquo;</em></p>
-
-                        <p><em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-Champion from Uganda</em></p>
-
-                    </div>
+					<blockquote>
+					 <strong>Workshop Objectives:</strong>
+					 <ol>
+						 <li><em>Create a shared understanding of what has been achieved through the project and lessons that have been learned.</em></li>
+						 <li><em>Look ahead and discuss how to build on lessons learned to support continued contributions to missions&rsquo; FTF programs and to the AU CAADP agenda.</em></li>
+					 </ol>
+					</blockquote>
 
                     <ul>
                         <li><strong>The Champions are the legacy of the project. </strong>The Champions who have participated in the trainings are the change agents who will bring about the policy, social and commercial innovations and transform Africa&rsquo;s agricultural production and food security. Champions will largely drive transformational change through their institutions or community involvement. To help Champions for Change for Food Security deepen and widen their networks of like-minded agriculture professionals it will be useful to support cascade trainings by the Champions most interested and driven to provide onward training.<br />
@@ -1923,132 +1617,71 @@
                         Providing minimal support to help create and sustain networks of Champions that will allow them to continue to dialogue and exchange ideas can help foster innovation. This can be done through websites, Facebook pages (e.g. Champions for Change FB site), and periodic reunions.</li>
                     </ul>
 
+                     <blockquote>
+                        Champions for Change bring together people from different professions.&nbsp; They are professional agriculturalists, they are journalists, they are government officials &ndash; I think we can be a very important group to cause change.
+                        <cite>Champion from Uganda</cite>
+                      </blockquote>
+
                     <ul>
                         <li><strong>Cascade training ensures scalability.</strong> A number of the Champions recount how they have taken all or some of the elements of the leadership training and cascaded that to their colleagues or local community groups. This allows for a wider reach and should be a supported activity. Cascade training can be supported with ready-to-use training material as well as having general access to training materials.&nbsp; Africa Lead is currently finalizing their E-Learning workshop tool that will be available for free online. There is a clear consensus among Champions that with small amounts of support they can expand the reach of the Champions training and thereby broaden the number of people who not only understand the CAADP principles, approach and goals, but also have changed mindsets about the role they can play in ensuring food security.</li>
                     </ul>
 
-                    <p>&nbsp;</p>
 
-                     <div class="shoutbox shoutboxright">
-                        <div class="shoutborder shoutright-top"></div>
-                        <div class="shoutborder shoutleft-top"></div>
-                        <div class="shoutborder shoutright-bottom"></div>
-                        <div class="shoutborder shoutleft-bottom"></div>
-                        <p><em>&ldquo;The training has given us the road map for CAADP and the vision. This new leadership and management skills have given us the vehicle, CAADP has given us the road map, and the vision of ending food insecurity in our countries and regions has given us the destination.&rdquo;</em></p>
-
-                        <p><em>&nbsp; &nbsp; &nbsp; &nbsp;- Workshop Participant</em></p>
-                    </div>
+                     <blockquote>
+                       The training has given us the road map for CAADP and the vision. This new leadership and management skills have given us the vehicle, CAADP has given us the road map, and the vision of ending food insecurity in our countries and regions has given us the destination.
+                        <cite>Workshop Participant</cite>
+                    </blockquote>
 
                     <ul>
                         <li><strong>It is important to target decision makers</strong>. Africa Lead has learned how important it is to include top level leadership &ndash; parliament, ministry and private sector executives in the trainings, engaging them in the process that they influence. The leadership training initially targeted leaders who did not necessarily hold high office -- mid-level civil servants, private sector and civil society professionals with varying levels of seniority in their own organizations. In early leadership training participants often voiced the desire to extend the training &ldquo;to our bosses&rdquo;. This demonstrates both the value attributed to the training by the participants and their view that their supervisors will benefit from similar training. Ultimately, Africa Lead has been able to provide an abbreviated version of the five day leadership training to top level decision makers. Targeting decision makers supports buy-in as well as creating avenues for better communication about policy.</li>
-                    </ul>
-
-                    <p>&nbsp;</p>
-
-                    <ul>
                         <li><strong>Leadership training with a focus is more powerful</strong><strong>.</strong> A large part of the success of the leadership training, according to interviews with Champions for Change, is attributable to the purpose for which the leadership training was provided, and the clear articulation of the proposition, &ldquo;Leadership training &hellip;for Food Security.&rdquo; Participants imagine, and are encouraged during the training to do so, applying their newly gained leadership and change management skills to play a part in bringing about real changes in food security.&nbsp; Participants are helped to expand their horizons toward a shared goal that is larger than each participant&rsquo;s own limited interests. The power of the training derives from its specificity and its near direct applicability (participants develop action plans); it is not leadership training in the abstract.</li>
-                    </ul>
-
-                    <ul>
                         <li><strong>Contextualized training increases impact</strong>. One of the key parts of the success of the training is its use of African regional trainers who are able to adapt the curriculum to engage the hearts and minds of the participants in an African context. This has been indispensable to the success of the trainings. The African trainers personalize the curriculum to include the &ldquo;little girl&rdquo; and the &ldquo;African Pot&rdquo; exercises in the training that receive an overwhelmingly positive response. &nbsp;Pictures and facts have been tweaked specifically to fit the context of individual countries.<br />
                         &nbsp;</li>
                     </ul>
 
-                    <p>In addition to the modifications made to contextualize the curriculum, other successful elements of the training are:</p>
+                    <strong>In addition to the modifications made to contextualize the curriculum, other successful elements of the training are:</strong>
 
                     <ul>
                         <li>Using adult learning methods.</li>
                         <li>Using and relating to people&rsquo;s emotions &ndash; making the issue personal.
-                        <ul>
-                            <li>Making participants feel special and that someone is investing in them.</li>
-                            <li>Having quality and enthusiastic trainers.</li>
-                        </ul>
-                        </li>
+						 <li>Making participants feel special and that someone is investing in them.</li>
+						 <li>Having quality and enthusiastic trainers.</li>
                         <li>Creating Personal Strategic Plans &ndash; Each person goes home with plan</li>
                     </ul>
 
-                    <p><img src="img/lessons_training.png" class="imagedisplay image_right" style="height:500px" /></p>
 
                     <h3>Lessons Learned from Conducting Assessments:</h3>
+                    <p><img src="img/lessons_training.png" id="lessons_training" class="image_center" style="height:250px" /></p>
                     <ul>
-                        <li><strong>Get buy-in from stakeholders.</strong> This is a lesson from the assessments conducted by Africa Lead. Assessments require deep engagement and buy-in from all stakeholders, funders and object of assessment alike. Ownership by the subject institution of the assessment process is pivotally important and increases the possibility that the findings will be implemented. This means building commitment and involvement with the organizations through the process, involving top management of the institution in initial planning and having the assessment be participatory or a facilitated self-assessments methodology to be a learning exercise.</li>
+					  <li><strong>Get buy-in from stakeholders.</strong> This is a lesson from the assessments conducted by Africa Lead. Assessments require deep engagement and buy-in from all stakeholders, funders and object of assessment alike. Ownership by the subject institution of the assessment process is pivotally important and increases the possibility that the findings will be implemented. This means building commitment and involvement with the organizations through the process, involving top management of the institution in initial planning and having the assessment be participatory or a facilitated self-assessments methodology to be a learning exercise.</li>
+					  <li><strong>Make recommended actions feasible</strong>. It is important to make sure organizations can implement the recommendations both financially and structurally. To achieve this it is important to connect process to existing policy processes; include &lsquo;low hanging fruit&rsquo; to increase organizations performance without external assistance and validate and review the findings with the institutions.</li>
+					  <li><strong>Follow up assessments with capacity building programs.</strong> For credibility it is important that donor projects that conduct assessments are also prepared to provide capacity building support where gaps have been identified. When assessments are not followed by capacity building in a relatively short period, the subject institutions are likely to become averse to participating freely in capacity needs assessments. Instances like the Africa Lead experience with CORAF and CILSS, in which the West Africa mission commissioned institutional capacity needs assessments and capacity building support, are especially fruitful partnerships.&nbsp;</li>
                     </ul>
 
-                    <p>&nbsp;</p>
-
-                    <ul>
-                        <li><strong>Make recommended actions feasible</strong>. It is important to make sure organizations can implement the recommendations both financially and structurally. To achieve this it is important to connect process to existing policy processes; include &lsquo;low hanging fruit&rsquo; to increase organizations performance without external assistance and validate and review the findings with the institutions.</li>
-                    </ul>
-
-                    <p>&nbsp;</p>
-
-                    <ul>
-                        <li><strong>Follow up assessments with capacity building programs.</strong> For credibility it is important that donor projects that conduct assessments are also prepared to provide capacity building support where gaps have been identified. When assessments are not followed by capacity building in a relatively short period, the subject institutions are likely to become averse to participating freely in capacity needs assessments. Instances like the Africa Lead experience with CORAF and CILSS, in which the West Africa mission commissioned institutional capacity needs assessments and capacity building support, are especially fruitful partnerships.&nbsp;</li>
-                    </ul>
-
-                    <h2>Operational/Administration Lessons</h2>
+                    <h3>Operational/Administration Lessons</h3>
                     <ul>
                         <li><strong>Budget Planning. </strong>Some of the challenges that Africa Lead faced during the past three years are the complex budgets due to the multiple buy-ins. Although this is the nature of the project and this mechanism allows the Missions to buy-in, it also has to be recognized that the complexity of managing multiple budgets with limited scopes of work requires a great deal of effort to manage and maintain the budgets, particularly when it comes to projections.</li>
-                    </ul>
-
-                    <p>&nbsp;</p>
-
-                    <ul>
                         <li><strong>Approval process and clearance process. </strong>Given the pattern of new activities consistently starting and stopping throughout the project as different missions make requests it is essential to have quick turnaround and approvals from USAID to be able to complete tasks that the Missions request.</li>
-                    </ul>
-
-                    <p>&nbsp;</p>
-
-                    <ul>
                         <li><strong>Complexity of project. </strong>Africa Lead is a continent-wide project with multiple implementers, Missions, and beneficiaries. There are many moving parts to the project which creates challenges.</li>
-                    </ul>
-
-                    <p>&nbsp;</p>
-
-                    <ul>
                         <li><strong>Consistent point of contact in mission. </strong>Establishing specific people to work with at the Missions allows for consistent communication and planning.</li>
-                    </ul>
-
-                    <p>&nbsp;</p>
-
-                    <ul>
                         <li><strong>Buy-in. </strong>Mission buy-in is essential to the success and continuation of Africa Lead. This made it very important to communicate what the project does and how and why the Mission benefits from buying-in.</li>
-                    </ul>
-
-                    <p>&nbsp;</p>
-
-                    <ul>
                         <li><strong>Regional Differences. </strong>Because of the scope of the project it is necessary to understand the differences among countries, regions and cultures. This applies to adjusting the training, planning logistics, understanding the different systems and context, including different needs and requests from Missions.</li>
-                    </ul>
-
-                    <p>&nbsp;</p>
-
-                    <ul>
                         <li><strong>Financial Flexibility</strong>.&nbsp; A flexible grant program is important for funding various activities.&nbsp; In order to be responsive to opportunities related to the work, mechanisms that allow grant funding are an efficient way to reinforce program investments.<br />
                         &nbsp;</li>
                         <li><strong>Reporting</strong>.&nbsp; A structured reporting schedule is more effective than reporting on demand.&nbsp; A program such as Africa Lead with activities both planned in advance and delivered on a rapid response basis can better track and integrate developments on a regular reporting schedule.&nbsp;</li>
                     </ul>
 
 
-                    <h2>Conclusion</h2>
+                    <h3>Conclusion</h3>
 
-                     <div class="shoutbox shoutboxright">
-                        <div class="shoutborder shoutright-top"></div>
-                        <div class="shoutborder shoutleft-top"></div>
-                        <div class="shoutborder shoutright-bottom"></div>
-                        <div class="shoutborder shoutleft-bottom"></div>
-                        <p><em>&ldquo;In order to make progress we can&rsquo;t stay where we are, we have to be in motion. Looking at issues as though you are looking through a kaleidoscope, it never stays the same.&nbsp; So you have to have to act to take advantage of each situation, to get the best out of it, to make sure the opportunity you have on hand is put to the utmost use.&rdquo;</em></p>
-
-                        <p><strong><em>&nbsp; &nbsp; &nbsp; &nbsp; -Champion for Change&nbsp;</em></strong></p>
-
-                    </div>
+                     <blockquote>
+                        In order to make progress we can&rsquo;t stay where we are, we have to be in motion. Looking at issues as though you are looking through a kaleidoscope, it never stays the same.&nbsp; So you have to have to act to take advantage of each situation, to get the best out of it, to make sure the opportunity you have on hand is put to the utmost use.
+                        <cite>Champion for Change</cite>
+                    </blockquote>
 
                     <p>Africa Lead is a capacity building program that operates across three Sub-Saharan Africa&nbsp;regions working across public, civil society, university and private sector institutions. The program seeks to establish and maintain a critical mass of food security &ldquo;Champions&rdquo; who can drive agriculture-led development by leading and implementing the Regional and National Agriculture Investment Plans within the CAADP framework.</p>
-
                     <p>Africa Lead also conducts institutional capacity assessments, sponsors agriculture interns and produces a database of food security and agriculture related online trainings, while functioning as a support mechanism for the USAID Missions by providing logistical support for conferences, trainings and meetings.</p>
-
                     <p>Africa Lead represents an approach to advancing food security on the continent through a powerful yet simple premise: empower a cadre of agricultural actors with the skills to lead others.&nbsp; This fundamental tenant of change has taken on a life of its own with the self-identified Champions of Africa Lead. To them, leadership is movement.&nbsp; It may reside as a sense of purpose and power in individuals, but its expression is as a collective force.&nbsp; It takes strong institutions, coordination among agencies, continuous learning and sharing.</p>
-
                     <p>Perhaps the enduring lesson of Africa Lead is this participatory quality.&nbsp; As one Champion has noted: &ldquo;Change is not always welcome&hellip;This is Africa.&rdquo; Yet, Africa Lead has empowered thousands of Africans to prove otherwise about their continent.&nbsp; Thinking outside the box is producing action that is transforming the way change itself is understood, accepted and even embraced in terms of making communities, countries and the region more food secure.</p>
 
                     <div class="subvideo image_center truevideo">
@@ -2066,42 +1699,8 @@
                     <div class="captionbox image_center"><p>&quot;Whimsy Groove&quot; Kevin MacLeod (<a href="http://incompetech.com/">incompetech.com</a>)<br />
 <span style="line-height:1.6em">Licensed under Creative Commons: By Artibution 3.0&nbsp;</span><a href="http://creativecommons.org/licenses/by/3.0/">&diams;</a></p></div>
 
-
-
-
-
-
-
-
-
                 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--start appendices section -->
                 <div id='appendices_anchor'>
                     <div id='appendices' class="subNavigation menu1 stickyitem sub_maincontent">
                         <img src="img/aidlogo_small.png" class="aidlogo"/>
@@ -2112,51 +1711,69 @@
 
                     </div>
                 </div>
+<div class="subwrapper">
 
-                <div class="subwrapper">
-                        <div id="appendices_accordion">
-                          <h3 id="appendices_results_framework">Results Framework</h3>
-                          <div>
-                            <p><img src="img/appendices_resultsframework.png" class="imagedisplay image_center" style="height:700px" /></p>
-                          </div>
-                          <h3 id="appendices_org_chart">Organizational Chart</h3>
-                          <div>
+			<section class="ac-container">
+				<div>
+					<input id="ac-1" name="accordion-1" type="radio" checked />
+					<label for="ac-1">Results Framework</label>
+					<article class="ac-small">
+                        <p><img src="img/appendices_resultsframework.png" class="imagedisplay image_center" style="height:700px" /></p>
+					</article>
+				</div>
+				<div>
+					<input id="ac-2" name="accordion-1" type="radio" />
+					<label for="ac-2">Organizational Chart</label>
+					<article class="ac-medium">
                             <p><img src="img/appendices_org_chart.png" class="imagedisplay image_center" style="height:700px" /></p>
-                                
-                          </div>
-                          <h3 id="appendices_pmp_table">PMP Table</h3>
-                          <div>
-                            <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
-                          </div>
-                          <h3 id="appendices_pmp_table">Fact Sheet</h3>
-                          <div>
+					</article>
+				</div>
+				<div>
+					<input id="ac-3" name="accordion-1" type="radio" />
+					<label for="ac-3">PMP Table</label>
+					<article class="ac-large">
+						<p>You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man. </p>
+					</article>
+				</div>
+				<div>
+					<input id="ac-4" name="accordion-1" type="radio" />
+					<label for="ac-4">Fact Sheet</label>
+					<article class="ac-large">
                             <ul>
                                 <li><a href="appendices/Fact Sheet/Africa Lead Fact Sheet 11.25.13.pdf" target="_blank">Africa Lead Fact Sheet</a></li>
                             </ul>
-                          </div>
-                            <h3 id="appendices_stat_tables">Other Statistical Tables</h3>
-                          <div>
-                            <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
-                          </div>
-                            <h3 id="appendices_training_conferences">Other Training and Conferences</h3>
-                          <div>
-                            <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
-                          </div>
-                            <h3 id="appendices_particpants_sponsored">Participants Sponsored to Conferences, Training and Workshops</h3>
-                          <div>
-                            <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
-                          </div>
-                            <h3 id="appendices_timelines">Timelines</h3>
-                          <div>
+					</article>
+				</div>
+				<div>
+					<input id="ac-5" name="accordion-1" type="radio" />
+					<label for="ac-5">Other Training and Conferences</label>
+					<article class="ac-large">
+						<p>You see? It's curious. Ted did figure it out - time travel. And when we get back, we gonna tell everyone. How it's possible, how it's done, what the dangers are. But then why fifty years in the future when the spacecraft encounters a black hole does the computer call it an 'unknown entry event'? Why don't they know? If they don't know, that means we never told anyone. And if we never told anyone it means we never made it back. Hence we die down here. Just as a matter of deductive logic. </p>
+					</article>
+				</div>
+				<div>
+					<input id="ac-6" name="accordion-1" type="radio" />
+					<label for="ac-6">Participants Sponsored to Conferences, Training and Workshops</label>
+					<article class="ac-large">
+						<p>You see? It's curious. Ted did figure it out - time travel. And when we get back, we gonna tell everyone. How it's possible, how it's done, what the dangers are. But then why fifty years in the future when the spacecraft encounters a black hole does the computer call it an 'unknown entry event'? Why don't they know? If they don't know, that means we never told anyone. And if we never told anyone it means we never made it back. Hence we die down here. Just as a matter of deductive logic. </p>
+					</article>
+				</div>
+				<div>
+					<input id="ac-7" name="accordion-1" type="radio" />
+					<label for="ac-7">Timelines</label>
+					<article class="ac-large">
                             <ul>
                                 <li><a href="appendices/Time lines/AL Timeline year 2011 (1).pdf" target="_blank">2011 Timeline</a></li>
                                 <li><a href="appendices/Time lines/AL Timeline year 2012.pdf" target="_blank">2012 Timeline</a></li>
                                 <li><a href="appendices/Time lines/Updated 2013 Timeline.pdf" target="_blank">2013 Timeline</a></li>
                             </ul>
-                          </div>
-                            <h3 id="appendices_success_stories">Success Stories</h3>
-                          <div>
-                            <ul>
+					</article>
+				</div>
+				<div>
+					<input id="ac-8" name="accordion-1" type="radio" />
+					<label for="ac-8">Success Stories</label>
+					<article class="ac-large">
+ <ul>
                                 <li><a href="appendices/Success stories/Al Success story training inspires policy makers.pdf" target="_blank">Snapshot: Training Inspires Policymakers and Private Sector (2012)</a></li>
                                 <li><a href="appendices/Success stories/Al Success story moving agri policy forward.pdf" target="_blank">Success Story: Moving Agriculture Policy Forward (2011)</a></li>
                                 <li><a href="appendices/Success stories/AL Success Story engagin youth in food security.pdf" target="_blank">Success Story: Engaging Youth for Food Security (2011)</a></li>
@@ -2175,10 +1792,13 @@
                                 <li><a href="appendices/Success stories/Champion Stories Global Forum.pdf" target="_blank">Champion Stories Global Forum - Africa Lead Champions Go Global (July 2012)</a></li>
                                 <li><a href="appendices/Success stories/Champion Stories Bulawayo Seed Fair.pdf" target="_blank">Champion Stories Bulawayo Seed Fair - Inspiring Entrepreneurship among Seed Business Operators (2012)</a></li>
                             </ul>
-                          </div>
-                            <h3 id="appendices_newsletters">Newsletters</h3>
-                          <div>
-                            <ul>
+					</article>
+				</div>
+				<div>
+					<input id="ac-9" name="accordion-1" type="radio" />
+					<label for="ac-9">Newsletters</label>
+					<article class="ac-large">
+                        <ul>
                                 <li><a href="appendices/Newsletters/Africa Lead Newsletter-January 2012.pdf" target="_blank">January-12    Non-State Actor Workshop Engages NSA on CAADP: Tamale, Ghana</a></li>
                                 <li><a href="appendices/Newsletters/Africa Lead Newsletter- February 2012.pdf" target="_blank">February-12   USAID Supported Agricultural Leadership Training in Zimbabwe and Zambia;</a></li>
                                 <li><a href="appendices/Newsletters/Africa Lead Newsletter_April 2012.pdf" target="_blank">April-12  Africa Lead Launches Module 2 Workshops in West Africa</a></li>
@@ -2193,10 +1813,13 @@
                                 <li><a href="appendices/Newsletters/africa lead newsletter july 2013.pdf" target="_blank">July-13   “Sustaining the Momentum” – Beyond the Trainings</a></li>
                                 <li><a href="appendices/Newsletters/Africa Lead Newsletter August 2013.pdf" target="_blank">August-13 Food Safety From Uganda to Mississippi</a></li>
                             </ul>
-                          </div>
-                            <h3 id="appendices_abbreviations">List of Abbreviations</h3>
-                          <div>
-                                <table border="" cellpadding="0" cellspacing="0">
+					</article>
+				</div>
+				<div>
+					<input id="ac-10" name="accordion-1" type="radio" />
+					<label for="ac-10">List of Abbreviations</label>
+					<article class="ac-large">
+ <table border="" cellpadding="0" cellspacing="0">
                                     <tbody>
                                         <tr>
                                             <td class="table-td">ACTESA&nbsp;</td>
@@ -2557,25 +2180,17 @@
                                     </tbody>
                                 </table>
 
-                          </div>
-                          
-                        </div>
+					</article>
+				</div>
+			</section>
+</div>
+
+                <div style="height:800px;display:block"></div>
+
+		
                 </div>
 
-<div style="display:block;height:800px;"></div>
-
-
-
-
-
-
-
-                </div>
-
-
-
-
-                <!--hidden buttons here-->
+                                <!--hidden buttons here-->
                 <a href="#energizing" class="storestate subreportside hidden" id="energizing_button" data="energizing_start" style="top:60px;z-index:6001">
                     <p>Read Energizing Champions for Food Security</p>
                 </a>
@@ -2749,7 +2364,7 @@
 
 <p>&nbsp;</p>
 
-<p><img src="img/Lessons_graph1.png" style="height:510px" /></p>
+<p><img src="img/Lessons_graph1.png" id="Lessons_graph1" style="height:510px" /></p>
 
 <p>It can be seen that over 3500 people have visited the database during the period 1 December 2012 to 30 September 2013 with 80.67% of the visits being first time ones and a return rate of 19.2%. The average visit duration was 3 minutes and 23 seconds. There is a bounce-rate of 60.88% which is rather high and needs further interrogation. The accessing of the database has been more or less consistent as shown by the graph above, however the number of courses newly uploaded at different times varied considerably with 444 being uploaded during the period December 2012 to February 2013, and then 93 and 131 new uploads over the next two time periods (March to June and then July to September 2013).&nbsp;</p>
 
@@ -2763,7 +2378,7 @@
 
 <p><strong>Table 1: Details of the database&rsquo;s top 20 short course providers</strong></p>
 
-<p><img src="img/Lessons_table1.png" style="height:563px" /></p>
+<p><img src="img/Lessons_table1.png" id="Lessons_table1" style="height:563px" /></p>
 
 <p>&nbsp;</p>
 
@@ -2771,7 +2386,7 @@
 
 <p>Table 2: Entry and vetting of Short Courses into the Africa Lead Database since inception of this phase:&nbsp;</p>
 
-<p><img src="img/Lessons_table2.png" style="height:250px" /></p>
+<p><img src="img/Lessons_table2.png" id="Lessons_table2" style="height:250px" /></p>
 
 <h3>Lessons learnt</h3>
 

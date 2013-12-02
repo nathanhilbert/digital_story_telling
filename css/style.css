@@ -40,7 +40,7 @@ div span.mainWelcomeText {font-size: 20px; color: #552701; margin-bottom: 15px; 
 div span.finalReport {font-size: 20px; color: #fff;  margin: 0px; font-family: arial;}
 
 div .og-details p {font-size: 14px; color: #555; font-family: arial; font-style: normal;}
-div.subwrapper, p, ul{font-style: normal !important; font-family: arial;} 
+div.subwrapper, p{font-style: normal !important; font-family: arial;} 
 div.subwrapper p{line-height: <##>;}
 
 blockquote { margin: 1em 2em; border-left: 1px dashed #999; padding-left: 1em; } 
@@ -49,7 +49,8 @@ blockquote p:first-line { font-variant: small-caps; }
 
 span.nexter {text-transform: uppercase; color: #0a5e07; font-weight: bold}
 span.nexter:hover {color: #555; margin: 0px 5px 0px 0px}
-div h3{font-style: normal !important; font-family: arial; text-transform: uppercase; font-size: 26px !important;}
+div h3{font-style: normal !important; font-family: "Armata"; text-transform: uppercase; padding-bottom: 19px; font-size: 24px !important;
+background: url(../img/hrLine.png) no-repeat left bottom; line-height: 30px;}
 div .subHolder {font-style: normal !important;}
 
 .floating_intro_info{
@@ -150,7 +151,6 @@ margin-left: 21px;}
 .shoutbox{
 	display: block;
 	width: 40%;
-    margin:10px;
 	float: right;
 	margin-left: 42px;
 	background-color: #CCCCCC;
@@ -273,18 +273,19 @@ margin-left: 21px;}
                 position: relative;
                 }
             .subvideo{
-				width: 415px;
-				height: 232px;
-				-moz-box-shadow: 0px 0px 20px #888;
-                -webkit-box-shadow: 0px 0px 20px #888;
-                box-shadow: 0px 0px 20px #888;
-                margin:25px;
-                margin-right: 42px;
+                width: 415px;
+                height: 232px;
+                margin: 10px 20px 25px 25px !important;
+               padding: 10px;
+               background-color: #ebebeb;
+               -moz-box-shadow: 0px 0px 5px #888;
+                -webkit-box-shadow: 0px 0px 5px #888;
+                box-shadow: 0px 0px 5px #888;
             }
 
             .videooverlay{
 				width: 415px;
-				height: 232px;
+				height: auto;
 				overflow:hidden;
 				cursor: pointer;
 				zoom: 1; filter: alpha(opacity=8);opacity: 0.8;
@@ -383,6 +384,7 @@ overflow: hidden;
 font-size: 18px;
 line-height: 150%;
 color: #454545;
+background-color: #fff;
 }
 
 blockquote:before{
@@ -562,3 +564,202 @@ position: relative;
 }
 
 
+
+
+/* New ACCORDION style ———————————————————————————————————————————— 
+///////////////////////////////////////////////////////////////////
+*/
+
+.ac-container{
+    width: 957px;
+    margin: 0 auto;
+    text-align: left;
+}
+.ac-container label{
+    font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
+    padding: 5px 20px;
+    position: relative;
+    z-index: 20;
+    display: block;
+    height: 30px;
+    cursor: pointer;
+    color: #777;
+    line-height: 33px;
+    font-size: 19px;
+    background: #ffffff;
+    background: -moz-linear-gradient(top, #ffffff 1%, #eaeaea 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#ffffff), color-stop(100%,#eaeaea));
+    background: -webkit-linear-gradient(top, #ffffff 1%,#eaeaea 100%);
+    background: -o-linear-gradient(top, #ffffff 1%,#eaeaea 100%);
+    background: -ms-linear-gradient(top, #ffffff 1%,#eaeaea 100%);
+    background: linear-gradient(top, #ffffff 1%,#eaeaea 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eaeaea',GradientType=0 );
+    box-shadow: 
+        0px 0px 0px 1px rgba(155,155,155,0.3), 
+        1px 0px 0px 0px rgba(255,255,255,0.9) inset, 
+        0px 2px 2px rgba(0,0,0,0.1);
+}
+.ac-container label:hover{
+    background: #fff;
+}
+.ac-container input:checked + label,
+.ac-container input:checked + label:hover{
+    background: #078301;
+    color: #fff;
+    text-shadow: 0px 1px 1px rgba(255,255,255, 0.6);
+    box-shadow: 
+        0px 0px 0px 1px rgba(155,155,155,0.3), 
+        0px 2px 2px rgba(0,0,0,0.1);
+}
+.ac-container label:hover:after,
+.ac-container input:checked + label:hover:after{
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 13px;
+    top: 7px;
+    background: transparent url(../img/accord/arrow_down.png) no-repeat center center;  
+}
+.ac-container input:checked + label:hover:after{
+    background-image: url(../img/accord/arrow_up.png);
+}
+.ac-container input{
+    display: none;
+}
+.ac-container article{
+    background: rgba(255, 255, 255, 0.5);
+    margin-top: -1px;
+    overflow: hidden;
+    height: 0px;
+    position: relative;
+    z-index: 10;
+    -webkit-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+    -moz-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+    -o-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+    -ms-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+    transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+}
+.ac-container article p{
+    font-style: italic;
+    color: #777;
+    line-height: 23px;
+    font-size: 14px;
+    padding: 20px;
+    text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
+}
+.ac-container input:checked ~ article{
+    -webkit-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+    -moz-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+    -o-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+    -ms-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+    transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+    box-shadow: 0px 0px 0px 1px rgba(155,155,155,0.3);
+}
+.ac-container input:checked ~ article.ac-small{
+    height: auto;
+}
+.ac-container input:checked ~ article.ac-medium{
+    height: auto;
+}
+.ac-container input:checked ~ article.ac-large{
+    height: auto;
+}
+
+
+/* Blockquote style ——————————————————————————————————————————————— 
+///////////////////////////////////////////////////////////////////
+*/
+
+blockquote {
+font-family: Georgia, serif;
+font-size: 18px;
+font-style: italic;
+width: 450px;
+margin: 8px 10px 8px 20px;
+padding: 1.25em 40px;
+line-height: 1.45;
+position: relative;
+color: #998576;
+float: right;
+}
+
+blockquote {
+font-family: Georgia, serif;
+font-size: 18px;
+font-style: italic;
+width: 450px;
+margin: 8px 10px 8px 20px;
+padding: 1.25em 40px;
+line-height: 1.45;
+position: relative;
+color: #998576;
+float: right;
+}
+
+blockquote:before {
+display: block;
+content: "\201C";
+font-size: 80px;
+position: absolute;
+left: 3px;
+top: -20px;
+color: #7a7a7a;
+font-family: Helvetica CY, serif;
+}
+
+blockquote cite {
+color: #999999;
+font-size: 14px;
+display: block;
+margin: 5px 0px 0px 20px;
+}
+
+blockquote ol, blockquote ul {margin: 0px; padding: 10px 0px 0px 0px;}
+blockquote li, .subwrapper li {margin: 0px; padding: 10px 0px 10px 0px; border-top: 1px dotted #c8c6c6; list-style-position: inside;}
+blockquote strong{font-size: 16px; text-transform: uppercase;}
+
+blockquote cite:before {
+content: "\2014 \2009";
+}
+
+p.info { margin: 50px auto 10px auto; }
+
+/* Image style ——————————————————————————————————————————————— 
+///////////////////////////////////////////////////////////////////
+*/
+
+div .subwrapper img {padding: 5px; background-color: #ebebeb; margin: 10px 25px 20px 15px; border: 1px solid #d7d7d7; float:left}
+div.videooverlay img, .sticky-wrapper img, .subHolder img {background-color: #fff !important; margin: 0 !important; padding: 0px !important}
+
+/* Tables style ——————————————————————————————————————————————— 
+///////////////////////////////////////////////////////////////////
+*/
+
+table.altrowstable {
+    font-family: verdana,arial,sans-serif;
+    font-size:11px;
+    color:#333333;
+    border: 1px solid #a9c6c9;
+    border-collapse: collapse;
+}
+table.altrowstable th {
+    border: 1px solid #096404;
+    padding: 8px;
+    background-color: #096404;
+    color: #fff;
+    font-size: 15px;
+    font-weight: normal;
+    border-bottom: 3px solid #0fa008;
+}
+
+table.altrowstable td {
+    padding: 10px;
+    border: 1px solid #a9c6c9;
+}
+.oddrowcolor{
+    background-color:#d4e3e5;
+}
+.evenrowcolor{
+    background-color:#c3dde0;
+}
