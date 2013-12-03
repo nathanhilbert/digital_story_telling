@@ -129,23 +129,6 @@
                                  ;
                              }
                          });
-                     /*
-                       $(".audiowrapper").click(function(){
-                         var tempaudioarray = $(this).children("audio");
-                         if (tempaudioarray.length < 1){
-                             return;
-                         }
-                         var tempaudio = tempaudioarray[0];
-                         if (tempaudio.currentTime == 0 || tempaudio.paused == true){
-                             tempaudio.play();
-                            $(tempaudio).siblings(".audiobutton").addClass("playing");
-                         }
-                         else {
-                             tempaudio.pause();
-                             $(tempaudio).siblings(".audiobutton").removeClass("playing");
-                         }
-                       });
-                     */
                      
                      });
                      
@@ -640,7 +623,7 @@
                                     <img src='img/Overlay_Zamindar-FINAL.png' />
                                  </div>
                                  <div class="videocontent">
-                                    <video id="video_sub5" class="videoclass" preload="none" volume="0" controls>
+                                    <video id="video_sub20" class="videoclass" preload="none" volume="0" controls>
                                        <source src="media/Zamindar-FINAL.webm" type="video/webm">
                                        Video not supported
                                     </video>
@@ -1094,8 +1077,8 @@
                               <cite>Workshop participant</cite>
                            </blockquote>
                            <p>Although learning is a constant aspect of the project, embodied through questionnaires administered to training participants before, immediately after and six month later, as well as through other means of collecting information about the effect of project activities, Africa Lead institutionalizes feedback in other ways.</p>
-                           <div class="subvideo image_left truevideo" style="float:left !important">
-                              <div class="videooverlay truevideo">
+                           <div class="subvideo image_left" style="float:left !important">
+                              <div class="videooverlay">
                                  <div class="videooverlay_button"></div>
                                  <img src='img/Overlay_Graphic2_map.png' />
                               </div>
@@ -3214,7 +3197,7 @@
                                  <img src='img/Overlay_Zamindar-FINAL.png' />
                               </div>
                               <div class="videocontent">
-                                 <video id="video_sub1" class="videoclass" preload="none" volume="0" controls>
+                                 <video id="video_sub19" class="videoclass" preload="none" volume="0" controls>
                                     <source src="media/Zamindar-FINAL2.webm" type="video/webm">
                                     Video not supported
                                  </video>
@@ -6641,7 +6624,19 @@
                      
                          if (Modernizr.video.webm){
                              $('.subvideo .videoclass').each(function(){
-                                 this.load();
+                                //conmtext $("#video_sub2").closest(".panelswipe")[0]
+                                $(this).closest(".subvideo").waypoint({
+                                  handler: function(direction) {
+                                    if (! $(this).hasClass("loaded")){
+                                      var theobj = $(this).find(".videoclass");
+                                      theobj.load();
+                                      $(this).addClass("loaded");
+                                    }
+                                  },
+                                  offset:2000,
+                                  context: '#' + $(this).closest(".panelswipe").attr("id")
+                                });
+                                 
                      
                              }).bind("ended", function() {
                                 $(this).parent().hide();
