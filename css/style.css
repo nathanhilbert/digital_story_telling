@@ -34,13 +34,27 @@ body {font-style: normal !important;}
 	*/)
 }
 
+ul, ol{
+    font-family: arial;
+}
+
+.strongtitle{
+    color: #572902;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    font-weight: bold;
+    font-size: 15px !important;
+}
+
 /* Additional Styles //////////////////////////////////////////////////////////// */
 p.introText {width: 700px; color: #000; font-size: 19px !important; overflow: hidden; display: block; clear: both;}
 div span.mainWelcomeText {font-size: 20px; color: #552701; margin-bottom: 15px; font-weight:bold; font-family: arial; text-transform: uppercase;}
 div span.finalReport {font-size: 20px; color: #fff;  margin: 0px; font-family: arial;}
 
 div .og-details p {font-size: 14px; color: #555; font-family: arial; font-style: normal;}
-div.subwrapper, p{font-style: normal !important; font-family: arial;} 
+div.subwrapper{font-style: normal !important; }
+ p{font-style: normal !important; font-family: arial;} 
 div.subwrapper p{line-height: <##>;}
 
 blockquote { margin: 1em 2em; border-left: 1px dashed #999; padding-left: 1em; } 
@@ -104,7 +118,7 @@ font-weight: normal;
 	   .subwrapper h1{color: #572902; background: url('../img/headerBG.png') no-repeat bottom center; font-size: 38px; text-align: center; padding: 0px 0px 25px 0px;  
     margin-bottom: 10px; font-family: 'Armata', sans-serif; font-weight: normal;}
 	.subwrapper p{text-align: justify; font-size: 14px;}
-    div .subwrapper strong{color: #572902; text-align: center; margin: 0px; padding: 0px; font-weight: bold; font-size: 15px !important;}
+    div .subwrapper strong{color: #181818; text-align: center; margin: 0px; padding: 0px; font-weight: bold; font-size: 14px !important;}
 
 .logo {width: 325px; overflow: hidden; margin: 0 auto 0px; display: block;}
 .introText {width: 940px; margin: 40px auto 50px; padding: 0px}
@@ -151,22 +165,16 @@ margin-left: 21px;}
 }
 
 .shoutbox{
-	display: block;
-	width: 40%;
-	float: right;
-	margin-left: 42px;
-	background-color: #CCCCCC;
-	padding: 20px;
-	margin-right: 42px;
-	border-top:thick solid #65b561;
-	border-bottom:thick solid #65b561;
-	position:relative;
-    background: -moz-linear-gradient(45deg, rgba(68,124,66,0.57) 0%, rgba(68,124,66,0.57) 2%, rgba(68,124,66,0.31) 43%, rgba(68,124,66,0.25) 52%, rgba(68,124,66,0.55) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(68,124,66,0.57)), color-stop(2%,rgba(68,124,66,0.57)), color-stop(43%,rgba(68,124,66,0.31)), color-stop(52%,rgba(68,124,66,0.25)), color-stop(100%,rgba(68,124,66,0.55))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(45deg, rgba(68,124,66,0.57) 0%,rgba(68,124,66,0.57) 2%,rgba(68,124,66,0.31) 43%,rgba(68,124,66,0.25) 52%,rgba(68,124,66,0.55) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(45deg, rgba(68,124,66,0.57) 0%,rgba(68,124,66,0.57) 2%,rgba(68,124,66,0.31) 43%,rgba(68,124,66,0.25) 52%,rgba(68,124,66,0.55) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(45deg, rgba(68,124,66,0.57) 0%,rgba(68,124,66,0.57) 2%,rgba(68,124,66,0.31) 43%,rgba(68,124,66,0.25) 52%,rgba(68,124,66,0.55) 100%); /* IE10+ */
-    background: linear-gradient(45deg, rgba(68,124,66,0.57) 0%,rgba(68,124,66,0.57) 2%,rgba(68,124,66,0.31) 43%,rgba(68,124,66,0.25) 52%,rgba(68,124,66,0.55) 100%); /* W3C */
+font-family: 'Armata' sans-serif;
+font-size: 13px;
+font-style: normal;
+width: 40%;
+min-width:300px;
+margin: 8px 10px 8px 20px;
+padding: 1.25em 40px;
+line-height: 1.45;
+position: relative;
+color: #998576;
 
 }
 
@@ -226,7 +234,7 @@ margin-left: 21px;}
             }
             .stickyitem{
                 
-                height:50px;width:98%;display:block;
+                height:60px;width:98%;display:block;
             }
             .menu1{
                 z-index:5001;
@@ -382,7 +390,6 @@ margin-left: 21px;}
 
 blockquote{
 	padding-top: 20px;
-overflow: hidden;
 font-size: 18px;
 line-height: 150%;
 color: #454545;
@@ -493,6 +500,8 @@ float: left;
 width: auto;
 display: inline;
 position: relative;
+    background-color:white;
+    padding:5px;
 }
 .fallbackinstruction{
     padding-top:100px;
@@ -522,10 +531,6 @@ position: relative;
     position:fixed;
     top:0;
     left:0;
-    /*box-shadow:0 2px 4px rgba(0, 0, 0, .3);*/
-      -webkit-box-shadow: 0px 2px 4px #000000;
-           -moz-box-shadow: 0px 2px 4px #000000;
-                box-shadow: 0px 2px 4px #000000;
 
 
 }
@@ -677,10 +682,11 @@ position: relative;
 ///////////////////////////////////////////////////////////////////
 */
 
+
 blockquote {
 font-family: Georgia, serif;
-font-size: 18px;
-font-style: italic;
+font-size: 14px;
+font-style: normal;
 width: 450px;
 margin: 8px 10px 8px 20px;
 padding: 1.25em 40px;
@@ -690,29 +696,6 @@ color: #998576;
 float: right;
 }
 
-blockquote {
-font-family: Georgia, serif;
-font-size: 18px;
-font-style: italic;
-width: 450px;
-margin: 8px 10px 8px 20px;
-padding: 1.25em 40px;
-line-height: 1.45;
-position: relative;
-color: #998576;
-float: right;
-}
-
-blockquote:before {
-display: block;
-content: "\201C";
-font-size: 80px;
-position: absolute;
-left: 3px;
-top: -20px;
-color: #7a7a7a;
-font-family: Helvetica CY, serif;
-}
 
 blockquote cite {
 color: #999999;
@@ -736,7 +719,7 @@ p.info { margin: 50px auto 10px auto; }
 */
 
 div .subwrapper img {padding: 5px; background-color: #ebebeb; margin: 10px 25px 20px 15px; border: 1px solid #d7d7d7; float:left}
-div.videooverlay img, .sticky-wrapper img, .subHolder img {background-color: #fff !important; margin: 0 !important; padding: 0px !important}
+div.videooverlay img, .sticky-wrapper img, .subHolder img {background-color: #fff !important; margin: 0 !important;}
 
 /* Tables style ——————————————————————————————————————————————— 
 ///////////////////////////////////////////////////////////////////
@@ -779,3 +762,4 @@ table.altrowstable td {
 a[href $='.pdf'] {padding: 8px 0 8px 20px; background: transparent url(../img/pdf.png) no-repeat center left}
 a[href $='.doc'] {padding: 8px 0 8px 20px; background: transparent url(../img/doc.png) no-repeat center left}
 a[href $='.docx'] {padding: 8px 0 8px 20px; background: transparent url(../img/doc.png) no-repeat center left}
+
