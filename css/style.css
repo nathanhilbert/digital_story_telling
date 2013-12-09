@@ -19,6 +19,9 @@ body {font-style: normal !important;}
 .startVideo {width: 100%; height: 600px; background-color: #ccc}
 	.startVideo h3 {color: brown; padding: 200px 0px 0px 0px; margin: 0 auto; text-align: center;}
 
+
+h4 {color:#572902; }
+
 .floating_intro_logo {
 	position: absolute;
 	margin: 0px auto;
@@ -684,7 +687,6 @@ position: relative;
 
 
 blockquote {
-font-family: Georgia, serif;
 font-size: 14px;
 font-style: normal;
 width: 450px;
@@ -706,7 +708,7 @@ margin: 5px 0px 0px 20px;
 
 blockquote ol, blockquote ul {margin: 0px; padding: 10px 0px 0px 0px;}
 blockquote li, .subwrapper li {margin: 0px; padding: 10px 0px 10px 0px; border-top: 1px dotted #c8c6c6; list-style-position: inside;}
-blockquote strong{font-size: 16px; text-transform: uppercase;}
+blockquote strong{font-size: 14px;}
 
 blockquote cite:before {
 content: "\2014 \2009";
