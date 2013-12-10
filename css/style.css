@@ -121,7 +121,7 @@ font-weight: normal;
 	   .subwrapper h1{color: #572902; background: url('../img/headerBG.png') no-repeat bottom center; font-size: 38px; text-align: center; padding: 0px 0px 25px 0px;  
     margin-bottom: 10px; font-family: 'Armata', sans-serif; font-weight: normal;}
 	.subwrapper p{text-align: justify; font-size: 14px;}
-    div .subwrapper strong{color: #181818; text-align: center; margin: 0px; padding: 0px; font-weight: bold; font-size: 14px !important;}
+    div .subwrapper strong{color: #181818; text-align: center; margin: 0px; padding: 0px; font-weight: bold; font-size: 14px}
 
 .logo {width: 325px; overflow: hidden; margin: 0 auto 0px; display: block;}
 .introText {width: 940px; margin: 40px auto 50px; padding: 0px}
@@ -755,6 +755,22 @@ table.altrowstable td {
     background-color:green;
 }
 
+
+.table_display{
+    color: #333333;
+    border: 1px solid #a9c6c9;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table_display td, .table_display th{border: 1px solid black;
+padding: 2px 4px 2px 4px;
+}
+
+.table_display td p, .table_display th p strong{font-size:85%;
+}
+
+.table_display th{ background-color: rgb(74, 160, 74);}
 
 
 /* Misc style ——————————————————————————————————————————————— 
