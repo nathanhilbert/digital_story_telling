@@ -764,7 +764,9 @@ padding: 2px 4px 2px 4px;
 text-align: center;
 }
 
-.table_display td p, .table_display th p strong, .table_display th p{font-size:85%;text-align: center;
+.table_display td p{font-size:85%;text-align: left;
+}
+.table_display th p strong, .table_display th p{font-size:85%;text-align: center;
 }
 
 .table_display th{ background-color: rgb(74, 160, 74);text-align: center;}
