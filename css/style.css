@@ -702,7 +702,7 @@ margin: 5px 0px 0px 20px;
 }
 
 blockquote ol, blockquote ul {margin: 0px; padding: 10px 0px 0px 0px;}
-blockquote li, .subwrapper li {margin: 0px; padding: 10px 0px 10px 0px; border-top: 1px dotted #c8c6c6; list-style-position: inside;}
+blockquote li, .subwrapper li {margin: 0px; padding: 3px 0px 3px 0px; border-top: 1px dotted #c8c6c6; list-style-position: inside;}
 blockquote strong{font-size: 14px;}
 
 blockquote cite:before {
