@@ -55,6 +55,7 @@ p.introText {width: 700px; color: #000; font-size: 19px !important; overflow: hi
 div span.mainWelcomeText {font-size: 20px; color: #552701; margin-bottom: 15px; font-weight:bold; font-family: arial; text-transform: uppercase;}
 div span.finalReport {font-size: 20px; color: #fff;  margin: 0px; font-family: arial;}
 
+div .og-details {border: solid black 2px}
 div .og-details p {font-size: 14px; color: #555; font-family: arial; font-style: normal;}
 div.subwrapper{font-style: normal !important; }
  p{font-style: normal !important; font-family: arial;} 
@@ -64,7 +65,7 @@ blockquote { margin: 1em 2em; border-left: 1px dashed #999; padding-left: 1em; }
 /*blockquote p:first-letter { float: left; margin: .2em .3em .1em 0; font-family: "Monotype Corsiva", "Apple Chancery", fantasy; font-size: 220%; font-weight: bold; } */
 /*blockquote p:first-line { font-variant: small-caps; }*/
 
-span.nexter {text-transform: uppercase; color: #0a5e07; font-weight: bold}
+span.nexter, span.nexterend {text-transform: uppercase; color: #0a5e07; font-weight: bold;float:right;font-size: 18px;}
 span.nexter:hover {color: #555; margin: 0px 5px 0px 0px}
 div h2{font-style: normal !important; font-family: "Armata"; text-transform: uppercase; padding-bottom: 19px; font-size: 24px !important;
 background: url(../img/hrLine.png) no-repeat left bottom; line-height: 30px;}
