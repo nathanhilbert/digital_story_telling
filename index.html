@@ -1746,7 +1746,7 @@
                                  </article>
                               </div>
                               <div>
-                                 <input id="ac-30" name="accordion-30" type="radio" />
+                                 <input id="ac-30" name="accordion-1" type="radio" />
                                  <label for="ac-30">Note on Format</label>
                                  <article class="ac-large">
                                     <p>This interactive presentation is formatted in HTML code. It is designed to be accessible off-line; no Internet connectivity is required although it is through an Internet browser that the presentation is experienced. The interactive features allow sound and moving images to be integrated with the main text, which also moves seamlessly to display associated reports and appendices. Mozilla &ldquo;Firefox&rdquo; and Google &ldquo;Chrome&rdquo; are the optimal browsers to experience the interactivity in full. (Instructions to safely install these browsers appear if the presentation is accessed on Microsoft &ldquo;Internet Explorer&rdquo; or Apple &ldquo;Safari&rdquo;). The full presentation can be distributed through USB flash drives, DVDs or uploaded and downloaded from a web-based document exchange site (such as &ldquo;Dropbox&rdquo;) when connected to the Internet. It can also be printed (with still images in place of the animated ones.) The Africa Lead team thanks especially the GIS specialists and web developers of DAI and the multimedia producers of Jordan Gantz Creative for providing an experience that captures the spirit of the Champions for Change.</p>
@@ -6639,6 +6639,23 @@
                          function(){
                              $("#" + $(this).attr('data')).removeClass("highlighted");
                          });
+
+
+                         $('input[name=accordion-1]').click(function(ev){
+                            if ($(this).hasClass("checked")){
+                              $(this).attr('checked',false);
+                              $(this).removeClass("checked");
+                            }
+                            else {
+                              $('input[name=accordion-1]').removeClass("checked");
+                              $(this).addClass("checked");
+                              $.smoothScroll({scrollTarget: $(this).siblings("label"), scrollElement: $('#maincontent'), offset:-120});
+                            }
+                          });
+
+
+
+                          //.attr('checked',false);
                      
 
                      
