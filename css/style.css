@@ -691,7 +691,7 @@ margin: 8px 10px 8px 20px;
 padding: 1.25em 40px;
 line-height: 1.45;
 position: relative;
-color: #998576;
+color: #555;
 float: right;
 }
 
@@ -786,3 +786,10 @@ a[href $='.pdf'] {padding: 8px 0 8px 20px; background: transparent url(../img/pd
 a[href $='.doc'] {padding: 8px 0 8px 20px; background: transparent url(../img/doc.png) no-repeat center left}
 a[href $='.docx'] {padding: 8px 0 8px 20px; background: transparent url(../img/doc.png) no-repeat center left}
 
+
+/* Tooltip style ——————————————————————————————————————————————— 
+///////////////////////////////////////////////////////////////////
+*/
+#tooltip {
+    opacity: 1 !important;
+}

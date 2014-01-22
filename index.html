@@ -164,7 +164,7 @@
                   </script>   
                </head>
                <body scrollleft="NaN" scrolltop="NaN" style="overflow-y:hidden;overflow: auto; height: 100%;">
-                  <div id="loading_div" style="display:block;width:100%;height:100%;background-color:white;z-index: 90000;position: absolute;"><span style="margin: auto;position: relative;display: block;width: 640px;top: 50%;"><img style="margin-right:10px" src='img/loading.gif' />Welcome to Africa Lead's Final Report.  Please wait while the page loads.</span><span style="margin: auto;position: relative;display: block;width: 640px;top: 70%;font-size:13px;">If you have a not so high-speed, but consistent Internet connection, you can <a href="https://s3.amazonaws.com/africaextras/africalead2013.zip">download the files</a> and run the report directly from your computer.</span></div>
+                  <div id="loading_div" style="display:block;width:100%;height:100%;background-color:white;z-index: 90000;position: absolute;"><span style="margin: auto;position: relative;display: block;width: 640px;top: 50%;"><img style="margin-right:10px" src='img/loading.gif' />Welcome to Africa Lead's Final Report.  Please wait while the page loads.</span><span style="margin: auto;position: relative;display: block;width: 640px;top: 70%;font-size:13px;">If you have a not so high-speed, but consistent Internet connection, you can <a href="http://africaleadreport2013.dai.com/downloads/africaleadreport2013.zip">download the files</a> and run the report directly from your computer.</span></div>
                   <!--[if lt IE 7]>
                   <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
                   <![endif]-->
@@ -6639,6 +6639,7 @@
                      
                          //tooltips
                          $("span.infotip").tooltip({ 
+                              tooltipClass : 'tooltipstyle',
                              bodyHandler: function() { 
                                  return $(this).attr("data");
                                  //return $(this).attr("title"); 
